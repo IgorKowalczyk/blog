@@ -61,21 +61,21 @@ width: 50px;
 }
 
 .main-header a {
-color: #000;
+color: #000 !important;
 text-decoration: none;
 }
 
 .main-header a:hover{
 text-decoration: none;
-color: #00a3a3;
+color: #00a3a3 !important;
 }
 
 main a, footer a {
-color: #000;
+color: #000 !important;
 }
 
 main a, footer a {
-color: #00a3a3;
+color: #00a3a3 !important;
 }
 
 main {
@@ -110,7 +110,7 @@ margin-bottom: 1em;
 
 .post-list-item h3 a, .post-content h3 {
 font-size: 1.3em;
-color: #33691E;
+color: #000;
 font-weight: 600;
 }
 
@@ -157,6 +157,11 @@ justify-content: space-between;
 
 a {
 position: relative;
+color: #000  !important;
+}
+
+a:hover {
+color: #00a3a3 !important;
 }
 
 a:before {
