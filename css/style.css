@@ -1,7 +1,21 @@
+@font-face {
+font-family: 'Montserrat-Light';
+font-style: normal;
+font-weight: 300;
+src: url("https://igorkowalczyk.github.io/blog/fonts/Montserrat-Light.ttf");
+}
+
+@font-face {
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+src: url("https://igorkowalczyk.github.io/blog/fonts/Montserrat-Medium.ttf");
+}
+
 * {
 margin: 0;
 padding: 0;
-font-family: 'Monserrat';
+font-family: 'Montserrat;
 color: #212121;
 font-weight: 400;
 box-sizing: border-box;
