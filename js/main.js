@@ -1,12 +1,9 @@
-function menu() {
-const menuicon = document.querySelector('.menu-icon');
-const mainnav = document.querySelector(".main-nav");
-if(innerWidth <= 426){
-mainnav.classList.toggle("hidden");
+var scrollposition = window.scrollY;
+var logocontainer = document.getElementsByClassName('nav')[0];
+window.addEventListener('scroll', function() {
+scrollposition = window.scrollY;
+if (scrollposition >= 40) {   logocontainer.classList.add('nav-scrolled');
+} else {
+logocontainer.classList.remove('nav-scrolled');
 }
-menuicon.addEventListener("click",(e)=>{
-mainnav.classList.toggle("hidden");
 });
-}
-
-menu();

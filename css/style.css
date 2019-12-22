@@ -56,20 +56,6 @@ padding: 0.2em;
 margin: 1em 0;
 }
 
-.main-header .logo {
-width: 50px;
-}
-
-.main-header a {
-color: #000 !important;
-text-decoration: none;
-}
-
-.main-header a:hover{
-text-decoration: none;
-color: #00a3a3 !important;
-}
-
 main a, footer a {
 color: #000 !important;
 }
@@ -149,12 +135,7 @@ line-height: 1.6em;
 text-decoration: none;
 }
 
-@media  (min-width: 427px) {
-.main-nav{
-display: flex;
-justify-content: space-between;
-}
-
+@media (min-width: 427px) {
 a {
 position: relative;
 color: #000  !important;
@@ -192,35 +173,8 @@ visibility: visible;
 transform: scaleX(1);
 }
 
-.menu-icon {
-display: none;
-}
-
 .social-icon {
 width: 32px;
-}
-
-.main-header, .main-header h1 {
-display: flex;
-justify-content: space-between;
-align-items: center;
-font-weight: 300;
-box-sizing: border-box;
-}
-
-.main-nav ul {
-display: flex;
-align-items: center;
-}
-
-.main-nav ul li {
-list-style: none;
-padding: 10px;
-box-sizing: border-box;
-}
-
-.main-header, .post-list-item {
-border-bottom: #000 solid 1px;
 }
 
 main, footer {
@@ -233,16 +187,12 @@ list-style: none;
 }
 
 @media (min-width:765px) {
-.main-header, main, footer {
+main, footer {
 padding: 10px 5%;
 }
 
 h1{
 font-size: 1.2em
-}
-
-.main-nav {
-font-size: 1em;
 }
 
 .social-icon, .logo img{
@@ -264,7 +214,7 @@ h1 {
 font-size: 2em;
 }
 
-.main-header, main, footer{
+main, footer{
 padding: 10px 20%;
 }
 
@@ -274,46 +224,8 @@ padding:3% 15%;
 }
 
 @media (max-width: 426px){
-.main-header {
-margin: 0;
-display: block;
-box-sizing: border-box;
-justify-content: space-around;
-position: relative;
-clear: both;
-height: auto;
-}
-
-.main-header h1 {
-display: flex;
-float: left;
-}
-
 .social-icon {
 width: 40px;
-}
-
-.menu-icon {
-display: block;
-position: absolute;
-top: 10px;
-right: 20px;
-}
-
-.main-nav {
-display: block;
-flex: none;
-}
-
-.main-nav ul li, .main-nav ul {
-clear: both;
-display: block;
-width: 100%;
-}
-
-.main-nav ul li {
-padding: 10px;
-border-bottom: #000 solid 1px;
 }
 
 main, footer {
@@ -340,4 +252,153 @@ display: flex;
 .pagination {
 display: flex;
 justify-content: space-between;
+}
+
+.nav {
+background-color: #fff;
+position: fixed;
+width: 100%;
+top: 0;
+transition: 500ms all;
+z-index: 9999;
+}
+
+.nav:not(.nav-scroled):hover {
+box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.1), 0 1px 3px 0 rgba(0, 0, 0, 0.08);
+}
+
+.nav.nav-scrolled {
+box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.1), 0 1px 3px 0 rgba(0, 0, 0, 0.08);
+}
+
+.nav ul {
+margin: 0;
+padding: 0;
+list-style: none;
+overflow: hidden;
+background-color: #fff;
+}
+
+.nav li a {
+display: block;
+font-size: 20px;
+padding: 20px 20px;
+text-decoration: none;
+transition: 500ms all;
+}
+
+.nav li a:hover, .nav .menu-btn:hover {
+background-color: #f4f4f4;
+}
+
+.nav .logo {
+display: block;
+float: left;
+line-height: 40px;
+font-size: 20px;
+padding: 10px 20px;
+text-decoration: none;
+}
+
+.nav .menu {
+clear: both;
+max-height: 0;
+transition: max-height .2s ease-in-out;
+}
+
+.nav .menu-icon {
+cursor: pointer;
+display: inline-block;
+float: right;
+padding: 28px 20px;
+position: relative;
+user-select: none;
+}
+
+.nav .menu-icon .navicon {
+background: #333;
+display: block;
+height: 2px;
+position: relative;
+transition: background .2s ease-out;
+width: 18px;
+}
+
+.nav .menu-icon .navicon:before,
+.nav .menu-icon .navicon:after {
+background: #333;
+content: '';
+display: block;
+height: 100%;
+position: absolute;
+transition: all .2s ease-out;
+width: 100%;
+}
+
+.nav .menu-icon .navicon:before {
+top: 5px;
+}
+
+.nav .menu-icon .navicon:after {
+top: -5px;
+}
+
+.nav .menu-btn {
+display: none;
+}
+
+.nav .menu-btn:checked ~ .menu {
+max-height: 240px;
+}
+
+.nav .menu-btn:checked {
+box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.1), 0 1px 3px 0 rgba(0, 0, 0, 0.08);
+}
+
+.nav .menu-btn:checked ~ .menu-icon .navicon {
+background: transparent;
+}
+
+.nav .menu-btn:checked ~ .menu-icon .navicon:before {
+transform: rotate(-45deg);
+}
+
+.nav .menu-btn:checked ~ .menu-icon .navicon:after {
+transform: rotate(45deg);
+}
+
+.nav .menu-btn:checked ~ .menu-icon .navicon:before, .nav .menu-btn:checked ~ .menu-icon .navicon:after {
+top: 0;
+}
+
+@media (min-width: 590px) {
+.nav li {
+float: left;
+}
+
+.nav li a {
+padding: 20px 30px;
+}
+
+.nav .menu {
+clear: none;
+float: right;
+max-height: none;
+}
+
+.nav .menu-icon {
+display: none;
+}
+}
+
+[hidden] {
+display: none;
+}
+
+ul, li {
+list-style: none;
+}
+
+.menu-icon svg {
+stroke: #ccc;
 }
