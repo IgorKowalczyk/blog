@@ -1,6 +1,6 @@
 ﻿---
 layout: post
-title: "Pierwszy wpis, nowy blog"
+title: "Pierwszy wpi2s, nowy blog"
 category: offtop
 ---
 Witajcie wszyscy! Stworzyłem oto tego nowego bloga, inspiracją był blog "Kot Zródłowy". Może powinienem wcześniej się za to wziąść ale jakoś nie znalazłem siły.
