@@ -33,11 +33,11 @@ layout: default
 </ul>
 <div class="pagination">
 {% if paginator.previous_page %}
-<a href="{{ paginator.previous_page_path }}" class="previous">Poprzednia Strona</a>
+<a href="/blog{{ paginator.previous_page_path }}" class="previous">Poprzednia Strona</a>
 {% endif %}
 <span class="page_number ">Strona: {{ paginator.page }} / {{ paginator.total_pages }}</span>
 {% if paginator.next_page %}
-<a href="{{ paginator.next_page_path }}" class="next">Następna Strona</a>
+<a href="/blog{{ paginator.next_page_path }}" class="next">Następna Strona</a>
 {% endif %}
 </div>
 <a href="{{"/feeds/feed.xml " | relative_url }}" style="line-height:2em">
