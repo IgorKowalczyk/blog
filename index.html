@@ -10,7 +10,7 @@ layout: default
 		<li class="post-list-item">
 			<header>
 				<h3 >
-					<a href="{{ /blog/post.url }}"> {{ post.title }}</a>
+					<a href="/blog{{ /post.url }}"> {{ post.title }}</a>
 				</h3>
 				<time datetime="{{ post.date | date_to_xmlschema}}">{{post.date | date: "%d-%m-%Y"}}</time>
 				<ul class="cat">
@@ -42,7 +42,7 @@ layout: default
 		<a href="{{ paginator.next_page_path }}" class="next">Następna Strona</a>
 		{% endif %}
 	</div>
-	<a href="{{"/blog/feeds/feed.xml " | relative_url }}" style="line-height:2em">
+	<a href="{{"/feeds/feed.xml " | relative_url }}" style="line-height:2em">
 		<img src="{{ "img/rss.png" | relative_url }}" alt="Subskrybuj"
 																								title="Subskrybuj" style="width:1em;">
 		Subskrybuj posty
