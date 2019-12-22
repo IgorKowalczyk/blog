@@ -160,8 +160,15 @@ position: relative;
 color: #000  !important;
 }
 
-a:hover {
+header h1, h3 a, main a {
+color: #000 !important;
+transition: 300ms;
+}
+
+header h1:hover, h3 a:hover, main a:hover, main a:hover svg {
 color: #00a3a3 !important;
+fill: #00a3a3;
+transition: 300ms;
 }
 
 a:before {
