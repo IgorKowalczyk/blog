@@ -24,7 +24,6 @@ text-decoration: none;
 body {
 font-size: 1em;
 position: relative;
-padding-bottom: 100px;
 }
 
 code, code span {
@@ -75,9 +74,9 @@ padding-bottom: 1em;
 footer {
 border-top: #000 solid 1px;
 position: absolute;
+right: 0;
 bottom: 0;
 left: 0;
-right: 0;
 }
 
 p, h2, h3, h4, h5, h6 {
