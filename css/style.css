@@ -71,7 +71,7 @@ color: #000;
 }
 
 main a, footer a {
-color: #388E3C;
+color: #00a3a3 !important;
 }
 
 main {
@@ -300,7 +300,7 @@ padding: 10px;
 border-bottom: #000 solid 1px;
 }
 
-main, footer{
+main, footer {
 clear: both;
 padding: 5px;
 display: flex;
