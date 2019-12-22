@@ -20,10 +20,8 @@ layout: default
 {{ category }}
 </a>
 </li>
-
 {% endfor %}
 </ul>
-
 </header>
 <div class="post-list-item-desc">
 <p>{{ post.excerpt | default: '' | strip_html | normalize_whitespace | truncate: 200 | escape }}

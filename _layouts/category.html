@@ -12,7 +12,6 @@ Subskrybuj kategorię {{ page.category_name | escape }}
 </p>
 {% for post in site.categories[page.category] %}
 <h3><a href = "/blog/{{post.url}}">{{ post.title }}</a></h3>
-
 <div class="post-list-item">
 <p>{{ post.excerpt | default: '' | strip_html | normalize_whitespace | truncate: 200 | escape }}
 <a href="/blog/{{ post.url }}"> Czytaj więcej</a>
