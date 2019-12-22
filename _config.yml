@@ -1,7 +1,7 @@
 title: Igor Kowalczyk Blog
 email:
 description: Igor Kowalczyk blog
-baseurl: "/blog"
+baseurl: "/blog/"
 url: "https://igorkowalczyk.github.io/blog"
 twitter_username:
 github_username:  IgorKowalczyk
