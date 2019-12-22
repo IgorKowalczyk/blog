@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Anonymous+Pro');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    color: #212121;
+    font-weight: 400;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body {
+    font-size: 1em;
+}
+code, code span {
+    font-family: 'Anonymous Pro', monospace;
+    line-height: 1.5em;
+    font-size: 0.9em;
+}
+blockquote {
+    background: #DCEDC8;
+    border-left: solid #558B2F 5px;
+    margin-left: 1em;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0.8em;
+    font-style: italic;
+}
+blockquote p {
+    padding: 0;
+}
+.highlighter-rouge {
+    background-color: #DCEDC8;
+    overflow-x: scroll;
+    box-sizing: border-box;
+    padding: 0.2em;
+    margin: 1em 0;
+}
+.main-header .logo {
+    width: 50px;
+}
+.main-header a {
+    color: #000;
+    text-decoration: none;
+}
+.main-header a:hover{
+    text-decoration: underline;
+    color: #212121;
+}
+.main-header {
+      box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+main a, footer a {
+    color: #388E3C;
+    font-weight: 600;
+}
+main{
+font-size:1.2em;
+}
+.post-header{
+    padding-bottom: 1em;
+}
+footer{
+    border-top: #8BC34A solid 1px;
+}
+p, h2,h3,h4,h5,h6{
+    padding-bottom: 0.8em;
+}
+h2,h3,h4,h5,h6{
+    font-weight: 500;
+}
+.page-title, .post-title {
+    font-size: 1.5em;
+    line-height: 1.3em;
+}
+.post-meta{
+    border-bottom: #8BC34A solid 1px;
+    margin-bottom: 1em;
+}
+.post-list-item h3 a, .post-content h3{
+    font-size: 1.3em;
+    color: #33691E;
+    font-weight: 600;
+}
+.post-content p {
+    line-height: 1.6em;
+}
+.post-list-item {
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+}
+.post-list-item-desc {
+    padding: 0.5em 0;
+}
+.post img{
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+}
+.post ul li {
+    list-style-type: disc;
+    list-style-position: inside;
+    padding-bottom: 1em;
+    line-height: 1.6em;
+}
+.post ol li {
+    list-style-type: decimal;
+    list-style-position: inside;
+    padding-bottom: 1em;
+    line-height: 1.6em;
+}
+.home a:hover, .post a:hover {
+    text-decoration: underline;
+}
+
+@media  (min-width: 427px) {
+    .main-nav{
+        display: flex;
+        justify-content: space-between;
+    }
+    .menu-icon{
+        display: none;
+    }
+    .social-icon {
+        width: 32px;
+    }
+    .main-header, .main-header h1 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: 300;
+        box-sizing: border-box;
+    }
+
+
+    .main-nav ul {
+        display: flex;
+        align-items: center;
+    }
+    .main-nav ul li {
+        list-style: none;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+    .main-header, .post-list-item{
+        border-bottom: #8BC34A solid 1px;
+    }
+    main, footer{
+        padding: 10px;
+    }
+    .post-list {
+        list-style: none;
+    }
+}
+@media (min-width:765px) {
+    .main-header, main, footer{
+        padding: 10px 5%;
+    }
+    h1{
+        font-size: 1.2em
+    }
+     .main-nav {
+        font-size: 1em;
+    }
+    .social-icon, .logo img{
+        width: 32px;
+    }
+    .post, .home {
+        padding:3% 10%;
+    }
+    footer {
+        display: flex;
+        justify-content: space-around;
+    }
+}
+@media (min-width:1080px) {
+    h1 {
+        font-size: 2em;
+    }
+    .main-header, main, footer{
+        padding: 10px 20%;
+    }
+    .post, .home{
+        padding:3% 15%;
+    }
+}
+@media (max-width: 426px){
+    .main-header{
+        margin: 0;
+        display: block;
+        box-sizing: border-box;
+        justify-content: space-around;
+        position: relative;
+        clear: both;
+        height: auto;
+    }
+    .main-header h1 {
+        display: flex;
+        float: left;
+    }
+    .social-icon {
+        width: 40px;
+    }
+    .menu-icon {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 20px;
+    }
+    .main-nav {
+        display: block;
+        flex: none;
+    }
+    .main-nav ul li, .main-nav ul {
+        clear: both;
+        display: block;
+        width: 100%;
+
+    }
+    .main-nav ul li {
+        padding: 10px;
+        border-bottom: #8BC34A solid 1px;
+    }
+    main, footer{
+        clear: both;
+        padding: 5px;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+    }
+    .post {
+        padding: 2%;
+    }
+
+}
+.hidden {
+    display: none;
+}
+.cat {
+    display: flex;
+    list-style-image: url("/img/cat-small.png");
+    list-style-position: inside;
+}
+
+.pagination {
+	display: flex;
+	justify-content: space-between;
+}

@@ -1,0 +1,32 @@
+---
+layout: default
+comments: true
+---
+<article class="post">
+<header class="post-header">
+<h2 class="post-title" >{{ page.title | escape }}</h2>
+<p class="post-meta">
+<time datetime="{{ page.date | date_to_xmlschema }}">
+{{ page.date | date: "%d-%m-%Y" }}
+</time>
+<ul class="cat">
+{% for category in page.categories %}
+<li>
+<a href="/categories/{{ category }}.html">
+{{ category }}
+</a>
+</li>
+{% endfor %}
+</ul>
+
+</p>
+</header>
+<section class="post-content">
+{{ content }}
+</section>
+
+{% if site.disqus.shortname %}
+{% include disqus_comments.html %}
+{% endif %}
+
+</article>

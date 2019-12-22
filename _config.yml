@@ -1,0 +1,23 @@
+title: Igor Kowalczyk Blog
+email:
+description: >
+Igor Kowalczyk blog
+baseurl: "/blog"
+url: "https://igorkowalczyk.github.io/blog"
+twitter_username:
+github_username:  IgorKowalczyk
+timezone: 'Europe/Warsaw'
+paginate: 8
+disqus:
+    shortname: 
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+exclude:
+  - Gemfile
+  - Gemfile.lock
+categories_names:
+    'offtop': "offtop"
+

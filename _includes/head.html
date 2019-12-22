@@ -1,0 +1,14 @@
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width initial-scale=1">
+<meta name="description" content="{{site.description}}">
+<link rel="stylesheet" href="/blog/css/syntax.css">
+<link rel="stylesheet" href="/blog/css/style.css">
+<link rel="icon" type="image/png" href="/blog/favicon.png">
+{% feed_meta %}
+<title> {% if page.title %}
+{{ page.title}} - {{site.title}}
+{% else %} {{site.title}}
+{% endif %}
+</title>
+</head>
