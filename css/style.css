@@ -15,9 +15,8 @@ src: url("https://igorkowalczyk.github.io/blog/fonts/Montserrat-Medium.ttf");
 * {
 margin: 0;
 padding: 0;
-font-family: 'Montserrat;
+font-family: 'Montserrat';
 color: #212121;
-font-weight: 400;
 box-sizing: border-box;
 text-decoration: none;
 }
