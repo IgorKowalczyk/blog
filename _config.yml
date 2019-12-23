@@ -1,5 +1,5 @@
 title: Igor Kowalczyk Blog
-email:
+email: xxmajonezxx@gmail.com
 description: Igor Kowalczyk blog
 baseurl: "/blog/"
 url: "https://igorkowalczyk.github.io/blog"
@@ -8,7 +8,7 @@ github_username:  IgorKowalczyk
 timezone: 'Europe/Warsaw'
 paginate: 8
 disqus:
-    shortname: 
+    shortname: igorkowalczykblog
 markdown: kramdown
 theme: minima
 plugins:
