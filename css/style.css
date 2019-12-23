@@ -12,6 +12,57 @@ font-weight: 500;
 src: url("https://igorkowalczyk.github.io/blog/fonts/Montserrat-Medium.ttf");
 }
 
+.preloader {
+height: 100%;
+width: 100%;
+background: #fff;
+position: fixed;
+left: 0;
+top: 0;
+z-index: 99999;
+perspective: 1600px;
+perspective-origin: 20% 50%;
+transition: 0.5s all;
+opacity: 1;
+}
+
+.spinner {
+width: 80px;
+height: 80px;
+border: 2px solid #f3f3f3;
+border-top: 3px solid #00a3a3;
+border-radius: 100%;
+position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+margin: auto;
+animation: spin 1s infinite linear;
+}
+
+.preloader.fade {
+opacity: 0;
+}
+
+@keyframes spin {
+from {
+transform: rotate(0deg);
+}
+to {
+transform: rotate(360deg);
+}
+}
+
+@keyframes ico {
+from {
+transform: rotateY(0deg);
+}
+to {
+transform: rotateY(360deg);
+}
+}
+
 * {
 margin: 0;
 padding: 0;
@@ -58,6 +109,16 @@ body {
 font-size: 1em;
 position: relative;
 padding-bottom: 100px;
+animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+0% {
+opacity:0;
+}
+100% {
+opacity:1;
+}
 }
 
 code, code span {

@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html lang="pl">
 {% include head.html %}
-<body>
+<link rel="stylesheet" href="/blog/css/syntax.css">
+<link rel="stylesheet" href="/blog/css/style.css">
+<body ondragstart="return false" ondrag="return false">
+<script tyle="text/javascript">var preload = document.createElement('div'); preload.className = "preloader"; preload.innerHTML = '</div><div class="spinner"></div>'; document.body.appendChild(preload); window.addEventListener('load', function() { preload.className +=  ' fade'; setTimeout(function(){ preload.style.display = 'none'; },500); })</script>
+<header>
 {% include header.html %}
 <main class="main-content">
 {{content}}
