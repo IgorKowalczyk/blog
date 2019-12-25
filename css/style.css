@@ -12,6 +12,26 @@ font-weight: 500;
 src: url("https://igorkowalczyk.github.io/blog/fonts/Montserrat-Medium.ttf");
 }
 
+.no-js {
+background: #f44336;
+font-family: 'Roboto-Thin';
+color: #fff;
+text-align: center;
+display: -ms-flexbox;
+display: -webkit-flex;
+display: flex;
+-ms-flex-align: center;
+-webkit-box-align: center;
+align-items: center;
+justify-content: center;
+position: absolute;
+user-select: none;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+}
+
 .preloader {
 height: 100%;
 width: 100%;
