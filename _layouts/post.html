@@ -9,7 +9,7 @@ comments: true
 <time datetime="{{ page.date | date_to_xmlschema }}">
 {{ page.date | date: "%d-%m-%Y" }}
 </time>
-<ul class="categories-text">
+<ul class="cat">
 {% for category in page.categories %}
 <li>
 <a href="/blog/categories/{{ category }}.html">
