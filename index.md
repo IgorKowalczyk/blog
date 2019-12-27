@@ -1,5 +1,5 @@
 ﻿---
-layout: index
+layout: default
 ---
 <section class="home">
 	<h2 class="page-title">
