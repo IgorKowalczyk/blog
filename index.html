@@ -1,7 +1,6 @@
 ﻿---
 layout: default
 ---
-
 <section class="home">
 <h2 class="page-title">
 {{ page.title }}
@@ -14,7 +13,7 @@ layout: default
 <a href="/blog{{ /post.url }}"> {{ post.title }}</a>
 </h3>
 <time datetime="{{ post.date | date_to_xmlschema}}">{{post.date | date: "%d-%m-%Y"}}</time>
-<ul class="cat">
+<ul class="caet">
 {% for category in post.categories %}
 <li>
 <a href="/blog/categories/{{ category }}.html">
