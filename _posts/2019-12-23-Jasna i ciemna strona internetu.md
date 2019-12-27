@@ -5,7 +5,7 @@ category: internet
 ---
 Witajcie, dzisiaj opowiem o jasnej i ciemnej stronie internetu. Może i dziwny temat ale bardzo potrzebny.
 
-## Typy stron
+# Typy stron
 
 Dzisiaj w internecie można spotkać wiele stron nie koniecznie tych bezpiecznych. Ze wszystkich stron internetowych
 wyróżnię dzisiaj 2 typy - jasną strone i ciemną strone.
@@ -16,7 +16,7 @@ Do 2 strony internetu (tej złej) należa za to strony totalnie inne od tych wy�
 wykożystują często skrypty śledzące i formy logowania czy rejestracji do zbierania informacji o nas. Niektóre z nich oferują także niebezpieczne oprogramowanie komputerowe czy proszą nas o zainstalowanie
 dodatku do przeglądarki.
 
-## Jak się przed niebezpiecznymi stronami chronić?
+# Jak się przed niebezpiecznymi stronami chronić?
 
 Chronić się przed niebezpiecznymi stronami jest wbrew pozorom bardzo ciężko. Przeglądarki próbują nas chronić wykożystując
 różne filtry ale pamiętajmy żaden filtr nie jest w 100% bezpieczny. Chronić się możemy za to my, możemy nie klikać w podejżane linki,
