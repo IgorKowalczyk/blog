@@ -415,8 +415,14 @@ padding: 2%;
 display: none;
 }
 
-.cat {
+.categories {
 display: flex;
+}
+
+.categories:before {
+content: 'Kategorie:';
+line-height: 1.6em;
+padding-right: 5px;
 }
 
 .pagination {
