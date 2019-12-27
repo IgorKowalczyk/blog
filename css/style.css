@@ -415,11 +415,11 @@ padding: 2%;
 display: none;
 }
 
-.categories {
+.categories-text {
 display: flex;
 }
 
-.categories:before {
+.categories-text:before {
 content: 'Kategorie:';
 line-height: 1.6em;
 padding-right: 5px;
