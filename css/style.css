@@ -647,7 +647,7 @@ background: var(--white) !important;
 resize: vertical !important;
 }
 
-.commento-root .commento-card .commento-name, .commento-root .commento-card .commento-score, .commento-root .commento-card .commento-timeago, .commento-root .commento-footer .commento-logo-container .commento-logo-text, .commento-root .commento-logged-container .commento-logged-in-as .commento-name, .commento-root .commento-mod-tools button, .commento-root .commento-logged-container .commento-profile-button {
+.commento-root .commento-card .commento-name, .commento-root .commento-card .commento-score, .commento-root .commento-card .commento-timeago, .commento-root .commento-footer .commento-logo-container .commento-logo-text, .commento-root .commento-logged-container .commento-logged-in-as .commento-name, .commento-root .commento-mod-tools button, .commento-root .commento-logged-container .commento-profile-button, .commento-root *, .commento-root input[type="text"], .commento-root textarea {
 color: var(--text) !important;
 }
 
