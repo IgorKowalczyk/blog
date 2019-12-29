@@ -704,3 +704,37 @@ color: var(--text) !important;
 .commento-root input[type="text"], .commento-root textarea {
 border: 1px solid var(--text) !important;
 }
+
+.commento-root .commento-login-box-container .commento-login-box {
+background: var(--white);
+}
+
+.commento-root .commento-login-box-container .commento-login-box .commento-login-box-close:hover {
+transition: 500ms all !important;
+}
+
+.commento-root .commento-login-box-container .commento-login-box .commento-login-box-close::after, .commento-root .commento-login-box-container .commento-login-box .commento-login-box-close::before {
+background-color: var(--text) !important;
+}
+
+.commento-root .commento-login-box-container .commento-login-box .commento-email-container .commento-email .commento-input {
+background: var(--white) !important;
+}
+
+.commento-root .commento-login-box-container .commento-login-box .commento-email-container .commento-email {
+background: var(--white);
+}
+
+.commento-root .commento-login-box-container .commento-login-box .commento-email-container .commento-email .commento-email-button {
+background: var(--checkbox);
+color: var(--checkbox-after) !important;
+border-radius: 3px;
+}
+
+.commento-root .commento-login-box-container .commento-login-box .commento-email-container .commento-email, .commento-root .commento-login-box-container .commento-login-box .shadow {
+box-shadow: none;
+}
+
+.commento-root .commento-login-box-container .commento-login-box {
+box-shadow: 0 4px 6px rgba(50,50,93,.11),0 1px 3px rgba(0,0,0,.08);
+}
