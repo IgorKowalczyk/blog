@@ -186,11 +186,11 @@ font-size: 1em;
 background: var(--white);
 position: relative;
 padding-bottom: 100px;
-animation: fadein 1s ease-in;
 }
 
 html {
 background: var(--white);
+animation: fadein 1s ease-in;
 }
 
 @keyframes fadein {
