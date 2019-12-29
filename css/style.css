@@ -696,3 +696,11 @@ transition: 300ms all !important;
 .commento-root .commento-button {
 color: var(--checkbox-after) !important;
 }
+
+.commento-root textarea::placeholder {
+color: var(--text) !important;
+}
+
+.commento-root input[type="text"], .commento-root textarea {
+border: 1px solid var(--text) !important;
+}
