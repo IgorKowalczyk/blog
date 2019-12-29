@@ -14,6 +14,8 @@
 --preloader: #fff;
 --spinner: #00a3a3;
 --spinner-border: #f3f3f3;
+--checkbox: #00a3a3;
+--checkbox-after: #fff;
 }
 
 [data-theme="dark"] {
@@ -32,6 +34,8 @@
 --preloader: #222;
 --spinner: #888;
 --spinner-border: #333;
+--checkbox: #fff;
+--checkbox-after: #000;
 }
 
 svg {
@@ -182,10 +186,14 @@ font-size: 1em;
 background: var(--white);
 position: relative;
 padding-bottom: 100px;
-animation: fadeIn 1s ease-in;
+animation: fadein 1s ease-in;
 }
 
-@keyframes fadeIn {
+html {
+background: var(--white);
+}
+
+@keyframes fadein {
 0% {
 opacity:0;
 }
@@ -657,4 +665,30 @@ font-family: 'Montserrat-Light' !important;
 
 .commento-root .commento-submit-button {
 background: var(--00a3a3) !important;
+}
+
+.commento-root .commento-round-check input[type="checkbox"]:checked + label::after, .commento-root .commento-round-check input[type="radio"]:checked + label::after {
+border: solid var(--checkbox-after) !important;
+border-width: 0 2px 2px 0 !important;
+}
+
+.commento-root .commento-round-check input[type="checkbox"]:checked + label::before, .commento-root .commento-round-check input[type="radio"]:checked + label::before {
+background: var(--checkbox) !important;
+border: 1px solid var(--checkbox) !important;
+}
+
+.commento-root .commento-round-check input[type="checkbox"] + label::after, .commento-root .commento-round-check input[type="radio"] + label::after {
+position: absolute !important;
+left: -7px !important;
+top: 4px !important;
+content: '' !important;
+display: inline-block !important;
+width: 3px !important;
+height: 7px !important;
+transform: rotate(45deg) !important;
+margin-left: 12px !important;
+margin-right: 12px !important;
+border: solid transparent !important;
+border-width: 0 2px 2px 0 !important;
+transition: 300ms all !important;
 }
