@@ -664,7 +664,7 @@ font-family: 'Montserrat-Light' !important;
 }
 
 .commento-root .commento-submit-button {
-background: var(--00a3a3) !important;
+background: var(--checkbox) !important;
 }
 
 .commento-root .commento-round-check input[type="checkbox"]:checked + label::after, .commento-root .commento-round-check input[type="radio"]:checked + label::after {
@@ -691,4 +691,8 @@ margin-right: 12px !important;
 border: solid transparent !important;
 border-width: 0 2px 2px 0 !important;
 transition: 300ms all !important;
+}
+
+.commento-root .commento-button {
+color: var(--checkbox-after) !important;
 }
