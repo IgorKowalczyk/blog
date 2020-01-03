@@ -650,6 +650,12 @@ border-radius: 50%;
 text-align: center;
 }
 
+.cat:before {
+content: "Kategorie:";
+margin-right: 5px;
+line-height: 1.6em;
+}
+
 textarea {
 background: var(--white) !important;
 resize: vertical !important;
