@@ -28,3 +28,13 @@ localStorage.setItem('theme', 'light');
 }
 }
 toggletheme.addEventListener('change', switchtheme, false);
+
+document.addEventListener('click', function(event) {
+if (!event.target.tagName !== 'A') return;
+event.preventDefault();
+var link = event.target;
+document.body.style.opacity = 0;
+document.body.addEventListener("transitionend", function() {
+location.href = link.href;
+});
+});

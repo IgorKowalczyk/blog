@@ -185,15 +185,17 @@ body {
 font-size: 1em;
 background: var(--white);
 position: relative;
+-webkit-animation: fade 500ms ease-in;
+animation: fade 500ms ease-in;
+transition: opacity 500ms;
 padding-bottom: 100px;
 }
 
 html {
 background: var(--white);
-animation: fadein 1s ease-in;
 }
 
-@keyframes fadein {
+@keyframes fade {
 0% {
 opacity:0;
 }
