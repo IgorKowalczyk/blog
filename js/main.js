@@ -30,7 +30,7 @@ localStorage.setItem('theme', 'light');
 toggletheme.addEventListener('change', switchtheme, false);
 
 document.addEventListener('click', function(event) {
-if (!event.target.tagName !== 'A') return;
+if (!event.target.classList.contains("link-fade")) return; 
 event.preventDefault();
 var link = event.target;
 document.body.style.opacity = 0;
