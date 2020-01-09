@@ -30,7 +30,7 @@ localStorage.setItem('theme', 'light');
 toggletheme.addEventListener('change', switchtheme, false);
 
 document.addEventListener('click', function(event) {
-if (!event.target.classList.contains("link-fade")) return; 
+if (event.target.tagName !== "A" || !event.target.href) return;
 event.preventDefault();
 var link = event.target;
 document.body.style.opacity = 0;
@@ -38,3 +38,6 @@ document.body.addEventListener("transitionend", function() {
 location.href = link.href;
 });
 });
+
+var date = document.querySelector(".date");
+date.innerHTML = (new Date().getFullYear());

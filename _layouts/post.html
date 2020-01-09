@@ -12,7 +12,7 @@ comments: true
 <ul class="cat">
 {% for category in page.categories %}
 <li>
-<a href="/blog/categories/{{ category }}.html" class="link-fade">
+<a href="/blog/categories/{{ category }}.html">
 {{ category }}
 </a>
 </li>
@@ -23,8 +23,6 @@ comments: true
 <section class="post-content">
 {{ content }}
 </section>
-
 <div id="commento"></div>
 <script src="https://cdn.commento.io/js/commento.js" data-hide-deleted="true"></script>
-
 </article>
