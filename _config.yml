@@ -7,17 +7,14 @@ twitter_username:
 github_username:  IgorKowalczyk
 timezone: 'Europe/Warsaw'
 paginate: 8
-disqus:
-    shortname: igorkowalczykblog
 markdown: kramdown
 theme: minima
 plugins:
-  - jekyll-feed
-  - jekyll-paginate
+- jekyll-feed
+- jekyll-paginate
 exclude:
-  - Gemfile
-  - Gemfile.lock
+- Gemfile
+- Gemfile.lock
 categories_names:
-    'offtop': "offtop"
-    'internet': "internet"
-
+'offtop': "offtop"
+'internet': "internet"
