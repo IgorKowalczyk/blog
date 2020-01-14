@@ -8,11 +8,11 @@ comments: true
 <p class="post-meta">
 <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%d-%m-%Y" }}</time>
 <ul class="cat">
-{% for category in page.categories %}
 <li>
-<a href="/blog/categories/{{ category }}.html">{{ category }} </a>
-</li>
+{% for category in page.categories %}
+<a href="/blog/categories/{{ category }}.html">{{ category }}</a>&nbsp;
 {% endfor %}
+</li>
 </ul>
 </p>
 </header>

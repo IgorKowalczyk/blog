@@ -12,11 +12,11 @@ layout: default
 </h3>
 <time datetime="{{ post.date | date_to_xmlschema}}">{{post.date | date: "%d-%m-%Y"}}</time>
 <ul class="cat">
-{% for category in post.categories %}
 <li>
+{% for category in page.categories %}
 <a href="/blog/categories/{{ category }}.html">{{ category }}</a>&nbsp;
-</li>
 {% endfor %}
+</li>
 </ul>
 </header>
 <div class="post-list-item-desc">
