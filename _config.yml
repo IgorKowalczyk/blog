@@ -1,9 +1,8 @@
 title: Igor Kowalczyk Blog
 email: xxmajonezxx@gmail.com
-description: Igor Kowalczyk blog
+description: Blog na którym pojawiają się wpisy na temat programowania lub innych technologi.
 baseurl: "/blog/"
 url: "https://igorkowalczyk.github.io/blog"
-twitter_username:
 github_username:  IgorKowalczyk
 timezone: 'Europe/Warsaw'
 paginate: 8
@@ -16,5 +15,5 @@ exclude:
 - Gemfile
 - Gemfile.lock
 categories_names:
-'offtop': "offtop"
-'internet': "internet"
+'offtop': "Offtop"
+'internet': "Internet"
