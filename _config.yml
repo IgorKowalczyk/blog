@@ -9,11 +9,11 @@ paginate: 8
 markdown: kramdown
 theme: minima
 plugins:
-- jekyll-feed
-- jekyll-paginate
+ - jekyll-feed
+ - jekyll-paginate
 exclude:
-- Gemfile
-- Gemfile.lock
+ - Gemfile
+ - Gemfile.lock
 categories_names:
-'offtop': "Offtop"
-'internet': "Internet"
+ 'offtop': "Offtop"
+ 'internet': "Internet"
