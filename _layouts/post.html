@@ -12,7 +12,9 @@ comments: true
 <ul class="cat">
 {% for category in page.categories %}
 <li>
-<a href="/blog/categories/{{ category }}.html">{{ category }}</a> 
+<a href="/blog/categories/{{ category }}.html">
+{{ category }}
+</a> 
 </li>
 {% endfor %}
 </ul>
