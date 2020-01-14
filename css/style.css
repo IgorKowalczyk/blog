@@ -663,6 +663,18 @@ margin-right: 5px;
 line-height: 1.6em;
 }
 
+header:not(.post-header) > .cat:before {
+line-height: 1.3em;
+}
+
+.cat li a:after  {
+content: ",";
+}
+
+.cat li a:last-of-type:after  {
+content: "";
+}
+
 textarea {
 background: var(--white) !important;
 resize: vertical !important;
