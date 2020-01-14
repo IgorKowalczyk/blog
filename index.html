@@ -8,13 +8,13 @@ layout: default
 <li class="post-list-item">
 <header>
 <h3 >
-<a href="/blog{{ /post.url }}"> {{ post.title }}</a>
+<a href="/blog{{ /post.url }}">{{ post.title }}</a>
 </h3>
 <time datetime="{{ post.date | date_to_xmlschema}}">{{post.date | date: "%d-%m-%Y"}}</time>
 <ul class="cat">
 <li>
 {% for category in post.categories %}
-<a href="/blog/categories/{{ category }}.html">{{ category }}</a>&nbsp;
+<a href="/blog/categories/{{ category }}">{{ category }}</a>&nbsp;
 {% endfor %}
 </li>
 </ul>
