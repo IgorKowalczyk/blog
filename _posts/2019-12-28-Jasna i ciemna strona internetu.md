@@ -1,7 +1,7 @@
 ﻿---
 layout: post
 title: "Jasna i ciemna strona internetu"
-category: internet testowakategoria
+categories: internet testowakategoria
 ---
 
 Witajcie, dzisiaj opowiem o jasnej i ciemnej stronie internetu. Może i dziwny temat ale bardzo potrzebny. Ten wpis jest pierwszym z wielu wpisów które mają się pojawić na tym blogu - będą dotyczyły bezpieczeństwa w sieci.

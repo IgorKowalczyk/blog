@@ -2,23 +2,19 @@
 layout: default
 ---
 <section class="home">
-<h2 class="page-title">
-{{ page.title }}
-</h2>
+<h2 class="page-title">{{ page.title }}</h2>
 <ul class="post-list">
 {% for post in paginator.posts %}
 <li class="post-list-item">
 <header>
 <h3 >
-<a href="{{ post.url }}"> {{ post.title }}</a>
+<a href="{{ post.url }}">{{ post.title }}</a>
 </h3>
 <time datetime="{{ post.date | date_to_xmlschema}}">{{post.date | date: "%d-%m-%Y"}}</time>
 <ul class="cat">
 {% for category in post.categories %}
 <li>
-<a href="/blog/categories/{{ category }}.html">
-{{ category }}
-</a>
+<a href="/blog/categories/{{ category }}.html">{{ category }}</a>
 </li>
 {% endfor %}
 </ul>
