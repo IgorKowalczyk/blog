@@ -212,9 +212,10 @@ font-size: 0.9em;
 }
 
 blockquote {
-background: #fff;
+background: var(--white);
 border-left: solid var(--text) 5px;
 margin-left: 1em;
+color: var(--text);
 padding: 1em;
 display: flex;
 flex-direction: column;
