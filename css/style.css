@@ -682,6 +682,64 @@ background: var(--white) !important;
 resize: vertical !important;
 }
 
+::-webkit-input-placeholder {
+color: #868b95;
+-webkit-transition: 300ms;
+transition: 300ms;
+-moz-user-select: none;
+user-select: none;
+}
+
+:-moz-placeholder {
+color: #868b95;
+-moz-transition: 300ms;
+transition: 300ms;
+-moz-user-select: none;
+user-select: none;
+}
+
+::-moz-placeholder {
+color: #868b95;
+-moz-transition: 300ms;
+transition: 300ms;
+-moz-user-select: none;
+user-select: none;
+font-family: 'Roboto-Light';
+}
+
+:-ms-input-placeholder {
+color: #868b95;
+-ms-transition: 300ms;
+transition: 300ms;
+-moz-user-select: none;
+user-select: none;
+}
+
+:focus::-webkit-input-placeholder {
+opacity: 0;
+-webkit-transition: 300ms;
+transition: 300ms;
+}
+
+:focus:-moz-placeholder {
+opacity: 0;
+-moz-transition: 300ms;
+transition: 300ms;
+}
+
+:focus::-moz-placeholder {
+opacity: 0;
+-moz-transition: 300ms;
+transition: 300ms;
+}
+
+:focus:-ms-input-placeholder {
+opacity: 0;
+-ms-transition: 300ms;
+transition: 300ms;
+font-family: 'Roboto-Light';
+}
+
 .highlight .c { color: #999988; font-style: italic } /* Comment */
 .highlight .err { color: #a61717; background-color: #e3d2d2 } /* Error */
 .highlight .k { font-weight: bold } /* Keyword */
