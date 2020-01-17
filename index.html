@@ -8,7 +8,7 @@ layout: default
 <li class="post-list-item">
 <header>
 <h3 >
-<a href="/blog{{ /post. }}">{{ post.title }}</a>
+<a href="/blog{{ /post.url }}">{{ post.title }}</a>
 </h3>
 <time datetime="{{ post.date | date_to_xmlschema}}">{{post.date | date: "%d-%m-%Y"}}</time>
 <ul class="cat">
@@ -21,7 +21,7 @@ layout: default
 </header>
 <div class="post-list-item-desc">
 <p>{{ post.excerpt | default: '' | strip_html | normalize_whitespace | truncate: 200 | escape }}
-<a href="/blog{{ /post }}"> Czytaj więcej</a>
+<a href="/blog{{ /post.url }}"> Czytaj więcej</a>
 </p>
 </div>
 </li>
