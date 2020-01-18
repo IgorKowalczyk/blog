@@ -446,6 +446,12 @@ transition: 500ms all !important;
 z-index: 9999;
 }
 
+@media screen and (max-width: 705px) {
+a:hover:before {
+visibility: hidden;
+}
+}
+
 .nav:not(.nav-scroled):hover, .nav.nav-scrolled {
 box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.1), 0 1px 3px 0 rgba(0, 0, 0, 0.08);
 }
