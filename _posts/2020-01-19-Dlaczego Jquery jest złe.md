@@ -31,4 +31,4 @@ Pierwsze wydanie **Jquery zostało wydane 26 sierpnia 2006 roku**. Dawno temu al
 
 Dzisiejsze techniki różnią się znacząco od tego co jest wykorzystywane w Jquery, niektóre rozwiązania są po prostu w dzisiejszych czasach gorsze, ponieważ wiele się zmieniło od 2006 roku. Przykładem takich zestarzałych rozwiązań są np. `fadeIn` i `fadeOut`. Dzisiaj używa się raczej `classListadd` a w klasie np. `display: none;`
 
-Więc, wychodzi z tego wszystkiego że **Jquery jest złe**,  może kiedyś było dobre, a nawet bardzo dobre ale z upływem czasu zmieniło się na gorsze, powstały inne lepsze na ten czas biblioteki.
+Więc, wychodzi z tego wszystkiego że **Jquery jest złe**,  może kiedyś było dobre, a nawet bardzo dobre ale z upływem czasu zmieniło się na gorsze, powstały inne lepsze na ten czas biblioteki. Co wy na to myślicie?

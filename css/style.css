@@ -18,6 +18,7 @@
 --spinner-border: #f3f3f3;
 --checkbox: #00a3a3;
 --checkbox-after: #fff;
+--code: #0000000d;
 }
 
 [data-theme="dark"] {
@@ -38,6 +39,7 @@
 --spinner-border: #333;
 --checkbox: #fff;
 --checkbox-after: #000;
+--code: #212121;
 }
 
 svg {
@@ -209,6 +211,9 @@ opacity:1;
 code, code span {
 line-height: 1.5em;
 font-size: 0.9em;
+border-radius: 3px;
+padding: 2px 4px;
+word-break: keep-all;
 }
 
 blockquote {
@@ -229,12 +234,12 @@ padding: 0;
 }
 
 .highlighter-rouge {
-background-color: #fff;
+background-color: var(--code);
 overflow-x: scroll;
 box-sizing: border-box;
-padding: 0.2em;
+padding: .2em;
 margin: 1em 0;
-}
+color: var(--f4f4f4);
 
 main a, footer a {
 color: var(--text) !important;
