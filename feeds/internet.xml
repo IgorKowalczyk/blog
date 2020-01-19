@@ -4,7 +4,7 @@ layout: null
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
 <title>{{site.title}} {{category}}</title>
-<description>Wpisy z kategorii Internet</description>
+<description>Wpisy z kategorii "Internet"</description>
 <link>{{ site.url }}</link>
 {% for post in site.categories.internet %}
 {% unless post.draft %}

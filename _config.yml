@@ -17,3 +17,5 @@ exclude:
 categories_names:
  'offtop': "Offtop"
  'internet': "Internet"
+ 'programowanie': "Programowanie"
+ 'javascript': "JavaScript"
