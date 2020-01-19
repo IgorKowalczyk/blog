@@ -239,7 +239,8 @@ overflow-x: scroll;
 box-sizing: border-box;
 padding: .2em;
 margin: 1em 0;
-color: var(--f4f4f4);
+color: var(--text);
+}
 
 main a, footer a {
 color: var(--text) !important;
