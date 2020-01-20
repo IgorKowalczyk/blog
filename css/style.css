@@ -212,7 +212,6 @@ code, code span {
 line-height: 1.5em;
 font-size: 0.9em;
 border-radius: 3px;
-padding: 2px 4px;
 word-break: keep-all;
 }
 
@@ -237,7 +236,7 @@ padding: 0;
 background-color: var(--code);
 overflow-x: scroll;
 box-sizing: border-box;
-padding: .2em;
+padding: 2px 4px;
 margin: 1em 0;
 color: var(--text);
 }
