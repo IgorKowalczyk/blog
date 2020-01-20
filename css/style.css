@@ -234,7 +234,7 @@ padding: 0;
 
 .highlighter-rouge {
 background-color: var(--code);
-overflow-x: scroll;
+overflow-x: hidden;
 box-sizing: border-box;
 padding: 2px 4px;
 margin: 1em 0;
@@ -815,8 +815,20 @@ white-space: pre-wrap;
 .highlight .vg { color: #008080 } /* Name.Variable.Global */
 .highlight .vi { color: #008080 } /* Name.Variable.Instance */
 .highlight .il { color: #009999 } /* Literal.Number.Integer.Long */
-.post > .highlight .lineno { color: #ccc; display:inline-block; padding: 0 5px; border-right:1px solid #ccc; }
-.post > .highlight pre code { display: block; white-space: pre; overflow-x: auto; word-wrap: normal; }
+
+.post > .highlight .lineno {
+color: #ccc;
+display:inline-block;
+padding: 0 5px;
+border-right:1px solid #ccc;
+}
+
+.post > .highlight pre code {
+display: block;
+white-space: pre;
+overflow-x: auto;
+word-wrap: normal;
+}
 
 .commento-root .commento-card .commento-name, .commento-root .commento-card .commento-score, .commento-root .commento-card .commento-timeago, .commento-root .commento-footer .commento-logo-container .commento-logo-text, .commento-root .commento-logged-container .commento-logged-in-as .commento-name, .commento-root .commento-mod-tools button, .commento-root .commento-logged-container .commento-profile-button, .commento-root *, .commento-root input[type="text"], .commento-root textarea {
 color: var(--text) !important;
