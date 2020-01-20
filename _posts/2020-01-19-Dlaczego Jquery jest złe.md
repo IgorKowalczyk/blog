@@ -43,6 +43,6 @@ a bez Jquery wygląda to tak:
 document.querySelectorAll('#id > tag .klasa');
 ```
 Również prosto a nie trzeba ładować całej biblioteki z dolarem?
-Kiedyś to "łapanie" elementów było totalną nowością, każdy tego używał ale dzisiaj raczej prościej jest użyć po prostu `querySelectorAll`. Jquery zmieniło się przez lata tak jak sam JavaScript i na dzień dzisiejszy IMO jest mniej użyteczne niż kiedyś.
+Kiedyś to "łapanie" elementów było totalną nowością, każdy tego używał ale dzisiaj raczej prościej jest użyć po prostu `querySelectorAll`. Jquery zmieniło się przez lata tak jak sam JavaScript i na dzień dzisiejszy Jquery IMO jest mniej użyteczny niż kiedyś.
 
 Więc, wychodzi z tego wszystkiego że **Jquery jest złe**,  może kiedyś było dobre, a nawet bardzo dobre ale z upływem czasu zmieniło się na gorsze, powstały inne, lepsze na ten czas biblioteki. Co wy na ten temat myślicie myślicie?
