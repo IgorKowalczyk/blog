@@ -715,7 +715,7 @@ color: #868b95;
 transition: 300ms;
 -moz-user-select: none;
 user-select: none;
-font-family: 'Roboto-Light';
+font-family: 'Montserrat-Light';
 }
 
 :-ms-input-placeholder {
@@ -748,7 +748,12 @@ transition: 300ms;
 opacity: 0;
 -ms-transition: 300ms;
 transition: 300ms;
-font-family: 'Roboto-Light';
+font-family: 'Montserrat-Light';
+}
+
+code {
+white-space: pre;
+white-space: pre-wrap;
 }
 
 .highlight .c { color: #999988; font-style: italic } /* Comment */
