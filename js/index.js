@@ -42,15 +42,6 @@ $anchor.href = '#' + id;
 $anchor.innerText = '#';
 $heading.appendChild($anchor);
 });
-document.querySelectorAll('a.anchor-link').forEach($anchor => {
-$anchor.addEventListener('click', function (e) {
-e.preventDefault();
-document.querySelector(this.getAttribute('href')).scrollIntoView({
-behavior: 'smooth',
-block: 'start'
-});
-});
-});
 if (window.location.hash.length > 0) {
 setTimeout(function () {
 document.querySelector('a[href="' + window.location.hash + '"]').click();
