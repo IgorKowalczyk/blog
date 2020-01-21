@@ -150,6 +150,7 @@ transition: 500ms color, 500ms background, 500ms background-color, 500ms opacity
 
 .anchor-heading .anchor-link {
 display: inline-block;
+user-select: none;
 padding-left: .25rem;
 text-decoration: none;
 opacity: 0;
@@ -165,7 +166,14 @@ opacity: 1 !important;
 }
 
 .anchor-heading:hover .anchor-link {
-opacity: .5;
+opacity: 0.5;
+}
+
+:target::before {
+content: "";
+display: block;
+height: 100px;
+margin: -100px 0 0; 
 }
 
 ::-webkit-scrollbar {
