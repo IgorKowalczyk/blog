@@ -354,7 +354,7 @@ color: var(--text) !important;
 transition: 300ms;
 }
 
-header h1:hover, h3 a:hover, main a:hover, main a:hover svg {
+main a:hover, main a:hover svg {
 color: var(--00a3a3) !important;
 fill: var(--00a3a3);
 transition: 300ms;
