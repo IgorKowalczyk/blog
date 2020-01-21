@@ -19,7 +19,7 @@ Doliczając do tego kilka innych skryptów robi się z tego niezła paczka, a ja
 
 # 2) Szybkość
 
-Jeden plik z Jquery spowalnia znacząco stronę, a co w wypadku połączeń mobilnych jest **strzałem w stopę z wyrzutni rakiet**. Użytkownicy mobilni zakładają że strona załaduje się szybko i będą mogli z niej korzystać po krótkim czasie, a co z czasem ładowania Jquery i kilku innych skryptów daje nie najlepszy wynik czasowy. Jquery nie jest szybkie 
+Jeden plik z Jquery spowalnia znacząco stronę, a co w wypadku połączeń mobilnych jest **strzałem w stopę z wyrzutni rakiet**. Użytkownicy mobilni zakładają że strona załaduje się szybko i będą mogli z niej korzystać po krótkim czasie, a co z czasem ładowania Jquery i kilku innych skryptów daje nie najlepszy wynik czasowy.
 
 **Czyli wychodzi że Jquery nie jest sprinterem.**
 
@@ -29,7 +29,7 @@ Niby nadal Jquery jest rozwijany, nadal ulepszany i nadal są wydawane nowe wers
 
 Pierwsze wydanie **Jquery zostało wydane 26 sierpnia 2006 roku**. Dawno temu ale Jquery i tak się zestarzało, może nie przez sam czas ale przez rozwiązania w nim użyte które sprawdzały się dobrze kilka lub kilkanaście lat temu ale dzisiaj są przestarzałe i nie zbyt dobre. 
 
-Dzisiejsze techniki różnią się znacząco od tego co jest wykorzystywane w Jquery, niektóre rozwiązania są po prostu w dzisiejszych czasach gorsze, ponieważ wiele się zmieniło od 2006 roku. Przykładem takich zestarzałych rozwiązań są np. `fadeIn` i `fadeOut`. Dzisiaj używa się raczej `classListadd` a w klasie np. `display: none;`, są także inne rozwiązania użyte w Jquery które dzisiaj są przestarzałe są to np. `.bind()` i `.delegate()`. Jquery jest także dzisiaj mało wydajne z animacjami (mówię to o `.animate()`
+Dzisiejsze techniki różnią się znacząco od tego co jest wykorzystywane w Jquery, niektóre rozwiązania są po prostu w dzisiejszych czasach gorsze, ponieważ wiele się zmieniło od 2006 roku. Przykładem takich zestarzałych rozwiązań są np. `fadeIn` i `fadeOut`. Dzisiaj używa się raczej `classListadd` a w klasie np. `display: none;`, są także inne rozwiązania użyte w Jquery które dzisiaj są przestarzałe są to np. `.bind()` i `.delegate()`. Jquery jest także dzisiaj mało wydajne z animacjami (mówię to o `.animate()` ).
 
 # 4) Użyteczność dawniej i dziś
 
