@@ -31,8 +31,35 @@ logocontainer.classList.remove('nav-scrolled');
 }
 });
 
+window.onload = function () {
+document.querySelectorAll('.post-content h1').forEach($heading => {
+var id = $heading.getAttribute("id") || $heading.innerText.toLowerCase().replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '').replace(/ +/g, '-');
+$heading.setAttribute('id', id);
+$heading.classList.add('anchor-heading');
+$anchor = document.createElement('a');
+$anchor.className = 'anchor-link';
+$anchor.href = '#' + id;
+$anchor.innerText = '#';
+$heading.appendChild($anchor);
+});
+document.querySelectorAll('a.anchor-link').forEach($anchor => {
+$anchor.addEventListener('click', function (e) {
+e.preventDefault();
+document.querySelector(this.getAttribute('href')).scrollIntoView({
+behavior: 'smooth',
+block: 'start'
+});
+});
+});
+if (window.location.hash.length > 0) {
+setTimeout(function () {
+document.querySelector('a[href="' + window.location.hash + '"]').click();
+}, 150);
+}
+};
+
 document.addEventListener('click', function(event) {
-if (event.target.tagName !== "A" || !event.target.href || event.target.target == "_blank") return;
+if (event.target.tagName !== "A" || !event.target.href || event.target.target == "_blank" || event.target.classList == "anchor-link") return;
 event.preventDefault();
 var link = event.target;
 document.body.style.opacity = 0;

@@ -148,6 +148,26 @@ scrollbar-width: thin;
 transition: 500ms color, 500ms background, 500ms background-color, 500ms opacity, 500ms border, 500ms border-color;
 }
 
+.anchor-heading .anchor-link {
+display: inline-block;
+padding-left: .25rem;
+text-decoration: none;
+opacity: 0;
+transition: opacity ease-in-out .25s;
+}
+
+.anchor-heading .anchor-link:before {
+visibility: hidden;
+}
+
+.anchor-heading .anchor-link:hover {
+opacity: 1 !important;
+}
+
+.anchor-heading:hover .anchor-link {
+opacity: .5;
+}
+
 ::-webkit-scrollbar {
 width: 6px;
 background-color: var(--scrollbar);
