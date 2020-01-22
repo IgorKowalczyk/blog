@@ -923,6 +923,8 @@ background-color: var(--text) !important;
 
 .commento-root .commento-login-box-container .commento-login-box .commento-email-container .commento-email .commento-input {
 background: var(--white) !important;
+border: 1px solid var(--text) !important;
+border-radius: 3px !important;
 }
 
 .commento-root .commento-login-box-container .commento-login-box .commento-email-container .commento-email {
