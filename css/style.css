@@ -937,3 +937,25 @@ transition: 500ms all !important;
 .commento-root .commento-login-box-container .commento-login-box .commento-email-container .commento-email {
 background: none !important;
 }
+
+.commento-root .commento-card {
+border: none !important;
+}
+
+.commento-root .commento-footer .commento-logo-container .commento-logo-text, .commento-root .commento-markdown-button {
+display: none !important;
+}
+
+.commento-root .commento-avatar {
+color: var(--checkbox-after) !important;
+background: var(--00a3a3) !important;
+}
+
+.commento-comments {
+margin-top: 80px;
+}
+
+@media (max-width: 399px) {
+.commento-options {
+display: none;
+}
