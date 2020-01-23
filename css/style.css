@@ -462,10 +462,6 @@ padding: 2%;
 display: none;
 }
 
-.cat {
-display: flex;
-}
-
 .pagination {
 display: flex;
 justify-content: space-between;
@@ -699,21 +695,11 @@ border-radius: 50%;
 text-align: center;
 }
 
-.cat:before {
-content: "Kategorie:";
-margin-right: 5px;
-line-height: 1.6em;
-}
-
-header:not(.post-header) > .cat:before {
-line-height: 1.3em;
-}
-
-.cat li a:after  {
+.cat span a:after  {
 content: ",";
 }
 
-.cat li a:last-of-type:after  {
+.cat span a:last-of-type:after  {
 content: "";
 }
 

@@ -35,3 +35,5 @@ na to co wysyłają nam znajomi czy obcy, mogą to być wirusy lub linki do nieb
 **Ja osobiście polecam korzystać z VPN** (Virtual Private Network), zwiększa on szanse że zostaniemy bezpieczni w sieci.
 
 **Z tego wszystkiego wychodzi że zawsze trzeba na siebie uważać w sieci. Nieważne gdzie jesteśmy i tak możemy być odsłonięci na ataki hakerów.** Niedługo pojawi się kontynuacja tego posta.
+
+**Koniecznie zobacz > [następną cześć posta](https://igorkowalczyk.github.io/blog/internet/2020/01/22/Bezpieczeństwo-w-sieci-nasze-dane)**
