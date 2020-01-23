@@ -38,7 +38,10 @@ Ten sposób wykorzystują także w innych formach np. tylko do E-Maila czy hasł
 
 # Tokeny U2F
 
-Ja osobiście bardzo polecam używać takiego klucza - daje on nam największe szanse że nasze konto nie zostanie przejęte przez inną osobę. **Fizyczne zabezpieczenie jest najlepsze - nawet najlepszy rosyjski haker nie jest w stanie wkraść się na konto z takim zabezpieczeniem** (musiał by ukraść Ci ten token z domu). **Taki token sprawdza poprawność adresu strony czy nie ma w niej literówek** (a wszyscy wiemy co oznacza literówka - fałszywą stronę), **potem wysyła poprawne dane logowania i jesteśmy bezpiecznie zalogowani**. Wiele firm na ten czas w swoich serwisach wprowadziła możliwość włączenia takiego zabezpieczenia
+Ja osobiście bardzo polecam używać takiego klucza - daje on nam największe szanse że nasze konto nie zostanie przejęte przez inną osobę. **Fizyczne zabezpieczenie jest najlepsze - nawet najlepszy rosyjski haker nie jest w stanie wkraść się na konto z takim zabezpieczeniem** (musiał by ukraść Ci ten token z domu).
 
+ **Taki token sprawdza poprawność adresu strony czy nie ma w niej literówek** (a wszyscy wiemy co oznacza literówka - fałszywą stronę), **potem wysyła poprawne dane logowania i jesteśmy bezpiecznie zalogowani**. Wiele firm na ten czas w swoich serwisach wprowadziła możliwość włączenia takiego zabezpieczenia - i to **IMO jest najlepszy sposób zabezpieczenia danych**.
+ 
+**Ale pamiętajmy wszystko musimy zabezpieczać abyśmy byli bezpieczni!** Następny wpis pojawi się niebawem. Cześć!
 
-**Koniecznie zobacz >** [poprzednią cześć posta](https://igorkowalczyk.github.io/blog/internet/2019/12/28/Jasna-i-ciemna-strona-internetu)
+**Koniecznie zobacz > [poprzednią cześć posta](https://igorkowalczyk.github.io/blog/internet/2019/12/28/Jasna-i-ciemna-strona-internetu)**
