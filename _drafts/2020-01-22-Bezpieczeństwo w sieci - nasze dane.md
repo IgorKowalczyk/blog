@@ -1,6 +1,6 @@
 ﻿---
 layout: post
-title: "Bezpieczeństwo w sieci"
+title: "Bezpieczeństwo w sieci - Nasze dane"
 categories: internet
 ---
 
@@ -12,11 +12,11 @@ Witajcie, jak mówiłem, ten wpis jest kolejną częścią serii o bezpieczeńst
 
 **Dużo ludzi popełnia fatalny błąd - podaje to samo hasło w wielu miejscach** w internecie, dla hakera 1 hasło w większości portali jest wielkim ułatwieniem bo łatwo może dopasować je do E-Maila, Loginu czy numeru telefonu. 
 
-**Po takim dopasowaniu już tylko prosta droga do zalogowania i ukradzenia konta na stałe czy na jakiś okres czasu**.
+**Po takim dopasowaniu już tylko prosta droga do zalogowania i  stracenia dostępu do konta**.
 
 # E-Maile
 
-**E-Maile - są dzisiaj bardzo powszechne, większość serwisów przy rejestracji czy przy logowaniu pyta nas o nasz E-Mail** (albo o telefon ale o tym za chwile). Jeżeli osoba hakująca posiada nasz adres E-Mail z jakiś wycieków baz danych czy sami go mu podaliśmy (nie koniecznie wysyłając mu wiadomość z E-Mailem tylko podając ten E-Mail w miejscu publicznym np. w profilu na jakimś serwisie). Jest wstanie uzyskać dostęp do hasła może i taką samą drogą jak uzyskała do E-Maila (raczej wykluczając wiadomość z hasłem od nas). Jak ma adres E-Mail i hasło do niego lub do innego serwisu - jest wstanie wykraść dalsze dane.
+**E-Maile - są dzisiaj bardzo powszechne, większość serwisów przy rejestracji czy przy logowaniu pyta nas o nasz E-Mail** (albo o telefon ale o tym za chwile). Jeżeli osoba hakująca posiada nasz adres E-Mail z jakiś wycieków baz danych czy sami go mu podaliśmy (nie koniecznie wysyłając mu wiadomość z E-Mailem tylko podając ten E-Mail w miejscu publicznym np. w profilu na jakimś serwisie). Jest wstanie uzyskać dostęp do hasła może i taką samą drogą jak uzyskał do E-Maila (raczej wykluczając wiadomość z hasłem od nas). Jak haker ma adres E-Mail i hasło do niego lub do innego serwisu - jest wstanie wykraść dalsze dane.
 
 **Teraz jest pytanie co zrobić jak ktoś nieznany zalogował się na nasz adres E-Mail** - najlepiej sprawdzić wszystkie pola w profilu (np. przekierowanie adresu E-Mail) i wylogować ze wszystkich urządzeń, potem należy zmienić hasło.
 
@@ -32,4 +32,13 @@ Jak dostaniemy wiadomość np. przepisz kod z tej wiadomości (mówię tu o **we
 
 # Weryfikacja 2 etapowa
 
-**Włączenie weryfikacji dwu etapowej zwiększa poziom bezpieczeństwa na koncie** ale i tak **takie konto jest narażone na ataki hakerów**. Mogą podać ci linka np. do zaproszenia do gry, przekierowuje na **fałszywą stronę logowania** (np. z jedną zmienioną literą, adres wygląda tak samo ale to zupełnie inny adres, **dane idą do osoby hakującej**), osoba zyskuje hasło, E-Mail (może nawet i numer telefonu) i kod weryfikacji 2 etapowej. Ten sposób wykorzystują także w innych formach np. tylko do E-Maila czy hasła. Potem na stronie można zobaczyć np. napis "Przerwa techniczna, przepraszamy itp.) **w tym wszystkim chodzi o danie hakerowi jak najwięcej czasu na uzyskanie dostępu do konta lub do samego E-Maila.**
+**Włączenie weryfikacji dwu etapowej zwiększa poziom bezpieczeństwa na koncie** ale i tak **takie konto jest narażone na ataki hakerów**. Mogą podać ci linka np. do zaproszenia do gry, przekierowuje na **fałszywą stronę logowania** (np. z jedną zmienioną literą, adres wygląda tak samo ale to zupełnie inny adres, **dane idą do osoby hakującej**), osoba zyskuje hasło, E-Mail (może nawet i numer telefonu) i kod weryfikacji 2 etapowej. 
+
+Ten sposób wykorzystują także w innych formach np. tylko do E-Maila czy hasła. Potem na stronie można zobaczyć np. napis "Przerwa techniczna, przepraszamy itp.) **w tym wszystkim chodzi o danie hakerowi jak najwięcej czasu na uzyskanie dostępu do konta lub do samego E-Maila.** Po takiej akcji dopiero po jakimś czasie zorientujemy się że zostaliśmy oszukani, ale zwykle już bywa za późno.
+
+# Tokeny U2F
+
+Ja osobiście bardzo polecam używać takiego klucza - daje on nam największe szanse że nasze konto nie zostanie przejęte przez inną osobę. **Fizyczne zabezpieczenie jest najlepsze - nawet najlepszy rosyjski haker nie jest w stanie wkraść się na konto z takim zabezpieczeniem** (musiał by ukraść Ci ten token z domu). **Taki token sprawdza poprawność adresu strony czy nie ma w niej literówek** (a wszyscy wiemy co oznacza literówka - fałszywą stronę), **potem wysyła poprawne dane logowania i jesteśmy bezpiecznie zalogowani**. Wiele firm na ten czas w swoich serwisach wprowadziła możliwość włączenia takiego zabezpieczenia
+
+
+**Koniecznie zobacz >** [poprzednią cześć posta](https://igorkowalczyk.github.io/blog/internet/2019/12/28/Jasna-i-ciemna-strona-internetu)
