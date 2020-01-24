@@ -1,4 +1,5 @@
-﻿---
+﻿
+---
 layout: post
 title: "Bezpieczeństwo w sieci - Nasze dane"
 categories: internet
@@ -10,7 +11,9 @@ Witajcie, jak mówiłem, ten wpis jest kolejną częścią serii o bezpieczeńst
 
 # Hasła
 
-**Dużo ludzi popełnia fatalny błąd - podaje to samo hasło w wielu miejscach** w internecie, dla hakera 1 hasło w większości portali jest wielkim ułatwieniem bo łatwo może dopasować je do E-Maila, Loginu czy numeru telefonu. 
+**Dużo ludzi popełnia fatalny błąd - podaje to samo hasło w wielu miejscach** w internecie, dla hakera jedno hasło w większości portali jest wielkim ułatwieniem bo łatwo może dopasować je do E-Maila, Loginu czy numeru telefonu.
+
+Błędem jest także ustawianie zbyt krótkiego lub zbyt prostego hasła typu: `hasło1 hasło2 hasło3`, dla hakerów to także wielkie ułatwienie.
 
 **Po takim dopasowaniu już tylko prosta droga do zalogowania i  stracenia dostępu do konta**.
 
