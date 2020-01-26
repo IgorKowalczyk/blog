@@ -3,6 +3,7 @@
 :root {
 --white: #fff;
 --text: #212121;
+--border-opacity: 33, 33, 33;
 --00a3a3: #00a3a3;
 --333: #333;
 --f4f4f4: #f4f4f4;
@@ -24,6 +25,7 @@
 [data-theme="dark"] {
 --white: #222;
 --text: #fff;
+--border-opacity: 255, 255, 255;
 --00a3a3: #fff;
 --333: #fff;
 --f4f4f4: #4a4a4a;
@@ -939,7 +941,8 @@ background: none !important;
 }
 
 .commento-root .commento-card {
-border: none !important;
+border-top: none !important;
+border-color: rgba(var(--border-opacity), 0.5) !important;
 }
 
 .commento-root .commento-footer .commento-logo-container .commento-logo-text, .commento-root .commento-markdown-button {
