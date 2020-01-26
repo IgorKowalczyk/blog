@@ -967,3 +967,7 @@ display: none;
 .commento-root a:before {
 visibility: hidden;
 }
+
+.commento-name:not(a) {
+cursor: default !important;
+}
