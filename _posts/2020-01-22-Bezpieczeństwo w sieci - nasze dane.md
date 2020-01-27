@@ -12,9 +12,9 @@ Witajcie, jak mówiłem, ten wpis jest kolejną częścią serii o bezpieczeńst
 
 **Dużo ludzi popełnia fatalny błąd - podaje to samo hasło w wielu miejscach** w internecie, dla hakera jedno hasło w większości portali jest wielkim ułatwieniem bo łatwo może dopasować je do E-Maila, Loginu czy numeru telefonu.
 
-Błędem jest także ustawianie zbyt krótkiego lub zbyt prostego hasła typu: `hasło1 hasło2 hasło3`, dla hakerów to także wielkie ułatwienie.
+Błędem jest także ustawianie zbyt krótkiego lub zbyt prostego hasła typu: `hasło1, hasło2, hasło3`, dla hakerów to także wielkie ułatwienie. Gdy używamy takiego hasła jeszcze do wielu kont, E-Maili itp. jeszcze bardziej stajemy się podatni na atak hakerów.
 
-**Po takim dopasowaniu już tylko prosta droga do zalogowania i  stracenia dostępu do konta**.
+**Po takim dopasowaniu hasła do E-Maila czy innego konta, już tylko prosta droga do zalogowania i  stracenia dostępu do konta**.
 
 # E-Maile
 
