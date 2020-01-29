@@ -970,4 +970,5 @@ visibility: hidden;
 
 .commento-name {
 cursor: default !important;
+pointer-events: none !important;
 }
