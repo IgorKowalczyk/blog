@@ -968,6 +968,6 @@ display: none;
 visibility: hidden;
 }
 
-.commento-name:not(a) {
+.commento-name {
 cursor: default !important;
 }

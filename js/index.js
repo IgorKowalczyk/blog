@@ -59,5 +59,14 @@ location.href = link.href;
 });
 });
 
+var blocklink = document.querySelector('.commento-name');
+if (window.addEventListener) {
+document.addEventListener('click', function (e) {
+if (e.target.id === blocklink.id) {
+e.preventDefault();
+}
+});
+}
+
 var date = document.querySelector(".date");
 date.innerHTML = (new Date().getFullYear());
