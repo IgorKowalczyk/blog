@@ -943,7 +943,7 @@ background: var(--00a3a3) !important;
 user-select: none !important;
 }
 
-.commento-root .commento-card .commento-score, .commento-root .commento-card .commento-timeago {
+.commento-root .commento-card .commento-score, .commento-root .commento-card .commento-timeago, .commento-root .commento-avatar-img {
 user-select: none !important;
 }
 
