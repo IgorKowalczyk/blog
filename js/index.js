@@ -44,7 +44,7 @@ $heading.appendChild($anchor);
 });
 if (window.location.hash.length > 0) {
 setTimeout(function () {
-document.querySelector('a[href="' + window.location.hash + '"]').click();
+document.querySelector('a[href="' + window.location.hash + '"]');
 }, 150);
 }
 };
