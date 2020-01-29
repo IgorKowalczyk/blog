@@ -870,18 +870,6 @@ border: 1px solid var(--checkbox) !important;
 }
 
 .commento-root .commento-round-check input[type="checkbox"] + label::after, .commento-root .commento-round-check input[type="radio"] + label::after {
-position: absolute !important;
-left: -7px !important;
-top: 4px !important;
-content: '' !important;
-display: inline-block !important;
-width: 3px !important;
-height: 7px !important;
-transform: rotate(45deg) !important;
-margin-left: 12px !important;
-margin-right: 12px !important;
-border: solid transparent !important;
-border-width: 0 2px 2px 0 !important;
 transition: 300ms all !important;
 }
 
@@ -952,6 +940,11 @@ display: none !important;
 .commento-root .commento-avatar {
 color: var(--checkbox-after) !important;
 background: var(--00a3a3) !important;
+user-select: none !important;
+}
+
+.commento-root .commento-card .commento-score, .commento-root .commento-card .commento-timeago {
+user-select: none !important;
 }
 
 .commento-comments {
