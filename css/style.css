@@ -356,6 +356,13 @@ text-decoration: none;
 @media (min-width: 427px) {
 a {
 position: relative;
+position: relative;
+text-decoration: none;
+background-image: linear-gradient(#00a3a3, #00a3a3);
+background-position: 50% 100%;
+background-repeat: no-repeat;
+background-size: 0% 2px;
+transition: background-size .3s;
 color: var(--text) !important;
 }
 
@@ -370,25 +377,8 @@ fill: var(--00a3a3);
 transition: 300ms;
 }
 
-a:before {
-content: "";
-position: absolute;
-width: 100%;
-height: 2px;
-bottom: 0;
-left: 0;
-background-color: var(--00a3a3);
-visibility: hidden;
--webkit-transform: scaleX(0);
-transform: scaleX(0);
--webkit-transition: all 0.3s ease-in-out 0s;
-transition: all 0.3s ease-in-out 0s;
-}
-
-a:hover:before {
-visibility: visible;
--webkit-transform: scaleX(1);
-transform: scaleX(1);
+a:hover {
+background-size: 100% 2px;
 }
 
 .social-icon {
@@ -409,11 +399,11 @@ main, footer {
 padding: 10px 5%;
 }
 
-h1{
+h1 {
 font-size: 1.2em
 }
 
-.social-icon, .logo img{
+.social-icon, .logo img {
 width: 32px;
 }
 
@@ -432,16 +422,16 @@ h1 {
 font-size: 2em;
 }
 
-main, footer{
+main, footer {
 padding: 10px 20%;
 }
 
-.post, .home{
+.post, .home {
 padding:3% 15%;
 }
 }
 
-@media (max-width: 426px){
+@media (max-width: 426px) {
 .social-icon {
 width: 40px;
 }
@@ -480,8 +470,8 @@ user-select: none;
 }
 
 @media screen and (max-width: 705px) {
-a:hover:before {
-visibility: hidden;
+a {
+background-size: 0%;
 }
 }
 
@@ -518,8 +508,8 @@ padding: 10px 20px;
 text-decoration: none;
 }
 
-.nav .logo a:before {
-visibility: hidden;
+.nav .logo a {
+background-size: 0%;
 }
 
 .nav .menu {
@@ -958,8 +948,8 @@ display: none;
 }
 }
 
-.commento-root a:before {
-visibility: hidden;
+.commento-root a {
+background-size: 0%;
 }
 
 .commento-name {
