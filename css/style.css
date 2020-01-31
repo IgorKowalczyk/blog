@@ -201,13 +201,13 @@ color: #fff;
 text-shadow: none;
 }
 
-::-webkit-selection{
+::-webkit-selection {
 background: #333;
 color: #fff;
 text-shadow: none;
 }
 
-::selection{
+::selection {
 background: #333;
 color: #fff;
 text-shadow: none;
