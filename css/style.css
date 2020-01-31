@@ -469,8 +469,8 @@ user-select: none;
 }
 
 @media screen and (max-width: 705px) {
-a {
-background-size: 0% 0px;
+a:hover {
+background-size: 0%;
 }
 }
 
@@ -507,8 +507,8 @@ padding: 10px 20px;
 text-decoration: none;
 }
 
-.nav .logo a {
-background-size: 0% 0px;
+.nav .logo a:hover {
+background-size: 0%;
 }
 
 .nav .menu {
@@ -947,8 +947,8 @@ display: none;
 }
 }
 
-.commento-root a {
-background-size: 0% 0px;
+.commento-root a:hover {
+background-size: 0%;
 }
 
 .commento-name {
