@@ -159,12 +159,9 @@ opacity: 0;
 transition: opacity 350ms, 500ms color;
 }
 
-.anchor-heading .anchor-link:before {
-visibility: hidden;
-}
-
 .anchor-heading .anchor-link:hover {
 opacity: 1 !important;
+background-size: 0%;
 }
 
 .anchor-heading:hover .anchor-link {
@@ -353,7 +350,6 @@ line-height: 1.6em;
 text-decoration: none;
 }
 
-@media (min-width: 427px) {
 a {
 position: relative;
 text-decoration: none;
@@ -365,6 +361,11 @@ transition: inherit, background-size 300ms;
 color: var(--text) !important;
 }
 
+a:hover {
+background-size: 100% 2px;
+}
+
+@media (min-width: 427px) {
 header h1, h3 a, main a {
 color: var(--text) !important;
 transition: 300ms;
@@ -374,10 +375,6 @@ main a:hover, main a:hover svg {
 color: var(--00a3a3) !important;
 fill: var(--00a3a3);
 transition: 300ms;
-}
-
-a:hover {
-background-size: 100% 2px;
 }
 
 .social-icon {
