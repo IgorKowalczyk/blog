@@ -356,13 +356,12 @@ text-decoration: none;
 @media (min-width: 427px) {
 a {
 position: relative;
-position: relative;
 text-decoration: none;
-background-image: linear-gradient(#00a3a3, #00a3a3);
+background-image: linear-gradient(var(--00a3a3), var(--00a3a3));
 background-position: 50% 100%;
 background-repeat: no-repeat;
 background-size: 0% 2px;
-transition: background-size .3s;
+transition: inherit, background-size 300ms;
 color: var(--text) !important;
 }
 
@@ -471,7 +470,7 @@ user-select: none;
 
 @media screen and (max-width: 705px) {
 a {
-background-size: 0%;
+background-size: 0% 0px;
 }
 }
 
@@ -509,7 +508,7 @@ text-decoration: none;
 }
 
 .nav .logo a {
-background-size: 0%;
+background-size: 0% 0px;
 }
 
 .nav .menu {
@@ -949,7 +948,7 @@ display: none;
 }
 
 .commento-root a {
-background-size: 0%;
+background-size: 0% 0px;
 }
 
 .commento-name {
