@@ -53,14 +53,14 @@ transition: 500ms all;
 font-family: 'Montserrat-Light';
 font-style: normal;
 font-weight: 300;
-src: url("https://igorkowalczyk.github.io/blog/fonts/montserrat-light.ttf");
+src: url("https://igorkowalczyk.github.io/blog/lib/fonts/montserrat-light.ttf");
 }
 
 @font-face {
 font-family: 'Montserrat';
 font-style: normal;
 font-weight: 500;
-src: url("https://igorkowalczyk.github.io/blog/fonts/montserrat-medium.ttf");
+src: url("https://igorkowalczyk.github.io/blog/lib/fonts/montserrat-medium.ttf");
 }
 
 .no-js {
