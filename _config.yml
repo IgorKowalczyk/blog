@@ -19,3 +19,11 @@ categories_names:
  'internet': "Internet"
  'programowanie': "Programowanie"
  'javascript': "JavaScript"
+ 
+# New comment system comming soon!
+# comments:
+#  enabled: true
+#  show_count: true
+#  receiver: https://###.azurewebsites.net/api/PostComment
+
+# emptyArray: []

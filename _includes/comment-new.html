@@ -1,0 +1,48 @@
+<h3>Odpowiedz na tego posta</h3>
+<form action="/fake" method="post" id="commentform" class="form-horizontal">
+  <fieldset id="commentfields">
+    <input name="redirect" type="hidden" value="{{ site.url }}/#">
+    <input name="post_id" type="hidden" value="{{ slug }}">
+    <input name="comment-site" type="hidden" value="{{ site.url }}">
+    <textarea name="message" id="message" placeholder="Odpowiedz"></textarea>
+
+    <label for="name">Imię <span>(Obowiązkowe, wyświetlane)</span></label>
+    <input type="text" name="name" id="name" placeholder="Twoje imię." />
+
+    <label for="email">E-Mail <span>(Obowiązkowe, ukryte)</span></label>
+    <input type="text" name="email" id="email" placeholder="john@doe.com" />
+
+    <label for="url">Twoja Strona <span>(Opcjonalne, dwyświetlane)</span></label>
+    <input type="text" name="url" id="url" placeholder="https://igorkowalczyk.github.io" />
+
+    <button onclick="setupForm()" type="button" class="btn btn-primary" id="commentbutton">Odpowiedz</button>
+  </fieldset>
+</form>
+<script>
+    function setupForm() {
+      var status = document.getElementById('commentstatus')
+      status.innerText = ''
+
+      var requiredIds = [ 'message', 'email', 'name']
+      var missing = requiredIds.filter(id => document.getElementById(id).value.length < 3)
+      if (missing.length > 0) {
+        status.innerText = 'Upss, nie uzupełniono wszystkich pól - (' + missing.join(', ') + ')'
+        return
+      }
+
+      var button = document.getElementById('commentbutton')
+      if (button.innerText != 'Potwierdź publikowanie') {
+        button.innerText = 'Potwierdź publikowanie'
+        return
+      }
+
+      var form = document.getElementById('commentform')
+      form.action = '{{ site.comments.receiver }}'
+      button.innerText = 'Publikowanie...'
+      button.disabled = true
+      form.submit()
+      var fields = document.getElementById('commentfields')                                         
+      fields.disabled = true
+    }
+  </script>
+<div id="commentstatus" style="clear:both" class="status"></div>
