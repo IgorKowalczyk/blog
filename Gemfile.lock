@@ -2,6 +2,7 @@ GEM
 remote: https://rubygems.org/
 specs:
 addressable (2.6.0)
+jekyll-github-comments (~> 1.0', '>= 1.0.1)
 public_suffix (>= 2.0.2, < 4.0)
 colorator (1.1.0)
 concurrent-ruby (1.1.5)
