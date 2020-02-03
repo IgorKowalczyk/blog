@@ -1,25 +1,14 @@
-{% capture default_slug %}{{ page.slug | default: (page.title | slugify) }}{% endcapture %}
-{% capture slug %}{{ (page.slug | fallback: default_slug) | downcase | replace: '.', '-' | replace: '_' : '-' }}{% endcapture %}
-{% assign comments_map = site.data.comments[slug] %}
-{% assign comments = site.emptyArray %}
-{% for comment in comments_map %}
-  {% assign comments = comments | push: comment[1] %}
-{% endfor %}
-{% assign comment_count = comments | size %}
-{% if comment_count > 0 %}
-  {% assign author = site.authors[page.author] %}
-<div id="comments">
-  <h3>{% if comment_count == 1 %}Jedna Odpowiedź{% else %}{{ comment_count }} Odpowiedzi{% endif %}</h3>
-  <ol>
-  {% assign sorted_comments = comments | sort: 'date' %}
-  {% for comment in sorted_comments %}
-    <li{% if comment.email == author.email %} class="byauthor" {% endif %}>
-      {% include comment.html %}
-    </li>
-  {% endfor %}
-  </ol>
+{% if subcomments == true %}<div class="comments">{{ comments }}</div>{% else %}
+<div class="ui threaded comments">
+    {% if comments contains "</div>" %}<h2 class="ui dividing header">Komentarze</h2>{% endif %}
+    {{ comments }}
+    <div class="ui tiny message" style="overflow:hidden">
+        <a class="add-comment ui primary labeled submit icon button" href="{{ site.git_repo }}{{ comment_url }}">
+          <i class="edit icon"></i> Dodaj Komentarz
+        </a>
+		Komentarze na tej stronie są zrobione na pull requestach na Githubie, 
+		zanim komentarz się pojawi taki pull request musi zostać zaakceptowany, 
+		dopiero po tym może zostać wyświetlony.
+    </div>
 </div>
-{% endif %}
-{% if page.commenting == 'open' %}
-{% include comment-new.html %}
 {% endif %}

@@ -20,6 +20,12 @@ categories_names:
  'programowanie': "Programowanie"
  'javascript': "JavaScript"
  
+ github_comments:
+  repo: igorkowalczyk/blog
+  branch: master
+  comment_template: comments.html
+  comments_template: comments.html
+  
 # New comment system comming soon!
 # comments:
 #  enabled: true
