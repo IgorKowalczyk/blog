@@ -11,7 +11,8 @@ theme: minima
 plugins:
  - jekyll-feed
  - jekyll-paginate
- - jekyll-github-comments
+gems:
+  - jekyll-github-comments
 exclude:
  - Gemfile
  - Gemfile.lock
