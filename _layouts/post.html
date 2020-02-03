@@ -19,10 +19,37 @@ comments: true
 <section class="post-content">
 {{ content }}
 </section>
-<!-- Comments system comming soon (see _config.yml file & _includes folder) -->
-<!-- {% include comments.html %} -->
+<!-- Adds an empty comment section to the page -->
+{% responses %}
+{% endresponses %}
+{% responses %}
+  {% response author="Admin" email="john@doe.com" date="2200-01-1 24:00:0" param="value" %}
+    To jest komentarz
+  {% endresponse %}
+  {% response author="Admin" email="john@doe.com" date="2200-01-1 24:00:0" param="value" %}
+    Napewno komentarz
+  {% endresponse %}
+{% endresponses %}
+{% responses %}
+  {% response author="Admin" email="john@doe.com" date="2200-01-1 24:00:0" param="value" %}
+    Komentarz testowy
+    {% responses %}
+      {% response author="Admin" email="john@doe.com" date="2200-01-1 24:00:0" param="value" %}
+        Odpowiedź do komentarza
+        {% responses %}
+          {% response author="Admin" email="john@doe.com" date="2200-01-1 24:00:0" param="value" %}
+            Kolejna odpowiedź
+          {% endreponse %}
+        {% endresponses %}
+      {% endresponse %}
+      {% response author="Admin" email="john@doe.com" date="2200-01-1 24:00:0" param="value" %}
+        Druga odpowiedź na komentarz
+      {% endresponse %}
+    {% endresponses %}
+  {% endresponse %}
+{% endresponses %}
 <br>
 <hr>
 <br>
-<p>Nowy system komentarzy już niedługo.</p>
+<p>Komentuj :)</p>
 </article>
