@@ -418,6 +418,10 @@ h1 {
 font-size: 2em;
 }
 
+main {
+padding: 10px 20%;
+}
+
 .post, .home {
 padding:3% 15%;
 }
