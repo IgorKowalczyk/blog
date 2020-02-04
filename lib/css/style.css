@@ -835,7 +835,7 @@ word-wrap: normal;
 }
 
 .post-nav {
-font-size: 14px;
+font-size: 20px;
 display: block;
 width: auto;
 overflow: hidden;
@@ -843,9 +843,12 @@ overflow: hidden;
 
 .post-nav a {
 display: block;
-width: 50%;
 float: left;
 margin: 1em 0;
+}
+
+.post-nav li {
+width: 50%;
 }
 
 .post-nav .next {
