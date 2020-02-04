@@ -846,7 +846,6 @@ overflow: hidden;
 display: block;
 float: left;
 margin: 1em 0;
-width: 50%;
 }
 
 .post-nav a:hover {
@@ -854,7 +853,7 @@ background-size: 0%;
 }
 
 .post-nav .next {
-text-align: right;
+float: right;
 }
 
 .post-recent h3 {
@@ -867,9 +866,21 @@ overflow: hidden;
 display: -webkit-box;
 -webkit-box-orient: vertical;
 -webkit-line-clamp: 4;
+padding-bottom: 0em !important;
 }
 
 .post-recent .post-related-title {
 overflow: hidden;
 text-overflow: ellipsis;
+}
+
+.post-recent ul li {
+width: 49%;
+}
+
+@media screen and (max-width: 600px)
+.post-recent ul li {
+width: 100%;
+height: auto;
+}
 }
