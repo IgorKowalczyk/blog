@@ -23,13 +23,26 @@ layout: default
 <br>
 <div class="post-nav">
 {% if page.previous.url %}
-<li><a class="prev" href="{{page.previous.url}}">< Poprzedni post</a></li>
+<li><a class="prev" href="/blog{{page.previous.url}}">< Poprzedni post</a></li>
 {% endif %}
 {% if page.next.url %}
-<li><a class="next" href="{{page.next.url}}">Następny post ></a></li>
+<li><a class="next" href="/blog{{page.next.url}}">Następny post ></a></li>
 {% endif %}
 </div>
-<h3>Polecane posty:</h3>{% for post in site.posts limit:3 %}  
-<li><a href="/blog{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>  
-{% endfor %}  
+<div class="post-recent">
+<h3>Polecane posty:</h3>
+<ul>
+{% assign posts = site.posts | where_exp:"post", "post.url != page.url" | sample: 4 %}
+{% for post in posts %}
+<li>
+<a href="{{ post.url | prepend: site.baseurl }}">
+<div>
+<div class="post-related-title">{{ post.title }}</div>
+<p class="post-summary">{{post.content | markdownify | strip_html | truncatewords: 30}}<p>
+</div>
+</a>
+</li>
+{% endfor %}
+</ul>
+</div>
 </article>

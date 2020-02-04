@@ -838,6 +838,7 @@ word-wrap: normal;
 font-size: 20px;
 display: block;
 width: auto;
+word-break: break-word;
 overflow: hidden;
 }
 
@@ -845,12 +846,30 @@ overflow: hidden;
 display: block;
 float: left;
 margin: 1em 0;
+width: 50%;
 }
 
-.post-nav li {
-width: 50%;
+.post-nav a:hover {
+background-size: 0%;
 }
 
 .post-nav .next {
 text-align: right;
+}
+
+.post-recent h3 {
+padding-bottom: 0.3em;
+}
+
+.post-recent .post-summary {
+font-size: 14.5px;
+overflow: hidden;
+display: -webkit-box;
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 4;
+}
+
+.post-recent .post-related-title {
+overflow: hidden;
+text-overflow: ellipsis;
 }
