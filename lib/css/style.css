@@ -418,10 +418,6 @@ h1 {
 font-size: 2em;
 }
 
-main, footer {
-padding: 10px 20%;
-}
-
 .post, .home {
 padding:3% 15%;
 }
@@ -858,6 +854,7 @@ float: right;
 
 .post-recent h3 {
 padding-bottom: 0.3em;
+text-align: center;
 }
 
 .post-recent .post-summary {
@@ -876,6 +873,9 @@ text-overflow: ellipsis;
 
 .post-recent ul li {
 width: 49%;
+padding: 5px;
+float: left;
+overflow: hidden;
 }
 
 @media screen and (max-width: 600px)
