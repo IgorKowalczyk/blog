@@ -833,3 +833,21 @@ white-space: pre;
 overflow-x: auto;
 word-wrap: normal;
 }
+
+.post-nav {
+font-size: 14px;
+display: block;
+width: auto;
+overflow: hidden;
+}
+
+.post-nav a {
+display: block;
+width: 50%;
+float: left;
+margin: 1em 0;
+}
+
+.post-nav .next {
+text-align: right;
+}
