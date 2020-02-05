@@ -44,15 +44,16 @@ Komentarze:
 {% endfor %}
 {% endif %}
 <form method="post" action="{{ site.staticman_url }}">
+<h3>Napisz komentarz:</h3>
 <input name="options[redirect]" type="hidden" value="https://igorkowalczyk.github.io/blog">
 <input name="options[slug]" type="hidden" value="{{ page.slug }}">
-<label>Imię (Wyświetlane)</label>
-<input name="fields[name]" type="text">
-<label>E-mail (Ukryte)</label>
-<input name="fields[email]" type="email">
-<label>Wiadomość</label>
-<textarea style="width:100%" name="fields[message]" rows="12"></textarea>
-<small>Komentarze pojawią się po zaakceptowaniu przez moderatora.</small>
+<label>Imię (Wyświetlane, wymagane)</label>
+<input name="fields[name]" type="text" required placeholder="Jan Kowalski" title="To pole jest wymagane">
+<label>E-mail (Ukryte, wymagane)</label>
+<input name="fields[email]" type="email" required placeholder="jan@kowalski.com" title="To pole jest wymagane">
+<label>Wiadomość (Wyświetlane, wymagane)</label>
+<textarea style="width:100%" name="fields[message]" rows="5" required placeholder="Twoja wiadomość" title="To pole jest wymagane"></textarea>
+<p>Komentarze pojawią się po zaakceptowaniu przez moderatora.</p>
 <button type="submit">Wyślij komentarz</button>
 </form>
 <br>

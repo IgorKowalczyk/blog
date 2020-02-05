@@ -693,12 +693,40 @@ content: "";
 }
 
 textarea {
-background: var(--white) !important;
 resize: vertical !important;
+background: var(--white) !important;
+border: 1px solid var(--text);
+border-radius: 3px;
+padding: 10px;
+display: flex;
+margin: 10px 0px 5px 0px;
+width: 100%;
+}
+
+input {
+background: var(--white);
+border: 1px solid var(--text);
+border-radius: 3px;
+padding: 10px;
+display: flex;
+margin: 10px 0px 5px 0px;
+width: 100%;
+}
+
+button {
+border: none;
+color: var(--checkbox-after);
+display: flex;
+background: var(--checkbox);
+padding: 10px;
+cursor: pointer;
+border-radius: 3px;
+box-shadow: 0 3px 15px 0 rgba(0,0,0,.1), 0 1px 3px 0 rgba(0,0,0,.08);
+margin: 10px 0px 5px 0px;
 }
 
 ::-webkit-input-placeholder {
-color: #868b95;
+color: var(--text);
 -webkit-transition: 300ms;
 transition: 300ms;
 -moz-user-select: none;
@@ -706,7 +734,7 @@ user-select: none;
 }
 
 :-moz-placeholder {
-color: #868b95;
+color: var(--text);
 -moz-transition: 300ms;
 transition: 300ms;
 -moz-user-select: none;
@@ -714,7 +742,7 @@ user-select: none;
 }
 
 ::-moz-placeholder {
-color: #868b95;
+color: var(--text);
 -moz-transition: 300ms;
 transition: 300ms;
 -moz-user-select: none;
@@ -723,7 +751,7 @@ font-family: 'Montserrat-Light';
 }
 
 :-ms-input-placeholder {
-color: #868b95;
+color: var(--text);
 -ms-transition: 300ms;
 transition: 300ms;
 -moz-user-select: none;
