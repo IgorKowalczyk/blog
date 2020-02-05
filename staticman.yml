@@ -1,0 +1,14 @@
+comments:
+  branch: "master"
+  filename: "entry{@timestamp}"
+  format: "yaml"
+    date:
+      type: date
+      options:
+        format: "timestamp-seconds"
+  moderation: true
+  name: "example.com"
+  path: "_data/comments/{options.slug}"
+  requiredFields: ["name", "email", "message"]
+  transforms:
+    email: md5
