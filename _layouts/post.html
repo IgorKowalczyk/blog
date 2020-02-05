@@ -29,7 +29,7 @@ Komentarze:
 {% assign commentData = comment[1] %}
 <div class="comment">
 <p class="name">Od: {{ commentData.name }}</p>
-<time datetime="{{ commentData | date_to_xmlschema }}">{{ commentData | date: "%d-%m-%Y" }}</time>
+<time datetime="{{ commentData | date_to_xmlschema }}">{{ commentData.date | date: "%d-%m-%Y" }}</time>
 <p class="message">{{ commentData.message }}</p>
 </div>
 {% endfor %}
