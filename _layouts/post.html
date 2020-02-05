@@ -42,7 +42,7 @@ Komentarze:
 {% assign commentData = comment[1] %}
 <div class="comment">
 <p class="name">Od: {{ commentData.name }}</p>
-<p>{{ commentData.date | timeago: 4 }}</p>
+<p>{{ commentData.date | timeago }}</p>
 <p class="message">{{ commentData.message }}</p>
 </div>
 {% endfor %}
