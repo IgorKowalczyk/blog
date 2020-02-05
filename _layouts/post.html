@@ -31,13 +31,8 @@ Komentarze:
 {% assign comments = site.data.comments[page.slug] | sort %}
 {% for comment in comments %}
 <label>
-{% if comment[1].url %}
-<a href="{{ comment[1].url }}">
-{% endif %}
 <strong>{{ comment[1].name }}</strong>
-{% if comment[1].url %}
 </a>
-{% endif %}
 </label>
 <em>{{ comment[1].date | date: "%B %d, %Y" }}</em>
 <p>{{ comment[1].message | markdownify }}</p>
@@ -45,7 +40,7 @@ Komentarze:
 {% endif %}
 <form method="post" action="{{ site.staticman_url }}">
 <h3>Napisz komentarz:</h3>
-<input name="options[redirect]" type="hidden" value="https://igorkowalczyk.github.io/blog">
+<input name="options[redirect]" type="hidden" value="{{ post.url }}">
 <input name="options[slug]" type="hidden" value="{{ page.slug }}">
 <label>Imię (Wyświetlane, wymagane)</label>
 <input name="fields[name]" type="text" required placeholder="Jan Kowalski" title="To pole jest wymagane">
