@@ -41,8 +41,7 @@ Komentarze:
 {% for comment in comments reversed %}
 {% assign commentData = comment[1] %}
 <div class="comment">
-<p class="name">Od: {{ commentData.name }}</p>
-<p>{{ commentData.date | timeago }}</p>
+<p class="name">Od: {{ commentData.name }} *{{ commentData.date | date: "%m/%d/%Y" }}</p>
 <p class="message">{{ commentData.message }}</p>
 </div>
 {% endfor %}

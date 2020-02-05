@@ -23,7 +23,6 @@ categories_names:
  
 staticman_url: https://api.staticman.net/v3/entry/github/igorkowalczyk/blog/master/comments
 
-jekyll_timeago:
   today: 'dzisiaj'
   yesterday: 'wczoraj'
   tomorrow: 'jutro'
