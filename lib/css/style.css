@@ -418,7 +418,7 @@ h1 {
 font-size: 2em;
 }
 
-main {
+main, footer {
 padding: 10px 20%;
 }
 
@@ -873,18 +873,4 @@ padding-bottom: 0em !important;
 .post-recent .post-related-title {
 overflow: hidden;
 text-overflow: ellipsis;
-}
-
-.post-recent ul li {
-width: 49%;
-padding: 5px;
-float: left;
-overflow: hidden;
-}
-
-@media screen and (max-width: 600px)
-.post-recent ul li {
-width: 100%;
-height: auto;
-}
 }
