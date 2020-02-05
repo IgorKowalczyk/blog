@@ -21,6 +21,43 @@ layout: default
 <br>
 <hr>
 <br>
+{% if site.data.comments[page.slug] %}
+<h3>
+{% if site.data.comments[page.slug].size > 1 %}
+{{ site.data.comments[page.slug] | size }}
+{% endif %}
+Komentarze:
+</h3>
+{% assign comments = site.data.comments[page.slug] | sort %}
+{% for comment in comments %}
+<label>
+{% if comment[1].url %}
+<a href="{{ comment[1].url }}">
+{% endif %}
+<strong>{{ comment[1].name }}</strong>
+{% if comment[1].url %}
+</a>
+{% endif %}
+</label>
+<em>{{ comment[1].date | date: "%B %d, %Y" }}</em>
+<p>{{ comment[1].message | markdownify }}</p>
+{% endfor %}
+{% endif %}
+<form method="POST" action="{{ site.staticman_url }}">
+<input name="options[redirect]" type="hidden" value="https://igorkowalczyk.github.io/blog">
+<input name="options[slug]" type="hidden" value="{{ page.slug }}">
+<label>Imię (Wyświetlane)</label>
+<input name="fields[name]" type="text">
+<label>E-mail (opcjonalne, ukryte)</label>
+<input name="fields[email]" type="email">
+<label>Wiadomość</label>
+<textarea style="width:100%" name="fields[message]" rows="12"></textarea>
+<small>Komentarze pojawią się po zaakceptowaniu przez moderatora.</small>
+<button type="submit">Wyślij komentarz</button>
+</form>
+<br>
+<hr>
+<br>
 <div class="post-nav">
 {% if page.previous.url %}
 <li><a class="prev" href="/blog{{page.previous.url}}">< Poprzedni post</a></li>

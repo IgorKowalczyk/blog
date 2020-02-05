@@ -20,10 +20,20 @@ categories_names:
  'programowanie': "Programowanie"
  'javascript': "JavaScript"
  
-# New comment system comming soon!
-# comments:
-#  enabled: true
-#  show_count: true
-#  receiver: https://###.azurewebsites.net/api/PostComment
+staticman_url: https://api.staticman.net/v3/entry/github/igorkowalczyk/blog/master/comments
 
-# emptyArray: []
+
+comments:
+  branch: "master"
+  filename: "entry{@timestamp}"
+  format: "yaml"
+    date:
+      type: date
+      options:
+        format: "timestamp-seconds"
+  moderation: true
+  name: "example.com"
+  path: "_data/comments/{options.slug}"
+  requiredFields: ["name", "email", "message"]
+  transforms:
+    email: md5
