@@ -874,3 +874,7 @@ padding-bottom: 0em !important;
 overflow: hidden;
 text-overflow: ellipsis;
 }
+
+.post-recent ul li:hover .post-related-title, .post-recent ul li:hover .post-summary {
+color: var(--00a3a3);
+}
