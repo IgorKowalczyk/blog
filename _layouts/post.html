@@ -21,6 +21,15 @@ layout: default
 <br>
 <hr>
 <br>
+<h3>Komentarze:</h3>
+{% assign comments = site.data.comments | sort %}
+{% for comment in comments reversed %}
+{% assign commentData = comment[1] %}
+<div class="comment">
+<p class="name">Od: {{ commentData.name }} * {{ commentData.date | date: "%m/%d/%Y" }}</p>
+<p class="message">{{ commentData.message }}</p>
+</div>
+{% endfor %}
 <form method="post" action="{{ site.staticman_url }}">
 <h3>Napisz komentarz:</h3>
 <input name="options[redirect]" type="hidden" value="{{ post.url }}">
@@ -34,17 +43,6 @@ layout: default
 <p>Komentarze pojawią się po zaakceptowaniu przez moderatora.</p>
 <button type="submit">Wyślij komentarz</button>
 </form>
-<h3>
-Komentarze:
-</h3>
-{% assign comments = site.data.comments | sort %}
-{% for comment in comments reversed %}
-{% assign commentData = comment[1] %}
-<div class="comment">
-<p class="name">Od: {{ commentData.name }} *{{ commentData.date | date: "%m/%d/%Y" }}</p>
-<p class="message">{{ commentData.message }}</p>
-</div>
-{% endfor %}
 <br>
 <hr>
 <br>
