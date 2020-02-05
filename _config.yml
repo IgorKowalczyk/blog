@@ -38,4 +38,5 @@ jekyll_timeago:
   month: 'miesiąc'
   weeks: 'tygodni'
   week: 'tydzień'
+  days: 'dni'
   day: 'dzień'
