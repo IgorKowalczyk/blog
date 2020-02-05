@@ -43,7 +43,7 @@ Komentarze:
 <p>{{ comment[1].message | markdownify }}</p>
 {% endfor %}
 {% endif %}
-<form method="POST" action="{{ site.staticman_url }}">
+<form method="post" action="{{ site.staticman_url }}">
 <input name="options[redirect]" type="hidden" value="https://igorkowalczyk.github.io/blog">
 <input name="options[slug]" type="hidden" value="{{ page.slug }}">
 <label>Imię (Wyświetlane)</label>
