@@ -906,3 +906,12 @@ text-overflow: ellipsis;
 .post-recent ul li:hover .post-related-title, .post-recent ul li:hover .post-summary {
 color: var(--00a3a3);
 }
+
+.comment .name {
+border-bottom: 1px solid var(--text);
+}
+
+.comment p {
+padding-bottom: 0.2em !important;
+margin-bottom: 5px;
+}
