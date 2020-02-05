@@ -11,6 +11,7 @@ theme: minima
 plugins:
  - jekyll-feed
  - jekyll-paginate
+ - jekyll-timeago 
 exclude:
  - Gemfile
  - Gemfile.lock
@@ -21,3 +22,20 @@ categories_names:
  'javascript': "JavaScript"
  
 staticman_url: https://api.staticman.net/v3/entry/github/igorkowalczyk/blog/master/comments
+
+jekyll_timeago:
+  today: 'dzisiaj'
+  yesterday: 'wczoraj'
+  tomorrow: 'jutro'
+  and: 'i'
+  suffix: 'temu'
+  prefix: ''
+  suffix_future: ''
+  prefix_future: ''
+  years: 'lat'
+  year: 'rok'
+  months: 'miesięcy'
+  month: 'miesiąc'
+  weeks: 'tygodni'
+  week: 'tydzień'
+  day: 'dzień'
