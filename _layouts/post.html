@@ -22,7 +22,7 @@ layout: default
 <hr>
 <br>
 <h3>Komentarze:</h3>
-{% assign comments = site.data.comments.options[slug] | sort %}
+{% assign comments = site.data.comments | sort %}
 {% for comment in comments reversed %}
 {% assign commentData = comment[1] %}
 <div class="comment">
