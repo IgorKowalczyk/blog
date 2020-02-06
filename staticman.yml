@@ -3,7 +3,7 @@ comments:
   branch            : "master"
   commitMessage     : "New comment by {fields.name}"
   filename          : "comment-{@timestamp}"
-  format            : "yaml"
+  format            : "json"
   moderation        : true
   path              : "_data/comments/{options.slug}"
   requiredFields    : ['name', 'email', 'message']
