@@ -915,3 +915,10 @@ border-bottom: 1px solid var(--text);
 padding-bottom: 0.2em !important;
 margin-bottom: 5px;
 }
+
+.comment {
+border: 1px solid var(--text);
+padding: 10px;
+border-radius: 3px;
+margin: 10px 0px 5px 0px;
+}
