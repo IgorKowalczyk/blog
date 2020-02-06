@@ -1,4 +1,4 @@
-<div id="comment{% unless include.r %}{{ index | prepend: '-' }}{% else %}{{ include.index | prepend: '-' }}{% endunless %}" class="js-comment comment {% unless include.replying_to == 0 %}child{% endunless %}">
+<article id="comment{% unless include.r %}{{ id | prepend: '-' }}{% else %}{{ include.id | prepend: '-' }}{% endunless %}" class="js-comment comment {% unless include.parent == include.id %}child{% endunless %}">
   <div class="comment__avatar">
     {% if include.avatar %}
       <noscript><img src="{{ include.avatar }}" alt=""></noscript>
@@ -13,39 +13,42 @@
   </div>
   <div class="comment__main">
     <div class="comment__meta">
-      {% unless include.url == blank %}
+      {% unless include.url == blank or include.url == "" %}
         <a rel="external nofollow" href="{{ include.url }}"><strong class="h-card">{{ include.name | strip_html }}</strong></a>
       {% else %}
         <strong class="h-card">{{ include.name | strip_html }}</strong>
       {% endunless %}
       {% if include.date %}
         on
-        {% if include.index %}<a href="#comment{% if r %}{{ index | prepend: '-' }}{% else %}{{ include.index | prepend: '-' }}{% endif %}" title="Permalink to this comment">{% endif %}
-          <time datetime="{{ include.date | date_to_xmlschema }}">{{ include.date | date_to_long_string: 'ordinal', 'US' }}</time>
-        {% if include.index %}</a>{% endif %}
+        {% if include.id %}<a href="#comment{% if r %}{{ id | prepend: '-' }}{% else %}{{ include.id | prepend: '-' }}{% endif %}" title="Permalink to this comment">{% endif %}
+          <time datetime="{{ include.date | date_to_xmlschema }}">{{ include.date | date_to_long_string }}</time>
+        {% if include.id %}</a>{% endif %}
       {% endif %}
-    </div>
+    </header>
     <div class="comment__message">
       {{ include.message | markdownify }}
     </div>
-    {% unless include.replying_to != 0 or page.comments_locked == true %}
+    {% unless include.parent != include.id or page.comments_locked == true %}
       <div class="comment__reply">
-        <a rel="nofollow" href="#comment-{{ include.index }}" onclick="return addComment.moveForm('comment-{{ include.index }}', '{{ include.index }}', 'respond', '{{ page.slug }}')"><svg class="icon icon--reply" width="16px" height="16px"><use xlink:href="{{ 'icons.svg#icon-reply' | prepend: 'assets/icons/' | relative_url }}"></use></svg> Reply to {{ include.name }}</a>
+        <a rel="nofollow" href="#comment-{{ include.id }}" onclick="return addComment.moveForm('comment-{{ include.id }}', '{{ include.id }}', 'respond', '{{ include.id }}')">
+          &#x2BA9; Reply to {{ include.name }}</a>
       </div>
     {% endunless %}
   </div>
-</div>
+</article>
 
-{% capture i %}{{ include.index }}{% endcapture %}
-{% assign replies = site.data.comments[page.slug] | sort | where_exp: 'comment', 'comment[1].replying_to == i' %}
-{% for reply in replies %}
-  {% assign index       = forloop.index | prepend: '-' | prepend: include.index %}
-  {% assign replying_to = reply[1].replying_to | to_integer %}
-  {% assign avatar      = reply[1].avatar %}
-  {% assign email       = reply[1].email %}
-  {% assign name        = reply[1].name %}
-  {% assign url         = reply[1].url %}
-  {% assign date        = reply[1].date %}
-  {% assign message     = reply[1].message %}
-  {% include comment.html index=index replying_to=replying_to avatar=avatar email=email name=name url=url date=date message=message %}
-{% endfor %}
+{% if include.parent == include.id %}
+  {% capture i %}{{ include.id }}{% endcapture %}
+  {% assign replies = site.data.comments[page.slug] | sort | where_exp: 'comment', 'comment[1]._id != i' | where_exp: 'comment', 'comment[1]._parent == i' %}
+  {% for reply in replies %}
+    {% assign id          = reply[1]._id %}
+    {% assign parent      = reply[1]._parent %}
+    {% assign avatar      = reply[1].avatar %}
+    {% assign email       = reply[1].email %}
+    {% assign name        = reply[1].name %}
+    {% assign url         = reply[1].url %}
+    {% assign date        = reply[1].date %}
+    {% assign message     = reply[1].message %}
+    {% include comment.html id=id parent=parent avatar=avatar email=email name=name url=url date=date message=message %}
+  {% endfor %}
+{% endif %}
