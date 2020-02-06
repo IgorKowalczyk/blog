@@ -22,94 +22,9 @@ layout: default
 <hr>
 <br>
 <h3>Komentarze:</h3>
-<!-- recaptcha v3 -->
-<!--
-<script src="https://www.google.com/recaptcha/api.js?render={{.Site.Params.staticman.sitekey_V3}}"></script>-->
-<!-- recaptcha v3 -->
-<script src='https://www.google.com/recaptcha/api.js'></script>
-
-<section class="post-comments">
-  <h2>Comments</h2>
-  {{- $mycomments := .Site.Data.comments }}
-  {{- $.Scratch.Add "hasComments" 0 }}
-  {{- range $mycomments }}
-    {{- if in .path $.File.Path }}
-        {{- $.Scratch.Add "hasComments" 1 }}
-        <div class="post-comment">
-          <div class="post-comment-header">
-            <img class="post-comment-avatar" src="https://www.gravatar.com/avatar/{{ .email }}?s=40">
-            <p class="post-comment-info"><strong>{{ .name }}</strong><br>{{ dateFormat "02 Jan 06 15:04 MST" .date }}</p>
-          </div>
-          <div class = "commentText">
-          {{- .message | markdownify }}
-          </div>
-        </div>
-    {{- end }}
-  {{- end }}
-  {{- if eq ($.Scratch.Get "hasComments") 0 }}
-    <p>There aren't any comments yet. Be the first to comment!</p>
-  {{- end }}
-  <h3 style = "margin-top:20px">Leave a comment</h3>
-  <form id="write_comment" class="post-comment" method="POST" action="{{ .Site.Params.staticman.comments_api }}">
-    Please enter your information. Your email address will not be published.
-    <!--
-    <input type="hidden" name="verify_url" id="verify_url" value="{{.Site.Params.staticman.recaptcha_verify_lambda}}">
-    <input type="hidden" name="gRecaptchaResponse" id="gRecaptchaResponse">
-    -->
-    <input type="hidden" name="options[reCaptcha][siteKey]" value="{{.Site.Params.staticman.sitekey_V2}}">
-    <input type="hidden" name="options[reCaptcha][secret]" value="{{.Site.Params.staticman.secret_V2}}">
-    <input type="hidden" name="options[redirect]" value="{{ .Permalink }}#comment-submitted">
-    <input type="hidden" name="options[redirectError]" value="{{ .Permalink }}#post-error">
-    <input type="hidden" name="options[entryId]" value="{{ .UniqueID }}">
-    <input name="fields[path]" type="hidden" value="{{ .File.Path }}">
-    <input name="fields[name]" type="text" class="post-comment-field" placeholder="Your name" title = "Name">
-    <input name="fields[email]" type="email" class="post-comment-field" placeholder="Your email address" title = "Email">
-    <textarea name="fields[message]" class="post-comment-field" placeholder="Your message. Feel free to use Markdown." rows="3" title = "Comment"></textarea>
-    <div class="g-recaptcha" data-sitekey="{{.Site.Params.staticman.sitekey_V2}}"></div>
-    <input id = "commentSubmitButton" type="submit" class="post-comment-field btn" value="Submit" onclick="changeCommentButton()">
-  </form>
-
-<script>
-
-function validate(form) {
-   getRecaptchaToken(form) 
-}
-
-function getRecaptchaToken(form) {
-    grecaptcha.ready(function() {
-        grecaptcha.execute('{{.Site.Params.staticman.sitekey_V3}}', {action: 'comment'}).then(function(token) {
-            gRecaptchaResponse.value = token //set the value of the hidden field
-            validateRecaptcha().then(val => {
-                if (val) {
-                    form.submit(); //submit the form
-                } else {
-                    alert("Sorry, but your comment was not submitted because you seem to be a robot.")
-                }
-            });
-        });
-    });
-}
-
-/*
-write_comment.addEventListener('submit', event => {
-    event.preventDefault()
-    validate(write_comment)
-});
-*/
-
-</script>
-
-</section>
-<div id="comment-submitted" class="dialog">
-<h3>Thank you</h3>
-  <p>Your comment has been submitted and will be published once it has been approved.</p>
-  <p><button class="btn" onclick="goBackToOrigin()">OK</button></p>
-</div>
-<div id="post-error" class="dialog">
-    <h3>Sorry</h3>
-    <p>Your post has not been submitted. Please return to the form and make sure that all fields are entered. Thank You!</p>
-    <p><button class="btn" onclick="goBackToOrigin()">OK</button></p>
-</div> 
+{% if page.comments == true %}
+{% include comments.html %}
+{% endif %}
 <br>
 <hr>
 <br>
