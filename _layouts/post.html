@@ -22,14 +22,22 @@ layout: default
 <hr>
 <br>
 <h3>Komentarze:</h3>
+{% if site.data.comments[page.slug] %}
+{% assign comments = site.data.comments[page.slug] | sort %}
+{% for comment in comments reversed %}
+{% assign commentData = comment[1] %}
+<div class="comment">
+<p class="name">Od: {{ commentData.name }} * {{ commentData.date | date: "%m/%d/%Y" }}</p>
+<p class="message">{{ commentData.message }}</p>
+</div>
+{% endfor %}
+{% endif %}
 
 
 {% if site.data.comments[page.slug] %}
 
   <h3>
-    {% if site.data.comments[page.slug].size > 1 %}
       {{ site.data.comments[page.slug] | size }}
-    {% endif %}
     Komentarze:
   </h3>
 
@@ -40,9 +48,9 @@ layout: default
 
   {% for comment in comments %}
     <br>
-    <legend><strong>{{ comment[1].name }}</strong><legend>
-    <em>{{ comment[1].date | date: "%B %d, %Y" }}</em>
-    <p>{{ comment[1].message | markdownify }}
+    <legend><strong>{{ commentData.name }}</strong><legend>
+    <em>{{ commentData.date | date: "%B %d, %Y" }}</em>
+    <p>{{ commentData.message | markdownify }}
     <hr>
   {% endfor %}
   <p>
