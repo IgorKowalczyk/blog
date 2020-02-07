@@ -35,7 +35,7 @@ layout: default
 {% elsif commentData.email %}
 <img src="https://www.gravatar.com/avatar/{{commentData.email }}?d=mm&s=60" srcset="https://www.gravatar.com/avatar/{{ commentData.email }}?d=mm&s=120 2x" alt="{{ commentData.name | escape }}">
 {% else %}
-<img src="/assets/images/avatar.png" alt="{{ commentData.name | escape }}">
+<img src="/blog/assets/images/avatar.png" alt="{{ commentData.name | escape }}">
 {% endif %}
   </div>
 {% endfor %}
