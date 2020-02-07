@@ -30,13 +30,13 @@ layout: default
 <p class="message">{{ commentData.message }}</p>
 </div>
 <div class="avatar">
-    {% if commentData.email %}
-      <img src="{{ commentData.email }}" alt="{{ commentData.name | escape }}">
-    {% elsif commentData.email %}
-      <img src="https://www.gravatar.com/avatar/{{commentData.email }}?d=mm&s=60" srcset="https://www.gravatar.com/avatar/{{ commentData.email }}?d=mm&s=120 2x" alt="{{ commentData.name | escape }}">
-    {% else %}
-      <img src="/assets/images/avatar-60.png" srcset="/assets/images/avatar-120.png 2x" alt="{{ commentData.name | escape }}">
-    {% endif %}
+{% if commentData.email %}
+<img src="{{ commentData.email }}" alt="{{ commentData.name | escape }}">
+{% elsif commentData.email %}
+<img src="https://www.gravatar.com/avatar/{{commentData.email }}?d=mm&s=60" srcset="https://www.gravatar.com/avatar/{{ commentData.email }}?d=mm&s=120 2x" alt="{{ commentData.name | escape }}">
+{% else %}
+<img src="/assets/images/avatar.png" alt="{{ commentData.name | escape }}">
+{% endif %}
   </div>
 {% endfor %}
 <hr>
