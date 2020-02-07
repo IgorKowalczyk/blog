@@ -25,3 +25,10 @@ staticman_url: https://api.staticman.net/v3/entry/github/igorkowalczyk/blog/mast
 
 staticman:
   branch: "master"
+  
+reCaptcha:
+  enabled: true
+  siteKey: "6LfLAjwUAAAAAKOi8qdESCsIsuNKQWprkVwVTOca"
+  secret: "hIjDAFgRYCqZ5vLwealMOgQ27fwTpIh64Wjem8fI6rzs65k6Jr6hDh5A8cTv1gi0LBnc74abCXCUR+hi9lKnozMxnisI2vLnFfcZQYfVCqXyH0d4APJDJJ0qhMxkM6OztcHNx7PjHqms0u4cjVIU1McmbDuxaB02V6z1eMzmdmE="
+
+github_repo_url: https://github.com/igorkowalczyk/blog/
