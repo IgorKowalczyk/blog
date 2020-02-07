@@ -8,6 +8,7 @@ timezone: 'Europe/Warsaw'
 paginate: 8
 markdown: kramdown
 theme: minima
+comments: true
 plugins:
  - jekyll-feed
  - jekyll-paginate
