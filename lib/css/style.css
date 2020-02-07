@@ -916,7 +916,7 @@ margin-bottom: 5px;
 width: 30px;
 height: 30px;
 border-radius: 50%;
-display: block;
+display: inline-block;
 }
 	
 .comment .meta {
@@ -928,11 +928,6 @@ border-bottom: 2px solid var(--text);
 
 .comment p {
 display: block;
-}
-
-.avatar {
-flex-shrink: 0;
-margin-right: 10px;
 }
 
 .comment {
