@@ -27,15 +27,12 @@ layout: default
 {% assign commentData = comment[1] %}
 <div class="comment">
 <div class="meta">
-<div class="avatar">
+<p class="name">
 {% if commentData.email %}
 <img src="https://www.gravatar.com/avatar/{{commentData.email }}?d=mm&s=60" alt="{{ commentData.name | escape }}">
 {% else %}
 <img src="/blog/lib/img/avatar.jpg" alt="{{ commentData.name | escape }}">
-{% endif %}
-</div>
-<p class="name">
-Od: {{ commentData.name }} * {{ commentData.date | date: "%m/%d/%Y" }}</p>
+{% endif %} Od: {{ commentData.name }} * {{ commentData.date | date: "%m/%d/%Y" }}</p>
 </div>
 <p class="message">{{ commentData.message }}</p>
 </div>
