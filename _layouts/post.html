@@ -22,29 +22,9 @@ layout: default
 <hr>
 <br>
 <h3>Komentarze:</h3>
-{% assign comments = site.data.comments[page.slug] | sort %}
-{% for comment in comments reversed %}
-{% assign commentData = comment[1] %}
-<div class="comment">
-<p class="name">Od: {{ commentData.name }} * {{ commentData.date | date: "%m/%d/%Y" }}</p>
-<p class="message">{{ commentData.message }}</p>
-</div>
-{% endfor %}
-<p>
-<hr>
-<form method="post" action="{{ site.staticman_url }}">
-<h3>Napisz komentarz:</h3>
-<input name="options[redirect]" type="hidden" value="{{ post.url }}">
-<input name="options[slug]" type="hidden" value="{{ page.slug }}">
-<label>Imię (Wyświetlane, wymagane)</label>
-<input name="fields[name]" type="text" required placeholder="Jan Kowalski" title="To pole jest wymagane">
-<label>E-mail (Ukryte, wymagane)</label>
-<input name="fields[email]" type="email" required placeholder="jan@kowalski.com" title="To pole jest wymagane">
-<label>Wiadomość (Wyświetlane, wymagane)</label>
-<textarea style="width:100%" name="fields[message]" rows="5" required placeholder="Twoja wiadomość" title="To pole jest wymagane"></textarea>
-<p>Komentarze pojawią się po zaakceptowaniu przez moderatora.</p>
-<button type="submit">Wyślij komentarz</button>
-</form>
+{% if page.comments == true %}
+{% include comments.html %}
+{% endif %}
 <br>
 <hr>
 <br>

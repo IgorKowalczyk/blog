@@ -1,5 +1,5 @@
 comments:
-  allowedFields     : ['name', 'email', 'message']
+  allowedFields: ["name", "email", "url", "message"]
   branch            : "master"
   commitMessage     : "New comment by {fields.name}"
   filename          : "comment-{@timestamp}"
@@ -14,3 +14,7 @@ comments:
       type          : "date"
       options:
         format      : "iso8601"
+  reCaptcha:
+    enabled: true
+    siteKey: " "
+    secret: " "

@@ -1,0 +1,54 @@
+<article id="comment{% unless include.r %}{{ id | prepend: '-' }}{% else %}{{ include.id | prepend: '-' }}{% endunless %}" class="js-comment comment {% unless include.parent == include.id %}child{% endunless %}">
+  <div class="comment__avatar">
+    {% if include.avatar %}
+      <noscript><img src="{{ include.avatar }}" alt=""></noscript>
+      <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{ include.avatar }}" alt="" class="lazyload blur-up">
+    {% elsif include.email %}
+      <noscript><img src="https://www.gravatar.com/avatar/{{ include.email }}?d=mm&s=60" alt=""></noscript>
+      <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-srcset="https://www.gravatar.com/avatar/{{ include.email }}?d=mm&s=60 1x, https://www.gravatar.com/avatar/{{ include.email }}?d=mm&s=120 2x" alt="" class="lazyload blur-up">
+    {% else %}
+      <noscript><img src="/assets/images/avatar-60.png" alt=""></noscript>
+      <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-srcset="https://www.gravatar.com/avatar/{{ include.email }}?d=mm&s=60 1x, /assets/images/avatar-120.png 2x" alt="" class="lazyload blur-up">
+    {% endif %}
+  </div>
+  <div class="comment__main">
+    <div class="comment__meta">
+      {% unless include.url == blank or include.url == "" %}
+        <a rel="external nofollow" href="{{ include.url }}"><strong class="h-card">{{ include.name | strip_html }}</strong></a>
+      {% else %}
+        <strong class="h-card">{{ include.name | strip_html }}</strong>
+      {% endunless %}
+      {% if include.date %}
+        on
+        {% if include.id %}<a href="#comment{% if r %}{{ id | prepend: '-' }}{% else %}{{ include.id | prepend: '-' }}{% endif %}" title="Permalink to this comment">{% endif %}
+          <time datetime="{{ include.date | date_to_xmlschema }}">{{ include.date | date_to_long_string }}</time>
+        {% if include.id %}</a>{% endif %}
+      {% endif %}
+    </header>
+    <div class="comment__message">
+      {{ include.message | markdownify }}
+    </div>
+    {% unless include.parent != include.id or page.comments_locked == true %}
+      <div class="comment__reply">
+        <a rel="nofollow" href="#comment-{{ include.id }}" onclick="return addComment.moveForm('comment-{{ include.id }}', '{{ include.id }}', 'respond', '{{ include.id }}')">
+          &#x2BA9; Reply to {{ include.name }}</a>
+      </div>
+    {% endunless %}
+  </div>
+</article>
+
+{% if include.parent == include.id %}
+  {% capture i %}{{ include.id }}{% endcapture %}
+  {% assign replies = site.data.comments[page.slug] | sort | where_exp: 'comment', 'comment[1]._id != i' | where_exp: 'comment', 'comment[1]._parent == i' %}
+  {% for reply in replies %}
+    {% assign id          = reply[1]._id %}
+    {% assign parent      = reply[1]._parent %}
+    {% assign avatar      = reply[1].avatar %}
+    {% assign email       = reply[1].email %}
+    {% assign name        = reply[1].name %}
+    {% assign url         = reply[1].url %}
+    {% assign date        = reply[1].date %}
+    {% assign message     = reply[1].message %}
+    {% include comment.html id=id parent=parent avatar=avatar email=email name=name url=url date=date message=message %}
+  {% endfor %}
+{% endif %}
