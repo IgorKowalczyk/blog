@@ -916,9 +916,29 @@ padding-bottom: 0.2em !important;
 margin-bottom: 5px;
 }
 
+.comment img {
+width: 30px;
+height: 30px;
+border-radius: 50%;
+display: block;
+}
+	
+.comment .meta {
+margin-bottom: 1em;
+padding-bottom: .25em;
+width: 100%;
+border-bottom: 2px solid var(--text);
+}
+
+.comment p {
+display: block;
+}
+
+.avatar {
+flex-shrink: 0;
+margin-right: 10px;
+}
+
 .comment {
-border: 1px solid var(--text);
-padding: 10px;
-border-radius: 3px;
-margin: 10px 0px 5px 0px;
+margin-top: 2em
 }
