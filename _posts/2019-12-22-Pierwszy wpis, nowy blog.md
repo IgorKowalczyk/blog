@@ -2,6 +2,7 @@
 layout: post
 title: "Pierwszy wpis, nowy blog"
 categories: offtop
+comments: true
 ---
 
 Witajcie wszyscy! Stworzyłem oto tego nowego bloga, inspiracją był blog "Kot Źródłowy". Może powinienem wcześniej się za to wsiąść ale jakoś nie znalazłem siły.

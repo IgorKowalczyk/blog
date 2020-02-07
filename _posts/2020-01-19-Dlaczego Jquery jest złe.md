@@ -2,6 +2,7 @@
 layout: post
 title: "Dlaczego Jquery jest złe?"
 categories: internet programowanie javascript
+comments: true
 ---
 
 Witam wszystkich ponownie, tym razem w Nowym Roku i z nowym postem (wreszcie) ;). Tym razem będzie on o możliwie **najgorszej bibliotece - Jquery**, może i stara biblioteka ale nadal można ją bardzo często spotkać w internecie.
