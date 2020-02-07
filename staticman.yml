@@ -14,7 +14,3 @@ comments:
       type          : "date"
       options:
         format      : "iso8601"
-  reCaptcha:
-    enabled: true
-    siteKey: "6LenZtYUAAAAAA9KQI8hzOe43ftO15-_GdLb5pDl"
-    secret: "6LenZtYUAAAAALH7Jcf2RfXyhfXB7i2XRb7Atxy3"

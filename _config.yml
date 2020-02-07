@@ -25,8 +25,3 @@ staticman_url: https://api.staticman.net/v3/entry/github/igorkowalczyk/blog/mast
 
 staticman:
   branch: "master"
-  
-reCaptcha:
- enabled: true
- siteKey: "6LenZtYUAAAAAA9KQI8hzOe43ftO15-_GdLb5pDl"
- secret: "6LenZtYUAAAAALH7Jcf2RfXyhfXB7i2XRb7Atxy3"
