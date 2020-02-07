@@ -22,7 +22,9 @@ layout: default
 <hr>
 <br>
 <h3>Komentarze:</h3>
+{% if page.comments == true %}
 {% include comments.html %}
+{% endif %}
 <br>
 <hr>
 <br>

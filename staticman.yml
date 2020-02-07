@@ -1,8 +1,8 @@
 comments:
-  allowedFields: ["name", "email", "url", "message", "replying_to"]
+  allowedFields: ["name", "email", "url", "message"]
   branch            : "master"
   commitMessage     : "New comment by {fields.name}"
-  filename: "comment-{@timestamp}"
+  filename          : "comment-{@timestamp}"
   format            : "yaml"
   moderation        : true
   path              : "_data/comments/{options.slug}"
@@ -14,7 +14,3 @@ comments:
       type          : "date"
       options:
         format      : "iso8601"
-  reCaptcha:
-    enabled: true
-    siteKey: "6LfLAjwUAAAAAKOi8qdESCsIsuNKQWprkVwVTOca"
-    secret: "hIjDAFgRYCqZ5vLwealMOgQ27fwTpIh64Wjem8fI6rzs65k6Jr6hDh5A8cTv1gi0LBnc74abCXCUR+hi9lKnozMxnisI2vLnFfcZQYfVCqXyH0d4APJDJJ0qhMxkM6OztcHNx7PjHqms0u4cjVIU1McmbDuxaB02V6z1eMzmdmE="
