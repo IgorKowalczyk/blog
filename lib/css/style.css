@@ -934,3 +934,7 @@ display: block;
 .comment {
 margin-top: 2em
 }
+
+.notice {
+text-align: center;
+}
