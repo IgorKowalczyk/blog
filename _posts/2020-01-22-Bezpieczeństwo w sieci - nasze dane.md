@@ -2,7 +2,7 @@
 layout: post
 title: "Bezpieczeństwo w sieci - Nasze dane"
 categories: internet
-comments: true
+comments: false
 ---
 
 Witajcie, jak mówiłem, ten wpis jest kolejną częścią serii o bezpieczeństwie w internecie.  Dzisiaj zajmę się danymi jakie udostępniamy w internecie.
