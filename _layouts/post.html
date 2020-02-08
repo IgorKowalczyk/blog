@@ -37,7 +37,7 @@ layout: default
 <p class="message">{{ commentData.message }}</p>
 </div>
 {% endfor %}
-<hr>
+{% unless page.comment == true %}
 <form method="post" action="{{ site.staticman_url }}">
 <h3>Napisz komentarz:</h3>
 <input name="options[redirect]" type="hidden" value="https://igorkowalczyk.github.io/blog/{{ page.url }}">
@@ -51,6 +51,11 @@ layout: default
 <p>Komentarze pojawią się po zaakceptowaniu przez moderatora.</p>
 <button type="submit">Wyślij komentarz</button>
 </form>
+{% else %}
+<div class="notice">
+<h4>Komentarze zostały zablokowane.</h4>
+</div>
+{% endunless %}
 <br>
 <hr>
 <br>
