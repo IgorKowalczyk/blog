@@ -918,6 +918,7 @@ height: 30px;
 border-radius: 50%;
 display: inline-block;
 margin-bottom: -7px;
+user-select: none;
 }
 	
 .comment .meta {
