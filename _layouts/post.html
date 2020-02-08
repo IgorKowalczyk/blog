@@ -22,9 +22,35 @@ layout: default
 <hr>
 <br>
 <h3>Komentarze:</h3>
-  {% if page.comments == true %}
-    {% include comments.html %}
-  {% endif %}
+{% assign comments = site.data.comments | sort %}
+{% for comment in comments reversed %}
+{% assign commentData = comment[1] %}
+<div class="comment">
+<div class="meta">
+<p class="name">
+{% if commentData.email %}
+<img src="https://www.gravatar.com/avatar/{{commentData.email }}?d=mm&s=60" alt="{{ commentData.name | escape }}">
+{% else %}
+<img src="/blog/lib/img/avatar.jpg" alt="{{ commentData.name | escape }}">
+{% endif %} Od: {{ commentData.name }} * {{ commentData.date | date: "%m/%d/%Y" }}</p>
+</div>
+<p class="message">{{ commentData.message }}</p>
+</div>
+{% endfor %}
+<hr>
+<form method="post" action="{{ site.staticman_url }}">
+<h3>Napisz komentarz:</h3>
+<input name="options[redirect]" type="hidden" value="https://igorkowalczyk.github.io/blog/{{ page.url }}">
+<input name="options[slug]" type="hidden" value="{{ page.slug }}">
+<label>Imię (Wyświetlane, wymagane)</label>
+<input name="fields[name]" type="text" required placeholder="Jan Kowalski" title="To pole jest wymagane">
+<label>E-mail (Ukryte, wymagane)</label>
+<input name="fields[email]" type="email" required placeholder="jan@kowalski.com" title="To pole jest wymagane">
+<label>Wiadomość (Wyświetlane, wymagane)</label>
+<textarea style="width:100%" name="fields[message]" rows="5" required placeholder="Twoja wiadomość" title="To pole jest wymagane"></textarea>
+<p>Komentarze pojawią się po zaakceptowaniu przez moderatora.</p>
+<button type="submit">Wyślij komentarz</button>
+</form>
 <br>
 <hr>
 <br>
