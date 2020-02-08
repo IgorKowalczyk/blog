@@ -1,16 +1,82 @@
+# Name of the property. You can have multiple properties with completely
+# different config blocks for different sections of your site.
+# For example, you can have one property to handle comment submission and
+# another one to handle posts.
 comments:
-  allowedFields     : ['name', 'email', 'message']
-  branch            : "master"
-  commitMessage     : "New comment by {fields.name}"
-  filename          : "comment-{@timestamp}"
-  format            : "yaml"
-  moderation        : true
-  path              : "_data/comments/{options.slug}"
-  requiredFields    : ['name', 'email', 'message']
-  transforms:
-    email           : md5
+  # (*) REQUIRED
+  #
+  # Names of the fields the form is allowed to submit. If a field that is
+  # not here is part of the request, an error will be thrown.
+  allowedFields: ["name", "email", "url", "message", "replying_to"]
+
+  # (*) REQUIRED WHEN USING NOTIFICATIONS
+  #
+  # When allowedOrigins is defined, only requests sent from one of the domains
+  # listed will be accepted. The origin is sent as part of the `options` object
+  # (e.g. <input name="options[origin]" value="http://yourdomain.com/post1")
+  allowedOrigins: ["igorkowalczyk.github.io/blog", "igorkowalczyk.github.io"]
+
+  # (*) REQUIRED
+  #
+  # Name of the branch being used. Must match the one sent in the URL of the
+  # request.
+  branch: "master"
+
+  # (*) REQUIRED
+  #
+  # Destination path (filename) for the data files. Accepts placeholders.
+  filename: "comment-{@timestamp}"
+
+  # The format of the generated data files. Accepted values are "json", "yaml"
+  # or "frontmatter"
+  format: "yaml"
+
+  # List of fields to be populated automatically by Staticman and included in
+  # the data file. Keys are the name of the field. The value can be an object
+  # with a `type` property, which configures the generated field, or any value
+  # to be used directly (e.g. a string, number or array)
   generatedFields:
     date:
-      type          : "date"
+      type: date
       options:
-        format      : "iso8601"
+        format: "iso8601"
+#        format: "timestamp-seconds"
+
+  # Whether entries need to be appproved before they are published to the main
+  # branch. If set to `true`, a pull request will be created for your approval.
+  # Otherwise, entries will be published to the main branch automatically.
+  moderation: true
+
+  # Name of the site. Used in notification emails.
+  #name: "eduardoboucas.com"
+  name: "igorkowalczyk"
+
+  # Notification settings. When enabled, users can choose to receive notifications
+  # via email when someone adds a reply or a new comment. This requires an account
+  # with Mailgun, which you can get for free at http://mailgun.com.
+  notifications:
+    # Enable notifications
+    # enabled: false
+
+    # (!) ENCRYPTED
+    # Mailgun API key
+    # apiKey: "WQ1XRFlolM6kZnQorsQn+IilznPTaUIOwvJ37Q5hNfXj9O6AZp4yANxciyosYabANYZF5Py8NZ5mB7R5Kkgg7/dum+Rb4KkMx/0Ny9/3g9D83/p7MpAdvkGywR4cQg4RCxfjzHLiW3EF+15gLwZYMHmn2vFiScpQpxm1tvgCi/E=
+"
+
+    # (!) ENCRYPTED
+    # Mailgun domain (encrypted)
+    # domain: "cfDHHwwF7f4lCTzvPkPfmebKMESn9Z0X0X4G5y2COM44tAbcDTw4DIK3DGE+Pviy1tdMBKis0m7bjQYcMlXcMRr++wIX4qhurvPghi/jNo0NtiLDR1w9/NAxCBLmbgSEQpWUMeOI3KNtL5dQbqDVheOIbsPi3DTCddpIJrY2Rkc="
+    # fromAddress: "test@example"
+  path: "_data/comments/{options.slug}"
+
+  # Names of required files. If any of these isn't in the request or is empty,
+  # an error will be thrown.
+  requiredFields: ["name", "email", "message"]
+
+  transforms:
+    email: md5
+
+  reCaptcha:
+    enabled: true
+    siteKey: "6LcK3xkUAAAAAKdppIIORt78Df93D2qvOGtZinEy"
+    secret: "Fny+FwO6GniFYJRmLc1bmy9eaQNGVGGsIVN/510Pb22f7QpsjyQ7dyRPEOMHy6esJtrku7k2ss4LIDUfUOjymmUEtcRwsqEDvE8OcsZt8c9H9slutW9F60n/bb+CGruk0WYS8V/uuMF8yu41NU3+mfcsJxCQrYkGvEQ0jQaOvBI="

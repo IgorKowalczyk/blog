@@ -21,7 +21,7 @@ categories_names:
  'programowanie': "Programowanie"
  'javascript': "JavaScript"
  
-staticman_url: https://api.staticman.net/v3/entry/github/igorkowalczyk/blog/master/comments
+staticmanUrl: https://api.staticman.net/v3/entry/github/igorkowalczyk/blog/master/comments
 
 staticman:
   branch: "master"
