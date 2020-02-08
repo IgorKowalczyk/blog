@@ -917,11 +917,11 @@ width: 30px;
 height: 30px;
 border-radius: 50%;
 display: inline-block;
+margin-bottom: -7px;
 }
 	
 .comment .meta {
 margin-bottom: 1em;
-padding-bottom: .25em;
 width: 100%;
 border-bottom: 2px solid var(--text);
 }
