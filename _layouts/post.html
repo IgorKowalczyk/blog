@@ -23,18 +23,18 @@ layout: default
 <br>
 <h3>Komentarze:</h3>
 {% assign comments = site.data.comments | where: "slug", page.slug %}
-{% for comment in data.comments %}
+{% for comment in comments %}
 <div class="comment">
 <div class="meta">
 <p class="name">
-{% if comment.email %}
-<img src="https://www.gravatar.com/avatar/{{ comment.email }}?d=mm&s=60" alt="{{ comment.name| escape }}">
+{% if commentData.email %}
+<img src="https://www.gravatar.com/avatar/{{ commentData.email }}?d=mm&s=60" alt="{{ commentData.name| escape }}">
 {% else %}
-<img src="/blog/lib/img/avatar.jpg" alt="{{ comment.name | escape }}">
+<img src="/blog/lib/img/avatar.jpg" alt="{{ commentData.name | escape }}">
 {% endif %}
-Od: {{ comment.name | strip_html }} * {{ comment.date | date: "%b %-d, %Y, %H:%M" }}</p>
+Od: {{ commentData.name | strip_html }} * {{ commentData.date | date: "%b %-d, %Y, %H:%M" }}</p>
 </div>
-<p class="message">{{ comment.message | strip_html | markdownify | smartify }}</p>
+<p class="message">{{ commentData.message | strip_html | markdownify | smartify }}</p>
 </div>
 {% endfor %}
 {% if page.comments == true %}
