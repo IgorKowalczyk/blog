@@ -1,0 +1,13 @@
+{% for comment in site.data.comments | where: "slug", page.slug %}
+<div class="comment">
+<div class="meta">
+<p class="name">
+{% if comment.email %}
+<img src="https://www.gravatar.com/avatar/{{ include.email }}?d=mm&s=60" alt="{{ include.name| escape }}">
+{% else %}
+<img src="/blog/lib/img/avatar.jpg" alt="{{ include.name | escape }}">
+{% endif %} Od: {{ include.name | strip_html }} * {{ include.date | date: "%b %-d, %Y, %H:%M" }}</p>
+</div>
+<p class="message">{{ include.message | strip_html | markdownify | smartify }}</p>
+</div>
+{% endfor %}
