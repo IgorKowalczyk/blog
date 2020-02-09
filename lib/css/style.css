@@ -935,7 +935,9 @@ padding: 5px 10px 10px 10px !important;
 }
 
 .comment {
-margin-top: 2em
+margin-top: 2em;
+border: 2px solid var(--text);
+border-radius: 5px
 }
 
 .notice {
