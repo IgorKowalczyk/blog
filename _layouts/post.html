@@ -23,7 +23,7 @@ layout: default
 <br>
 <h3>Komentarze:</h3>
 {% assign comments = site.data.comments | where: "slug", page.slug %}
-{% for comment in site.data.comments %}
+{% for comment in data.comments %}
 <div class="comment">
 <div class="meta">
 <p class="name">
