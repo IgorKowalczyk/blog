@@ -22,7 +22,7 @@ layout: default
 <hr>
 <br>
 <h3>Komentarze:</h3>
-{% for comment in site.data.comments | where: "slug", page.slug %}
+{% for comment in site.data.comments %}
 <div class="comment">
 <div class="meta">
 <p class="name">
