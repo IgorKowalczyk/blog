@@ -1,10 +1,10 @@
 <form method="post" action="{{ site.staticman_url }}">
-    <input type="hidden" name="reply_to" value="{{ include.reply_to }}" />
+    <input type="hidden" name="options[reply_to]" value="{{ include.reply_to }}" />
     <div style="clear: both; padding-top: .5em;">Name</div>
-    <input type="text" name="author" />
+    <input type="text" name="options[author]" />
     <div>E-mail</div>
-    <input type="email" name="email" />
+    <input type="email" name="options[email]" />
     <div>Comment</div>
-    <textarea name="text"></textarea>
+    <textarea name="options[text]"></textarea>
     <input type="submit" value="Submit" />
 </form>
