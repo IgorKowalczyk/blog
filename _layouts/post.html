@@ -26,13 +26,13 @@ layout: default
 <div class="comment">
 <div class="meta">
 <p class="name">
-{% if commentData.email %}
-<img src="https://www.gravatar.com/avatar/{{ commentData.email }}?d=mm&s=60" alt="{{ commentData.name| escape }}">
+{% if comment[1].email %}
+<img src="https://www.gravatar.com/avatar/{{ comment[1].email }}?d=mm&s=60" alt="{{ comment[1].name| escape }}">
 {% else %}
-<img src="/blog/lib/img/avatar.jpg" alt="{{ commentData.name | escape }}">
-{% endif %} Od: {{ commentData.name | strip_html }} * {{ commentData.date | date: "%b %-d, %Y, %H:%M" }}</p>
+<img src="/blog/lib/img/avatar.jpg" alt="{{ comment[1].name | escape }}">
+{% endif %} Od: {{ comment[1].name | strip_html }} * {{ comment[1].date | date: "%b %-d, %Y, %H:%M" }}</p>
 </div>
-<p class="message">{{ commentData.message | strip_html | markdownify | smartify }}</p>
+<p class="message">{{ comment[1].message | strip_html | markdownify | smartify }}</p>
 </div>
 {% endfor %}
 {% if page.comments == true %}
