@@ -909,7 +909,6 @@ color: var(--00a3a3);
 
 .comment p {
 padding-bottom: 0.2em !important;
-margin-bottom: 5px;
 }
 
 .comment img {
@@ -922,13 +921,17 @@ user-select: none;
 }
 	
 .comment .meta {
-margin-bottom: 1em;
 width: 100%;
 border-bottom: 2px solid var(--text);
+padding: 5px;
 }
 
 .comment p {
 display: block;
+}
+
+.comment .message {
+padding: 5px 10px 10px 10px !important;
 }
 
 .comment {
