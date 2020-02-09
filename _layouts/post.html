@@ -22,21 +22,8 @@ layout: default
 <hr>
 <br>
 <h3>Komentarze:</h3>
-{% assign comments = site.data.comments | where: "slug", page.slug %}
-{% for comment in comments %}
-<div class="comment">
-<div class="meta">
-<p class="name">
-{% if commentData.email %}
-<img src="https://www.gravatar.com/avatar/{{ commentData.email }}?d=mm&s=60" alt="{{ commentData.name| escape }}">
-{% else %}
-<img src="/blog/lib/img/avatar.jpg" alt="{{ commentData.name | escape }}">
-{% endif %}
-Od: {{ commentData.name | strip_html }} * {{ commentData.date | date: "%b %-d, %Y, %H:%M" }}</p>
-</div>
-<p class="message">{{ commentData.message | strip_html | markdownify | smartify }}</p>
-</div>
-{% endfor %}
+{% include comments.html replies_to=page.url %}
+{% include comment-form.html reply_to=page.url %}
 {% if page.comments == true %}
 <form method="post" action="{{ site.staticman_url }}">
 <h3>Napisz komentarz:</h3>
