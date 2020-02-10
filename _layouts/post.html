@@ -21,7 +21,7 @@ layout: default
 <br>
 <hr>
 <br>
-<h3>Komentarze:</h3>
+<h2>Komentarze:</h2>
 {% for comment in site.data.comments %}
 <div class="comment">
 <div class="meta">
@@ -39,7 +39,7 @@ layout: default
 {% endfor %}
 {% if page.comments == true %}
 <form method="post" action="{{ site.staticman_url }}">
-<h3 class="new-comment">Napisz komentarz:</h3>
+<h2 class="new-comment">Napisz komentarz:</h2>
 <input name="options[redirect]" type="hidden" value="https://igorkowalczyk.github.io/blog/{{ page.url }}">
 <input name="options[slug]" type="hidden" value="{{ page.slug }}">
 <label>Imię (Wyświetlane, wymagane)</label>
