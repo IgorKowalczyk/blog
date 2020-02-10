@@ -47,9 +47,6 @@ layout: default
 <h2 class="new-comment">Napisz komentarz:</h2>
 <input name="options[redirect]" type="hidden" value="https://igorkowalczyk.github.io/blog/{{ page.url }}">
 <input name="options[slug]" type="hidden" value="{{ page.slug }}">
-<input type="hidden" name="options[origin]" value="{{ page.url | relative_url }}">
-<input type="hidden" name="options[parent]" value="{{ page.url | relative_url }}">
-<input type="hidden" id="comment-replying-to" name="fields[replying_to]" value="">
 <label>Imię (Wyświetlane, wymagane)</label>
 <input name="fields[name]" type="text" required placeholder="Jan Kowalski" title="To pole jest wymagane" maxlength="50">
 <label>E-mail (Ukryty, wymagany)</label>
