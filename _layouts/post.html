@@ -22,7 +22,7 @@ layout: default
 <hr>
 <br>
 <h2>Komentarze:</h2>
-{% for comment in site.data.comments %}
+{% assign comments = site.data.comments[page.slug] %}
 <div class="comment">
 <div class="meta">
 <p class="name">
