@@ -930,7 +930,7 @@ padding: 5px;
 display: block;
 }
 
-.comment .message {
+.comment .message, .comment .comment-body {
 padding: 5px 10px 10px 10px !important;
 }
 
