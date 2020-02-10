@@ -21,37 +21,37 @@ layout: default
 <br>
 <hr>
 <br>
-<h2>Komentarze:</h2>
-{% for comment in site.data.comments | where: "slug", page.slug %}
+<h3>Komentarze:</h3>
+{% for comment in site.data.comments %}
 <div class="comment">
 <div class="meta">
 <p class="name">
-{% if comment.email %}
-<img src="https://www.gravatar.com/avatar/{{ commentData.email }}?d=mm&s=60" alt="{{ commentData.name| escape }}">
+{% if comment[1].email %}
+<img src="https://www.gravatar.com/avatar/{{ comment[1].email }}?d=mm&s=60" alt="{{ comment[1].name| escape }}">
 {% else %}
-<img src="/blog/lib/img/avatar.jpg" alt="{{ commentData.name | escape }}">
-{% endif %} Od: {{ commentData.name | strip_html }} * {{ commentData.date | date: "%b %-d, %Y, %H:%M" }}</p>
+<img src="/blog/lib/img/avatar.jpg" alt="{{ comment[1].name | escape }}">
+{% endif %} Od: {{ comment[1].name | strip_html }} * {{ comment[1].date | date: "%d/%m/%Y" }}</p>
 </div>
-<p class="message">{{ commentData.message | strip_html | markdownify | smartify }}</p>
+<p class="message">{{ comment[1].message | markdownify | smartify }}</p>
 </div>
 {% endfor %}
 {% if page.comments == true %}
 <form method="post" action="{{ site.staticman_url }}">
-<h2 class="new-comment">Napisz komentarz:</h2>
+<h3>Napisz komentarz:</h3>
 <input name="options[redirect]" type="hidden" value="https://igorkowalczyk.github.io/blog/{{ page.url }}">
 <input name="options[slug]" type="hidden" value="{{ page.slug }}">
 <label>Imię (Wyświetlane, wymagane)</label>
-<input name="fields[name]" type="text" required placeholder="Jan Kowalski" title="To pole jest wymagane" maxlength="50">
+<input name="fields[name]" type="text" required placeholder="Jan Kowalski" title="To pole jest wymagane">
 <label>E-mail (Ukryty, wymagany)</label>
-<input name="fields[email]" type="email" required placeholder="jan@kowalski.com" title="To pole jest wymagane" maxlength="50">
+<input name="fields[email]" type="email" required placeholder="jan@kowalski.com" title="To pole jest wymagane">
 <label>Wiadomość (Wyświetlane, wymagane)</label>
-<textarea style="width:100%" name="fields[message]" rows="5" required placeholder="Twoja wiadomość" title="To pole jest wymagane" maxlength="200"></textarea>
+<textarea style="width:100%" name="fields[message]" rows="5" required placeholder="Twoja wiadomość" title="To pole jest wymagane"></textarea>
 <p>Komentarze pojawią się po zaakceptowaniu przez moderatora.</p>
 <button type="submit">Wyślij komentarz</button>
 </form>
 {% else %}
 <div class="notice">
-<h3>Dodawanie komentarzy jest zablokowane.</h3>
+<h4>Dodawanie komentarzy jest zablokowane.</h4>
 </div>
 {% endif %}
 <br>
