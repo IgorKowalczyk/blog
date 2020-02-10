@@ -23,7 +23,7 @@ layout: default
 <br>
 <h2>Komentarze:</h2>
 {% if site.data.comments[page.slug] %}
-{% assign comments = site.data.comments[page.slug] | sort %}
+{% assign comments = site.data.comments[page.slug] | sort | where_exp: 'comment', 'comment[1].replying_to == blank' %}
 {% for comment in comments %}
 {% assign index = forloop.index %}
 {% assign replying_to = comment[1].replying_to | to_integer %}
