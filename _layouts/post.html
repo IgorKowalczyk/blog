@@ -1,4 +1,4 @@
----
+﻿---
 layout: default
 ---
 <article class="post">
@@ -23,7 +23,8 @@ layout: default
 <br>
 <h2>Komentarze:</h2>
 {% if site.data.comments[page.slug] %}
-{% for comment in site.data.comments | where: "slug", page.slug %}
+{% assign comments = site.data.comments | where: "slug", page.slug %}
+{% for comment in comments %}
 <div class="comment">
 <div class="meta">
 <p class="name">
