@@ -940,6 +940,10 @@ border: 2px solid var(--text);
 border-radius: 5px
 }
 
+.new-comment {
+margin-top: 2em;
+}
+
 .notice {
 text-align: center;
 }
