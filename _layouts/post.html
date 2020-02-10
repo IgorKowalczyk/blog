@@ -30,7 +30,7 @@ layout: default
 <img src="https://www.gravatar.com/avatar/{{ comment[1].email }}?d=mm&s=60" alt="{{ comment[1].name| escape }}">
 {% else %}
 <img src="/blog/lib/img/avatar.jpg" alt="{{ comment[1].name | escape }}">
-{% endif %} Od: {{ comment[1].name | strip_html }} * {{ comment[1].date | date: "%b %-d, %Y, %H:%M" }}</p>
+{% endif %} Od: {{ comment[1].name | strip_html }} * {{ comment[1].date | date: "%d/%m/%Y" }}</p>
 </div>
 <p class="message">{{ comment[1].message | markdownify | smartify }}</p>
 </div>
@@ -42,7 +42,7 @@ layout: default
 <input name="options[slug]" type="hidden" value="{{ page.slug }}">
 <label>Imię (Wyświetlane, wymagane)</label>
 <input name="fields[name]" type="text" required placeholder="Jan Kowalski" title="To pole jest wymagane">
-<label>E-mail (Ukryte, wymagane)</label>
+<label>E-mail (Ukryty, wymagany)</label>
 <input name="fields[email]" type="email" required placeholder="jan@kowalski.com" title="To pole jest wymagane">
 <label>Wiadomość (Wyświetlane, wymagane)</label>
 <textarea style="width:100%" name="fields[message]" rows="5" required placeholder="Twoja wiadomość" title="To pole jest wymagane"></textarea>
