@@ -35,11 +35,11 @@ layout: default
 </div>
 <p class="message">{{ commentData.message | strip_html | markdownify | smartify }}</p>
 </div>
+{% endfor %}
 {% else %}
 <div class="notice">
 <h3>Nikt jeszcze nie skomentował.</h3>
 </div>
-{% endfor %}
 {% endif %}
 {% if page.comments == true %}
 <form method="post" action="{{ site.staticman_url }}">
