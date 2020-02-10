@@ -22,18 +22,20 @@ layout: default
 <hr>
 <br>
 <h2>Komentarze:</h2>
-{% if site.data.comments[page.slug] %}
-{% assign comments = site.data.comments[page.slug] | sort | where_exp: 'comment', 'comment[1].replying_to == blank' %}
-{% for comment in comments %}
-{% assign index = forloop.index %}
-{% assign replying_to = comment[1].replying_to | to_integer %}
-{% assign email = comment[1].email %}
-{% assign name = comment[1].name %}
-{% assign url = comment[1].url %}
-{% assign date = comment[1].date %}
-{% assign message = comment[1].message %}
-{% include comment.html index=index replying_to=replying_to email=email name=name url=url date=date message=message %}
-{% endfor %}
+{% assign comments = site.data.comments[page.slug] | sort %}
+<div class="comment">
+<div class="meta">
+<p class="name">
+{% if comment[1].email %}
+<img src="https://www.gravatar.com/avatar/{{ comment[1].email }}?d=mm&s=60" alt="{{ comment[1].name| escape }}">
+{% else %}
+<img src="/blog/lib/img/avatar.jpg" alt="{{ comment[1].name | escape }}">
+{% endif %} Od: {{ comment[1].name | strip_html }} * {{ comment[1].date | date: "%d/%m/%Y" }}</p>
+</div>
+<div class="comment-body">
+<p class="message">{{ comment[1].message | markdownify | smartify }}</p>
+</div>
+</div>
 {% else %}
 <div class="notice">
 <h3>Nikt jeszcze nie skomentował.</h3>
@@ -48,11 +50,11 @@ layout: default
 <input type="hidden" name="options[parent]" value="{{ page.url | relative_url }}">
 <input type="hidden" id="comment-replying-to" name="fields[replying_to]" value="">
 <label>Imię (Wyświetlane, wymagane)</label>
-<input name="fields[name]" type="text" required placeholder="Jan Kowalski" title="To pole jest wymagane">
+<input name="fields[name]" type="text" required placeholder="Jan Kowalski" title="To pole jest wymagane" maxlength="50">
 <label>E-mail (Ukryty, wymagany)</label>
-<input name="fields[email]" type="email" required placeholder="jan@kowalski.com" title="To pole jest wymagane">
+<input name="fields[email]" type="email" required placeholder="jan@kowalski.com" title="To pole jest wymagane" maxlength="50">
 <label>Wiadomość (Wyświetlane, wymagane)</label>
-<textarea style="width:100%" name="fields[message]" rows="5" required placeholder="Twoja wiadomość" title="To pole jest wymagane"></textarea>
+<textarea style="width:100%" name="fields[message]" rows="5" required placeholder="Twoja wiadomość" title="To pole jest wymagane" maxlength="200"></textarea>
 <p>Komentarze pojawią się po zaakceptowaniu przez moderatora.</p>
 <button type="submit">Wyślij komentarz</button>
 </form>

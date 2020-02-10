@@ -701,6 +701,8 @@ padding: 10px;
 display: flex;
 margin: 10px 0px 5px 0px;
 width: 100%;
+min-height: 60px;
+max-height: 300px;
 }
 
 input {
