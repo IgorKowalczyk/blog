@@ -32,12 +32,14 @@ layout: default
 <img src="/blog/lib/img/avatar.jpg" alt="{{ comment[1].name | escape }}">
 {% endif %} Od: {{ comment[1].name | strip_html }} * {{ comment[1].date | date: "%d/%m/%Y" }}</p>
 </div>
+<div class="comment-body">
 <p class="message">{{ comment[1].message | markdownify | smartify }}</p>
+</div>
 </div>
 {% endfor %}
 {% if page.comments == true %}
 <form method="post" action="{{ site.staticman_url }}">
-<h3>Napisz komentarz:</h3>
+<h3 class="new-comment">Napisz komentarz:</h3>
 <input name="options[redirect]" type="hidden" value="https://igorkowalczyk.github.io/blog/{{ page.url }}">
 <input name="options[slug]" type="hidden" value="{{ page.slug }}">
 <label>Imię (Wyświetlane, wymagane)</label>
