@@ -32,6 +32,10 @@ layout: default
 {% assign message = comment[1].message %}
 {% include comment.html index=forloop.index email=email name=name date=date message=message %}
 {% endfor %}
+{% else %}
+<div class="notice">
+<h4>Nikt jeszcze nie skomentował</h4>
+</div>
 {% endif %}
 {% if page.comments == true %}
 <form method="post" action="{{ site.staticman_url }}">
