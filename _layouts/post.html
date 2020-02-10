@@ -25,12 +25,14 @@ layout: default
 {% if site.data.comments[page.slug] %}
 {% assign comments = site.data.comments[page.slug] | sort %}
 {% for comment in comments %}
+{% assign index = forloop.index %}
+{% assign replying_to = comment[1].replying_to | to_integer %}
 {% assign email = comment[1].email %}
 {% assign name = comment[1].name %}
 {% assign url = comment[1].url %}
 {% assign date = comment[1].date %}
 {% assign message = comment[1].message %}
-{% include comment.html index=forloop.index email=email name=name date=date message=message %}
+{% include comment.html index=index replying_to=replying_to email=email name=name url=url date=date message=message %}
 {% endfor %}
 {% else %}
 <div class="notice">
@@ -42,6 +44,9 @@ layout: default
 <h2 class="new-comment">Napisz komentarz:</h2>
 <input name="options[redirect]" type="hidden" value="https://igorkowalczyk.github.io/blog/{{ page.url }}">
 <input name="options[slug]" type="hidden" value="{{ page.slug }}">
+<input type="hidden" name="options[origin]" value="{{ page.url | relative_url }}">
+<input type="hidden" name="options[parent]" value="{{ page.url | relative_url }}">
+<input type="hidden" id="comment-replying-to" name="fields[replying_to]" value="">
 <label>Imię (Wyświetlane, wymagane)</label>
 <input name="fields[name]" type="text" required placeholder="Jan Kowalski" title="To pole jest wymagane">
 <label>E-mail (Ukryty, wymagany)</label>
