@@ -22,21 +22,19 @@ layout: default
 <hr>
 <br>
 <h2>Komentarze:</h2>
-{% assign comments = site.data.comments[page.slug] | sort %}
-{% for comment in comments %}
+{% for comment in site.data.comments | where: "slug", page.slug %}
 <div class="comment">
 <div class="meta">
 <p class="name">
-{% if comment[1].email %}
-<img src="https://www.gravatar.com/avatar/{{ comment[1].email }}?d=mm&s=60" alt="{{ comment[1].name| escape }}">
+{% if comment.email %}
+<img src="https://www.gravatar.com/avatar/{{ comment.email }}?d=mm&s=60" alt="{{ comment.name| escape }}">
 {% else %}
-<img src="/blog/lib/img/avatar.jpg" alt="{{ comment[1].name | escape }}">
-{% endif %} Od: {{ comment[1].name | strip_html }} * {{ comment[1].date | date: "%d/%m/%Y" }}</p>
+<img src="/blog/lib/img/avatar.jpg" alt="{{ comment.name | escape }}">
+{% endif %} Od: {{ comment.name | strip_html }} * {{ comment.date | date: "%b %-d, %Y, %H:%M" }}</p>
 </div>
-<div class="comment-body">
-<p class="message">{{ comment[1].message | markdownify | smartify }}</p>
+<p class="message">{{ comment.message | strip_html | markdownify | smartify }}</p>
 </div>
-</div>
+{% endfor %}
 {% else %}
 <div class="notice">
 <h3>Nikt jeszcze nie skomentował.</h3>
