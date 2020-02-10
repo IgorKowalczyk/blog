@@ -22,97 +22,6 @@ layout: default
 <hr>
 <br>
 <h2>Komentarze:</h2>
-{% for comment in site.data.comments | where: "slug", page.slug %}
-<div class="comment">
-<div class="meta">
-<p class="name">
-{% if comment.email %}
-<img src="https://www.gravatar.com/avatar/{{ comment.email }}?d=mm&s=60" alt="{{ comment.name| escape }}">
-{% else %}
-<img src="/blog/lib/img/avatar.jpg" alt="{{ comment.name | escape }}">
-{% endif %} Od: {{ comment.name | strip_html }} * {{ comment.date | date: "%b %-d, %Y, %H:%M" }}</p>
-</div>
-<p class="message">{{ comment.message | strip_html | markdownify | smartify }}</p>
-</div>
-{% endfor %}
-{% else %}
-<div class="notice">
-<h3>Nikt jeszcze nie skomentował.</h3>
-</div>
-{% endif %}
-{% if page.comments == true %}
-<form method="post" action="{{ site.staticman_url }}">
-<h2 class="new-comment">Napisz komentarz:</h2>
-<input name="options[redirect]" type="hidden" value="https://igorkowalczyk.github.io/blog/{{ page.url }}">
-<input name="options[slug]" type="hidden" value="{{ page.slug }}">
-<label>Imię (Wyświetlane, wymagane)</label>
-<input name="fields[name]" type="text" required placeholder="Jan Kowalski" title="To pole jest wymagane" maxlength="50">
-<label>E-mail (Ukryty, wymagany)</label>
-<input name="fields[email]" type="email" required placeholder="jan@kowalski.com" title="To pole jest wymagane" maxlength="50">
-<label>Wiadomość (Wyświetlane, wymagane)</label>
-<textarea style="width:100%" name="fields[message]" rows="5" required placeholder="Twoja wiadomość" title="To pole jest wymagane" maxlength="200"></textarea>
-<p>Komentarze pojawią się po zaakceptowaniu przez moderatora.</p>
-<button type="submit">Wyślij komentarz</button>
-</form>
-{% else %}
-<div class="notice">
-<h3>Dodawanie komentarzy jest zablokowane.</h3>
-</div>
-{% endif %}
-<br>
-<hr>
-<br>
-<div class="post-nav">
-{% if page.previous.url %}
-<li><a class="prev" href="/blog{{page.previous.url}}">< Poprzedni post</a></li>
-{% endif %}
-{% if page.next.url %}
-<li><a class="next" href="/blog{{page.next.url}}">Następny post ></a></li>
-{% endif %}
-</div>
-<div class="post-recent">
-<h3>Polecane posty:</h3>
-<ul>
-{% assign posts = site.posts | where_exp:"post", "post.url != page.url" | sample: 2 %}
-{% for post in posts %}
-<li>
-<a href="{{ post.url | prepend: site.baseurl }}">
-<div>
-<div class="post-related-title">{{ post.title }}</div>
-<p class="post-summary">{{post.content | markdownify | strip_html | truncatewords: 15}}</p>
-</div>
-</a>
-</li>
-{% endfor %}
-</ul>
-</div>
-</article>
-
-
----
-layout: default
----
-<article class="post">
-<header class="post-header">
-<h2 class="post-title" >{{ page.title | escape }}</h2>
-<p class="post-meta">
-<time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%d-%m-%Y" }}</time>
-<ul class="cat">Kategorie:&nbsp;
-<span>
-{% for category in page.categories %}
-<a href="/blog/categories/{{ category }}">{{ category }}</a>&nbsp;
-{% endfor %}
-</span>
-</ul>
-</p>
-</header>
-<section class="post-content">
-{{ content }}
-</section>
-<br>
-<hr>
-<br>
-<h3>Komentarze:</h3>
 {% if site.data.comments[page.slug] %}
 {% for comment in site.data.comments | where: "slug", page.slug %}
 <div class="comment">
@@ -134,7 +43,7 @@ layout: default
 {% endif %}
 {% if page.comments == true %}
 <form method="post" action="{{ site.staticman_url }}">
-<h3>Napisz komentarz:</h3>
+<h2 class="new-comment">Napisz komentarz:</h2>
 <input name="options[redirect]" type="hidden" value="https://igorkowalczyk.github.io/blog/{{ page.url }}">
 <input name="options[slug]" type="hidden" value="{{ page.slug }}">
 <label>Imię (Wyświetlane, wymagane)</label>
@@ -148,7 +57,7 @@ layout: default
 </form>
 {% else %}
 <div class="notice">
-<h4>Dodawanie komentarzy jest zablokowane.</h4>
+<h3>Dodawanie komentarzy jest zablokowane.</h3>
 </div>
 {% endif %}
 <br>
