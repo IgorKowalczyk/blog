@@ -22,22 +22,24 @@ layout: default
 <hr>
 <br>
 <h3>Komentarze:</h3>
-{% for comment in site.data.comments | where: "slug", page.slug %}
+{% assign comments = site.data.comments | sort %}
+{% for comment in comments reversed %}
+{% assign commentData = comment[1] %}
 <div class="comment">
 <div class="meta">
 <p class="name">
-{% if comment.email %}
-<img src="https://www.gravatar.com/avatar/{{ comment.email }}?d=mm&s=60" alt="{{ comment.name| escape }}">
+{% if commentData.email %}
+<img src="https://www.gravatar.com/avatar/{{commentData.email }}?d=mm&s=60" alt="{{ commentData.name | escape }}">
 {% else %}
-<img src="/blog/lib/img/avatar.jpg" alt="{{ commenta.name | escape }}">
-{% endif %} Od: {{ comment.name | strip_html }} * {{ comment.date | date: "%b %-d, %Y, %H:%M" }}</p>
+<img src="/blog/lib/img/avatar.jpg" alt="{{ commentData.name | escape }}">
+{% endif %} Od: {{ commentData.name }} * {{ commentData.date | date: "%m/%d/%Y" }}</p>
 </div>
-<p class="message">{{ comment.message | strip_html | markdownify | smartify }}</p>
+<p class="message">{{ commentData.message }}</p>
 </div>
 {% endfor %}
-{% if page.comments == true %}
+{% unless page.comment == true %}
 <form method="post" action="{{ site.staticman_url }}">
-<h3 class="new-comment">Napisz komentarz:</h3>
+<h3>Napisz komentarz:</h3>
 <input name="options[redirect]" type="hidden" value="https://igorkowalczyk.github.io/blog/{{ page.url }}">
 <input name="options[slug]" type="hidden" value="{{ page.slug }}">
 <label>Imię (Wyświetlane, wymagane)</label>
@@ -51,9 +53,9 @@ layout: default
 </form>
 {% else %}
 <div class="notice">
-<h4>Dodawanie komentarzy jest zablokowane.</h4>
+<h4>Komentarze zostały zablokowane.</h4>
 </div>
-{% endif %}
+{% endunless %}
 <br>
 <hr>
 <br>
