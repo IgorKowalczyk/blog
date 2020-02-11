@@ -25,10 +25,10 @@ layout: default
 {% if site.data.comments[page.slug] %}
 {% assign comments = site.data.comments[page.slug] | sort %}
 {% for comment in comments %}
-{% assign email = comment[1].email %}
-{% assign name = comment[1].name %}
-{% assign date = comment[1].date %}
-{% assign message = comment[1].message %}
+{% assign email = commentData.email %}
+{% assign name = commentData.name %}
+{% assign date = commentData.date %}
+{% assign message = commentData.message %}
 {% include comment.html index=forloop.index email=email name=name date=date message=message %}
 {% endfor %}
 {% else %}
