@@ -26,7 +26,7 @@ layout: default
 <div class="comment">
 <div class="meta">
 <p class="name">
-{% if comment.email %}
+{% if commentData.email %}
 <img src="https://www.gravatar.com/avatar/{{ commentData.email }}?d=mm&s=60" alt="{{ commentData.name| escape }}">
 {% else %}
 <img src="/blog/lib/img/avatar.jpg" alt="{{ commentData.name | escape }}">
