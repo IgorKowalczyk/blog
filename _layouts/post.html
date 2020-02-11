@@ -22,7 +22,6 @@ layout: default
 <hr>
 <br>
 <h3>Komentarze:</h3>
-{% if site.data.comments[page.slug] %}
 {% assign comments = site.data.comments[page.slug] | sort %}
 {% for comment in comments %}
 <div class="comment">
@@ -37,11 +36,6 @@ layout: default
 <p class="message">{{ comment.message | strip_html | markdownify | smartify }}</p>
 </div>
 {% endfor %}
-{% else %}
-<div class="notice">
-<h4>Nikt jeszcze nie skomentował.</h4>
-</div>
-{% endif %}
 {% if page.comments == true %}
 <form method="post" action="{{ site.staticman_url }}">
 <h3 class="new-comment">Napisz komentarz:</h3>
