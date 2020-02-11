@@ -32,7 +32,7 @@ layout: default
 <img src="https://www.gravatar.com/avatar/{{commentData.email }}?d=mm&s=60" alt="{{ commentData.name | escape }}">
 {% else %}
 <img src="/blog/lib/img/avatar.jpg" alt="{{ commentData.name | escape }}">
-{% endif %} Od: {{ commentData.name }} * {{ commentData.date | date: "%m/%d/%Y" }}</p>
+{% endif %} Od: {{ commentData.name }} * {{ commentData.date | date: "%d-%m-%Y" }}</p>
 </div>
 <p class="message">{{ commentData.message }}</p>
 </div>
