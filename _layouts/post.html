@@ -39,7 +39,7 @@ layout: default
 {% endfor %}
 {% unless page.comment == true %}
 <form method="post" action="{{ site.staticman_url }}">
-<h3>Napisz komentarz:</h3>
+<h3 class="new-comment">Napisz komentarz:</h3>
 <input name="options[redirect]" type="hidden" value="https://igorkowalczyk.github.io/blog/{{ page.url }}">
 <input name="options[slug]" type="hidden" value="{{ page.slug }}">
 <label>Imię (Wyświetlane, wymagane)</label>
