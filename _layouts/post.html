@@ -23,15 +23,6 @@ layout: default
 {% endcase %}
 {{ page.date | date: "%Y" }}
 </time>
-Czas czytania: {% raw %}
-  {% assign words = content | number_of_words %}
-  {% if words < 360 %}
-    1 minuta
-  {% else %}
-    {{ words | divided_by:180 }} minut
-  {% endif %}
-
-{% endraw %}
 <ul class="cat">Kategorie:&nbsp;
 <span>
 {% for category in page.categories %}
