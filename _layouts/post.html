@@ -43,11 +43,11 @@ layout: default
 <input name="options[redirect]" type="hidden" value="https://igorkowalczyk.github.io/blog/{{ page.url }}">
 <input name="options[slug]" type="hidden" value="{{ page.slug }}">
 <label>Imię (Wyświetlane, wymagane)</label>
-<input name="fields[name]" type="text" required placeholder="Jan Kowalski" title="To pole jest wymagane">
+<input name="fields[name]" type="text" required placeholder="Jan Kowalski" title="To pole jest wymagane" maxlenght="30">
 <label>E-mail (Ukryty, wymagany)</label>
-<input name="fields[email]" type="email" required placeholder="jan@kowalski.com" title="To pole jest wymagane">
+<input name="fields[email]" type="email" required placeholder="jan@kowalski.com" title="To pole jest wymagane" maxlenght="50" spellcheck="false">
 <label>Wiadomość (Wyświetlane, wymagane)</label>
-<textarea style="width:100%" name="fields[message]" rows="5" required placeholder="Twoja wiadomość" title="To pole jest wymagane"></textarea>
+<textarea style="width:100%" name="fields[message]" required placeholder="Twoja wiadomość" title="To pole jest wymagane" maxlenght="200" autocomplete="off"></textarea>
 <p>Komentarze pojawią się po zaakceptowaniu przez moderatora.</p>
 <button type="submit">Wyślij komentarz</button>
 </form>
