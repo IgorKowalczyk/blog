@@ -43,14 +43,28 @@ layout: default
 <input name="options[redirect]" type="hidden" value="https://igorkowalczyk.github.io/blog/{{ page.url }}">
 <input name="options[slug]" type="hidden" value="{{ page.slug }}">
 <label>Imię (Wyświetlane, wymagane)</label>
-<input name="fields[name]" type="text" required placeholder="Jan Kowalski" title="To pole jest wymagane" maxlenght="30">
+<input name="fields[name]" type="text" class="input" onkeyup="manage(this)" required placeholder="Jan Kowalski" title="To pole jest wymagane" maxlenght="30">
 <label>E-mail (Ukryty, wymagany)</label>
-<input name="fields[email]" type="email" required placeholder="jan@kowalski.com" title="To pole jest wymagane" maxlenght="50" spellcheck="false">
+<input name="fields[email]" type="email" class="input" onkeyup="manage(this)" required placeholder="jan@kowalski.com" title="To pole jest wymagane" maxlenght="50" spellcheck="false">
 <label>Wiadomość (Wyświetlane, wymagane)</label>
-<textarea style="width:100%" name="fields[message]" required placeholder="Twoja wiadomość" title="To pole jest wymagane" maxlenght="200" autocomplete="off"></textarea>
+<textarea style="width:100%" name="fields[message]" class="input" onkeyup="manage(this)" required placeholder="Twoja wiadomość" title="To pole jest wymagane" maxlenght="200" autocomplete="off"></textarea>
 <p>Komentarze pojawią się po zaakceptowaniu przez moderatora.</p>
-<button type="submit" class="button">Wyślij komentarz</button>
-<script type="text/javascript">var post=document.querySelector(".button");post.addEventListener("click",function(){post.innerHTML="Wysyłanie..."});</script>
+<button type="submit" class="button" disabled>Wyślij komentarz</button>
+<script type="text/javascript">var post=document.querySelector(".button");post.addEventListener("click",function(){post.innerHTML="Wysyłanie..."});
+function manage(txt) {
+var bt = document.querySelector('.button');
+var ele = document.querySelectorAll('.input');
+for (i = 0; i < ele.length; i++) {
+if (ele[i].type == 'text' && ele[i].value == '') {
+bt.disabled = true;
+return false;
+}
+else {
+bt.disabled = false;
+}
+}
+}
+</script>
 </form>
 {% else %}
 <div class="notice">
