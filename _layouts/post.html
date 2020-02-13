@@ -50,7 +50,7 @@ layout: default
 <textarea style="width:100%" name="fields[message]" class="input" onkeyup="manage(this)" required placeholder="Twoja wiadomość" title="To pole jest wymagane" maxlenght="200" autocomplete="off"></textarea>
 <p>Komentarze pojawią się po zaakceptowaniu przez moderatora.</p>
 <button type="submit" class="button" disabled>Wyślij komentarz</button>
-<script type="text/javascript">var post=document.querySelector(".button");post.addEventListener("click",function(){post.innerHTML="Wysyłanie..."});
+<script type="text/javascript">
 function manage(txt) {
 var bt = document.querySelector('.button');
 var ele = document.querySelectorAll('.input');
@@ -61,6 +61,7 @@ return false;
 }
 else {
 bt.disabled = false;
+var post=document.querySelector(".button");post.addEventListener("click",function(){post.innerHTML="Wysyłanie..."});
 }
 }
 }
