@@ -49,7 +49,8 @@ layout: default
 <label>Wiadomość (Wyświetlane, wymagane)</label>
 <textarea style="width:100%" name="fields[message]" required placeholder="Twoja wiadomość" title="To pole jest wymagane" maxlenght="200" autocomplete="off"></textarea>
 <p>Komentarze pojawią się po zaakceptowaniu przez moderatora.</p>
-<button type="submit">Wyślij komentarz</button>
+<button type="submit" class="button">Wyślij komentarz</button>
+<script type="text/javascript">var post=document.querySelector(".button");post.addEventListener("click",function(){post.innerHTML="Wysyłanie..."});</script>
 </form>
 {% else %}
 <div class="notice">
