@@ -5,7 +5,7 @@ layout: default
 <header class="post-header">
 <h2 class="post-title" >{{ page.title | escape }}</h2>
 <p class="post-meta">
-Napisany:<time datetime="{{ page.date | date_to_xmlschema }}">{% assign m = page.date | date: "%-m" %}
+<time datetime="{{ page.date | date_to_xmlschema }}">{% assign m = page.date | date: "%-m" %}
 {{ page.date | date: "%-d" }}
 {% case m %}
 {% when '1' %}Stycznia
@@ -23,7 +23,6 @@ Napisany:<time datetime="{{ page.date | date_to_xmlschema }}">{% assign m = page
 {% endcase %}
 {{ page.date | date: "%Y" }}
 </time>
-Ostatnio edytowany: {{ "now" | date: "%Y-%m-%d %H:%M" }}.
 <ul class="cat">Kategorie:&nbsp;
 <span>
 {% for category in page.categories %}
