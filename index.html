@@ -1,4 +1,4 @@
----
+﻿---
 layout: default
 ---
 <section class="home">
@@ -11,6 +11,8 @@ layout: default
 <a href="/blog{{ /post.url }}">{{ post.title }}</a>
 </h3>
 <time datetime="{{ post.date | date_to_xmlschema}}">{{post.date | date: "%d-%m-%Y"}}</time>
+{% include reading-time.html %}
+{{ page.author }}
 <ul class="cat">Kategorie:&nbsp;
 <span>
 {% for category in post.categories %}
