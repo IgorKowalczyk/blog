@@ -1,6 +1,7 @@
 ﻿---
 layout: post
 title: "Bezpieczeństwo w sieci - Nasze dane"
+author: "Igor Kowalczyk"
 categories: internet
 comments: true
 ---

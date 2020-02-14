@@ -1,6 +1,7 @@
 ﻿---
 layout: post
 title: "Dlaczego Jquery jest złe?"
+author: "Igor Kowalczyk"
 categories: internet programowanie javascript
 comments: true
 ---

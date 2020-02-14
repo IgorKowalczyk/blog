@@ -1,6 +1,7 @@
 ﻿---
 layout: post
 title: "Jasna i ciemna strona internetu"
+author: "Igor Kowalczyk"
 categories: internet
 comments: true
 ---
