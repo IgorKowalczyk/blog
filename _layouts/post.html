@@ -19,10 +19,10 @@ layout: default
 {% when '9' %}Września
 {% when '10' %}Października
 {% when '11' %}Listopada
-{% when '12' %}Gudnia
+{% when '12' %}Grudnia
 {% endcase %}
 {{ page.date | date: "%Y" }}
-</time> • {% include reading-time.html %} • {{ page.author }}
+</time> • {{ page.author }} • {% include reading-time.html %}
 <ul class="cat">Kategorie:&nbsp;
 <span>
 {% for category in page.categories %}
