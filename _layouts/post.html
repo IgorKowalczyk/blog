@@ -5,7 +5,7 @@ layout: default
 <header class="post-header">
 <h2 class="post-title" >{{ page.title | escape }}</h2>
 <p class="post-meta">
-{% include time.html %} • {{ page.author }} • {% include reading-time.html %}
+{% include time.html %} <span class="bullet" aria-hidden="true">•</span> {{ page.author }} <span class="bullet" aria-hidden="true">•</span> {% include reading-time.html %}
 <ul class="cat">Kategorie:&nbsp;
 <span>
 {% for category in page.categories %}
