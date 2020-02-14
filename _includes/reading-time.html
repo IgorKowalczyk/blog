@@ -1,6 +1,8 @@
-{% capture words %}
-{{ content | number_of_words | minus: 180 }}
-{% endcapture %}
-{% unless words contains '-' %}
-{{ words | plus: 150 | divided_by: 150 | append: ' minutes to read' }}
-{% endunless %}
+<span class="reading-time">
+{% assign words = content | number_of_words %}
+{% if words < 360 %}
+1 miuta.
+{% else %}
+{{ words | divided_by:180 }} minut
+{% endif %}
+</span>
