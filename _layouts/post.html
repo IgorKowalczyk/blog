@@ -22,7 +22,7 @@ layout: default
 {% when '12' %}Grudnia
 {% endcase %}
 {{ page.date | date: "%Y" }}
-</time> • {{ page.author }} • {% include reading-time.html %}
+</time> <span class="bullet" aria-hidden="true">•</span> {{ page.author }} <span class="bullet" aria-hidden="true">•</span> {% include reading-time.html %}
 <ul class="cat">Kategorie:&nbsp;
 <span>
 {% for category in page.categories %}
