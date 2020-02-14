@@ -1,0 +1,35 @@
+<h3>Komentarze:</h3>
+{% assign comments = site.data.comments | sort %}
+{% for comment in comments reversed %}
+{% assign commentData = comment[1] %}
+<div class="comment">
+<div class="meta">
+<p class="name">
+{% if commentData.email %}
+<img src="https://www.gravatar.com/avatar/{{commentData.email }}?d=mm&s=60" alt="{{ commentData.name | escape }}">
+{% else %}
+<img src="/blog/lib/img/avatar.jpg" alt="{{ commentData.name | escape }}">
+{% endif %} Od: {{ commentData.name }} <span class="bullet" aria-hidden="true">•</span> <span title="{{ commentData.date | date: "%Y-%m-%d %H:%M" }}">{{ commentData.date | date: "%d-%m-%Y" }}</span></p>
+</div>
+<p class="message">{{ commentData.message }}</p>
+</div>
+{% endfor %}
+{% unless page.comment == true %}
+<form method="post" action="{{ site.staticman_url }}">
+<h3 class="new-comment">Napisz komentarz:</h3>
+<input name="options[redirect]" type="hidden" value="https://igorkowalczyk.github.io/blog/{{ page.url }}">
+<input name="options[slug]" type="hidden" value="{{ page.slug }}">
+<label>Imiê (Wyœwietlane, wymagane)</label>
+<input name="fields[name]" type="text" required placeholder="Jan Kowalski" title="To pole jest wymagane" maxlenght="30">
+<label>E-mail (Ukryty, wymagany)</label>
+<input name="fields[email]" type="email" required placeholder="jan@kowalski.com" title="To pole jest wymagane" maxlenght="50" spellcheck="false">
+<label>Wiadomoœæ (Wyœwietlane, wymagane)</label>
+<textarea style="width:100%" name="fields[message]" required placeholder="Twoja wiadomoœæ" title="To pole jest wymagane" maxlenght="200" autocomplete="off"></textarea>
+<p>Komentarze pojawi¹ siê po zaakceptowaniu przez moderatora.</p>
+<button type="submit">Wyœlij komentarz</button>
+</form>
+{% else %}
+<div class="notice">
+<h4>Komentarze zosta³y zablokowane.</h4>
+</div>
+{% endunless %}

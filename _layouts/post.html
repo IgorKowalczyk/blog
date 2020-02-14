@@ -5,26 +5,7 @@ layout: default
 <header class="post-header">
 <h2 class="post-title" >{{ page.title | escape }}</h2>
 <p class="post-meta">
-<time datetime="{{ page.date | date_to_xmlschema }}">{% assign m = page.date | date: "%-m" %}
-{{ page.date | date: "%-d" }}
-{% case m %}
-{% when '1' %}Stycznia
-{% when '2' %}Lutego
-{% when '3' %}Marca
-{% when '4' %}Kwietnia
-{% when '5' %}Maja
-{% when '6' %}Czerwca
-{% when '7' %}Lipca
-{% when '8' %}Sierpnia
-{% when '9' %}Września
-{% when '10' %}Października
-{% when '11' %}Listopada
-{% when '12' %}Gudnia
-{% endcase %}
-{{ page.date | date: "%Y" }}
-</time>
-<br>
-Czas czytania: {% include reading-time.html %}
+{% include post-meta.html %}
 <ul class="cat">Kategorie:&nbsp;
 <span>
 {% for category in page.categories %}
@@ -40,66 +21,9 @@ Czas czytania: {% include reading-time.html %}
 <br>
 <hr>
 <br>
-<h3>Komentarze:</h3>
-{% assign comments = site.data.comments | sort %}
-{% for comment in comments reversed %}
-{% assign commentData = comment[1] %}
-<div class="comment">
-<div class="meta">
-<p class="name">
-{% if commentData.email %}
-<img src="https://www.gravatar.com/avatar/{{commentData.email }}?d=mm&s=60" alt="{{ commentData.name | escape }}">
-{% else %}
-<img src="/blog/lib/img/avatar.jpg" alt="{{ commentData.name | escape }}">
-{% endif %} Od: {{ commentData.name }} <span class="bullet" aria-hidden="true">•</span> <span title="{{ commentData.date | date: "%Y-%m-%d %H:%M" }}">{{ commentData.date | date: "%d-%m-%Y" }}</span></p>
-</div>
-<p class="message">{{ commentData.message }}</p>
-</div>
-{% endfor %}
-{% unless page.comment == true %}
-<form method="post" action="{{ site.staticman_url }}">
-<h3 class="new-comment">Napisz komentarz:</h3>
-<input name="options[redirect]" type="hidden" value="https://igorkowalczyk.github.io/blog/{{ page.url }}">
-<input name="options[slug]" type="hidden" value="{{ page.slug }}">
-<label>Imię (Wyświetlane, wymagane)</label>
-<input name="fields[name]" type="text" required placeholder="Jan Kowalski" title="To pole jest wymagane" maxlenght="30">
-<label>E-mail (Ukryty, wymagany)</label>
-<input name="fields[email]" type="email" required placeholder="jan@kowalski.com" title="To pole jest wymagane" maxlenght="50" spellcheck="false">
-<label>Wiadomość (Wyświetlane, wymagane)</label>
-<textarea style="width:100%" name="fields[message]" required placeholder="Twoja wiadomość" title="To pole jest wymagane" maxlenght="200" autocomplete="off"></textarea>
-<p>Komentarze pojawią się po zaakceptowaniu przez moderatora.</p>
-<button type="submit">Wyślij komentarz</button>
-</form>
-{% else %}
-<div class="notice">
-<h4>Komentarze zostały zablokowane.</h4>
-</div>
-{% endunless %}
+{% include comments.html %}
 <br>
 <hr>
 <br>
-<div class="post-nav">
-{% if page.previous.url %}
-<li><a class="prev" href="/blog{{page.previous.url}}">< Poprzedni post</a></li>
-{% endif %}
-{% if page.next.url %}
-<li><a class="next" href="/blog{{page.next.url}}">Następny post ></a></li>
-{% endif %}
-</div>
-<div class="post-recent">
-<h3>Polecane posty:</h3>
-<ul>
-{% assign posts = site.posts | where_exp:"post", "post.url != page.url" | sample: 2 %}
-{% for post in posts %}
-<li>
-<a href="{{ post.url | prepend: site.baseurl }}">
-<div>
-<div class="post-related-title">{{ post.title }}</div>
-<p class="post-summary">{{post.content | markdownify | strip_html | truncatewords: 15}}</p>
-</div>
-</a>
-</li>
-{% endfor %}
-</ul>
-</div>
+{% include next.html %}
 </article>
