@@ -1,7 +1,7 @@
 ﻿---
 layout: post
 title: "Pierwszy wpis, nowy blog"
-author: "Igor Kowalczyk"
+author: "Igor Kowalczykk"
 categories: offtop
 comments: true
 ---
