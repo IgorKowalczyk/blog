@@ -943,7 +943,7 @@ border: 2px solid var(--text);
 border-radius: 5px
 }
 
-.comment .bullet {
+.bullet {
 font-weight: bold;
 }
 
