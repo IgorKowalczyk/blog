@@ -22,8 +22,7 @@ layout: default
 {% when '12' %}Gudnia
 {% endcase %}
 {{ page.date | date: "%Y" }}
-</time>•
-{% include reading-time.html %} • {{ page.author }}
+</time> • {% include reading-time.html %} • {{ page.author }}
 <ul class="cat">Kategorie:&nbsp;
 <span>
 {% for category in page.categories %}
