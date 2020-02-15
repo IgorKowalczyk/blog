@@ -6,7 +6,7 @@ layout: default
 <h2 class="post-title" >{{ page.title | escape }}</h2>
 <p class="post-meta">
 {% include time.html %}
-<span class="bullet" aria-hidden="true">•</span> {{ page.author }} <span class="bullet" aria-hidden="true">•</span> {% include reading-time.html %}
+<span class="bullet" aria-hidden="true">&bull;</span> {{ page.author }} <span class="bullet" aria-hidden="true">&bull;</span> {% include reading-time.html %}
 <ul class="cat">Kategorie:&nbsp;
 <span>
 {% for category in page.categories %}
@@ -33,7 +33,7 @@ layout: default
 <img src="https://www.gravatar.com/avatar/{{commentData.email }}?d=mm&s=60" alt="{{ commentData.name | escape }}">
 {% else %}
 <img src="/blog/lib/img/avatar.jpg" alt="{{ commentData.name | escape }}">
-{% endif %} Od: {{ commentData.name }} <span class="bullet" aria-hidden="true">•</span> <span title="{{ commentData.date | date: "%Y-%m-%d %H:%M" }}">{{ commentData.date | date: "%d-%m-%Y" }}</span></p>
+{% endif %} Od: {{ commentData.name }} <span class="bullet" aria-hidden="true">&bull;</span> <span title="{{ commentData.date | date: "%Y-%m-%d %H:%M" }}">{{ commentData.date | date: "%d-%m-%Y" }}</span></p>
 </div>
 <p class="message">{{ commentData.message }}</p>
 </div>
