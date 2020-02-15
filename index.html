@@ -1,4 +1,4 @@
-﻿---
+---
 layout: default
 ---
 <section class="home">
@@ -10,24 +10,7 @@ layout: default
 <h3 >
 <a href="/blog{{ /post.url }}">{{ post.title }}</a>
 </h3>
-<time datetime="{{ post.date | date_to_xmlschema }}">{% assign m = post.date | date: "%-m" %}
-{{ page.date | date: "%-d" }}
-{% case m %}
-{% when '1' %}Stycznia
-{% when '2' %}Lutego
-{% when '3' %}Marca
-{% when '4' %}Kwietnia
-{% when '5' %}Maja
-{% when '6' %}Czerwca
-{% when '7' %}Lipca
-{% when '8' %}Sierpnia
-{% when '9' %}Września
-{% when '10' %}Października
-{% when '11' %}Listopada
-{% when '12' %}Grudnia
-{% endcase %}
-{{ page.date | date: "%Y" }}
-</time> 
+<time datetime="{{ post.date | date_to_xmlschema}}">{{post.date | date: "%d-%m-%Y"}}</time>
 <ul class="cat">Kategorie:&nbsp;
 <span>
 {% for category in post.categories %}
