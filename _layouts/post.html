@@ -24,7 +24,7 @@ layout: default
 <br>
 <h3>Komentarze</h3>
 {% if site.data.comments[page.slug] %}
-{% assign comments = site.data.comments[page.slug] | sort %}
+{% assign comments = site.data.comments | where: "slug", page.slug %}
 {% for comment in comments %}
 {% assign email = comment[1].email %}
 {% assign name = comment[1].name %}
