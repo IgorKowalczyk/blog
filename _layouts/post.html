@@ -23,24 +23,30 @@ layout: default
 <hr>
 <br>
 <h3>Komentarze</h3>
-{% assign comments = site.data.comments | where: "slug", page.slug %}
-{% for comment in comments %}
-<div class="comment">
-<div class="meta">
-<p class="name">
-{% if comment.email %}
-<img src="https://www.gravatar.com/avatar/{{ comment.email }}?d=mm&s=60" alt="{{ comment.name| escape }}">
-{% else %}
-<img src="/blog/lib/img/avatar.jpg" alt="{{ comment.name | escape }}">
-{% endif %} Od: {{ comment.name | strip_html }} * {{ comment.date | date: "%b %-d, %Y, %H:%M" }}</p>
-</div>
-<p class="message">{{ comment.message | strip_html | markdownify | smartify }}</p>
-</div>
-{% else %}
-<div class="notice">
-<h4>Nikt jeszcze nie skomentował.</h4>
-</div>
-{% endfor %}
+<!-- Comments -->
+{% if site.data.comments[page.slug] %}
+    <h3>
+    {% if site.data.comments[page.slug].size > 1 %}
+      {{ site.data.comments[page.slug] | size }}
+    {% endif %}
+    Comments:
+    </h3>
+  {% assign comments = site.data.comments[page.slug] | sort %}
+    {% for comment in comments %}
+      <label>
+        {% if comment[1].url %}
+          <a href="{{ comment[1].url }}">
+        {% endif %}
+        <strong>{{ comment[1].name }}</strong>
+        {% if comment[1].url %}
+          </a>
+        {% endif %}
+      </label>
+      <em>{{ comment[1].date | date: "%B %d, %Y" }}</em>
+      <p>{{ comment[1].message | markdownify }}</p>
+    {% endfor %}
+{% endif %}
+
 {% unless page.comments == false %}
 <form method="post" action="{{ site.staticman_url }}">
 <h3 class="new-comment">Napisz komentarz:</h3>
