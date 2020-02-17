@@ -3,7 +3,7 @@ layout: post
 title: "Pierwszy wpis, nowy blog"
 author: "Igor Kowalczyk"
 categories: offtop
-comments: true
+comments: false
 ---
 
 Witajcie wszyscy! Stworzyłem oto tego nowego bloga, inspiracją był blog "Kot Źródłowy". Może powinienem wcześniej się za to wsiąść ale jakoś nie znalazłem siły.

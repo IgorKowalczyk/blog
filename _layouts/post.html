@@ -38,7 +38,7 @@ layout: default
 <h4>Nikt jeszcze nie skomentował.</h4>
 </div>
 {% endif %}
-{% unless page.comment == true %}
+{% unless page.comments == true %}
 <form method="post" action="{{ site.staticman_url }}">
 <h3 class="new-comment">Napisz komentarz:</h3>
 <input name="options[redirect]" type="hidden" value="https://igorkowalczyk.github.io/blog/{{ page.url }}">
