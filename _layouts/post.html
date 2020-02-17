@@ -22,7 +22,16 @@ layout: default
 <br>
 <hr>
 <br>
-<h3>Komentarze:</h3>
+<h3>
+{% if site.data.comments[page.slug] %}
+{% if site.data.comments[page.slug].size <= 1 %}
+{{ site.data.comments[page.slug] | size | append: ' komentarz' }}
+{% elsif site.data.comments[page.slug].size > 1 %}
+{{ site.data.comments[page.slug] | size | append: ' komentarzy' }}
+{% else %}
+0 Komentarzy
+{% endif %}
+</h3>
 {% assign comments = site.data.comments[page.slug] %}
 {% for comment in comments %}
 {% assign id = comment[1]._id %}
