@@ -38,7 +38,7 @@ layout: default
 <h4>Nikt jeszcze nie skomentował.</h4>
 </div>
 {% endif %}
-{% unless page.comments == true %}
+{% unless page.comments == false %}
 <form method="post" action="{{ site.staticman_url }}">
 <h3 class="new-comment">Napisz komentarz:</h3>
 <input name="options[redirect]" type="hidden" value="https://igorkowalczyk.github.io/blog/{{ page.url }}">
@@ -55,7 +55,7 @@ layout: default
 </form>
 {% else %}
 <div class="notice">
-<h4>Komentarze zostały zablokowane.</h4>
+<h4>Dodawanie komentarzy zostały zablokowane.</h4>
 </div>
 {% endunless %}
 <br>
