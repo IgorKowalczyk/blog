@@ -22,15 +22,25 @@ layout: default
 <br>
 <hr>
 <br>
-<h3>Komentarze:</h3>
+<h3>
 {% if site.data.comments[page.slug] %}
-{% assign comments = site.data.comments[page.slug] | sort %}
+{% if site.data.comments[page.slug].size <= 1 %}
+{{ site.data.comments[page.slug] | size | append: ' komentarz' }}
+{% elsif site.data.comments[page.slug].size > 1 %}
+{{ site.data.comments[page.slug] | size | append: ' komentarzy' }}
+{% else %}
+0 Komentarzy
+{% endif %}
+</h2>
+{% assign comments = site.data.comments[page.slug] | sort | where_exp: 'comment', 'comment[1]._parent == comment[1]._id' %}
 {% for comment in comments %}
+{% assign id = comment[1]._id %}
+{% assign parent = comment[1]._parent %}
 {% assign email = comment[1].email %}
 {% assign name = comment[1].name %}
 {% assign date = comment[1].date %}
 {% assign message = comment[1].message %}
-{% include comment.html index=forloop.index email=email name=name date=date message=message %}
+{% include comment.html id=id parent=parent email=email name=name date=date message=message %}
 {% endfor %}
 {% else %}
 <div class="notice">
