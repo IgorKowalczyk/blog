@@ -31,8 +31,8 @@ layout: default
 {% else %}
 0 Komentarzy
 {% endif %}
-</h2>
-{% assign comments = site.data.comments[page.slug] | sort | where_exp: 'comment', 'comment[1]._parent == comment[1]._id' %}
+</h3>
+{% assign comments = site.data.comments[page.slug] %}
 {% for comment in comments %}
 {% assign id = comment[1]._id %}
 {% assign parent = comment[1]._parent %}
