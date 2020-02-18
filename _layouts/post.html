@@ -26,9 +26,7 @@ layout: default
 <div class="mb4">
 {% include comment-form.html %}
 {% assign all_comments = site.data.comments | where: "slug", page.slug %}
-{% if all_comments.size > 0 %}
 {% include comments.html %}
-{% endif %}
 </div>	
 <br>
 <hr>
