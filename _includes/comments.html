@@ -1,0 +1,27 @@
+<section class="pt2">
+
+<h2 class="f4 c-lh-title">Comments</h2>
+
+{% for comment in site.data.comments | where: "slug", page.slug %}
+
+<article class="mb4 pa2 pa3-ns ba b--moon-gray c-linky-visited">
+
+<header class="pb1 bb b--light-gray mb2">
+
+<h3 class="f5 lh-title mt0 mb1">{{ comment.name | strip_html }}</h3>
+
+<p class="f6 gray ma0"><time><a href="{{ page.url }}#{{ comment._id}}">{{ comment.created_at | date: "%b %-d, %Y, %H:%M" }}</a></time></p>
+
+</header>
+
+<div class="c-no-top-margin c-linky-underline">
+
+{{ comment.message | strip_html | markdownify | smartify }}
+
+</div>
+
+</article>
+
+{% endfor %}
+
+</section>

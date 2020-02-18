@@ -23,44 +23,13 @@ layout: default
 <hr>
 <br>
 <h3>Komentarze</h3>
-{% assign comments = site.data.comments | where: "slug", page.slug %}
-{% for comment in comments %}
-<div class="comment">
-<div class="meta">
-<p class="name">
-{% if comment.email %}
-<img src="https://www.gravatar.com/avatar/{{ comment.email }}?d=mm&s=60" alt="{{ comment.name| escape }}">
-{% else %}
-<img src="/blog/lib/img/avatar.jpg" alt="{{ comment.name | escape }}">
-{% endif %} Od: {{ comment.name | strip_html }} * {{ comment.date | date: "%b %-d, %Y, %H:%M" }}</p>
-</div>
-<p class="message">{{ comment.message | strip_html | markdownify | smartify }}</p>
-</div>
-{% else %}
-<div class="notice">
-<h4>Nikt jeszcze nie skomentował.</h4>
-</div>
-{% endfor %}
-{% unless page.comments == false %}
-<form method="post" action="{{ site.staticman_url }}">
-<h3 class="new-comment">Napisz komentarz:</h3>
-<input name="options[redirect]" type="hidden" value="https://igorkowalczyk.github.io/blog/{{ page.url }}">
-<input name="options[slug]" type="hidden" value="{{ page.slug }}">
-<label>Imię (Wyświetlane, wymagane)</label>
-<input name="fields[name]" type="text" required placeholder="Jan Kowalski" title="To pole jest wymagane" maxlenght="30">
-<label>E-mail (Ukryty, wymagany)</label>
-<input name="fields[email]" type="email" required placeholder="jan@kowalski.com" title="To pole jest wymagane" maxlenght="50" spellcheck="false">
-<label>Wiadomość (Wyświetlane, wymagane)</label>
-<textarea style="width:100%" name="fields[message]" required placeholder="Twoja wiadomość" title="To pole jest wymagane" maxlenght="200" autocomplete="off"></textarea>
-<p>Markdown jest obsługiwany.</p>
-<p>Komentarze pojawią się po zaakceptowaniu przez moderatora.</p>
-<button type="submit">Wyślij komentarz</button>
-</form>
-{% else %}
-<div class="notice">
-<h4>Dodawanie komentarzy zostały zablokowane.</h4>
-</div>
-{% endunless %}
+<div class="mb4">
+{% include comment-form.html %}
+{% assign all_comments = site.data.comments | where: "slug", page.slug %}
+{% if all_comments.size > 0 %}
+{% include comments.html %}
+{% endif %}
+</div>	
 <br>
 <hr>
 <br>
