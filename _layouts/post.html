@@ -34,6 +34,7 @@ layout: default
 {% assign date = comment.date %}
 {% assign message = comment.message %}
 {% include comment.html index=index replying_to=replying_to email=email name=name date=date message=message %}
+{% endfor %}
 {% unless page.comments == false %}
 <form method="post" action="{{ site.staticman_url }}">
 <h3 class="new-comment">Napisz komentarz:</h3>
