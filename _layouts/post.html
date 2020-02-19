@@ -23,31 +23,25 @@ layout: default
 <hr>
 <br>
 <h3>Komentarze</h3>
-{% assign comments = site.data.comments | where: "slug", page.slug %}
-{% for comment in comments %}
-{% assign commentData = comment[1] %}
-
-<div class="comment">
-<div class="meta">
-<p class="name">
-{% if commentData.email %}
-<img src="https://www.gravatar.com/avatar/{{ commentData.email }}?d=mm&s=60" alt="{{ commentData.name| escape }}">
-{% else %}
-<img src="/blog/lib/img/avatar.jpg" alt="{{ commentData.name | escape }}">
-{% endif %} Od: {{ commentData.name | strip_html }} * {{ commentData.date | date: "%b %-d, %Y, %H:%M" }}</p>
-</div>
-<p class="message">{{ commentData.message | strip_html | markdownify | smartify }}</p>
-</div>
-{% else %}
-<div class="notice">
-<h4>Nikt jeszcze nie skomentował.</h4>
-</div>
-{% endfor %}
+{% assign comments = site.data.comments[post_slug] | where_exp: "item", "item.replying_to == ''" %}
+{% assign comments_by_date = comments | sort: 'date' | reverse %}
+{% for comment in comments_by_date %}
+{% assign index = forloop.length | plus: 1 | minus: forloop.index %}
+{% assign r = comment.replying_to %}
+{% assign replying_to = r | to_integer %}
+{% assign email = comment.email %}
+{% assign name = comment.name %}
+{% assign date = comment.date %}
+{% assign message = comment.message %}
+{% include comment.html index=index replying_to=replying_to email=email name=name date=date message=message %}
 {% unless page.comments == false %}
 <form method="post" action="{{ site.staticman_url }}">
 <h3 class="new-comment">Napisz komentarz:</h3>
 <input name="options[redirect]" type="hidden" value="https://igorkowalczyk.github.io/blog/{{ page.url }}">
-<input name="options[slug]" type="hidden" value="{{ page.slug }}">
+<input type="hidden" name="options[origin]" value="{{ page.url | absolute_url }}">
+<input type="hidden" name="options[parent]" value="{{ page.url | absolute_url }}">
+<input type="hidden" id="comment-replying-to" name="fields[replying_to]" value="">
+<input type="hidden" name="options[slug]" value="{{ post_slug }}">
 <label>Imię (Wyświetlane, wymagane)</label>
 <input name="fields[name]" type="text" required placeholder="Jan Kowalski" title="To pole jest wymagane" maxlenght="30">
 <label>E-mail (Ukryty, wymagany)</label>
