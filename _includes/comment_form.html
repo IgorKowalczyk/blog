@@ -1,41 +1,34 @@
-  <form class="js-form form" method="post" action="{{ site.staticmanUrl }}" autocomplete="off">
-  <input type="hidden" name="options[origin]" value="{{ page.url | absolute_url }}">
-  <input type="hidden" name="options[parent]" value="{{ page.url | absolute_url }}">
-  <input type="hidden" id="comment-replying-to" name="fields[replying_to]" value="">
-  <input type="hidden" name="options[slug]" value="{{ post_slug }}">
-  <fieldset>
-  <div class="textfield">
-    <label for="comment-form-message"><h2>Comment <small><a rel="nofollow" id="cancel-comment-reply-link" href="{{ page.url | absolute_url }}#respond" style="display:none;">(cancel reply)</a></small></h2>
-      <textarea class="textfield__input" name="fields[message]" type="text" id="comment-form-message"></textarea>
-    </label>
-  </div>
-  </fieldset>
-  <fieldset>
-    <div class="textfield">
-      <label for="comment-form-name">Name
-        <input class="textfield__input" name="fields[name]" type="text" id="comment-form-name" placeholder="Your name"/>
-      </label>
-    </div>
-  </fieldset>
-  <fieldset>
-    <div class="textfield">
-      <label for="comment-form-email">E-mail
-        <input class="textfield__input" name="fields[email]" type="email" id="comment-form-email" placeholder="Your email (optional, used only to send comments.)"/>
-      </label>
-    </div>
-  </fieldset>
-    <fieldset>
-    <div class="textfield">
-      <label for="hp">
-        <input class="textfield__input" name="fields[hp]" id="hp" type="text" placeholder="Leave blank">
-      </label>
-    </div>
-  </fieldset>
-
-  <fieldset>
-    <button class="button">
-      Submit
-    </button>
-  </fieldset>
-
+{% unless page.comments == false %}
+<form method="post" action="{{ site.comments-post }}">
+<h3 class="new-comment">Napisz komentarz:</h3>
+<input type="hidden" name="options[origin]" value="{{ page.url | absolute_url }}">
+<input type="hidden" name="options[parent]" value="{{ page.url | absolute_url }}">
+<input type="hidden" id="comment-replying-to" name="fields[replying_to]" value=""><!-- Used for replies? But i'm not using reply system -->
+<input type="hidden" name="options[slug]" value="{{ post_slug }}">
+<fieldset>
+<label for="message">Wiadomość (Wyświetlana, wymagana)
+<textarea name="fields[message]" type="text" id="message" required placeholder="Twoja wiadomość" title="To pole jest wymagane" maxlenght="200" autocomplete="off"></textarea>
+</label>    
+</fieldset>
+<fieldset>
+<label for="name">Imię (Wyświetlane, wymagane)
+<input name="fields[name]" type="text" id="name" placeholder="Your name"/>
+</label>
+</fieldset>
+<fieldset>
+<label for="email">E-mail (Ukryty, wymagany)
+<input name="fields[email]" id="email" type="email" required placeholder="jan@kowalski.com" title="To pole jest wymagane" maxlenght="50" spellcheck="false">
+</label>
+</fieldset>
+<fieldset>
+<label for="hp">
+<input name="fields[hp]" id="hp" type="hidden" placeholder="Zostaw puste, jeżeli to pole zostanie wypełnione komentarz nie zoztanie zaakceptowany">
+</label>
+</fieldset>
+<button class="submit">Wyślij</button>
 </form>
+{% else %}
+<div class="notice">
+<h4>Dodawanie komentarzy zostały zablokowane.</h4>
+</div>
+{% endunless %}
