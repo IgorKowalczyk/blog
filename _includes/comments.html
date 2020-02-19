@@ -1,0 +1,15 @@
+{% if site.data.comments[post_slug] %}
+{% assign comments = site.data.comments[post_slug] | where_exp: "item", "item.replying_to == ''" %}
+{% assign comments_by_date = comments | sort: 'date' | reverse %}
+{% for comment in comments_by_date %}
+{% assign index = forloop.length | plus: 1 | minus: forloop.index %}
+{% assign r = comment.replying_to %}
+{% assign replying_to = r | to_integer %}
+{% assign email = comment.email %}
+{% assign name = comment.name %}
+{% assign date = comment.date %}
+{% assign message = comment.message %}
+{% include comment.html index=index replying_to=replying_to email=email name=name date=date message=message %}
+{% endfor %}
+{% endif %}
+{% include comment_form.html %}
