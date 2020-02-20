@@ -1,5 +1,5 @@
 {% if site.data.comments[post_slug] %}
-{% assign comments = site.data.comments[post_slug] | where_exp: "item", "item.replying_to == ''" %}
+{% assign comments = site.data.comments[post_slug] %}
 {% assign comments_by_date = comments | sort: 'date' | reverse %}
 {% for comment in comments_by_date %}
 {% assign index = forloop.length | plus: 1 | minus: forloop.index %}
