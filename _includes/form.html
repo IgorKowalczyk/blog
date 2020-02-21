@@ -1,10 +1,8 @@
 {% unless page.comments == false %}
 <form method="post" action="{{ site.comments-post }}">
 <h3 class="new-comment">Napisz komentarz:</h3>
-<input type="hidden" name="options[origin]" value="{{ page.url | absolute_url }}">
-<input type="hidden" name="options[parent]" value="{{ page.url | absolute_url }}">
-<input type="hidden" name="options[slug]" value="{{ page.slug | slugify }}">
-<input type="hidden" name="fields[slug]" value="{{ page.slug | slugify }}">
+<input name="fields[slug]" type="hidden" value="{{ page.slug }}">
+<input name="options[slug]" type="hidden" value="{{ page.slug }}">
 {{ site.data.comments[page.slug] }}
 <fieldset>
 <label for="message">Wiadomość (Wyświetlana, wymagana)
