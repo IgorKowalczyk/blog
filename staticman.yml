@@ -1,5 +1,5 @@
 comments:
-  allowedFields: ["name", "email", "url", "message", "replying_to"]
+  allowedFields: ["name", "email", "url", "message"]
   branch: "master"
   commitMessage: "New comment by {fields.name}"
   filename: "comment-{@timestamp}"
