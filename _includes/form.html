@@ -4,6 +4,7 @@
 <input type="hidden" name="options[origin]" value="{{ page.url | absolute_url }}">
 <input type="hidden" name="options[parent]" value="{{ page.url | absolute_url }}">
 <input type="hidden" name="options[slug]" value="{{ page.slug | slugify }}">
+<input type="hidden" name="fields[slug]" value="{{ page.slug | slugify }}">
 {{ site.data.comments[page.slug] }}
 <fieldset>
 <label for="message">Wiadomość (Wyświetlana, wymagana)
