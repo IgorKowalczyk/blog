@@ -17,8 +17,9 @@
 --preloader: #fff;
 --spinner: #00a3a3;
 --spinner-border: #f3f3f3;
---checkbox: #00a3a3;
---checkbox-after: #fff;
+--button-background: #00a3a3;
+--button-color: #fff;
+--button-hover: #0fbcbc;
 --code: #0000000d;
 }
 
@@ -39,8 +40,9 @@
 --preloader: #222;
 --spinner: #888;
 --spinner-border: #333;
---checkbox: #fff;
---checkbox-after: #000;
+--button-background: #fff;
+--button-color: #000;
+--button-hover: #d2d2d2;
 --code: #212121;
 }
 
@@ -722,15 +724,19 @@ width: 100%;
 
 button {
 border: none;
-color: var(--checkbox-after);
+color: var(--button-color);
 display: flex;
-background: var(--checkbox);
+background: var(--button-background);
 padding: 10px;
 cursor: pointer;
 border-radius: 3px;
 box-shadow: 0 3px 15px 0 rgba(0,0,0,.1), 0 1px 3px 0 rgba(0,0,0,.08);
 margin: 10px 0px 5px 0px;
 user-select: none;
+}
+
+button:hover {
+background: var(--button-hover);
 }
 
 ::-webkit-input-placeholder {
