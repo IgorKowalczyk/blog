@@ -6,10 +6,10 @@
 {% assign comment = commentData[1] %}
 {% include comment.html %}
 {% endfor %}
+{% endif %}
 {% else %}
 <div class="notice">
 <h4>Nikt jeszcze nie skomentował.</h4>
 </div>
-{% endif %}
 {% endif %}
 {% include form.html %}
