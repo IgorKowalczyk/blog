@@ -5,7 +5,7 @@
 <input type="hidden" name="options[parent]" value="{{ page.url | absolute_url }}">
 <input type="hidden" id="comment-replying-to" name="fields[replying_to]" value=""><!-- Used for replies? But i'm not using reply system -->
 <input type="hidden" name="options[slug]" value="{{ page.slug | slugify }}">
-{{site.data.comments[page.slug]}}
+{{ site.data.comments[page.slug] }}
 <fieldset>
 <label for="message">Wiadomość (Wyświetlana, wymagana)
 <textarea name="fields[message]" type="text" id="message" required placeholder="Twoja wiadomość" title="To pole jest wymagane" maxlenght="200" autocomplete="off"></textarea>
