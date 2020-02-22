@@ -1,8 +1,8 @@
 comments:
-  allowedFields: ["name", "email", "message", "slug"]
+  allowedFields: ["name", "email", "url", "message", "replying_to"]
   branch: "master"
   commitMessage: "New comment by {fields.name}"
-  filename: "{@timestamp}"
+  filename: "comment-{@timestamp}"
   format: "yaml"
   moderation: true
   path: "_data/comments/{options.slug}"
