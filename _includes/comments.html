@@ -1,15 +1,21 @@
-{% if site.data.comments[page.slug] %}
-{% assign comments = site.data.comments[page.slug] %}
-{% if comments != null %}
-{% assign comments = site.data.comments[page.slug] | sort %}
-{% for commentData in comments %}
-{% assign comment = commentData[1] %}
-{% include comment.html %}
-{% endfor %}
-{% endif %}
-{% else %}
-<div class="notice">
-<h4>Nikt jeszcze nie skomentował.</h4>
-</div>
+Post_slug... {{ post_slug }}
+<br>
+Site.data.comments size (number of posts that have comments)... {{ site.data.comments.size }}
+<br>
+Comments at site.data.comments["{{ post_slug }}"]... <br>{{ site.data.comments[post_slug] }}
+<p>Delete debug statements above this line in comments.html.</p>
+{% if site.data.comments[post_slug] %}
+	{% assign comments = site.data.comments[post_slug] %}
+	{% if comments != null %}
+		{% assign comments = site.data.comments[post_slug] | sort %}
+		{% for commentData in comments %}
+			{% assign comment = commentData[1] %}
+			{% include comment.html %}
+		{% endfor %}
+	{% endif %}
+	{% else %}
+	<div class="notice">
+	<h4>Nikt jeszcze nie skomentował.</h4>
+	</div>
 {% endif %}
 {% include form.html %}

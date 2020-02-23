@@ -1,6 +1,7 @@
 ﻿---
 layout: default
 ---
+{% capture post_slug %}{{ page.title | slugify: "latin" }}{% endcapture %}
 <article class="post">
 <header class="post-header">
 <h2 class="post-title" >{{ page.title | escape }}</h2>
