@@ -3,7 +3,7 @@ layout: post
 title: "Jasna i ciemna strona internetu"
 author: "Igor Kowalczyk"
 categories: internet
-comments: false
+comments: true
 ---
 
 Witajcie, dzisiaj opowiem o jasnej i ciemnej stronie internetu. Może i dziwny temat ale bardzo potrzebny. Ten wpis jest pierwszym z wielu wpisów które mają się pojawić na tym blogu - będą dotyczyły bezpieczeństwa w sieci, ponieważ bezpieczeństwo to podstawa.
