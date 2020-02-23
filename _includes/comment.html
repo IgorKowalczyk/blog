@@ -1,11 +1,11 @@
 <div class="comment">
 <div class="meta">
 <p class="name">
-{% if commentData.email %}
-<img src="https://www.gravatar.com/avatar/{{ commentData.email }}?d=mm&s=60" alt="{{ commentData.name | escape }}">
+{% if comment[1].email %}
+<img src="https://www.gravatar.com/avatar/{{ comment[1].email }}?d=mm&s=60" alt="{{ comment[1].name | escape }}">
 {% else %}
-<img src="/blog/lib/img/avatar.jpg" alt="{{ comment.name | escape }}">
-{% endif %} Od: {{ commentData.name }} <span class="bullet" aria-hidden="true">&bull;</span> <span title="{{ commentData.date | date: "%Y-%m-%d %H:%M" }}">{{ commentData.date | date: "%d-%m-%Y" }}</span></p>
+<img src="/blog/lib/img/avatar.jpg" alt="{{ comment[1].name | escape }}">
+{% endif %} Od: {{ comment[1].name }} <span class="bullet" aria-hidden="true">&bull;</span> <span title="{{ comment[1].date | date: "%Y-%m-%d %H:%M" }}">{{ comment[1].date | date: "%d-%m-%Y" }}</span></p>
 </div>
-<p class="message">{{ commentData.message }}</p>
+<p class="message">{{ comment[1].message }}</p>
 </div>
