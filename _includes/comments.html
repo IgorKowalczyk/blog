@@ -5,7 +5,11 @@
 {% assign comments = site.data.comments[post_slug] | sort %}
 {% for commentData in comments %}
 {% assign comment = commentData[1] %}
-{% include comment.html %}
+{% assign email = comment.email %}
+{% assign name = comment.name %}
+{% assign date = comment.date %}
+{% assign message = comment.message %}
+{% include comment.html email=email name=name date=date message=message %}
 {% endfor %}
 {% endif %}
 {% else %}
