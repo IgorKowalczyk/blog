@@ -43,7 +43,7 @@
 --button-background: #fff;
 --button-color: #000;
 --button-hover: #d2d2d2;
---code: #212121;
+--code: #1b1b1b;
 }
 
 svg {
@@ -264,6 +264,7 @@ padding: 0;
 
 .highlighter-rouge {
 background-color: var(--code);
+border-radius: 5px;
 overflow-x: hidden;
 box-sizing: border-box;
 padding: 2px 4px;

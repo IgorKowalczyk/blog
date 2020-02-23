@@ -1,9 +1,4 @@
-<h3>Komentarze ({% assign numbers = site.data.comments[post_slug].size %}
-{% if numbers < 0 %}
-0
-{% else %}
-{{ numbers | divided_by:1 }}
-{% endif %}):</h3>
+<h3>Komentarze ({% assign numbers = site.data.comments[post_slug].size %}{% if numbers < 0 %}0{% else %}{{ numbers | divided_by:1 }}{% endif %}):</h3>
 {% if site.data.comments[post_slug] %}
 {% assign comments = site.data.comments[post_slug] %}
 {% if comments != null %}
