@@ -1,8 +1,8 @@
-<h3>Komentarze ({{ site.data.comments[post_slug].size }}):</h3>
-{% if site.data.comments[post_slug] %}
-{% assign comments = site.data.comments[post_slug] %}
+<h3>Komentarze ({{ site.data.comments[page.slug].size }}):</h3>
+{% if site.data.comments[page.slug] %}
+{% assign comments = site.data.comments[page.slug] %}
 {% if comments != null %}
-{% assign comments = site.data.comments[post_slug] | sort %}
+{% assign comments = site.data.comments[page.slug] | sort %}
 {% for commentData in comments %}
 {% assign comment = commentData[1] %}
 {% include comment.html %}
