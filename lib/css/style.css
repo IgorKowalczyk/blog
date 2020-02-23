@@ -977,6 +977,26 @@ font-weight: bold;
 margin-top: 2em;
 }
 
+.commentform-sendfailed {
+display: none;
+border: 2px solid var(--text);
+border-radius: 5px;
+padding: 10px;
+margin-top: 2rem;
+}
+
+.commentform-errormessages, .commentform-sendfailed {
+margin-bottom: 2rem;
+}
+
+.commentform-sendsucceeded {
+display: none;
+border: 2px solid var(--text);
+border-radius: 5px;
+padding: 10px;
+margin-top: 2rem;
+}
+
 .notice {
 text-align: center;
 }
