@@ -1,5 +1,4 @@
-Komentarze ({{ site.data.comments.size }})
-<br>
+<h3>Komentarze ({{ site.data.comments[post_slug].size }}):</h3>
 {% if site.data.comments[post_slug] %}
 {% assign comments = site.data.comments[post_slug] %}
 {% if comments != null %}
