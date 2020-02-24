@@ -34,13 +34,13 @@
 <h4>Dodawanie komentarzy zostało zablokowane.</h4>
 </div>
 {% endunless %}
-<div class="commentform-errormessages"></div>
 <div class="commentform-sendfailed">
 Wiadomość nie mogła zostać wysłana, proszę spróbować później.
 </div>
 <div class="commentform-sendsucceeded">
 Dziękuje, twój komentarz został poprawnie wysłany!
 </div>
+<div class="commentform-errormessages"></div>
 <script>
 const commentForm = document.querySelector('.commentform');
 const commentFormInputs = document.querySelectorAll('.commentform-input');
@@ -81,15 +81,15 @@ let fatalError = false;
 const messages = [];
 if (name.length < 2) {
 error = true;
-messages.push('Proszę wpisać imię.');
+messages.push('<div class="commentform-sendfailed">Proszę wpisać imię.</div>');
 }
 if (email.search(/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/) === -1) {
 error = true;
-messages.push('Proszę wpisać poprawny e-mail.');
+messages.push('<div class="commentform-sendfailed">Proszę wpisać poprawny e-mail.</div>');
 }
 if (message.length < 2) {
 error = true;
-messages.push('Proszę wpisać wiadomość.');
+messages.push('<div class="commentform-sendfailed">Proszę wpisać wiadomość.</div>');
 }
 if (fatalError) {
 return false;
