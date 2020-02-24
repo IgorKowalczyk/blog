@@ -987,7 +987,13 @@ transition: 500ms;
 }
 
 .commentform-errormessages {
-/* border: 2px solid var(--text); */
+border-radius: 5px;
+padding: 10px;
+transition: 500ms;
+}
+
+.commentform-errormessage {
+border: 2px solid var(--text);
 border-radius: 5px;
 padding: 10px;
 margin-top: 2rem;

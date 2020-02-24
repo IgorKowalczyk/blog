@@ -81,21 +81,20 @@ let fatalError = false;
 const messages = [];
 if (name.length < 2) {
 error = true;
-messages.push('<div class="commentform-sendfailed">Proszę wpisać imię.</div>');
+messages.push('<div class="commentform-errormessage">Proszę wpisać imię.</div>');
 }
 if (email.search(/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/) === -1) {
 error = true;
-messages.push('<div class="commentform-sendfailed">Proszę wpisać poprawny e-mail.</div>');
+messages.push('<div class="commentform-errormessage">Proszę wpisać poprawny e-mail.</div>');
 }
 if (message.length < 2) {
 error = true;
-messages.push('<div class="commentform-sendfailed">Proszę wpisać wiadomość.</div>');
+messages.push('<div class="commentform-errormessage">Proszę wpisać wiadomość.</div>');
 }
 if (fatalError) {
 return false;
 }
 if (error) {
-errorMessagesDiv.innerHTML = messages.join('<br><br>');
 return false;
 }
 const params = [];
