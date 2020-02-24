@@ -69,12 +69,8 @@ if (commentForm) {
 commentForm.addEventListener('submit', (e) => {
 e.preventDefault();
 errorMessagesDiv.innerHTML = '';
-sendFailedDiv.style.overflow = 'hidden';
-sendFailedDiv.style.maxHeight = '0';
-sendFailedDiv.style.opacity = '0';
-sendSucceededDiv.style.overflow = 'hidden';
-sendSucceededDiv.style.maxHeight = '0';
-sendSucceededDiv.style.opacity = '0';
+sendFailedDiv.style.display = 'none';
+sendSucceededDiv.style.display = 'none';
 const slug = slugInput.value.trim();
 const optionsSlug = optionsSlugInput.value.trim();
 const name = nameInput.value.trim();
@@ -112,14 +108,10 @@ e.target.getAttribute('data-action'),
 params.join('&'),
 function(text){
 commentForm.reset();
-sendSucceededDiv.style.overflow = 'unset';
-sendSucceededDiv.style.maxHeight = '100%';
-sendSucceededDiv.style.opacity = '1';
+sendSucceededDiv.style.display = 'block';
 },
 function(text){
-sendFailedDiv.style.overflow = 'unset';
-sendFailedDiv.style.maxHeight = '100%';
-sendFailedDiv.style.opacity = '1';
+sendFailedDiv.style.display = 'block';
 }
 );
 });
