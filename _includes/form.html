@@ -69,8 +69,12 @@ if (commentForm) {
 commentForm.addEventListener('submit', (e) => {
 e.preventDefault();
 errorMessagesDiv.innerHTML = '';
-sendFailedDiv.style.display = 'none';
-sendSucceededDiv.style.display = 'none';
+sendFailedDiv.style.position = 'absolute';
+sendFailedDiv.style.top = '-9999px';
+sendFailedDiv.style.left = '-9999px';
+sendSucceededDiv.style.position = 'absolute';
+sendSucceededDiv.style.top = '-9999px';
+sendSucceededDiv.style.left = '-9999px';
 const slug = slugInput.value.trim();
 const optionsSlug = optionsSlugInput.value.trim();
 const name = nameInput.value.trim();
@@ -108,10 +112,12 @@ e.target.getAttribute('data-action'),
 params.join('&'),
 function(text){
 commentForm.reset();
-sendSucceededDiv.style.display = 'block';
+sendSucceededDiv.style.position = 'relative';
 },
 function(text){
-sendFailedDiv.style.display = 'block';
+sendFailedDiv.style.position = 'relative';
+
+
 }
 );
 });

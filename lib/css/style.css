@@ -978,7 +978,9 @@ margin-top: 2em;
 }
 
 .commentform-sendfailed, .commentform-sendsucceeded {
-display: none;
+position: absolute;
+top: -9999px;
+left: -9999px;
 border: 2px solid var(--text);
 border-radius: 5px;
 padding: 10px;
