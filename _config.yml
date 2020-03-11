@@ -20,7 +20,7 @@ categories_names:
  'internet': "Internet"
  'programowanie': "Programowanie"
  'javascript': "JavaScript"
-    
+
 comments-post: https://api-igorkowalczyk.herokuapp.com/v2/entry/igorkowalczyk/blog/master
 
 staticman:
