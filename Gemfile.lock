@@ -1,6 +1,5 @@
 GEM
 remote: https://rubygems.org/
-specs:
 
 PLATFORMS
 ruby
@@ -9,7 +8,6 @@ DEPENDENCIES
 jekyll (~> 3.8.5)
 jekyll-feed (~> 0.6)
 jekyll-paginate (~> 1.1)
-minima (~> 2.0)
 
 RUBY VERSION
 ruby 2.5.1p57
