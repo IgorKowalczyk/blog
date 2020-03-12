@@ -1,11 +1,6 @@
 GEM
 remote: https://rubygems.org/
 specs:
-jekyll-feed (0.11.0)
-kramdown (~> 1.14)
-liquid (~> 4.0)
-jekyll (~> 3.3)
-rouge (>= 1.7, < 4)
 
 PLATFORMS
 ruby
