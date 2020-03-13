@@ -11,7 +11,6 @@ theme: minima
 plugins:
  - jekyll-feed
  - jekyll-paginate
- - jekyll-timeago 
 exclude:
  - Gemfile
  - Gemfile.lock
