@@ -23,4 +23,4 @@ categories_names:
 comments-post: https://api-igorkowalczyk.herokuapp.com/v2/entry/igorkowalczyk/blog/master
 
 staticman:
-  branch: "master"
+ branch: "master"
