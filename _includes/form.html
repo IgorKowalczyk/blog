@@ -52,9 +52,10 @@ const messageInput = document.querySelector('.commentform-input-message');
 const errorMessagesDiv = document.querySelector('.commentform-errormessages');
 const sendFailedDiv = document.querySelector('.commentform-sendfailed');
 const sendSucceededDiv = document.querySelector('.commentform-sendsucceeded');
+const url = 'https://api-igorkowalczyk.herokuapp.com/v2/entry/igorkowalczyk/blog/master';
 function post(url, data, callback, errorCallback) {
 const xhr = new XMLHttpRequest();
-xhr.open('POST', url);
+xhr.open('POST', url, true);
 xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 xhr.onload = function() {
 if (xhr.status === 200) {
@@ -63,7 +64,7 @@ callback(xhr.responseText);
 errorCallback(xhr.responseText);
 }
 };
-xhr.send(encodeURI(data));
+xhr.send;
 }
 if (commentForm) {
 commentForm.addEventListener('submit', (e) => {
