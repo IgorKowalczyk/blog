@@ -21,6 +21,12 @@
 --button-color: #fff;
 --button-hover: #0fbcbc;
 --code: #0000000d;
+--facebook: #3B5998;
+--twitter: #55ACEE;
+--linkedin: #0077b5;
+--pinterest: #CB2027;
+--mail: #7D7D7D;
+--instagram: #C73B92;
 }
 
 [data-theme="dark"] {
@@ -44,6 +50,12 @@
 --button-color: #000;
 --button-hover: #d2d2d2;
 --code: #1b1b1b;
+--facebook: #3B5998;
+--twitter: #55ACEE;
+--linkedin: #0077b5;
+--pinterest: #CB2027;
+--mail: #7D7D7D;
+--instagram: #C73B92;
 }
 
 svg {
@@ -1002,4 +1014,83 @@ transition: 500ms;
 
 .notice {
 text-align: center;
+}
+
+#share-buttons {
+display: inline-block;
+vertical-align: middle;
+}
+
+#share-buttons:after {
+content: "";
+display: block;
+clear: both;
+}
+
+#share-buttons > div {
+position: relative;
+text-align: left; 
+height: 41px; 
+width: 37px; 
+float: left; 
+text-align: center;
+}
+
+#share-buttons > div > svg {
+height: 21px;
+fill: var(--text);
+margin-top: 10px;
+}
+
+#share-buttons > div:hover {
+cursor: pointer;
+}
+
+#share-buttons > div.facebook:hover > svg {
+fill: var(--facebook);
+}
+
+#share-buttons > div.twitter:hover > svg {
+fill: var(--twitter);
+}
+
+#share-buttons > div.linkedin:hover > svg {
+fill: var(--linkedin);
+}
+
+#share-buttons > div.pinterest:hover > svg {
+fill: var(--pinterest);
+}
+
+#share-buttons > div.mail:hover > svg {
+fill: var(--mail);
+}
+
+#share-buttons > div.instagram:hover > svg {
+fill: var(--instagram);
+}
+
+#share-buttons > div.facebook > svg {
+height: 24px;
+margin-top: 9px;
+}
+
+#share-buttons > div.twitter > svg {
+height: 25px;
+margin-top: 8px;
+}
+
+#share-buttons > div.linkedin > svg {
+height: 24px;
+margin-top: 7px;
+}
+
+#share-buttons > div.pinterest > svg {
+height: 25px;
+margin-top: 9px;
+}
+
+#share-buttons > div.mail > svg {
+height: 19px;
+margin-top: 11px;
 }
