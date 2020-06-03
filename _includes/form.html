@@ -1,21 +1,21 @@
 {% unless page.comments == false %}
 <form method="post" action="{{ site.comments-post }}" class="commentform" data-action="{{ site.comments-post }}">
 <h3 class="new-comment">Napisz komentarz:</h3>
-<input name="fields[slug]" type="hidden" value="{{ page.slug }}" class="commentform-input commentform-input-slug">
+<input name="fields[slug]" type="hidden" value="{{ page.slug | slugify }}" class="commentform-input commentform-input-slug">
 <input name="options[slug]" type="hidden" value="{{ page.slug }}" class="commentform-input commentform-input-optionsslug">
 <fieldset>
 <label for="name">Imię (Wyświetlane, wymagane)
-<input name="fields[name]" type="text" id="name" placeholder="Jan Kowalski" class="commentform-input commentform-input-name">
+<input name="fields[name]" type="text" id="name" placeholder="Jan Kowalski" required class="commentform-input commentform-input-name">
 </label>
 </fieldset>
 <fieldset>
 <label for="email">E-mail (Ukryty, wymagany)
-<input name="fields[email]" id="email" type="email" placeholder="jan@kowalski.com" title="To pole jest wymagane" maxlenght="50" spellcheck="false" class="commentform-input commentform-input-email">
+<input name="fields[email]" id="email" type="email" placeholder="jan@kowalski.com" required title="To pole jest wymagane" maxlenght="50" spellcheck="false" class="commentform-input commentform-input-email">
 </label>
 </fieldset>
 <fieldset>
 <label for="message">Wiadomość (Wyświetlana, wymagana)
-<textarea name="fields[message]" type="text" id="message" placeholder="Twoja wiadomość" title="To pole jest wymagane" maxlenght="200" autocomplete="off"  class="commentform-input commentform-input-message"></textarea>
+<textarea name="fields[message]" type="text" id="message" placeholder="Twoja wiadomość" title="To pole jest wymagane" maxlenght="200" required autocomplete="off"  class="commentform-input commentform-input-message"></textarea>
 </label>
 </fieldset>
 <!-- Honeypot -->
@@ -34,7 +34,12 @@
 <h4>Dodawanie komentarzy zostało zablokowane.</h4>
 </div>
 {% endunless %}
+
+
 {% comment %}
+<!-- ======================== -->
+<!-- Not working code, to fix -->
+<!-- ======================== -->
 <div class="commentform-sendfailed">
 Wiadomość nie mogła zostać wysłana, proszę spróbować później.
 </div>
@@ -120,4 +125,7 @@ sendFailedDiv.style.display = 'block';
 });
 }
 </script>
+<!-- /======================== -->
+<!-- /Not working code, to fix -->
+<!-- /======================== -->
 {% endcomment %}
