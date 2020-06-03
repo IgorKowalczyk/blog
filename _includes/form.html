@@ -27,13 +27,14 @@
 <!-- /Honeypot -->
 <p>Markdown jest obsługiwany.</p>
 <p>Komentarze pojawią się po zaakceptowaniu przez moderatora.</p>
-<button class="submit">Wyślij komentarz</button>
+<button class="submit" type="submit">Wyślij komentarz</button>
 </form>
 {% else %}
 <div class="notice">
 <h4>Dodawanie komentarzy zostało zablokowane.</h4>
 </div>
 {% endunless %}
+{% comment %}
 <div class="commentform-sendfailed">
 Wiadomość nie mogła zostać wysłana, proszę spróbować później.
 </div>
@@ -119,3 +120,4 @@ sendFailedDiv.style.display = 'block';
 });
 }
 </script>
+{% endcomment %}
