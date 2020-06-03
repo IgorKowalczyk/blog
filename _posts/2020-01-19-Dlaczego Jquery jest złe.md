@@ -9,7 +9,7 @@ comments: true
 Witam wszystkich ponownie, tym razem w Nowym Roku i z nowym postem (wreszcie) ;). Tym razem będzie on o możliwie **najgorszej bibliotece - Jquery**, może i stara biblioteka ale nadal można ją bardzo często spotkać w internecie.
 Nieważne co gadać o jej "dobrych" stronach i tak zostanie ona (według mnie) najgorszą z możliwych. 
 **Od samego początku Jquery zrewolucjonizowało Java Script, po prostu było łatwiej**, ale teraz jak wiadomo 
-"Czasy się zmieniają" tak samo jak internet i Jquery ze swoim AJAX'em stało się złe ale nadal odgrywa ono olbrzymią rolę w Front Endzie.
+"Czasy się zmieniają" tak samo jak internet i Jquery ze swoim AJAX'em stało się przestarzałe ale nadal odgrywa ono olbrzymią rolę w Front Endzie.
 
 Bez zbędnego gadania przejdźmy do części właściwej.
 
@@ -47,4 +47,4 @@ document.querySelectorAll('#id > tag .klasa');
 Również prosto a nie trzeba ładować całej biblioteki z dolarem?
 Kiedyś to "łapanie" elementów było totalną nowością, każdy tego używał ale dzisiaj raczej prościej jest użyć po prostu `querySelectorAll`. Jquery zmieniło się przez lata tak jak sam JavaScript i na dzień dzisiejszy Jquery IMO jest mniej użyteczny niż kiedyś.
 
-Więc, wychodzi z tego wszystkiego że **Jquery jest złe**,  może kiedyś było dobre, a nawet bardzo dobre ale z upływem czasu zmieniło się na gorsze, powstały inne, lepsze na ten czas biblioteki. Co wy na ten temat myślicie myślicie?
+Więc, wychodzi z tego wszystkiego że **Jquery w dzisiejszych czasach nie jest najlepsze**,  może kiedyś było dobre, a nawet bardzo dobre ale z upływem czasu zmieniło się na gorsze, powstały inne, lepsze na ten czas biblioteki. Co wy na ten temat myślicie myślicie?
