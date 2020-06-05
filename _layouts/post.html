@@ -45,7 +45,7 @@ layout: default
 {% assign posts = site.posts | where_exp:"post", "post.url != page.url" | sample: 2 %}
 {% for post in posts %}
 <li>
-<a href="/blog{{ post.url | prepend: site.baseurl }}" target="_blank">
+<a href="/blog{{ post.url | prepend: site.baseurl }}">
 <div>
 <div class="post-related-title">{{ post.title }}</div>
 <p class="post-summary">{{post.content | markdownify | strip_html | truncatewords: 15}}</p>
