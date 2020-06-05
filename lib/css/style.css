@@ -29,6 +29,7 @@
 --instagram: #C73B92;
 --hackernews: #fb651e;
 --reddit: #fc451e;
+--share-link: #7D7D7D;
 }
 
 [data-theme="dark"] {
@@ -60,6 +61,7 @@
 --instagram: #7D7D7D;
 --hackernews: #7D7D7D;
 --reddit: #7D7D7D;
+--share-link: #7D7D7D;
 }
 
 svg {
@@ -1078,6 +1080,10 @@ fill: var(--reddit);
 fill: var(--mail);
 }
 
+#share-buttons > div.share-link:hover > svg {
+fill: var(--share-link);
+}
+
 #share-buttons > div.instagram:hover > svg {
 fill: var(--instagram);
 }
@@ -1102,7 +1108,7 @@ height: 25px;
 margin-top: 9px;
 }
 
-#share-buttons > div.mail > svg, #share-buttons > div.hackernews > svg, #share-buttons > div.reddit > svg {
+#share-buttons > div.mail > svg, #share-buttons > div.hackernews > svg, #share-buttons > div.reddit > svg, #share-buttons > div.share-link > svg {
 height: 19px;
 margin-top: 11px;
 }
