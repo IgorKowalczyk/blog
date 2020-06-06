@@ -8,6 +8,7 @@ layout: default
 <p class="post-meta">
 {% include time.html %}
 <span class="bullet" aria-hidden="true">&bull;</span> {{ page.author }} <span class="bullet" aria-hidden="true">&bull;</span> {% include reading-time.html %}
+<ol>
 <ul class="cat">Kategorie:&nbsp;
 <span>
 {% for category in page.categories %}
@@ -15,6 +16,7 @@ layout: default
 {% endfor %}
 </span>
 </ul>
+</ol>
 </p>
 </header>
 <section class="post-content">
