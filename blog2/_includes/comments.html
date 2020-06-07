@@ -1,0 +1,20 @@
+<h3>Komentarze ({% assign numbers = site.data.comments[post_slug].size %}{% if numbers < 0 %}0{% else %}{{ numbers | divided_by:1 }}{% endif %}):</h3>
+{% if site.data.comments[post_slug] %}
+{% assign comments = site.data.comments[post_slug] %}
+{% if comments != null %}
+{% assign comments = site.data.comments[post_slug] | sort %}
+{% for commentData in comments %}
+{% assign comment = commentData[1] %}
+{% assign email = comment.email %}
+{% assign name = comment.name %}
+{% assign date = comment.date %}
+{% assign message = comment.message %}
+{% include comment.html email=email name=name date=date message=message %}
+{% endfor %}
+{% endif %}
+{% else %}
+<div class="notice">
+<h4>Nikt jeszcze nie skomentował.</h4>
+</div>
+{% endif %}
+{% include form.html %}

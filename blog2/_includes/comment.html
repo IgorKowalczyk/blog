@@ -1,0 +1,11 @@
+<div class="comment">
+<div class="meta">
+<p class="name">
+{% if include.email %}
+<img src="https://www.gravatar.com/avatar/{{ include.email }}?d=mm&s=60" alt="{{ include.name | escape }}">
+{% else %}
+<img src="/blog/lib/img/avatar.jpg" alt="{{ comment.name | escape }}">
+{% endif %} Od: {{ include.name }} <span class="bullet" aria-hidden="true">&bull;</span> <span title="{{ include.date | date: "%Y-%m-%d %H:%M" }}">{{ include.date | date: "%d-%m-%Y" }}</span></p>
+</div>
+<p class="message">{{ include.message }}</p>
+</div>
