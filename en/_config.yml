@@ -1,0 +1,26 @@
+title: Igor Kowalczyk Blog
+email: xxmajonezxx@gmail.com
+description: A blog with entries on programming or other technologies.
+baseurl: "/en"
+url: "https://igorkowalczyk.github.io/blog/en"
+github_username:  IgorKowalczyk
+timezone: 'Europe/Warsaw'
+paginate: 8
+markdown: kramdown
+theme: minima
+plugins:
+ - jekyll-feed
+ - jekyll-paginate
+exclude:
+ - Gemfile
+ - Gemfile.lock
+categories_names:
+ 'offtop': "Offtop"
+ 'internet': "Web"
+ 'programowanie': "Programming"
+ 'javascript': "JavaScript"
+
+comments-post: https://api.staticman.net/v3/entry/github/igorkowalczyk/blog/master/comments
+
+staticman:
+ branch: "master"

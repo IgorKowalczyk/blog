@@ -1,0 +1,11 @@
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="/blog/lib/css/style.min.css">
+<meta name="viewport" content="width=device-width initial-scale=1">
+<meta name="theme-color" content="#fff">
+<meta name="description" content="{{site.description}}">
+<link rel="shortcut icon" href="https://igorkowalczyk.github.io/lib/favicon/favicon.jpg">
+<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl }}">
+{% feed_meta %}
+<title>{% if page.title %}{{ page.title}} - {{site.title}}{% else %} {{site.title}}{% endif %}</title>
+</head>

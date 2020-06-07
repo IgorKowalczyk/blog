@@ -1,0 +1,26 @@
+﻿<!-- (c) IGOR KOWALCZYK. All rights reserved. -->
+<!DOCTYPE html>
+<html lang="en">
+{% include head.html %}
+<body ondragstart="return false" ondrag="return false">
+<script type="text/javascript">var preload = document.createElement('div'); preload.className = "preloader"; preload.innerHTML = '</div><div class="spinner"></div>'; document.body.appendChild(preload); window.addEventListener('load', function() { preload.className +=  ' fade'; setTimeout(function(){ preload.style.display = 'none'; },500); })</script>
+<header>
+{% include header.html %}
+<main class="main-content">
+{{content}}
+</main>
+<li class="center"><div class="theme-switch-container">
+<label class="theme-switch" for="checkbox">
+<input type="checkbox" id="checkbox"/>
+<div class="slider round"></div>
+</label>
+</div><div class="option-description">Light/Dark Mode</div></li>
+<footer class="main-footer">
+<div class="footer-col-3">
+This site uses cookies.
+</div>
+<div class="footer-col-3">(c) Igor Kowalczyk <noscript>2019</noscript><span class="date"></span>. This site relased under <a href="/blog/license.txt" target="_blank" download>MIT</a></div>
+</footer>
+<script src="/blog/en/lib/js/index.min.js"></script>
+</body>
+</html>
