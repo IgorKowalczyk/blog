@@ -1,7 +1,7 @@
 title: Igor Kowalczyk Blog
 email: xxmajonezxx@gmail.com
 description: A blog with entries on programming or other technologies.
-baseurl: "/en"
+baseurl: ""
 url: "https://igorkowalczyk.github.io/blog/en"
 github_username:  IgorKowalczyk
 timezone: 'Europe/Warsaw'
