@@ -1,5 +1,5 @@
 {% unless page.comments == false %}
-<form method="post" action="{{ site.comments-post }}" data-action="{{ site.comments-post }} class="commentform">
+<form method="post" action="{{ site.comments-post }}" data-action="{{ site.comments-post }}" class="commentform">
 <h3 class="new-comment">Napisz komentarz:</h3>
 <input name="fields[slug]" type="hidden" value="{{ post_slug }}" class="commentform-input commentform-input-slug">
 <input name="options[slug]" type="hidden" value="{{ post_slug }}" class="commentform-input commentform-input-optionsslug">
