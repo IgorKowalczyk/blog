@@ -37,7 +37,7 @@
 </div>
 {% endunless %}
 
-{% comment %}
+
 <!-- ======================== -->
 <!-- Not working code, to fix -->
 <!-- ======================== -->
@@ -50,16 +50,15 @@ Dziękuje, twój komentarz został poprawnie wysłany!
 <div class="commentform-errormessages"></div>
 <script>
 "use strict";
-function submitForm(oFormElement)
+function submitForm(form, data)
 {
   var xhr = new XMLHttpRequest();
   xhr.onload = function(){ alert(xhr.responseText); }
-  xhr.open(oFormElement.method, oFormElement.getAttribute("action"));
-  xhr.send(new FormData(oFormElement));
+  xhr.open('POST', form.getAttribute("action"));
+  xhr.send(encodeURI(data));
   return false;
 }
 </script>
 <!-- /======================== -->
 <!-- /Not working code, to fix -->
 <!-- /======================== -->
-{% endcomment %}
