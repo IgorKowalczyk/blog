@@ -20,7 +20,7 @@ categories_names:
  'programowanie': "Programowanie"
  'javascript': "JavaScript"
 
-comments-post: https://spinningnumbers-staticmandev2.herokuapp.com/v2/entry/igorkowalczyk/blog/master/comments
+comments-post: https://api-igorkowalczykblog.herokuapp.com/v2/entry/igorkowalczyk/blog/master/comments
 
 staticman:
  branch: "master"
