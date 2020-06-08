@@ -6,7 +6,7 @@
 <input name="options[redirect]" type="hidden" value="{{ page.slug }}">
 <fieldset>
 <label for="name">Imię (Wyświetlane, wymagane)
-<input name="fields[name]" type="text" id="name" placeholder="Jan Kowalski" class="commentform-input commentform-input-name">
+<input name="fields[name]" type="text" id="name" placeholder="Jan Kowalski" title="To pole jest wymagane" maxlenght="50" class="commentform-input commentform-input-name">
 </label>
 </fieldset>
 <fieldset>
@@ -28,7 +28,7 @@
 <!-- /Honeypot -->
 <p>Markdown jest obsługiwany.</p>
 <p>Komentarze pojawią się po zaakceptowaniu przez moderatora.</p>
-<button class="submit">Wyślij komentarz</button>
+<button class="submit submit-spinner">Wyślij komentarz</button>
 </form>
 {% else %}
 <div class="notice">
@@ -53,6 +53,7 @@ const messageinput = document.querySelector('.commentform-input-message');
 const errormessagesdiv = document.querySelector('.commentform-errormessages');
 const sendfaileddiv = document.querySelector('.commentform-sendfailed');
 const sendsucceededdiv = document.querySelector('.commentform-sendsucceeded');
+const spinner = document.querySelector('.submit-spinner');
 function post(url, data, callback, errorcallback) {
 const xhr = new XMLHttpRequest();
 xhr.open('POST', url);
@@ -104,15 +105,20 @@ for (let i = 0; i < commentforminputs.length; i++) {
 const input = commentforminputs[i];
 params.push(`${ input.name }=${ input.value }`);
 }
+
+spinner.innerHTML = "Trwa wysyłanie...";
+
 post(
 e.target.getAttribute('data-action'),
 params.join('&'),
 function(text){
 commentform.reset();
 sendsucceededdiv.style.display = 'block';
+spinner.innerHTML = "Wyślij Komentarz";
 },
 function(text){
 sendfaileddiv.style.display = 'block';
+spinner.innerHTML = "Wyślij Komentarz";
 }
 );
 });
