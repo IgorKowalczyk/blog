@@ -1,23 +1,22 @@
 {% unless page.comments == false %}
-{% capture post_slug %}{{ page.slug | slugify: "latin" }}{% endcapture %}
-<form method="post" onsubmit="return submitForm(this);" action="{{ site.comments-post }}" class="commentform" data-action="{{ site.comments-post }}">
+<form method="post" action="{{ site.comments-post }}" data-action="{{ site.comments-post }} class="commentform">
 <h3 class="new-comment">Napisz komentarz:</h3>
 <input name="fields[slug]" type="hidden" value="{{ post_slug }}" class="commentform-input commentform-input-slug">
 <input name="options[slug]" type="hidden" value="{{ post_slug }}" class="commentform-input commentform-input-optionsslug">
 <input name="options[redirect]" type="hidden" value="{{ page.slug }}">
 <fieldset>
 <label for="name">Imię (Wyświetlane, wymagane)
-<input name="fields[name]" type="text" id="name" placeholder="Jan Kowalski" required title="To pole jest wymagane" class="commentform-input commentform-input-name">
+<input name="fields[name]" type="text" id="name" placeholder="Jan Kowalski" class="commentform-input commentform-input-name">
 </label>
 </fieldset>
 <fieldset>
 <label for="email">E-mail (Ukryty, wymagany)
-<input name="fields[email]" id="email" type="email" placeholder="jan@kowalski.com" required title="To pole jest wymagane" maxlenght="50" spellcheck="false" class="commentform-input commentform-input-email">
+<input name="fields[email]" id="email" type="email" placeholder="jan@kowalski.com" title="To pole jest wymagane" maxlenght="50" spellcheck="false" class="commentform-input commentform-input-email">
 </label>
 </fieldset>
 <fieldset>
 <label for="message">Wiadomość (Wyświetlana, wymagana)
-<textarea name="fields[message]" type="text" id="message" placeholder="Twoja wiadomość" title="To pole jest wymagane" maxlenght="200" required autocomplete="off"  class="commentform-input commentform-input-message"></textarea>
+<textarea name="fields[message]" type="text" id="message" placeholder="Twoja wiadomość" title="To pole jest wymagane" maxlenght="200" autocomplete="off"  class="commentform-input commentform-input-message"></textarea>
 </label>
 </fieldset>
 <!-- Honeypot -->
@@ -29,18 +28,13 @@
 <!-- /Honeypot -->
 <p>Markdown jest obsługiwany.</p>
 <p>Komentarze pojawią się po zaakceptowaniu przez moderatora.</p>
-<button class="submit" type="submit">Wyślij komentarz</button>
+<button class="submit">Wyślij komentarz</button>
 </form>
 {% else %}
 <div class="notice">
 <h4>Dodawanie komentarzy zostało zablokowane.</h4>
 </div>
 {% endunless %}
-
-
-<!-- ======================== -->
-<!-- Not working code, to fix -->
-<!-- ======================== -->
 <div class="commentform-sendfailed">
 Wiadomość nie mogła zostać wysłana, proszę spróbować później.
 </div>
@@ -49,8 +43,7 @@ Dziękuje, twój komentarz został poprawnie wysłany!
 </div>
 <div class="commentform-errormessages"></div>
 <script>
-"use strict";
-+const commentForm = document.querySelector('.commentform');
+const commentForm = document.querySelector('.commentform');
 const commentFormInputs = document.querySelectorAll('.commentform-input');
 const slugInput = document.querySelector('.commentform-input-slug');
 const optionsSlugInput = document.querySelector('.commentform-input-optionsslug');
@@ -60,8 +53,6 @@ const messageInput = document.querySelector('.commentform-input-message');
 const errorMessagesDiv = document.querySelector('.commentform-errormessages');
 const sendFailedDiv = document.querySelector('.commentform-sendfailed');
 const sendSucceededDiv = document.querySelector('.commentform-sendsucceeded');
-const overlayDiv = document.querySelector('.commentform-overlay');
-
 function post(url, data, callback, errorCallback) {
 const xhr = new XMLHttpRequest();
 xhr.open('POST', url);
@@ -75,74 +66,55 @@ errorCallback(xhr.responseText);
 };
 xhr.send(encodeURI(data));
 }
-
 if (commentForm) {
 commentForm.addEventListener('submit', (e) => {
 e.preventDefault();
 errorMessagesDiv.innerHTML = '';
 sendFailedDiv.style.display = 'none';
 sendSucceededDiv.style.display = 'none';
-
 const slug = slugInput.value.trim();
 const optionsSlug = optionsSlugInput.value.trim();
 const name = nameInput.value.trim();
 const email = emailInput.value.trim();
 const message = messageInput.value.trim();
-
 let error = false;
 let fatalError = false;
 const messages = [];
-
 if (name.length < 2) {
 error = true;
-messages.push('Proszę wpisać imię.');
+messages.push('<div class="commentform-errormessage">Proszę wpisać imię.</div>');
 }
-
 if (email.search(/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/) === -1) {
 error = true;
-messages.push('Proszę wpisać poprawny e-mail.');
+messages.push('<div class="commentform-errormessage">Proszę wpisać poprawny e-mail.</div>');
 }
-
 if (message.length < 2) {
 error = true;
-messages.push('Proszę wpisać wiadomość.');
+messages.push('<div class="commentform-errormessage">Proszę wpisać wiadomość.</div>');
 }
-
 if (fatalError) {
 return false;
 }
-
 if (error) {
-errorMessagesDiv.innerHTML = messages.join('<br>');
+errorMessagesDiv.innerHTML = messages.join('');
 return false;
 }
-
-
 const params = [];
-
 for (let i = 0; i < commentFormInputs.length; i++) {
 const input = commentFormInputs[i];
 params.push(`${ input.name }=${ input.value }`);
 }
-
-overlayDiv.style.display = 'flex';
-
 post(
 e.target.getAttribute('data-action'),
 params.join('&'),
 function(text){
 commentForm.reset();
 sendSucceededDiv.style.display = 'block';
-overlayDiv.style.display = 'none';
 },
 function(text){
 sendFailedDiv.style.display = 'block';
-overlayDiv.style.display = 'none';
 }
 );
 });
 }
 </script>
-<!-- /======================== -->
-<!-- /Not working code, to fix -->
-<!-- /======================== -->
