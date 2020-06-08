@@ -38,7 +38,6 @@
 {% endunless %}
 
 
-{% comment %}
 <!-- ======================== -->
 <!-- Not working code, to fix -->
 <!-- ======================== -->
@@ -50,84 +49,110 @@ Dziękuje, twój komentarz został poprawnie wysłany!
 </div>
 <div class="commentform-errormessages"></div>
 <script>
-const commentForm = document.querySelector('.commentform');
-const commentFormInputs = document.querySelectorAll('.commentform-input');
-const slugInput = document.querySelector('.commentform-input-slug');
-const optionsSlugInput = document.querySelector('.commentform-input-optionsslug');
-const nameInput = document.querySelector('.commentform-input-name');
-const emailInput = document.querySelector('.commentform-input-email');
-const messageInput = document.querySelector('.commentform-input-message');
-const errorMessagesDiv = document.querySelector('.commentform-errormessages');
-const sendFailedDiv = document.querySelector('.commentform-sendfailed');
-const sendSucceededDiv = document.querySelector('.commentform-sendsucceeded');
-const url = 'https://api-igorkowalczyk.herokuapp.com/v2/entry/igorkowalczyk/blog/master';
+const commentForm = document.querySelector('.commentForm');
+const commentFormInputs = document.querySelectorAll('.commentForm-input');
+const slugInput = document.querySelector('.commentForm-input-slug');
+const optionsSlugInput = document.querySelector('.commentForm-input-optionsSlug');
+const nameInput = document.querySelector('.commentForm-input-name');
+const emailInput = document.querySelector('.commentForm-input-email');
+const messageInput = document.querySelector('.commentForm-input-message');
+const errorMessagesDiv = document.querySelector('.commentForm-errorMessages');
+const sendFailedDiv = document.querySelector('.commentForm-sendFailed');
+const sendSucceededDiv = document.querySelector('.commentForm-sendSucceeded');
+
 function post(url, data, callback, errorCallback) {
-const xhr = new XMLHttpRequest();
-xhr.open('POST', url);
-xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-xhr.onload = function() {
-if (xhr.status === 200) {
-callback(xhr.responseText);
-} else if (xhr.status !== 200) {
-errorCallback(xhr.responseText);
+  const xhr = new XMLHttpRequest();
+  xhr.open('POST', url);
+  xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+  xhr.onload = function() {
+    if (xhr.status === 200) {
+      callback(xhr.responseText);
+    } else if (xhr.status !== 200) {
+      errorCallback(xhr.responseText);
+    }
+  };
+  xhr.send(encodeURI(data));
 }
-};
-xhr.send;
-}
+
 if (commentForm) {
-commentForm.addEventListener('submit', (e) => {
-e.preventDefault();
-errorMessagesDiv.innerHTML = '';
-sendFailedDiv.style.display = 'none';
-sendSucceededDiv.style.display = 'none';
-const slug = slugInput.value.trim();
-const optionsSlug = optionsSlugInput.value.trim();
-const name = nameInput.value.trim();
-const email = emailInput.value.trim();
-const message = messageInput.value.trim();
-let error = false;
-let fatalError = false;
-const messages = [];
-if (name.length < 2) {
-error = true;
-messages.push('<div class="commentform-errormessage">Proszę wpisać imię.</div>');
-}
-if (email.search(/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/) === -1) {
-error = true;
-messages.push('<div class="commentform-errormessage">Proszę wpisać poprawny e-mail.</div>');
-}
-if (message.length < 2) {
-error = true;
-messages.push('<div class="commentform-errormessage">Proszę wpisać wiadomość.</div>');
-}
-if (fatalError) {
-return false;
-}
-if (error) {
-errorMessagesDiv.innerHTML = messages.join('');
-return false;
-}
-const params = [];
-for (let i = 0; i < commentFormInputs.length; i++) {
-const input = commentFormInputs[i];
-params.push(`${ input.name }=${ input.value }`);
-}
-post(
-console.log("Hello world!"),
-e.target.getAttribute('data-action'),
-params.join('&'),
-function(text){
-commentForm.reset();
-sendSucceededDiv.style.display = 'block';
-},
-function(text){
-sendFailedDiv.style.display = 'block';
-}
-);
-});
+  commentForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    errorMessagesDiv.innerHTML = '';
+    sendFailedDiv.style.display = 'none';
+    sendSucceededDiv.style.display = 'none';
+
+    const slug = slugInput.value.trim();
+    const optionsSlug = optionsSlugInput.value.trim();
+    const name = nameInput.value.trim();
+    const email = emailInput.value.trim();
+    const message = messageInput.value.trim();
+    const spKey = '__s_p__';
+    const sp = localStorage.getItem(spKey);
+
+    let error = false;
+    const messages = [];
+    const spamFilter = ['bully', 'bullies', 'bullying', 'abuser'];
+
+    if (slug === '' || slug !== optionsSlug !== '') {
+      return false;
+    }
+
+    if (name.length < 1) {
+      error = true;
+      messages.push('Please enter name');
+    }
+
+    if (email.search(/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/) === -1) {
+      error = true;
+      messages.push('Please enter valid email');
+    }
+
+    if (message.length < 1) {
+      error = true;
+      messages.push('Please enter message');
+    }
+
+    if (error) {
+      errorMessagesDiv.innerHTML = messages.join('<br>');
+      return false;
+    }
+
+    for (let i = 0; i < spamFilter.length; i++) {
+      const spamWord = spamFilter[i];
+      if (
+        sp ||
+        name.toLowerCase().indexOf(spamWord) >= 0 ||
+        email.toLowerCase().indexOf(spamWord) >= 0 ||
+        message.toLowerCase().indexOf(spamWord) >= 0
+      ) {
+        commentForm.reset();
+        localStorage.setItem(spKey, '_');
+        sendSucceededDiv.style.display = 'block';
+        return false;
+      }
+    }
+
+    const params = [];
+
+    for (let i = 0; i < commentFormInputs.length; i++) {
+      const input = commentFormInputs[i];
+      params.push(`${ input.name }=${ input.value }`);
+    }
+
+    post(
+      e.target.getAttribute('data-action'),
+      params.join('&'),
+      function(text){
+        commentForm.reset();
+        sendSucceededDiv.style.display = 'block';
+      },
+      function(text){
+        sendFailedDiv.style.display = 'block';
+      }
+    );
+  });
 }
 </script>
 <!-- /======================== -->
 <!-- /Not working code, to fix -->
 <!-- /======================== -->
-{% endcomment %}
