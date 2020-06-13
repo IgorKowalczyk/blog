@@ -8,6 +8,8 @@
 <meta name="google-site-verification" content="-wuCsk4qLolXEPSUTGX7YBxywcyNNf5HS2ClzgEWxNY">
 <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl }}">
 {% feed_meta %}
-{% if site.tracking_id %} {% include analytics.html %} {% endif %} 
+
+{% if site.tracking_id %} {% include analytics.html %} {% endif %}
+
 <title>{% if page.title %}{{ page.title}} - {{site.title}}{% else %} {{site.title}}{% endif %}</title>
 </head>
