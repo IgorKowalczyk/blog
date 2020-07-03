@@ -349,9 +349,12 @@ margin-bottom: 1em;
 padding: 0.5em 0;
 }
 
-.post img:not(.comment .meta .avatar img) {
-margin: 0 auto;
-width: 80%;
+img {
+max-width: 100%;
+margin-left: auto;
+margin-right: auto;
+align-items: center;
+justify-content: center;
 display: flex;
 }
 
