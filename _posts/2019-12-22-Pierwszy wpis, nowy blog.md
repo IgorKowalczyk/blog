@@ -11,4 +11,4 @@ Wpisy na tym blogu będą zazwyczaj o programowaniu, różnych technologiach itp
 
 To chyba wszystko co miałem do przekazania na dzisiaj. Następny wpis niebawem! 
 
-![Zdjęcie](/lib/img/posts/img.jpg)
+![Zdjęcie](./lib/img/posts/img.jpg)
