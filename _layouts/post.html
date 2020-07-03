@@ -5,7 +5,8 @@ layout: default
 <article class="post">
 <header class="post-header">
 <h2 class="post-title" >{{ page.title | escape }}</h2>
-<div class="post-meta">
+
+<p class="post-meta">
 {% include time.html %}
 <span class="bullet" aria-hidden="true">&bull;</span> {{ page.author }} <span class="bullet" aria-hidden="true">&bull;</span> {% include reading-time.html %}
 <ol>
@@ -17,7 +18,8 @@ layout: default
 </span>
 </ul>
 </ol>
-</div>
+</p>
+
 </header>
 <section class="post-content">
 {{ content }}
