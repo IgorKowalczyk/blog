@@ -675,6 +675,10 @@ width: 60px;
 display: none;
 }
 
+.option-description {
+transition: 500ms all;
+}
+
 .theme-switch-container, .switch-container {
 position: sticky;
 top: 0;
