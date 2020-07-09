@@ -3,6 +3,7 @@ email: xxmajonezxx@gmail.com
 description: Blog na którym pojawiają się wpisy na temat programowania lub innych technologi.
 baseurl: ""
 url: "https://igorkowalczyk.github.io/blog"
+main: "/blog"
 github_username:  IgorKowalczyk
 timezone: 'Europe/Warsaw'
 paginate: 8
