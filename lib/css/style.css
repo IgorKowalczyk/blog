@@ -167,7 +167,6 @@ box-sizing: border-box;
 text-decoration: none;
 scrollbar-color: #353535 transparent;
 scrollbar-width: thin;
-transition: 500ms color, 500ms background, 500ms background-color, 500ms opacity, 500ms border, 500ms border-color;
 }
 
 .anchor-heading .anchor-link {
@@ -240,6 +239,7 @@ position: relative;
 -webkit-animation: fade 500ms ease-in;
 animation: fade 500ms ease-in;
 padding-bottom: 100px;
+transition: 500ms all;
 }
 
 html {
@@ -261,6 +261,7 @@ line-height: 1.5em;
 font-size: 0.9em;
 border-radius: 3px;
 word-break: keep-all;
+transition: 500ms all;
 }
 
 blockquote {
@@ -274,6 +275,7 @@ flex-direction: column;
 align-items: center;
 margin-bottom: 0.8em;
 font-style: italic;
+transition: 500ms all;
 }
 
 blockquote p {
@@ -288,14 +290,17 @@ box-sizing: border-box;
 padding: 2px 4px;
 margin: 1em 0;
 color: var(--text);
+transition: 500ms all;
 }
 
 main a, footer a {
 color: var(--text) !important;
+transition: 500ms all;
 }
 
 main a, footer a {
 color: var(--00a3a3) !important;
+transition: 500ms all;
 }
 
 main {
@@ -314,27 +319,32 @@ right: 0;
 bottom: 0;
 left: 0;
 padding: 10px;
+transition: 500ms all;
 }
 
 p, h2, h3, h4, h5, h6 {
 padding-bottom: 0.8em;
+transition: 500ms all;
 }
 
 .page-title, .post-title {
 font-size: 1.5em;
 line-height: 1.3em;
+transition: 500ms all;
 }
 
 .post-meta {
 border-bottom: var(--text) solid 1px;
 margin-bottom: 1em;
 padding-bottom: 9px;
+transition: 500ms all;
 }
 
 .post-list-item h3 a, .post-content h3 {
 font-size: 1.3em;
 color: var(--text);
 font-weight: 600;
+transition: 500ms all;
 }
 
 .post-content p {
@@ -363,12 +373,14 @@ display: flex;
 list-style: none;
 padding-bottom: 1em;
 line-height: 1.6em;
+transition: 500ms all;
 }
 
 .post ol li {
 list-style: none;
 padding-bottom: 1em;
 line-height: 1.6em;
+transition: 500ms all;
 }
 
 .home a:hover, .post a:hover {
@@ -728,6 +740,7 @@ margin: 10px 0px 5px 0px;
 width: 100%;
 min-height: 60px;
 max-height: 300px;
+transition: 500ms all;
 }
 
 .hp {
@@ -753,6 +766,7 @@ padding: 10px;
 display: flex;
 margin: 10px 0px 5px 0px;
 width: 100%;
+transition: 500ms all;
 }
 
 button {
@@ -766,6 +780,7 @@ border-radius: 3px;
 box-shadow: 0 3px 15px 0 rgba(0,0,0,.1), 0 1px 3px 0 rgba(0,0,0,.08);
 margin: 10px 0px 5px 0px;
 user-select: none;
+transition: 500ms all;
 }
 
 button:hover {
@@ -901,9 +916,9 @@ padding: 10px;
 
 .post > .highlight .lineno {
 color: #ccc;
-display:inline-block;
+display: inline-block;
 padding: 0 5px;
-border-right:1px solid #ccc;
+border-right: 1px solid #ccc;
 }
 
 .post > .highlight pre code {
@@ -919,6 +934,7 @@ display: block;
 width: auto;
 word-break: break-word;
 overflow: hidden;
+transition: 500ms all;
 }
 
 .post-nav a {
@@ -938,6 +954,7 @@ float: right;
 .post-recent h3 {
 padding-bottom: 0.3em;
 text-align: center;
+transition: 500ms all;
 }
 
 .post-recent .post-summary {
@@ -947,11 +964,13 @@ display: -webkit-box;
 -webkit-box-orient: vertical;
 -webkit-line-clamp: 4;
 padding-bottom: 0em !important;
+transition: 500ms all;
 }
 
 .post-recent .post-related-title {
 overflow: hidden;
 text-overflow: ellipsis;
+transition: 500ms all;
 }
 
 .post-recent ul li:hover .post-related-title, .post-recent ul li:hover .post-summary {
@@ -960,6 +979,7 @@ color: var(--00a3a3);
 
 .comment p {
 padding-bottom: 0.2em !important;
+transition: 500ms all;
 }
 
 .comment img {
@@ -988,7 +1008,8 @@ padding: 5px 10px 10px 10px !important;
 .comment {
 margin-top: 2em;
 border: 2px solid var(--text);
-border-radius: 5px
+border-radius: 5px;
+transition: 500ms all;
 }
 
 .bullet {
@@ -1005,13 +1026,13 @@ border: 2px solid var(--text);
 border-radius: 5px;
 padding: 10px;
 margin-top: 2rem;
-transition: 500ms;
+transition: 500ms all;
 }
 
 .commentform-errormessages {
 border-radius: 5px;
 padding: 10px;
-transition: 500ms;
+transition: 500ms all;
 }
 
 .commentform-errormessage {
@@ -1019,7 +1040,7 @@ border: 2px solid var(--text);
 border-radius: 5px;
 padding: 10px;
 margin-top: 2rem;
-transition: 500ms;
+transition: 500ms all;
 }
 
 .notice {
@@ -1029,6 +1050,7 @@ text-align: center;
 #share-buttons {
 display: inline-block;
 vertical-align: middle;
+transition: 500ms all;
 }
 
 #share-buttons:after {
