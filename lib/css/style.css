@@ -234,7 +234,7 @@ text-shadow: none;
 
 body {
 font-size: 1em;
-background: var(--white);
+background-color: var(--white);
 position: relative;
 -webkit-animation: fade 500ms ease-in;
 animation: fade 500ms ease-in;
@@ -243,7 +243,7 @@ transition: 500ms all;
 }
 
 html {
-background: var(--white);
+background-color: var(--white);
 scroll-behavior: smooth;
 }
 
@@ -657,6 +657,7 @@ transition: 500ms all;
 
 ul, li {
 list-style: none;
+transition: 500ms all;
 }
 
 .menu-icon svg {
