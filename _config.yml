@@ -4,7 +4,7 @@ description: Blog na którym pojawiają się wpisy na temat programowania lub in
 baseurl: ""
 url: "https://igorkowalczyk.github.io/blog"
 main: "/blog"
-github_username:  IgorKowalczyk
+github_username:  igorkowalczyk
 timezone: "Europe/Warsaw"
 paginate: 8
 markdown: kramdown
