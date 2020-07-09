@@ -293,6 +293,10 @@ color: var(--text);
 transition: 500ms all;
 }
 
+.footer-col-3, time, .main-footer  {
+transition: 500ms all;
+}
+
 main a, footer a {
 color: var(--text) !important;
 transition: 500ms all;
@@ -490,6 +494,11 @@ display: none;
 .pagination {
 display: flex;
 justify-content: space-between;
+transition: 500ms all;
+}
+
+.page-number {
+transition: 500ms all;
 }
 
 .nav {
@@ -526,6 +535,7 @@ font-size: 20px;
 padding: 20px 20px;
 text-decoration: none;
 color: var(--link) !important;
+transition: 500ms all;
 }
 
 .nav li a:hover, .nav .menu-btn:hover {
@@ -535,6 +545,7 @@ background-color: var(--f4f4f4);
 .nav .logo a {
 display: block;
 float: left;
+transition: 500ms all;
 padding: 20px 20px !important;
 font-size: 20px;
 padding: 10px 20px;
@@ -723,10 +734,16 @@ text-align: center;
 
 .cat span a:after  {
 content: ",";
+transition: 500ms all;
 }
 
 .cat span a:last-of-type:after  {
 content: "";
+transition: 500ms all;
+}
+
+span {
+transition: 500ms all;
 }
 
 textarea {
