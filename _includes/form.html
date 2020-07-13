@@ -37,7 +37,15 @@
 <button class="submit submit-spinner">Wyślij komentarz</button>
 </form>
 {% if site.reCaptcha %}
-<script async src="https://www.google.com/recaptcha/api.js"></script>
+<script async src="https://www.google.com/recaptcha/api.js?onload=on&render=explicit"></script>
+<script type="text/javascript">
+      var onload = function() {
+        grecaptcha.render('html_element', {
+          'sitekey' : '{{ site.reCaptcha.siteKey }}',
+		  'theme' : 'dark'
+        });
+      };
+</script>
 {% endif %}
 {% else %}
 <div class="notice">
