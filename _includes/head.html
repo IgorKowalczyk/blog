@@ -18,5 +18,5 @@
 <meta name="google-site-verification" content="-wuCsk4qLolXEPSUTGX7YBxywcyNNf5HS2ClzgEWxNY">
 <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl }}">
 {% feed_meta %}
-{% if site.tracking_id %}{% include analytics.html %}{% endif %}
+{% if  if jekyll.environment == 'production' and site.tracking_id %}{% include analytics.html %}{% endif %}
 </head>
