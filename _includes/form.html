@@ -24,17 +24,21 @@
 <input name="fields[hp]" type="text" id="hp" placeholder="Nie wypełniaj tego! To jest zabezpieczenie przeciwko botom">
 </label>
 </fieldset>
+{% if site.reCaptcha %}
 <input type="hidden" name="options[reCaptcha][siteKey]" value="{{ site.reCaptcha.siteKey }}">
 <input type="hidden" name="options[reCaptcha][secret]" value="{{ site.reCaptcha.secret }}">
 <fieldset>
 <div class="g-recaptcha" data-sitekey="{{ site.reCaptcha.siteKey }}"></div>
 </fieldset>
+{% endif %}
 <!-- /Honeypot -->
 <p>Markdown jest obsługiwany.</p>
 <p>Komentarze pojawią się po zaakceptowaniu przez moderatora.</p>
 <button class="submit submit-spinner">Wyślij komentarz</button>
 </form>
+{% if site.reCaptcha %}
 <script async src="https://www.google.com/recaptcha/api.js"></script>
+{% endif %}
 {% else %}
 <div class="notice">
 <h4>Dodawanie komentarzy zostało zablokowane.</h4>
