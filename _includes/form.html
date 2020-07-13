@@ -98,6 +98,15 @@ const message = messageinput.value.trim();
 let error = false;
 let fatalerror = false;
 const messages = [];
+
+{% if site.reCaptcha %}
+var response = grecaptcha.getResponse();
+if(response.length == 0) {
+error = true;
+messages.push('<div class="commentform-errormessage">Proszę rozwiązać zadanie Captcha.</div>');
+}
+{% endif %}
+
 if (name.length < 2) {
 error = true;
 messages.push('<div class="commentform-errormessage">Proszę wpisać imię.</div>');
