@@ -27,7 +27,7 @@
 {% if site.reCaptcha %}
 <input type="hidden" name="options[reCaptcha][siteKey]" value="{{ site.reCaptcha.siteKey }}">
 <input type="hidden" name="options[reCaptcha][secret]" value="{{ site.reCaptcha.secret }}">
-<fieldset>
+<fieldset class="security">
 <div class="g-recaptcha" data-sitekey="{{ site.reCaptcha.siteKey }}"></div>
 </fieldset>
 {% endif %}

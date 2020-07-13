@@ -1070,6 +1070,10 @@ transition: 500ms all;
 text-align: center;
 }
 
+.security {
+padding: 20px 0px 20px 0px;
+}
+
 #share-buttons {
 display: inline-block;
 vertical-align: middle;
