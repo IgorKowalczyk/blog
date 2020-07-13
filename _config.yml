@@ -29,6 +29,6 @@ staticman:
 reCaptcha:
   enabled: true
   siteKey: "6Lcw_LAZAAAAAJb7qZ4S6c_rDauxxZGWUyZZ7azR"
-  secret: "ldo4oB+7Y5MhrbB/x4MYwzX/OFniwQgYNmJTr4VER6AZKvLO+yaynUPwC+nqwG4G+yzm4V6yVxGsjSWqe0DqC3R4dXcbvgOK4ad6bPqR/44dK4mmylSwqB2HDr5HaBGKAEzJVQfQ6hIlz5Jb2NT74PBl7YAxLAM9LEzzf0B5Sng="
+  secret: "6Lcw_LAZAAAAAOjewCvpqZI4_sPLJRBM4Fth_Ce5"
 
 tracking_id: UA-153609882-1
