@@ -15,7 +15,7 @@
 </fieldset>
 <fieldset>
 <label for="message">Wiadomość (Wyświetlana, wymagana)
-<textarea name="fields[message]" type="text" id="message" placeholder="Twoja wiadomość" title="To pole jest wymagane" maxlenght="200" autocomplete="off"  class="commentform-input commentform-input-message"></textarea>
+<textarea name="fields[message]" type="text" id="message" placeholder="Twoja wiadomość" title="To pole jest wymagane" maxlenght="150" autocomplete="off" spellcheck="true" class="commentform-input commentform-input-message"></textarea>
 </label>
 </fieldset>
 <!-- Honeypot -->
@@ -24,11 +24,17 @@
 <input name="fields[hp]" type="text" id="hp" placeholder="Nie wypełniaj tego! To jest zabezpieczenie przeciwko botom">
 </label>
 </fieldset>
+<input type="hidden" name="options[reCaptcha][siteKey]" value="{{ site.reCaptcha.siteKey }}">
+<input type="hidden" name="options[reCaptcha][secret]" value="{{ site.reCaptcha.secret }}">
+<fieldset>
+<div class="g-recaptcha" data-sitekey="{{ site.reCaptcha.siteKey }}"></div>
+</fieldset>
 <!-- /Honeypot -->
 <p>Markdown jest obsługiwany.</p>
 <p>Komentarze pojawią się po zaakceptowaniu przez moderatora.</p>
 <button class="submit submit-spinner">Wyślij komentarz</button>
 </form>
+<script async src="https://www.google.com/recaptcha/api.js"></script>
 {% else %}
 <div class="notice">
 <h4>Dodawanie komentarzy zostało zablokowane.</h4>
