@@ -27,7 +27,7 @@ staticman:
  branch: "master"
 
 reCaptcha:
-  siteKey: "6LenZtYUAAAAAA9KQI8hzOe43ftO15-_GdLb5pDl"
-  secret: "VaX5KnL7atd+brREnevmZaymhpvW0FcJ9eKi4h4CGVEUqUV6qOOdg+prI+/Aw36wo+YF2UBZKocQz4Lwn2THM7j2j/slPjf7TgrkKIXf0BZOYY2PU9Glhg+IcGn8cOvpqIPPpTsSIsgcs+SHXKhJAM+EuoReOD0BSEwOBRQmrGSvPRI+okTh0/EXVn0D72lL065io/gTPaWIwLA3t1ppX9pIHSzwi+T3q6cqbRAojNXgMCTOwfOJyttLmgNFsoTqoy6x4l7p0VneZH1NncmiDZLPtXbTG/0eNK/7+06XEk3/h6Hy7BWtDiKei6sZdClkYcvz/zpdYTqr8lDkqvtQ=="
+  siteKey: "6Lcw_LAZAAAAAJb7qZ4S6c_rDauxxZGWUyZZ7azR"
+  secret: "PVRxwcbnI5Vy3Ks1cg7/cDENEjGK/et+EbDR7zjnBva3szyg5HP+d7fEQ6kHweDiYgU/rCSv9kptcbNIjrk4hHjVEq+1GRfRAaRtkQL1aZn4BvUqowsVrmZSp3SX+AJR4k3WUXy98ViVyVnf+A1+/ktPaAB5sgOxrFo0zYXkcWc="
 
 tracking_id: UA-153609882-1
