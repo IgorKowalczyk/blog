@@ -104,7 +104,7 @@ const messages = [];
 var response = grecaptcha.getResponse();
 if(response.length == 0) {
 error = true;
-messages.push('<div class="commentform-errormessage">Proszę rozwiązać zadanie Captcha.</div>');
+messages.push('<div class="commentform-errormessage">Proszę rozwiązać zadanie zabezpieczające.</div>');
 }
 // End of Captcha Script
 {% endif %}
