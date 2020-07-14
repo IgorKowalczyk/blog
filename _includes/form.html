@@ -28,7 +28,7 @@
 <input type="hidden" name="options[reCaptcha][siteKey]" value="{{ site.reCaptcha.siteKey }}">
 <input type="hidden" name="options[reCaptcha][secret]" value="{{ site.reCaptcha.secret }}">
 <fieldset class="security">
-<div class="g-recaptcha" data-sitekey="{{ site.reCaptcha.siteKey }}"></div>
+<div id="captcha"></div>
 </fieldset>
 {% endif %}
 <!-- /Honeypot -->
@@ -38,12 +38,21 @@
 </form>
 {% if site.reCaptcha %}
 <script type="text/javascript">
+if (currenttheme === 'dark') {
 var onload = function() {
-grecaptcha.render('html_element', {
+grecaptcha.render('captcha', {
 'sitekey' : '{{ site.reCaptcha.siteKey }}',
 'theme' : 'dark'
 });
 };
+} else {
+ var onload = function() {
+grecaptcha.render('captcha', {
+'sitekey' : '{{ site.reCaptcha.siteKey }}',
+'theme' : 'light'
+});
+};
+}
 </script>
 <script async src="https://www.google.com/recaptcha/api.js?onload=onload"></script>
 {% endif %}
