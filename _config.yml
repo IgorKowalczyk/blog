@@ -28,7 +28,7 @@ staticman:
 
 reCaptcha:
   enabled: true
-  siteKey: "6LfF_7AZAAAAAK796nWHg-K4DkjG_-pnlfEH7Ch0"
-  secret: "KX02DlLiKdqKkMkyAThrIVhjP9zydIZ/KC0copPjpdkkA1cX+zy5loEpg+c618R5kZMKXlelpN/2GDItQWNy4alUGQCtP8k8GTioTtZVmuNXal5sbP1OPkXFKof+6auTz5cfeFs2XRkrQlduNAw/Bc0TB/7RiZNOjMNGBSmbKWc="
+  siteKey: "6Ld4LbEZAAAAAIKYpAUARHRdH0ziQuhtbWGoQEmb"
+  secret: "flRTpZx52dHE7C/VYvDV/kWuP6L5lrJOIZy7bnbvSFGT0YijrGKhcDxpi5+fFpPRfxlMCp5s31GMgKTAuUekxNEkZyGZJIWFxIDVzqjccPF7dcmOuDyUkVQo4WROvC9Dzuo2YxuzqOhhzHv0BUr904cFqEcQSezaS9nT3p9xVAQ="
 
 tracking_id: UA-153609882-1
