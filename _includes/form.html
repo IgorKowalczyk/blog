@@ -40,9 +40,10 @@
 <script async src="https://www.google.com/recaptcha/api.js?onload=onload"></script>
 <script type="text/javascript">
 var onload = function() {
-grecaptcha.render('captcha', {
-'sitekey' : '{{ site.reCaptcha.siteKey }}',
-'theme' : 'dark'
+grecaptcha.ready(function() {
+grecaptcha.execute("{{ site.reCaptcha.siteKey }}").then(function(token) {
+console.log("Captcha ok!);
+});
 });
 };
 </script>
