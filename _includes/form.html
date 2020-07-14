@@ -42,7 +42,7 @@
 var onload = function() {
 grecaptcha.ready(function() {
 grecaptcha.execute("{{ site.reCaptcha.siteKey }}").then(function(token) {
-console.log("Captcha ok!);
+console.log("Captcha ok!");
 });
 });
 };
