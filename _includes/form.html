@@ -37,6 +37,7 @@
 <button class="submit submit-spinner">Wyślij komentarz</button>
 </form>
 {% if site.reCaptcha %}
+<script async src="https://www.google.com/recaptcha/api.js?onload=onload"></script>
 <script type="text/javascript">
 const theme = localStorage.getItem('theme');
 if (theme === 'dark') {
@@ -55,7 +56,6 @@ grecaptcha.render('captcha', {
 };
 }
 </script>
-<script async src="https://www.google.com/recaptcha/api.js?onload=onload"></script>
 {% endif %}
 {% else %}
 <div class="notice">
