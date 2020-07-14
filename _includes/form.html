@@ -100,11 +100,13 @@ let fatalerror = false;
 const messages = [];
 
 {% if site.reCaptcha %}
+// Captcha Script
 var response = grecaptcha.getResponse();
 if(response.length == 0) {
 error = true;
 messages.push('<div class="commentform-errormessage">Proszę rozwiązać zadanie Captcha.</div>');
 }
+// End of Captcha Script
 {% endif %}
 
 if (name.length < 2) {
@@ -133,6 +135,12 @@ params.push(`${ input.name }=${ input.value }`);
 }
 
 spinner.innerHTML = "Trwa wysyłanie...";
+
+{% if site.reCaptcha %}
+// Captcha reset Script
+grecaptcha.reset()
+// End of Captcha reset Script
+{% endif %}
 
 post(
 e.target.getAttribute('data-action'),
