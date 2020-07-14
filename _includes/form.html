@@ -41,9 +41,11 @@
 <script type="text/javascript">
 var onload = function() {
 grecaptcha.ready(function() {
-grecaptcha.execute("{{ site.reCaptcha.siteKey }}").then(function(token) {
-console.log("Captcha ok!");
+grecaptcha.render('captcha', {
+'sitekey' : '{{ site.reCaptcha.siteKey }}',
+'theme' : 'dark'
 });
+console.log("Captcha ok!");
 });
 };
 </script>
