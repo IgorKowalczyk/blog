@@ -38,6 +38,7 @@
 </form>
 {% if site.reCaptcha %}
 <script type="text/javascript">
+const currenttheme = localStorage.getItem('theme');
 if (currenttheme === 'dark') {
 var onload = function() {
 grecaptcha.render('captcha', {
@@ -46,7 +47,7 @@ grecaptcha.render('captcha', {
 });
 };
 } else {
- var onload = function() {
+var onload = function() {
 grecaptcha.render('captcha', {
 'sitekey' : '{{ site.reCaptcha.siteKey }}',
 'theme' : 'light'
