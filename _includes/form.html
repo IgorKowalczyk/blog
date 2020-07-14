@@ -38,12 +38,22 @@
 </form>
 {% if site.reCaptcha %}
 <script type="text/javascript">
+const theme = localStorage.getItem('theme');
+if (theme === 'dark') {
 var onload = function() {
 grecaptcha.render('captcha', {
 'sitekey' : '{{ site.reCaptcha.siteKey }}',
 'theme' : 'dark'
 });
 };
+} else {
+var onload = function() {
+grecaptcha.render('captcha', {
+'sitekey' : '{{ site.reCaptcha.siteKey }}',
+'theme' : 'light'
+});
+};
+}
 </script>
 <script async src="https://www.google.com/recaptcha/api.js?onload=onload"></script>
 {% endif %}
