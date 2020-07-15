@@ -30,14 +30,6 @@
 <fieldset class="security">
 <div id="captcha"></div>
 </fieldset>
-<script type="text/javascript">
-var onload = function() {
-grecaptcha.render('captcha', {
-'sitekey' : '{{ site.reCaptcha.siteKey }}',
-'theme' : 'dark'
-});
-};
-</script>
 {% endif %}
 <!-- /Honeypot -->
 <p>Markdown jest obsługiwany.</p>
@@ -45,7 +37,25 @@ grecaptcha.render('captcha', {
 <button class="submit submit-spinner">Wyślij komentarz</button>
 </form>
 {% if site.reCaptcha %}
-<script async src="https://www.google.com/recaptcha/api.js?onload=onload&render=explicit"></script>
+<script type="text/javascript">
+const currenttheme = localStorage.getItem('theme');
+if (currenttheme === 'dark') {
+var onload = function() {
+grecaptcha.render('captcha', {
+'sitekey' : '{{ site.reCaptcha.siteKey }}',
+'theme' : 'dark'
+});
+};
+} else {
+var onload = function() {
+grecaptcha.render('captcha', {
+'sitekey' : '{{ site.reCaptcha.siteKey }}',
+'theme' : 'light'
+});
+};
+}
+</script>
+<script async src="https://www.google.com/recaptcha/api.js?onload=onload"></script>
 {% endif %}
 {% else %}
 <div class="notice">
