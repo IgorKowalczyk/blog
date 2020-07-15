@@ -41,12 +41,12 @@
 var onload = function() {
 grecaptcha.render('captcha', {
 'sitekey' : '{{ site.reCaptcha.siteKey }}',
-'theme' : 'light'
+'theme' : 'light',
+'hl': 'pl'
 });
 };
 </script>
 <script async src="https://www.google.com/recaptcha/api.js?onload=onload"></script>
-{% endif %}
 {% else %}
 <div class="notice">
 <h4>Dodawanie komentarzy zostało zablokowane.</h4>
