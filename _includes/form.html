@@ -39,8 +39,13 @@
 {% if site.reCaptcha %}
 <script type="text/javascript">
 var load = function() {
-alert("Captcha is ready!");
-};
+grecaptcha.render('captcha', {
+'sitekey' : '{{ site.reCaptcha.siteKey }}',
+'theme' : 'dark',
+'hl': 'pl'
+})
+console.log("Captcha is ready!");
+}
 </script>
 <script src="https://www.google.com/recaptcha/api.js?onload=load&render=explicit" async defer>
 {% endif %}
