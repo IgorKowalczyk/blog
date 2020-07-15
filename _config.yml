@@ -21,7 +21,7 @@ categories_names:
  'programowanie': "Programowanie"
  'javascript': "JavaScript"
 
-comments-post: https://testapp-igorkowalczyk.herokuapp.com/v2/entry/igorkowalczyk/blog/master/comments
+comments-post: https://api-igorkowalczyk.herokuapp.com/v2/entry/igorkowalczyk/blog/master/comments
 
 staticman:
  branch: "master"
