@@ -30,13 +30,7 @@
 <fieldset class="security">
 <div id="captcha"></div>
 </fieldset>
-{% endif %}
-<!-- /Honeypot -->
-<p>Markdown jest obsługiwany.</p>
-<p>Komentarze pojawią się po zaakceptowaniu przez moderatora.</p>
-<button class="submit submit-spinner">Wyślij komentarz</button>
-</form>
-{% if site.reCaptcha %}
+<script async src="https://www.google.com/recaptcha/api.js?onload=onload"></script>
 <script type="text/javascript">
 var onload = function() {
 grecaptcha.render('captcha', {
@@ -46,8 +40,12 @@ grecaptcha.render('captcha', {
 });
 };
 </script>
-<script async src="https://www.google.com/recaptcha/api.js?onload=onload"></script>
 {% endif %}
+<!-- /Honeypot -->
+<p>Markdown jest obsługiwany.</p>
+<p>Komentarze pojawią się po zaakceptowaniu przez moderatora.</p>
+<button class="submit submit-spinner">Wyślij komentarz</button>
+</form>
 {% else %}
 <div class="notice">
 <h4>Dodawanie komentarzy zostało zablokowane.</h4>
