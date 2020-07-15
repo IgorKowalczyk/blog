@@ -44,7 +44,6 @@ grecaptcha.render('captcha', {
 'theme' : 'dark',
 'hl': 'pl'
 })
-console.log("Captcha is ready!");
 }
 </script>
 <script src="https://www.google.com/recaptcha/api.js?onload=load&render=explicit" async defer>
@@ -85,6 +84,7 @@ errorcallback(xhr.responseText);
 }
 };
 xhr.send(encodeURI(data));
+console.log(xhr.responseText);
 }
 if (commentform) {
 commentform.addEventListener('submit', (e) => {
@@ -137,6 +137,7 @@ params.push(`${ input.name }=${ input.value }`);
 }
 
 spinner.innerHTML = "Trwa wysyłanie...";
+console.log("Trwa wysyłanie...")
 
 {% if site.reCaptcha %}
 // Captcha reset Script
