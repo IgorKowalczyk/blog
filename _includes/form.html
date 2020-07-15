@@ -137,17 +137,16 @@ params.push(`${ input.name }=${ input.value }`);
 
 spinner.innerHTML = "Trwa wysyłanie...";
 
-{% if site.reCaptcha %}
-// Captcha reset Script
-grecaptcha.reset();
-// End of Captcha reset Script
-{% endif %}
-
 post(
 e.target.getAttribute('data-action'),
 params.join('&'),
 function(text){
 commentform.reset();
+{% if site.reCaptcha %}
+// Captcha reset Script
+grecaptcha.reset();
+// End of Captcha reset Script
+{% endif %}
 sendsucceededdiv.style.display = 'block';
 spinner.innerHTML = "Wyślij Komentarz";
 },
