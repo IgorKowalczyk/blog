@@ -26,9 +26,9 @@ comments-post: https://testapp-igorkowalczyk.herokuapp.com/v2/entry/igorkowalczy
 staticman:
  branch: "master"
 
-#reCaptcha:
-#  enabled: true
-#  siteKey: "6LepabEZAAAAACc5CaKQ576otDawf5Zp1HXfCKDu"
-#  secret: "SBOGLVfiD12mi2BzRmKiNPtbldET2ccrn80DMrIzzxVYdxmM4FfR64w8GjotSPF9Qm71UlyNU3QOojzYdkPq5NF1qSE5e+4wlZ7PLY63nwcQ9jea59RWRIPouBGZRhc5gzbDfQfyQBue32nVFrxXn42Fith81j/1w+aLZjf8AXI="
+reCaptcha:
+  enabled: true
+  siteKey: "6LepabEZAAAAACc5CaKQ576otDawf5Zp1HXfCKDu"
+  secret: "SBOGLVfiD12mi2BzRmKiNPtbldET2ccrn80DMrIzzxVYdxmM4FfR64w8GjotSPF9Qm71UlyNU3QOojzYdkPq5NF1qSE5e+4wlZ7PLY63nwcQ9jea59RWRIPouBGZRhc5gzbDfQfyQBue32nVFrxXn42Fith81j/1w+aLZjf8AXI="
 
 tracking_id: UA-153609882-1
