@@ -1,5 +1,5 @@
 ---
-name: Zgłoszenie Błedu)
+name: Zgłoszenie Błedu [PL]
 about: Złóż zgłoszenie błędu aby pomóc nam
 title: ''
 labels: bug
