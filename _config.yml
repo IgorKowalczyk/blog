@@ -6,9 +6,9 @@ url: "https://igorkowalczyk.github.io/blog"
 main: "/blog"
 github_username:  "igorkowalczyk"
 timezone: "Europe/Warsaw"
-paginate: "8"
-markdown: "kramdown"
-theme: "minima"
+paginate: 8
+markdown: kramdown
+theme: minima
 plugins:
  - jekyll-feed
  - jekyll-paginate
@@ -27,7 +27,7 @@ staticman:
  branch: "master"
 
 reCaptcha:
-  enabled: "true"
+  enabled: true
   siteKey: "6LepabEZAAAAACc5CaKQ576otDawf5Zp1HXfCKDu"
   secret: "SBOGLVfiD12mi2BzRmKiNPtbldET2ccrn80DMrIzzxVYdxmM4FfR64w8GjotSPF9Qm71UlyNU3QOojzYdkPq5NF1qSE5e+4wlZ7PLY63nwcQ9jea59RWRIPouBGZRhc5gzbDfQfyQBue32nVFrxXn42Fith81j/1w+aLZjf8AXI="
 
