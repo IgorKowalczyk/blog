@@ -31,14 +31,14 @@ layout: default
 <ul class="cat">Kategorie:&nbsp;
 <span>
 {% for category in page.categories %}
-<a href="{{ site.url }}categories/{{ category }}">{{ category }}</a>&nbsp;
+<a href="/blog/categories/{{ category }}">{{ category }}</a>&nbsp;
 {% endfor %}
 </span>
 </ul>
 </header>
 <div class="post-list-item-desc">
 <p>{{ post.excerpt | default: '' | strip_html | normalize_whitespace | truncate: 200 | escape }}
-<a href="{{ site.url }}{{ post.url }}"> Czytaj więcej</a>
+<a href="{{ /blog/post.url }}"> Czytaj więcej</a>
 </p>
 </div>
 </li>
