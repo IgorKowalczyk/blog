@@ -37,7 +37,7 @@ layout: default
 </header>
 <div class="post-list-item-desc">
 <p>{{ post.excerpt | default: '' | strip_html | normalize_whitespace | truncate: 200 | escape }}
-<a href="{{site.main}}/{{ post.url }}"> Czytaj więcej</a>
+<a href="{{site.main}}{{ post.url }}"> Czytaj więcej</a>
 </p>
 </div>
 </li>
