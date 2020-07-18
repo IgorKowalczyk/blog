@@ -1,10 +1,10 @@
-title: Igor Kowalczyk Blog
-email: xxmajonezxx@gmail.com
-description: Blog na którym pojawiają się wpisy na temat programowania lub innych technologi.
+title: "Igor Kowalczyk Blog"
+email: "xxmajonezxx@gmail.com"
+description: "Blog na którym pojawiają się wpisy na temat programowania lub innych technologi."
 baseurl: ""
 url: "https://igorkowalczyk.github.io/blog"
 main: "/blog"
-github_username:  igorkowalczyk
+github_username:  "igorkowalczyk"
 timezone: "Europe/Warsaw"
 paginate: 8
 markdown: kramdown
@@ -21,7 +21,7 @@ categories_names:
  'programowanie': "Programowanie"
  'javascript': "JavaScript"
 
-comments-post: https://api-igorkowalczyk.herokuapp.com/v2/entry/igorkowalczyk/blog/master/comments
+comments-post: "https://api-igorkowalczyk.herokuapp.com/v2/entry/igorkowalczyk/blog/master/comments"
 
 staticman:
  branch: "master"
@@ -31,6 +31,6 @@ reCaptcha:
   siteKey: "6LepabEZAAAAACc5CaKQ576otDawf5Zp1HXfCKDu"
   secret: "SBOGLVfiD12mi2BzRmKiNPtbldET2ccrn80DMrIzzxVYdxmM4FfR64w8GjotSPF9Qm71UlyNU3QOojzYdkPq5NF1qSE5e+4wlZ7PLY63nwcQ9jea59RWRIPouBGZRhc5gzbDfQfyQBue32nVFrxXn42Fith81j/1w+aLZjf8AXI="
 
-tracking_id: UA-153609882-1
+tracking_id: "UA-153609882-1"
 
 verification: "-wuCsk4qLolXEPSUTGX7YBxywcyNNf5HS2ClzgEWxNY"
