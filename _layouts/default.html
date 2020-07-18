@@ -21,7 +21,7 @@
 <div class="footer-col-3">
 Ta strona korzysta z ciasteczek.
 </div>
-<div class="footer-col-3">(c) Igor Kowalczyk <noscript>2019</noscript><span class="date"></span>. Strona udostępniana pod licencją <a href="/blog/license.txt" target="_blank" download>MIT</a></div>
+<div class="footer-col-3">(c) {% if site.first-launch %}<noscript>{{ site.first-launch }}</noscript>{% endif %}<span class="date"></span> {{ site.name | upcase }}. Strona udostępniana pod licencją <a href="{{ site.main }}/license.txt" target="_blank" download>MIT</a></div>
 </footer>
 <script src="{{site.main}}/lib/js/index.min.js"></script>
 </body>

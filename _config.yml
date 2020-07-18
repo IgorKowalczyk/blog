@@ -1,15 +1,45 @@
+# Title of the blog
 title: "Igor Kowalczyk Blog"
+
+# Your name (or nickname/company name)
+name: "Igor Kowalczyk"
+
+# E-Mail (Public)
 email: "xxmajonezxx@gmail.com"
+
+# Description
 description: "Blog na którym pojawiają się wpisy na temat programowania lub innych technologi."
+
+# Link to portfolio (end with slash) - if you don't have - leave blank
+portfolio: "/"
+
+# Base url
 baseurl: ""
+
+# Main url to the site (end without slash)
 url: "https://igorkowalczyk.github.io/blog"
 main: "/blog"
+
+# Head site - to favicons (end without slash)
 head-site: "https://igorkowalczyk.github.io"
+
+# Your github username (no link) - if you don't have - leave blank
 github_username:  "igorkowalczyk"
+
+# Time zone
 timezone: "Europe/Warsaw"
+
+# First Launch of the site (displays in footer)
+first-launch: "2019"
+
+# Page pagination
 paginate: 8
+
+# Markdown and Default theme
 markdown: kramdown
 theme: minima
+
+# Plugins
 plugins:
  - jekyll-feed
  - jekyll-paginate
@@ -22,16 +52,21 @@ categories_names:
  'programowanie': "Programowanie"
  'javascript': "JavaScript"
 
+# To comments (only github. Replace "igorkowalczyk/blog" with your [username/repo]
 comments-post: "https://api-igorkowalczyk.herokuapp.com/v2/entry/igorkowalczyk/blog/master/comments"
 
+# Default branch to comments
 staticman:
  branch: "master"
 
+# Captcha - to protect comment. Sitekey - normal key. Secret - encrypted. To encrypt go to https://api-igorkowalczyk.herokuapp.com/v2/encrypt/[YOUR-TEXT-TO-ENCRYPT]
 reCaptcha:
   enabled: true
   siteKey: "6LepabEZAAAAACc5CaKQ576otDawf5Zp1HXfCKDu"
   secret: "SBOGLVfiD12mi2BzRmKiNPtbldET2ccrn80DMrIzzxVYdxmM4FfR64w8GjotSPF9Qm71UlyNU3QOojzYdkPq5NF1qSE5e+4wlZ7PLY63nwcQ9jea59RWRIPouBGZRhc5gzbDfQfyQBue32nVFrxXn42Fith81j/1w+aLZjf8AXI="
 
+# Tracking ID - if you don't have - leave blank
 tracking_id: "UA-153609882-1"
 
+# Site verification ID - if you don't have - leave blank
 verification: "-wuCsk4qLolXEPSUTGX7YBxywcyNNf5HS2ClzgEWxNY"
