@@ -13,9 +13,9 @@ layout: null
 <div class="message">
 <h1>404</h1>
 <h2>Tutaj nic nie ma!</h2>
-<h3>Ta strona mogła być usunięta albo przeniesiona. <a href="{{site.main}}/?ref=404">Powróć do strony głównej</a> albo <a href="mailto:{{ site.email }}">zgłoś błąd.</a></h3>
+<h3>Ta strona mogła być usunięta albo przeniesiona. <a href="{{site.main}}/?ref=404">Powróć do strony głównej</a>{% if site.email %} albo <a href="mailto:{{ site.email }}">zgłoś błąd.</a>{% endif %}</h3>
 <p><a class="button" href="{{site.main}}/?ref=404">Aktualności</a></p>
-<p><a class="button" href="mailto:{{ site.email }}">Zgłoś Błąd</a></p>
+{% if site.email %}<p><a class="button" href="mailto:{{ site.email }}">Zgłoś Błąd</a></p>{% endif %}
 </div>
 </main>
 <footer>
