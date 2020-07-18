@@ -37,7 +37,7 @@ layout: default
 </header>
 <div class="post-list-item-desc">
 <p>{{ post.excerpt | default: '' | strip_html | normalize_whitespace | truncate: 200 | escape }}
-<a href="{{site.main}}{{ /post.url }}"> Czytaj więcej</a>
+<a href="{{site.main}}/{{ post.url }}"> Czytaj więcej</a>
 </p>
 </div>
 </li>
@@ -45,11 +45,11 @@ layout: default
 </ul>
 <div class="pagination">
 {% if paginator.previous_page %}
-<a href="{{site.main}}{{ paginator.previous_page_path }}" class="previous">Poprzednia Strona</a>
+<a href="{{site.main}}/{{ paginator.previous_page_path }}" class="previous">Poprzednia Strona</a>
 {% endif %}
 <span class="page-number">Strona: {{ paginator.page }} / {{ paginator.total_pages }}</span>
 {% if paginator.next_page %}
-<a href="{{site.main}}{{ paginator.next_page_path }}" class="next">Następna Strona</a>
+<a href="{{site.main}}/{{ paginator.next_page_path }}" class="next">Następna Strona</a>
 {% endif %}
 </div>
 <a href="{{site.main}}/feeds/feed.xml" style="line-height:2em" target="_blank">
