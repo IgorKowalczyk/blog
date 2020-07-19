@@ -1,5 +1,3 @@
-<span class="reading-time" title="{% assign words-count = content | number_of_words %}{% if words-count < 1 %}1 słowo{% else %}{{ words-count | divided_by:1 }} słów{% endif %}">{% assign words = content | number_of_words %}{% if words < 360 %}1 miuta czytania{% else %}{{ words | divided_by:180 }} minuty czytania{% endif %}</span>
-{% comment %}
 <span class="reading-time" title="
 {% assign words-count = content | number_of_words %}
 {% if words-count < 1 %}
@@ -14,4 +12,3 @@
 {{ words | divided_by:180 }} minuty czytania
 {% endif %}
 </span>
-{% endcomment %}
