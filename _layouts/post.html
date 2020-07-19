@@ -30,6 +30,9 @@ layout: default
 <hr>
 <br>
 {% include comments.html %}
+{% unless page.comments == false %}
+<script src="{{site.main}}/lib/js/form.js"></script>
+{% endunless %}
 <br>
 <hr>
 <br>
