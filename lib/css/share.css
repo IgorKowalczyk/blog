@@ -1,0 +1,74 @@
+---
+layout: null
+---
+/* (c) IGOR KOWALCZYK. All rights reserved. */
+
+@font-face {
+font-family: 'Montserrat-Light';
+font-style: normal;
+font-weight: 300;
+src: url('{{ site.main }}/lib/fonts/montserrat-light.ttf');
+}
+
+@font-face {
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+src:url('{{ site.main }}/lib/fonts/montserrat-medium.ttf');
+}
+
+body {
+font-size: 1em;
+position: relative;
+-webkit-animation: fade 500ms ease-in;
+animation: fade 500ms ease-in;
+padding: 10px;
+}
+
+@keyframes fade {
+0% {
+opacity:0;
+}
+100% {
+opacity:1;
+}
+}
+main{
+font-size: 1.2em;
+clear: both;
+display: flex;
+flex-direction: column;
+margin: auto;
+}
+
+.post-content p {
+line-height: 1.6em;
+}
+
+* {
+outline: none;
+margin: 0;
+padding: 0;
+font-family: 'Montserrat-Light';
+color:#212121;
+box-sizing: border-box;
+text-decoration: none;
+scrollbar-color: #353535 transparent;
+scrollbar-width: thin;
+transition: 500ms color, 500ms background, 500ms background-color, 500ms opacity, 500ms border, 500ms border-color;
+}
+
+.link {
+-webkit-user-select: all;
+-moz-user-select: all;
+-ms-user-select: all;
+user-select: all;
+background: #fff;
+border: 1px solid #212121;
+border-radius: 3px;
+padding: 10px;
+display: flex;
+margin: 10px 0px 5px 0px;
+width: 100%;
+word-break: break-all;
+}
