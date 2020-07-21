@@ -14,11 +14,10 @@ description: "Blog na którym pojawiają się wpisy na temat programowania lub i
 portfolio: "/"
 
 # Base url
-baseurl: ""
+baseurl: "blog/"
 
-# Main url to the site (end without slash)
-url: "https://igorkowalczyk.github.io/blog"
-main: "/blog"
+# Link to the page (without subpage)
+url: "https://igorkowalczyk.github.io"
 
 # Head site - to favicons (end without slash)
 head-site: "https://igorkowalczyk.github.io"

@@ -7,14 +7,14 @@ layout: null
 font-family: 'Montserrat-Light';
 font-style: normal;
 font-weight: 300;
-src: url('{{ site.main }}/lib/fonts/montserrat-light.ttf');
+src: url('{{ site.url }}{{ site.baseurl }}/lib/fonts/montserrat-light.ttf');
 }
 
 @font-face {
 font-family: 'Montserrat';
 font-style: normal;
 font-weight: 500;
-src:url('{{ site.main }}/lib/fonts/montserrat-medium.ttf');
+src:url('{{ site.url }}{{ site.baseurl }}/lib/fonts/montserrat-medium.ttf');
 }
 
 body {
