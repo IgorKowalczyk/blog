@@ -3,4 +3,4 @@ Allow: *.js
 Allow: *.css
 Allow: /lib/
 Disallow:
-Sitemap: {{ site.url }}{{ site.baseurl }}/sitemap.xml
+Sitemap: {{ site.url }}/{{ site.baseurl }}/sitemap.xml
