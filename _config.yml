@@ -17,7 +17,7 @@ portfolio: "/"
 baseurl: "/blog/"
 
 # Link to the page (without subpage)
-url: "https://igorkowalczyk.github.io"
+#url: "https://igorkowalczyk.github.io"
 
 # Head site - to favicons (end without slash)
 head-site: "https://igorkowalczyk.github.io"
