@@ -8,7 +8,7 @@ layout: default
 <li class="post-list-item">
 <header>
 <h3 >
-<a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+<a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
 </h3>
 <time datetime="{{ post.date | date_to_xmlschema }}">{% assign m = post.date | date: "%-m" %}
 {{ post.date | date: "%-d" }}
@@ -31,7 +31,7 @@ layout: default
 <ul class="cat">Kategorie:&nbsp;
 <span>
 {% for category in page.categories %}
-<a href="{{ site.baseurl }}categories/{{ category }}">{{ category }}</a>&nbsp;
+<a href="{{ site.baseurl }}/categories/{{ category }}">{{ category }}</a>&nbsp;
 {% endfor %}
 </span>
 </ul>
