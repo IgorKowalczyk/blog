@@ -14,7 +14,7 @@ description: "Blog na którym pojawiają się wpisy na temat programowania lub i
 portfolio: "/"
 
 # Base url
-baseurl: "/blog/"
+baseurl: "blog/"
 
 # Link to the page (without subpage)
 url: "https://igorkowalczyk.github.io"
