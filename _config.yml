@@ -13,14 +13,8 @@ description: "Blog na którym pojawiają się wpisy na temat programowania lub i
 # Link to portfolio (end with slash) - if you don't have - leave blank
 portfolio: "/"
 
-# Base url
-baseurl: ""
-
-# Main url to the site (end without slash)
+# Main url to the site (end without slash) [or dir.]
 url: "https://igorkowalczyk.github.io/blog"
-
-# Head site - to favicons (end without slash)
-head-site: "https://igorkowalczyk.github.io"
 
 # Your github username (no link) - if you don't have - leave blank
 github_username:  "igorkowalczyk"
