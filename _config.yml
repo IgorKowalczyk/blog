@@ -18,7 +18,7 @@ baseurl: ""
 
 # Main url to the site (end without slash)
 url: "https://igorkowalczyk.github.io/blog"
-main: "/blog"
+main: "https://igorkowalczyk.github.io/blog"
 
 # Head site - to favicons (end without slash)
 head-site: "https://igorkowalczyk.github.io"
