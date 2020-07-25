@@ -24,6 +24,10 @@
 <input name="fields[hp]" type="text" id="hp" placeholder="Nie wypełniaj tego! To jest zabezpieczenie przeciwko botom">
 </label>
 </fieldset>
+<fieldset>
+<input type="checkbox" name="options[subscribe]" value="email">
+Powiadom mnie jeśli ktoś napisze komentarz pod tym postem
+</fieldset>
 {% if site.reCaptcha %}
 <input type="hidden" name="options[reCaptcha][siteKey]" value="{{ site.reCaptcha.siteKey }}">
 <input type="hidden" name="options[reCaptcha][secret]" value="{{ site.reCaptcha.secret }}">
