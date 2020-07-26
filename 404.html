@@ -1,15 +1,8 @@
 ---
-layout: null
+layout: "404"
+title: "404"
+description: "Tutaj nic nie ma"
 ---
-
-<!-- (c) IGOR KOWALCZYK. All rights reserved. -->
-<!DOCTYPE html>
-<html lang="pl">
-{% include head-404.html %}
-<body ondragstart="return false" ondrag="return false">
-<script type="text/javascript">var preload = document.createElement('div'); preload.className = "preloader"; preload.innerHTML = '</div><div class="spinner"></div>'; document.body.appendChild(preload); window.addEventListener('load', function() { preload.className +=  ' fade'; setTimeout(function(){ preload.style.display = 'none'; },500); })</script>
-<noscript><div class="no-js">To view the page please enable javascript in your browser.</div></noscript>
-<main>
 <div class="message">
 <h1>404</h1>
 <h2>Tutaj nic nie ma!</h2>
@@ -17,18 +10,3 @@ layout: null
 <p><a class="button" href="{{site.url}}/?ref=404">Aktualności</a></p>
 {% if site.email %}<p><a class="button" href="mailto:{{ site.email }}">Zgłoś Błąd</a></p>{% endif %}
 </div>
-</main>
-<footer>
-<ul>
-<li><div class="theme-switch-container">
-<label class="theme-switch" for="checkbox">
-<input type="checkbox" id="checkbox"/>
-<div class="slider round"></div>
-</label>
-</div><div class="option-description">Jasny/Ciemny Tryb</div></li>
-</ul>
-<p>(c) {% if site.first-launch %}<noscript>{{ site.first-launch }}</noscript>{% endif %}<span class="date"></span> {{ site.name | upcase }}</p><p>Ta strona korzysta z ciasteczek.</p>
-</footer>
-<script src="{{site.url}}/lib/js/404.min.js"></script>
-</body>
-</html>

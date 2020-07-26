@@ -1,6 +1,5 @@
 <head>
 <meta charset="utf-8">
-<link rel="stylesheet" href="{{ site.url }}/lib/css/style.min.css">
 <meta name="viewport" content="width=device-width initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <title>{% if page.title %}{{page.title}} - {{site.title}}{% else %} {{site.title}}{% endif %}</title>
@@ -16,6 +15,18 @@
 <meta name="msapplication-TileImage" content="{{ site.url }}/lib/favicon/mstile-144x144.png">
 <meta name="msapplication-config" content="{{ site.url }}/lib/favicon/browserconfig.xml">
 {% if page.redirect %}<meta http-equiv="refresh" content="0; url='{{ page.redirect }}'">{% endif %}
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{% if page.title %}{{ page.title }} - {{ site.title }}{% else %} {{ site.title }}{% endif %}">
+<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+{% comment %}<meta property="og:image" content="{{ site.url }}lib/pics/thumbs/{{ page.image }}" />{% endcomment %}
+<meta property="og:site_name" content="{{ site.name }}">
+<meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+{% if page.layout == '404' %}
+<link rel="stylesheet" href="{{ site.baseurl }}/lib/css/404.min.css">
+{% else %}
+<link rel="stylesheet" href="{{ site.baseurl }}/lib/css/style.min.css">
+{% endif %}
 {% if page.block %}
 <meta name="robots" content="noindex, nofollow">
 <meta name="googlebot" content="noindex, nofollow">
