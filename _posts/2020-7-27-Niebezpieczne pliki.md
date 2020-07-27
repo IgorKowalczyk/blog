@@ -1,0 +1,27 @@
+﻿---
+layout: post
+title: "Niebezpieczne pliki"
+author: "Igor Kowalczyk"
+categories: internet
+comments: true
+---
+
+Nasz komputer pod pewnymi względami przypomina ludzkie ciało – musimy o niego dbać, by mieć pewność, że wszystko działa jak należy. Kluczową rolę w tym procesie odgrywają programy antywirusowe, które chronią nas przed szkodliwym oprogramowaniem i niebezpiecznymi plikami. Ich główną funkcję można porównać do tej, którą spełniają szczepionki lub leki wzmacniające odporność organizmu – zapobiegają „zarażeniu” lub "infekcji", blokując złośliwe fragmenty kodu. W przeciwieństwie jednak do swoich biologicznych pierwowzorów, antywirusy nie ograniczają się do profilaktyki – potrafią także aktywnie zwalczać zagrożenia.
+
+# Rodzaje wirusów
+- Worm – oprogramowanie, którego głównym celem jest rozprzestrzenianie się na jak największej liczbie komputerów. Stanowią duże zagrożenie ponieważ mogą działać tak jak wirusy Ransomware, przykładem tego jest luka w systemie Windows "EternalBlue" (14 kwietnia 2017 r.)
+- Adware – uciążliwe programy, które są tworzone po to, by wyświetlać reklamy. Najczęściej instalujemy je wraz z innym oprogramowaniem. Dlatego lepiej czytać to co się zaznacza w instalatorze. Nie są zwykle ciężkie do usunięcia, nie czynią też wielkich szkód na komputerze.
+- Spyware – oprogramowanie szpiegujące. Są niezwykle niebezpieczne, bowiem potrafią śledzić np. historię przeglądarki czy zapisywać wykorzystywane przez nas hasła, zbierać informacje o lokalizacji itp. Niektóre potrafią instalować na naszym komputerze dodatkowe oprogramowanie, które zazwyczaj czynią dalsze szkody. Ten typ wirusów jest szczególnie ciężki do wykrycia w tych czasach - większość firm zbiera o nas informacje podobne jak ten typ wirusów.
+- Ransomware – wirusy blokujące komputer w celu wymuszenia okupu (np. poprzez szyfrowanie i blokowanie dostępu do danych). Podają konto na które trzeba przelać określona ilość pieniędzy aby odzyskać komputer. Ma się ograniczony czas - jeżeli się nie zapłaci wirus potrafi zniszczyć nieodwracalnie dysk komputera.
+
+# Jak działają antywirusy
+Oprogramowanie antywirusowe może wykorzystywać jedną lub kilka technik wykrywania szkodliwego oprogramowania. Głównym zadaniem każdej metody jest analiza podejrzanego pliku, jego cech oraz zachowań w systemie w celu ustalenia czy jest to rzeczywiście wirus czy bezpieczny plik. Wielu producentów antywirusów chwali się swoją techniką wyszukiwania szkodliwych, nieznanych jeszcze zagrożeń (nieznanych – antywirus nie posiada odpowiednich danych, aby wykryć / usunąć wirusa). Jednak jedna technika nie zawsze jest równa innej. Analiza heurystyczna wykorzystuje wiele metod do zwalczania szkodliwego oprogramowania np. analizę pasywną, algorytmiczną, emulację czy piaskownicę(sandbox). Inaczej analiza heurystyczna zawiera zestawy procedur, które analizują kod w plikach wykonywalnych, skryptach, pamięci, sektorze startowym itp. w celu wykrycia złośliwego oprogramowania.
+#####  Oto kilka metod jak antywirusy działają:
+- Skanowanie w tle / on access – podczas korzystania z komputera, antywirus skanuje pliki / procesy pod kątem podejrzanych zachowań korzystając z zaawansowanych technik. Każdy uruchamiany program, proces, załadowanie biblioteki, są sprawdzane pod kątem potencjalnej infekcji, nietypowego zachowania aplikacji.
+- Skanowanie on demand – czyli ręczne uruchomienie skanera w celu przeskanowania komputera pod kątem wirusów.
+
+# Trochę o niebezpieczeństwach w sieci
+W sieci istnieje prawie 650 milionów stron internetowych, lub inaczej - ponad pół miliarda... Sprawa jest jasna - nie wszystkie są bezpieczne. Na wielu stronach internetowych spotykamy linki do innych stron lub pliki do pobrania. Te pliki dostępne do pobrania (o linkach opowiem za chwilę) najczęściej są programami komputerowymi, arkuszami kalkulacyjnymi itp. Jednak mogą one okazać się niebezpieczne - mogą zawierać w sobie wirusa. Większość dzisiejszych antywirusów skanuje pliki zaraz po pobraniu ale nie każdy wirus może zostać wykryty w czas. 
+
+# Zagrożenia dla telefonów
+Wiele osób korzystających z telefonów komórkowych pobiera antywirusy - i to jest dobre. Ale kiedy zaczynają przychodzić powiadomienia często je ignorują lub wyciszają (nawet te o niebezpiecznych stronach czy plikach). W ostateczności odinstalowują antywirusa ponieważ zaczyna być denerwujący. Nowe aplikację, skrypty śledzące nie są wtedy blokowane (wliczając też już wcześniej zainstalowane). Użytkownicy są wtedy najbardziej narażeni na wirusy. Na telefonach także nie widzimy adresów URL - możemy chcieć wejść na stronę https://example.com a wejdziemy na http://example-2.com. Możemy zostać przekierowani rekordem DNS i nawet tego nie zauważyć. Strona może wyglądać identycznie (np. strona logowania)
