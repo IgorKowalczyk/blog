@@ -20,7 +20,7 @@ Oprogramowanie antywirusowe może wykorzystywać jedną lub kilka technik wykryw
 - Skanowanie w tle / on access – podczas korzystania z komputera, antywirus skanuje pliki / procesy pod kątem podejrzanych zachowań korzystając z zaawansowanych technik. Każdy uruchamiany program, proces, załadowanie biblioteki, są sprawdzane pod kątem potencjalnej infekcji, nietypowego zachowania aplikacji.
 - Skanowanie on demand – czyli ręczne uruchomienie skanera w celu przeskanowania komputera pod kątem wirusów.
 
-# Trochę o niebezpieczeństwach w sieci
+# Niebezpieczeństwo w sieci
 W sieci istnieje prawie 650 milionów stron internetowych, lub inaczej - ponad pół miliarda... Sprawa jest jasna - nie wszystkie są bezpieczne. Na wielu stronach internetowych spotykamy linki do innych stron lub pliki do pobrania. Te pliki dostępne do pobrania (o linkach opowiem za chwilę) najczęściej są programami komputerowymi, arkuszami kalkulacyjnymi itp. Jednak mogą one okazać się niebezpieczne - mogą zawierać w sobie wirusa. Większość dzisiejszych antywirusów skanuje pliki zaraz po pobraniu ale nie każdy wirus może zostać wykryty w czas. 
 
 # Zagrożenia dla telefonów
