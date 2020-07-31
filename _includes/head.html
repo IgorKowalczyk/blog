@@ -19,7 +19,7 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="{% if page.title %}{{ page.title }} - {{ site.title }}{% else %} {{ site.title }}{% endif %}">
 <meta property="og:url" content="{{ site.url }}{{ page.url }}">
-{% comment %}<meta property="og:image" content="{{ site.url }}lib/pics/thumbs/{{ page.image }}" />{% endcomment %}
+{% if page.image %}<meta property="og:image" content="{{ site.url }}lib/pics/thumbs/{{ page.image }}" />{% endif %}
 <meta property="og:site_name" content="{{ site.name }}">
 <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
 {% if page.layout == '404' %}
