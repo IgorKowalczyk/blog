@@ -6,7 +6,7 @@
 {{ words-count | divided_by:1 }} słów
 {% endif %}">
 {% assign words = content | number_of_words %}
-{% if words < {{ site.words-per-minute %}
+{% if words < {{ site.words-per-minute }} %}
 1 miuta czytania
 {% else %}
 {{ words | divided_by:180 }} minuty czytania
