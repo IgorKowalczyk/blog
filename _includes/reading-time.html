@@ -9,6 +9,6 @@
 {% if words < {{ site.words-per-minute }} %}
 1 miuta czytania
 {% else %}
-{{ words | divided_by:180 }} minuty czytania
+{{ words | divided_by:60 }} minuty czytania
 {% endif %}
 </span>
