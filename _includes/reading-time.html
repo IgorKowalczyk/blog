@@ -1,15 +1,15 @@
-{% assign words-per-minute = site.words-per-minute %}
 <span class="reading-time" title="
 {% assign words-count = content | number_of_words %}
 {% if words-count < 1 %}
 1 słowo
 {% else %}
-{{ words-count | divided_by:1 }} słów
+{{ words-count | divided_by: 1 }} słów
 {% endif %}">
 {% assign words = content | number_of_words %}
+{% assign words-per-minute = site.words-per-minute %}
 {% if words < words-per-minute %}
 1 miuta czytania
 {% else %}
-{{ words | divided_by:words-per-minute }} minuty czytania
+{{ words | divided_by: words-per-minute }} minuty czytania
 {% endif %}
 </span>
