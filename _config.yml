@@ -13,9 +13,6 @@ description: "Blog na którym pojawiają się wpisy na temat programowania lub i
 # Link to portfolio (end with slash) - if you don't have - leave blank
 portfolio: "/"
 
-# Read words per minute
-words-per-minute: "120"
-
 # Main url to the site (end without slash) [or dir.]
 url: "https://igorkowalczyk.github.io/blog"
 
