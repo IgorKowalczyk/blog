@@ -6,9 +6,9 @@
 {{ words-count | divided_by: 1 }} słów
 {% endif %}">
 {% assign words = content | number_of_words %}
-{% if words < 120 %}
+{% if words < 360 %}
 1 miuta czytania
 {% else %}
-{{ words | divided_by: 120 }} minuty czytania
+{{ words | divided_by: 180 }} minuty czytania
 {% endif %}
 </span>
