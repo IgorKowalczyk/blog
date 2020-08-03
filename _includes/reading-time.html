@@ -10,6 +10,6 @@
 {% if words < wpm %}
 1 miuta czytania
 {% else %}
-{{ words | divided_by: wpm }} minuty czytania
+{{ words | divided_by: site.words-per-minute }} minuty czytania
 {% endif %}
 </span>
