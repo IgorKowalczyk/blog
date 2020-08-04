@@ -16,15 +16,11 @@ layout: "null"
 {% endif %}
 {% endfor %}
 {% for post in site.posts %}
-{% if page.layout != "null" %}
-{% if page.layout != "404" %}
 <url>
 <loc>{{ post.url }}</loc>
 <lastmod>{{ site.time | date: '%Y-%m-%d' }}</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
-{% endif %}
-{% endif %}
 {% endfor %}
 </urlset>
