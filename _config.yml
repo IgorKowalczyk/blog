@@ -44,6 +44,7 @@ plugins:
 exclude:
  - Gemfile
  - Gemfile.lock
+ - feed.xml
 
 # Categories
 categories_names:
