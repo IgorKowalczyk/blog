@@ -1,13 +1,11 @@
 language: ruby
 cache: bundler
-rvm:
-  - 2.6.6
+gemfile: Gemfile
 script:
-  - |
-      if [ "$TRAVIS_BRANCH" = "master" ];
-      then bundle exec rake travis:deploy
-      else bundle exec rake build
-      fi
+  - bundle exec jekyll
 branches:
   only:
+    # Change this to gh-pages if you're deploying using the gh-pages branch
     - master
+rvm:
+ - 2.4
