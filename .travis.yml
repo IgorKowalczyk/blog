@@ -1,3 +1,15 @@
 language: ruby
+cache: bundler
 rvm:
- - 2.2
+  - 2.6.6
+install:
+  - bundle install --deployment
+script:
+  - |
+      if [ "$TRAVIS_BRANCH" = "master" ];
+      then bundle exec rake travis:deploy
+      else bundle exec rake build
+      fi
+branches:
+  only:
+    - master
