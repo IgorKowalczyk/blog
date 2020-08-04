@@ -1,10 +1,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width initial-scale=1">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>{% if page.title %}{{page.title}} - {{site.title}}{% else %} {{site.title}}{% endif %}</title>
-<meta name="theme-color" content="#fff">
-<meta name="description" content="{{site.description}}">
+{% if page.description %}
+<meta name="description" content="{{ page.description }}">
+{% else %}
+<meta name="description" content="{{ site.description }}">
+{% endif %}
+{% if site.title %}<title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %} {{ site.title }}{% endif %}</title>{% endif %}
 <link rel="shortcut icon" href="{{ site.url }}/lib/favicon/favicon.jpg">
 <link rel="apple-touch-icon" sizes="180x180" href="{{ site.url }}/lib/favicon/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="{{ site.url }}/lib/favicon/favicon-32x32.png">
@@ -14,14 +16,7 @@
 <meta name="msapplication-TileColor" content="#fff">
 <meta name="msapplication-TileImage" content="{{ site.url }}/lib/favicon/mstile-144x144.png">
 <meta name="msapplication-config" content="{{ site.url }}/lib/favicon/browserconfig.xml">
-{% if page.redirect %}<meta http-equiv="refresh" content="0; url='{{ page.redirect }}'">{% endif %}
-<meta property="og:locale" content="en_US">
-<meta property="og:type" content="website">
-<meta property="og:title" content="{% if page.title %}{{ page.title }} - {{ site.title }}{% else %} {{ site.title }}{% endif %}">
-<meta property="og:url" content="{{ site.url }}{{ page.url }}">
-{% if page.image %}<meta property="og:image" content="{{ site.baseurl }}lib/pics/thumbs/{{ page.image }}" />{% endif %}
-<meta property="og:site_name" content="{{ site.name }}">
-<meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+{% include seo.html %}
 {% if page.layout == '404' %}
 <link rel="stylesheet" href="{{ site.baseurl }}/lib/css/404.min.css">
 {% else %}
@@ -33,7 +28,7 @@
 {% else %}
 {% if site.verification and jekyll.environment == 'production' %}<meta name="google-site-verification" content="{{ site.verification }}">{% endif %}
 {% endif %}
-<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl }}">
+{% if page.redirect %}<meta http-equiv="refresh" content="0; url='{{ page.redirect }}'">{% endif %}
 {% feed_meta %}
 {% if jekyll.environment == 'production' and site.tracking_id %}{% include analytics.html %}{% endif %}
 </head>

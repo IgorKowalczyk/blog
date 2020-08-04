@@ -19,11 +19,17 @@ url: "https://igorkowalczyk.github.io/blog"
 # Your github username (no link) - if you don't have - leave blank
 github_username:  "igorkowalczyk"
 
+# Twitter username (no link) - if you don't have - leave blank
+twitter: "@majonezexe"
+
 # Time zone
 timezone: "Europe/Warsaw"
 
 # First Launch of the site (displays in footer)
 first-launch: "2019"
+
+# Support to mobile browsers (It’s unknown what range of browsers support this meta tags) [Better to set the value to "false"!]
+mobile: "false"
 
 # Page pagination
 paginate: 8
