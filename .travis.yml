@@ -2,8 +2,6 @@ language: ruby
 cache: bundler
 rvm:
   - 2.6.6
-install:
-  - bundle install --deployment
 script:
   - |
       if [ "$TRAVIS_BRANCH" = "master" ];
