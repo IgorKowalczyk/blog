@@ -8,7 +8,7 @@ layout: "null"
 {% if page.layout != "404" %}
 <url>
 <loc>{{ page.url }}</loc>
-<lastmod>{{ site.time | date: '%Y-%m-%d' }}</lastmod>
+<lastmod>{% if page.time %}{{ page.time | date: '%Y-%m-%d' }}{% else %}{{ site.time | date: '%Y-%m-%d' }}{% endif %}</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -18,7 +18,7 @@ layout: "null"
 {% for post in site.posts %}
 <url>
 <loc>{{ post.url }}</loc>
-<lastmod>{{ site.time | date: '%Y-%m-%d' }}</lastmod>
+<lastmod>{% if page.time %}{{ page.time | date: '%Y-%m-%d' }}{% else %}{{ site.time | date: '%Y-%m-%d' }}{% endif %}</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
