@@ -38,7 +38,7 @@ layout: "null"
 @font-face {
 font-family: Roboto-Thin;
 font-style: normal;
-src: url({{ site.url }}/lib/fonts/roboto-thin.otf);
+src: url('{{ site.url }}/lib/fonts/roboto-thin.otf');
 }
 
 * {

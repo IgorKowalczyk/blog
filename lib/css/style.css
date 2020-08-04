@@ -76,14 +76,14 @@ transition: 500ms all;
 font-family: 'Montserrat-Light';
 font-style: normal;
 font-weight: 300;
-src: url("{{ site.url }}/lib/fonts/montserrat-light.ttf");
+src: url('{{ site.url }}/lib/fonts/montserrat-light.ttf');
 }
 
 @font-face {
 font-family: 'Montserrat';
 font-style: normal;
 font-weight: 500;
-src: url("{{ site.url }}/lib/fonts/montserrat-medium.ttf");
+src: url('{{ site.url }}/lib/fonts/montserrat-medium.ttf');
 }
 
 .no-js {
