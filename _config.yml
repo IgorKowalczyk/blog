@@ -32,13 +32,20 @@ paginate: 8
 markdown: kramdown
 theme: minima
 
+# Encoding (default: utf-8)
+encoding: utf-8
+
 # Plugins
 plugins:
  - jekyll-feed
  - jekyll-paginate
+ 
+# Exclude files
 exclude:
  - Gemfile
  - Gemfile.lock
+
+# Categories
 categories_names:
  'offtop': "Offtop"
  'internet': "Internet"
