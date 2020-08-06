@@ -7,12 +7,17 @@ layout: "null"
 {% for page in site.pages %}
 {% if page.layout != "null" %}
 {% if page.layout != "404" %}
+{% comment %}
+<!-- Default style file ignore -->
+{% endcomment %}
+{% if page.url != "/assets/main.css" %}
 <url>
 <loc>{{ page.url | prepend: url }}</loc>
 <lastmod>{% if page.time %}{{ page.time | date: '%Y-%m-%d' }}{% else %}{{ site.time | date: '%Y-%m-%d' }}{% endif %}</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
+{% endif %}
 {% endif %}
 {% endif %}
 {% endfor %}
