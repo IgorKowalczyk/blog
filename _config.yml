@@ -49,7 +49,6 @@ plugins:
 # Exclude files
 exclude:
  - Gemfile
- - Gemfile.lock
  - feed.xml
 
 # Categories
