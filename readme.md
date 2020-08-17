@@ -2,9 +2,9 @@
 Blog build on Ruby and JS
 
 [![Jekyll](https://github.com/igorkowalczyk/blog/workflows/Jekyll/badge.svg)](https://igorkowalczyk.github.io/blog)
-[![GitHub License](https://img.shields.io/github/license/igorkowalczyk/blog?color=%2334D058&logo=%23010101)](https://igorkowalczyk.github.io/blog/license.txt)
-[![Version](https://img.shields.io/github/v/release/igorkowalczyk/blog?color=%2334D058&logo=%2301010)](https://github.com/igorkowalczyk/blog/releases)
-[![Discord](https://img.shields.io/discord/666599184844980224?color=%2334D058&logo=%2301010)](https://discord.gg/f4KtqNB)
+[![GitHub License](https://img.shields.io/github/license/igorkowalczyk/blog?color=%2334D058&logo=Github)](https://igorkowalczyk.github.io/blog/license.txt)
+[![Version](https://img.shields.io/github/v/release/igorkowalczyk/blog?color=%2334D058&logo=Github)](https://github.com/igorkowalczyk/blog/releases)
+[![Discord](https://img.shields.io/discord/666599184844980224?color=%2334D058&logo=Discord)](https://discord.gg/f4KtqNB)
 # Issues
 If you have any issues with the page please create [new issue here](https://github.com/igorkowalczyk/blog/issues)
 
