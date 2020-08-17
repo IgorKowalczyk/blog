@@ -1,10 +1,10 @@
 name: Jekyll
 
-on: [push]
+on:
   push:
     branches: [ master ]
   pull_request:
-    branches: [ master 
+    branches: [ master ]
 
 jobs:
   build:
@@ -12,9 +12,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v2
     - name: Build the site in the jekyll/builder container
       run: |
         docker run \
-        -v $:/srv/jekyll -v $/_site:/srv/jekyll/_site \
+        -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
         jekyll/builder:latest /bin/bash -c "chmod a+w /srv/jekyll/Gemfile.lock && chmod 777 /srv/jekyll && jekyll build --future"
