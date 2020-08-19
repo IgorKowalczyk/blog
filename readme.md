@@ -10,13 +10,16 @@ Blog build on Ruby and JS
 If you have any issues with the page please create [new issue here](https://github.com/igorkowalczyk/blog/issues)
 
 # Development
-To set up your environment to develop this theme, run `bundle install`.
+To set up your environment to develop this page, run `bundle install`.
 
-To test the blog, run `bundle exec rake preview` and open your browser at http://localhost:4000/dir/. This starts a Jekyll server using content in the `dir/` directory. As modifications are made to the theme and test site, it will regenerate and you should see the changes in the browser after a refresh.
+To test site, run `bundle exec jekyll serve` and open your browser at http://localhost:4000. This starts a Jekyll server using your config and the contents. As you make modifications, your site will regenerate and you should see the changes in the browser after a refresh.
 
 # Pull Requests
 When submitting a pull request:
 
 - Clone the repo.
 - Create a branch off of master and give it a meaningful name (e.g. my-awesome-new-feature).
-- Open a pull request on GitHub and describe the feature or fix.
+- Open a [pull request](https://github.com/igorkowalczyk/blog/pulls) on [GitHub](https://github.com) and describe the feature or fix.
+
+# License
+This project is licensed under the MIT. See the [LICENSE](https://github.com/igorkowalczyk/blog/blob/master/license.md) file for details
