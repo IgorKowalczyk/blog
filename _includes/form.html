@@ -3,19 +3,19 @@
 <h3 class="new-comment">Napisz komentarz:</h3>
 <input name="fields[slug]" type="hidden" value="{{ post_slug }}" class="commentform-input commentform-input-slug">
 <input name="options[slug]" type="hidden" value="{{ post_slug }}" class="commentform-input commentform-input-optionsslug">
-<fieldset>
+<fieldset class="name">
 <label for="name">Imię (Wyświetlane, wymagane)
 <div class="nameerror error">Proszę wpisać imię!</div>
 <input name="fields[name]" type="text" id="name" placeholder="Jan Kowalski" title="To pole jest wymagane" maxlenght="50" class="commentform-input commentform-input-name">
 </label>
 </fieldset>
-<fieldset>
+<fieldset class="email">
 <label for="email">E-mail (Ukryty, wymagany)
 <div class="emailerror error">Proszę wpisać poprawny e-mail!</div>
 <input name="fields[email]" id="email" type="email" placeholder="jan@kowalski.com" title="To pole jest wymagane" maxlenght="50" spellcheck="false" class="commentform-input commentform-input-email">
 </label>
 </fieldset>
-<fieldset class="margin">
+<fieldset class="margin textarea">
 <label for="message">Wiadomość (Wyświetlana, wymagana)
 <div class="messageerror error">Proszę wpisać wiadomość!</div>
 <textarea name="fields[message]" type="text" id="message" placeholder="Twoja wiadomość" title="To pole jest wymagane" maxlenght="150" autocomplete="off" spellcheck="true" class="commentform-input commentform-input-message no-margin"></textarea>
@@ -36,8 +36,12 @@
 </fieldset>
 {% endif %}
 <!-- /Honeypot -->
+<div class="messages">
 <p>Markdown jest obsługiwany.</p>
 <p>Komentarze pojawią się po zaakceptowaniu przez moderatora.</p>
+</div>
+<div class="commentform-sendfailed message">Wiadomość nie mogła zostać wysłana, proszę spróbować później.</div>
+<div class="commentform-sendsucceeded message">Dziękuje, twój komentarz został poprawnie wysłany!</div>
 <button class="submit submit-spinner">Wyślij komentarz</button>
 </form>
 {% if site.reCaptcha %}
@@ -57,5 +61,3 @@ grecaptcha.render('captcha', {
 <h4>Dodawanie komentarzy zostało zablokowane.</h4>
 </div>
 {% endunless %}
-<div class="commentform-sendfailed message">Wiadomość nie mogła zostać wysłana, proszę spróbować później.</div>
-<div class="commentform-sendsucceeded message">Dziękuje, twój komentarz został poprawnie wysłany!</div>

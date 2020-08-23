@@ -1047,16 +1047,52 @@ font-weight: bold;
 
 .new-comment {
 margin-top: 2em;
+grid-area: title / title;
+}
+
+.commentform {
+display: grid;
+grid-template-columns: 1fr 1fr;
+grid-template-areas:
+"title title"
+"email name"
+"message message"
+"captcha captcha"
+"error error"
+". button";
+gap: 10px;
 }
 
 .commentform-sendfailed {
 border: 2px solid var(--error);
 color: var(--error);
+grid-area: error;
 }
 
 .commentform-sendsucceeded {
 border: 2px solid var(--error);
 color: var(--error);
+grid-area: error;
+}
+
+.email {
+grid-area: email;
+}
+
+.name {
+grid-area: name;
+}
+
+.textarea {
+grid-area: message;
+}
+
+.button {
+grid-area: button;
+}
+
+.captcha {
+grid-area: captcha / captcha;
 }
 
 .message {
@@ -1092,6 +1128,22 @@ opacity: 1 !important;
 pointer-events: all !important;
 transition: 500ms;
 max-height: unset;
+}
+
+@media (max-width: 780px) {
+.commentform {
+grid-template-areas:
+"title title"
+"email name"
+"message message"
+"captcha captcha"
+"error error"
+". button";
+width: 100%;
+}
+input, textarea {
+width: 100%;
+}
 }
 
 .notice {
