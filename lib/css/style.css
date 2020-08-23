@@ -1057,8 +1057,9 @@ grid-template-areas:
 "title title"
 "email name"
 "message message"
-"captcha captcha"
+"captcha"
 "error error"
+"info"
 ". button";
 gap: 10px;
 }
@@ -1092,7 +1093,11 @@ grid-area: button;
 }
 
 .captcha {
-grid-area: captcha / captcha;
+grid-area: captcha;
+}
+
+.messages {
+grid-area: info;
 }
 
 .message {
@@ -1136,7 +1141,8 @@ grid-template-areas:
 "title title"
 "email name"
 "message message"
-"captcha captcha"
+"captcha"
+"info"
 "error error"
 ". button";
 width: 100%;
