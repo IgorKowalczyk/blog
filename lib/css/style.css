@@ -1055,7 +1055,7 @@ display: grid;
 grid-template-columns: 1fr 1fr;
 grid-template-areas:
 "title title"
-"email name"
+"name email"
 "message message"
 "captcha ..."
 "info info"
@@ -1071,17 +1071,19 @@ grid-area: error;
 }
 
 .commentform-sendsucceeded {
-border: 2px solid var(--error);
-color: var(--error);
+border: 2px solid var(--text);
+color: var(--text);
 grid-area: error;
 }
 
 .email {
 grid-area: email;
+margin-left: 5px;
 }
 
 .name {
 grid-area: name;
+margin-rignt: 5px;
 }
 
 .textarea {
@@ -1107,7 +1109,8 @@ pointer-events: none;
 border-radius: 5px;
 padding: 10px;
 max-height: 0;
-transition: .5s all;
+transition: 0.5s all;
+margin-top: 5px;
 }
 
 .error {
@@ -1127,6 +1130,14 @@ margin-bottom: 0;
 margin-bottom: 10px;
 }
 
+#captcha {
+margin-top: 5px;
+}
+
+.small-message {
+font-size: 13px;
+}
+
 .show-message {
 visibility: visible !important;
 opacity: 1 !important;
@@ -1139,7 +1150,7 @@ max-height: unset;
 .commentform {
 grid-template-areas:
 "title title"
-"email name"
+"name email"
 "message message"
 "captcha ..."
 "info info"
@@ -1149,6 +1160,9 @@ width: 100%;
 }
 input, textarea {
 width: 100%;
+}
+.email, .name {
+margin: 0;
 }
 }
 

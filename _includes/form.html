@@ -4,21 +4,22 @@
 <input name="fields[slug]" type="hidden" value="{{ post_slug }}" class="commentform-input commentform-input-slug">
 <input name="options[slug]" type="hidden" value="{{ post_slug }}" class="commentform-input commentform-input-optionsslug">
 <fieldset class="name">
-<label for="name">Imię (Wyświetlane, wymagane)
+<label for="name">Imię
 <div class="nameerror error">Proszę wpisać imię!</div>
 <input name="fields[name]" type="text" id="name" placeholder="Jan Kowalski" title="To pole jest wymagane" maxlenght="50" class="commentform-input commentform-input-name">
 </label>
 </fieldset>
 <fieldset class="email">
-<label for="email">E-mail (Ukryty, wymagany)
+<label for="email">E-mail
 <div class="emailerror error">Proszę wpisać poprawny e-mail!</div>
 <input name="fields[email]" id="email" type="email" placeholder="jan@kowalski.com" title="To pole jest wymagane" maxlenght="50" spellcheck="false" class="commentform-input commentform-input-email">
 </label>
 </fieldset>
 <fieldset class="margin textarea">
-<label for="message">Wiadomość (Wyświetlana, wymagana)
+<label for="message">Wiadomość
 <div class="messageerror error">Proszę wpisać wiadomość!</div>
 <textarea name="fields[message]" type="text" id="message" placeholder="Twoja wiadomość" title="To pole jest wymagane" maxlenght="150" autocomplete="off" spellcheck="true" class="commentform-input commentform-input-message no-margin"></textarea>
+<p class="small-message">Markdown jest obsługiwany</p>
 </label>
 </fieldset>
 <!-- Honeypot -->
@@ -37,8 +38,7 @@
 {% endif %}
 <!-- /Honeypot -->
 <div class="messages">
-<p>Markdown jest obsługiwany.</p>
-<p>Komentarze pojawią się po zaakceptowaniu przez moderatora.</p>
+<p class="small-message">Twój E-Mail nie zostanie opublikowany. Komentarze pojawią się po zaakceptowaniu przez moderatora</p>
 </div>
 <div>
 <button class="submit submit-spinner button">Wyślij komentarz</button>
