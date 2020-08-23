@@ -5,16 +5,19 @@
 <input name="options[slug]" type="hidden" value="{{ post_slug }}" class="commentform-input commentform-input-optionsslug">
 <fieldset>
 <label for="name">Imię (Wyświetlane, wymagane)
+<div class="nameerror error">Proszę wpisać imię!</div>
 <input name="fields[name]" type="text" id="name" placeholder="Jan Kowalski" title="To pole jest wymagane" maxlenght="50" class="commentform-input commentform-input-name">
 </label>
 </fieldset>
 <fieldset>
 <label for="email">E-mail (Ukryty, wymagany)
+<div class="emailerror error">Proszę wpisać poprawny e-mail!</div>
 <input name="fields[email]" id="email" type="email" placeholder="jan@kowalski.com" title="To pole jest wymagane" maxlenght="50" spellcheck="false" class="commentform-input commentform-input-email">
 </label>
 </fieldset>
 <fieldset>
 <label for="message">Wiadomość (Wyświetlana, wymagana)
+<div class="messageerror error">Proszę wpisać wiadomość!</div>
 <textarea name="fields[message]" type="text" id="message" placeholder="Twoja wiadomość" title="To pole jest wymagane" maxlenght="150" autocomplete="off" spellcheck="true" class="commentform-input commentform-input-message"></textarea>
 </label>
 </fieldset>
@@ -25,6 +28,7 @@
 </label>
 </fieldset>
 {% if site.reCaptcha %}
+<div class="captchaerror error">Proszę rozwiązać zadanie zabezpieczające!</div>
 <input type="hidden" name="options[reCaptcha][siteKey]" value="{{ site.reCaptcha.siteKey }}">
 <input type="hidden" name="options[reCaptcha][secret]" value="{{ site.reCaptcha.secret }}">
 <fieldset class="security">
@@ -53,10 +57,5 @@ grecaptcha.render('captcha', {
 <h4>Dodawanie komentarzy zostało zablokowane.</h4>
 </div>
 {% endunless %}
-<div class="commentform-sendfailed">
-Wiadomość nie mogła zostać wysłana, proszę spróbować później.
-</div>
-<div class="commentform-sendsucceeded">
-Dziękuje, twój komentarz został poprawnie wysłany!
-</div>
-<div class="commentform-errormessages"></div>
+<div class="commentform-sendfailed message">Wiadomość nie mogła zostać wysłana, proszę spróbować później.</div>
+<div class="commentform-sendsucceeded message">Dziękuje, twój komentarz został poprawnie wysłany!</div>

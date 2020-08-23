@@ -33,6 +33,7 @@ layout: "null"
 --hackernews: #fb651e;
 --reddit: #fc451e;
 --share-link: #7D7D7D;
+--error: #c80000;
 }
 
 [data-theme="dark"] {
@@ -65,6 +66,7 @@ layout: "null"
 --hackernews: #7D7D7D;
 --reddit: #7D7D7D;
 --share-link: #7D7D7D;
+--error: #c80000;
 }
 
 svg {
@@ -1046,27 +1048,40 @@ font-weight: bold;
 margin-top: 2em;
 }
 
-.commentform-sendfailed, .commentform-sendsucceeded {
-display: none;
-border: 2px solid var(--text);
+.contact-sendfailed {
+border: 2px solid var(--error);
+color: var(--error);
+}
+
+.contact-sendsucceeded {
+border: 2px solid var(--error);
+color: var(--error);
+}
+
+.message {
+visibility: hidden;
+opacity: 0;
+pointer-events: none;
 border-radius: 5px;
 padding: 10px;
-margin-top: 2rem;
+max-height: 0;
+transition: .5s all;
+}
+
+.error {
+color: var(--error);
+visibility: hidden;
+opacity: 0;
+pointer-events: none;
 transition: 500ms all;
 }
 
-.commentform-errormessages {
-border-radius: 5px;
-padding: 10px;
-transition: 500ms all;
-}
-
-.commentform-errormessage {
-border: 2px solid var(--text);
-border-radius: 5px;
-padding: 10px;
-margin-top: 2rem;
-transition: 500ms all;
+.show-message {
+visibility: visible !important;
+opacity: 1 !important;
+pointer-events: all !important;
+transition: 500ms;
+max-height: unset;
 }
 
 .notice {
