@@ -784,6 +784,7 @@ z-index: -1;
 fieldset {
 display: block;
 border: none;
+margin-bottom: 20px;
 }
 
 input {
@@ -1048,12 +1049,12 @@ font-weight: bold;
 margin-top: 2em;
 }
 
-.contact-sendfailed {
+.commentform-sendfailed {
 border: 2px solid var(--error);
 color: var(--error);
 }
 
-.contact-sendsucceeded {
+.commentform-sendsucceeded {
 border: 2px solid var(--error);
 color: var(--error);
 }
@@ -1074,6 +1075,7 @@ visibility: hidden;
 opacity: 0;
 pointer-events: none;
 transition: 500ms all;
+font-size: 13px;
 }
 
 .show-message {
@@ -1089,7 +1091,7 @@ text-align: center;
 }
 
 .security {
-padding: 20px 0px 20px 0px;
+padding: 10px 0px 10px 0px;
 }
 
 #share-buttons {
