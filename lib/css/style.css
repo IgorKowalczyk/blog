@@ -1078,6 +1078,14 @@ transition: 500ms all;
 font-size: 13px;
 }
 
+.no-margin {
+margin-bottom: 0;
+}
+
+.margin {
+margin-bottom: 10px;
+}
+
 .show-message {
 visibility: visible !important;
 opacity: 1 !important;
