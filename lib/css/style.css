@@ -1057,11 +1057,10 @@ grid-template-areas:
 "title title"
 "name email"
 "message message"
-"captcha ..."
+"captcha captcha"
 "info info"
 ". button"
 "error error";
-gap: 10px;
 }
 
 .commentform-sendfailed {
@@ -1136,6 +1135,7 @@ margin-top: 5px;
 
 .small-message {
 font-size: 13px;
+margin-top: 5px;
 }
 
 .show-message {
@@ -1152,7 +1152,7 @@ grid-template-areas:
 "title title"
 "name email"
 "message message"
-"captcha ..."
+"captcha captcha"
 "info info"
 ". button"
 "error error";
