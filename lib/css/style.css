@@ -1058,9 +1058,9 @@ grid-template-areas:
 "email name"
 "message message"
 "captcha ..."
-"error error"
 "info info"
-". button";
+". button"
+"error error";
 gap: 10px;
 }
 
@@ -1142,9 +1142,9 @@ grid-template-areas:
 "email name"
 "message message"
 "captcha ..."
-"error error"
 "info info"
-". button";
+". button"
+"error error";
 width: 100%;
 }
 input, textarea {
