@@ -1,8 +1,8 @@
 <div class="post-nav">
 {% if page.previous.url %}
-<li><a class="prev" href="{{ site.url }}{{ page.previous.url }}">< Poprzedni post</a></li>
+<li><a class="prev" href="{{ site.url }}{{ page.previous.url | remove: ".html" }}">< Poprzedni post</a></li>
 {% endif %}
 {% if page.next.url %}
-<li><a class="next" href="{{ site.url }}{{ page.next.url }}">Następny post ></a></li>
+<li><a class="next" href="{{ site.url }}{{ page.next.url | remove: ".html" }}">Następny post ></a></li>
 {% endif %}
 </div>
