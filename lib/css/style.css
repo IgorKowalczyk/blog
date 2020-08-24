@@ -1265,3 +1265,12 @@ margin-top: 9px;
 height: 19px;
 margin-top: 11px;
 }
+
+.rss-link {
+line-height: 2em;
+}
+
+.rss-icon {
+vertical-align: middle;
+margin-bottom: 5px;
+}
