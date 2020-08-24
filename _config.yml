@@ -41,6 +41,10 @@ theme: minima
 # Encoding (default: utf-8)
 encoding: utf-8
 
+# RSS Feed config
+feed:
+ enabled: "true"
+
 # Plugins
 plugins:
  - jekyll-paginate
