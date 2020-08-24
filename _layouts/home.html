@@ -8,7 +8,7 @@ layout: "default"
 <li class="post-list-item">
 <header>
 <h3 >
-<a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
+<a href="{{ site.url }}{{ post.url | remove: ".html" }}">{{ post.title }}</a>
 </h3>
 <time datetime="{{ post.date | date_to_xmlschema }}">{% assign m = post.date | date: "%-m" %}
 {{ post.date | date: "%-d" }}
@@ -38,7 +38,7 @@ layout: "default"
 </header>
 <div class="post-list-item-desc">
 <p>{{ post.excerpt | default: '' | strip_html | normalize_whitespace | truncate: 200 | escape }}
-<a href="{{ site.url }}{{ post.url }}"> Czytaj więcej</a>
+<a href="{{ site.url }}{{ post.url | remove: ".html" }}"> Czytaj więcej</a>
 </p>
 </div>
 </li>
