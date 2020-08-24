@@ -27,4 +27,6 @@
 {% else %}
 <meta name="twitter:description" content="{{ site.description }}">
 {% endif %}
+{% unless site.feed.enabled == false %}
 <link href="{{ site.url }}/feeds/feed.xml" type="application/rss+xml" rel="alternate">
+{% endunless %}
