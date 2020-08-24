@@ -1,4 +1,4 @@
-﻿---
+---
 layout: "default"
 ---
 <div class="home">
@@ -11,10 +11,10 @@ Subskrybuj kategorię {{ page.category_name | escape }}
 </a>
 </p>
 {% for post in site.categories[page.category] %}
-<h3><a href = "{{ site.url }}{{post.url}}">{{ post.title }}</a></h3>
+<h3><a href = "{{ site.url }}{{ post.url | remove: ".html" }}">{{ post.title }}</a></h3>
 <div class="post-list-item">
 <p>{{ post.excerpt | default: '' | strip_html | normalize_whitespace | truncate: 200 | escape }}
-<a href="{{ site.url }}{{ post.url }}"> Czytaj więcej</a>
+<a href="{{ site.url }}{{ post.url | remove: ".html" }}"> Czytaj więcej</a>
 </p>
 </div>
 {% endfor %}
