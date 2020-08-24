@@ -1,10 +1,11 @@
-<noscript><div class="no-js">Aby wyświetlić tą stronę proszę włączyć obsługę Java Script w twojej przeglądarce.</div></noscript><nav class="nav" role="navigation">
+<noscript><div class="no-js">Aby wyświetlić tą stronę proszę włączyć obsługę Java Script w twojej przeglądarce.</div></noscript>
+<nav class="nav" role="navigation">
 <span class="logo"><a href="{{ site.url }}">{{site.title}}</a></span>
 <input class="menu-btn" type="checkbox" id="menu-btn" />
 <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
 <ul class="menu">
 <li><a href="{{ site.url }}" aria-label="Zobacz aktualności na blogu">Aktualności</a></li>
 {% if site.portfolio %}<li><a href="{{ site.portfolio }}" class="link-fade" aria-label="Zobacz Portfolio">Portfolio</a></li>{% endif %}
-{% if site.github_username %}<li><a href="https://github.com/{{site.github_username}}" target="_blank" rel="noopener">Github</a></li>{% endif %}
+{% if site.github_username %}<li><a href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener">Github</a></li>{% endif %}
 </ul>
 </nav>
