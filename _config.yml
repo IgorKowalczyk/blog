@@ -43,7 +43,6 @@ encoding: utf-8
 
 # Plugins
 plugins:
- - jekyll-feed
  - jekyll-paginate
  
 # Exclude files
