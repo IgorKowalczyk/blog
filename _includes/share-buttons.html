@@ -15,8 +15,8 @@
 <script type="text/javascript">
 const share = document.querySelector('.share-link');
 share.addEventListener('click', function() {
-const window = window.open("", "Podziel się tym postem", "toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=780,height=200,top="+(screen.height-400)+",left="+(screen.width-840));
-window.document.body.innerHTML = '<link rel="stylesheet" href="{{ site.url }}/lib/css/share.min.css"><main class="main-content"><section class="post-content"><p>Skopiuj ten link i wklej gdziekolwiek chcesz:</p><span class="link">{{ site.url }}{{ pageurl | remove: ".html" }}</span></section></main>';
+const win = window.open("", "Podziel się tym postem", "toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=780,height=200,top="+(screen.height-400)+",left="+(screen.width-840));
+win.document.body.innerHTML = '<link rel="stylesheet" href="{{ site.url }}/lib/css/share.min.css"><main class="main-content"><section class="post-content"><p>Skopiuj ten link i wklej gdziekolwiek chcesz:</p><span class="link">{{ site.url }}{{ pageurl | remove: ".html" }}</span></section></main>';
 });
 </script>
 </div></div>
