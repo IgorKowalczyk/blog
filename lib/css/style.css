@@ -1161,9 +1161,6 @@ width: 100%;
 input, textarea {
 width: 100%;
 }
-.email, .name {
-margin: 0;
-}
 }
 
 .notice {
