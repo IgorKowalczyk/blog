@@ -6,14 +6,14 @@ layout: "null"
 <channel>
 <title>{{ site.title }}</title>
 <description>{{ site.description }}</description>
-<link>{{ site.url }}</link>
+<link>{{ site.url | remove: ".html" }}</link>
 {% for post in site.posts %}
 {% unless post.draft %}
 <item>
 <title>{{ post.title | xml_escape }}</title>
 <description>{{ post.excerpt | default: '' | strip_html | normalize_whitespace | truncate: 200 | escape }}</description>
 <pubDate>{{ post.date | date_to_xmlschema }}</pubDate>
-<link>{{ post.url | prepend: site.url }}</link>
+<link>{{ post.url | prepend: site.url | remove: ".html" }}</link>
 </item>
 {% endunless %}
 {% endfor %}
