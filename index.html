@@ -7,7 +7,7 @@ layout: "default"
 <li class="post-list-item">
 <header>
 <h3 >
-<a href="{{ site.url }}{{ post.url | remove: ".html" }}">{{ post.title }}</a>
+<a href="{{ site.url || site.host }}{{ site.baseurl }}{{ post.url | remove: ".html" }}">{{ post.title }}</a>
 </h3>
 <time datetime="{{ post.date | date_to_xmlschema }}">{% assign m = post.date | date: "%-m" %}
 {{ post.date | date: "%-d" }}
@@ -30,14 +30,14 @@ layout: "default"
 <ul class="cat">Kategorie:&nbsp;
 <span>
 {% for category in post.categories %}
-<a href="{{ site.url }}/categories/{{ category }}">{{ category }}</a>&nbsp;
+<a href="{{ site.url || site.host }}{{ site.baseurl }}/categories/{{ category }}">{{ category }}</a>&nbsp;
 {% endfor %}
 </span>
 </ul>
 </header>
 <div class="post-list-item-desc">
 <p>{{ post.excerpt | default: '' | strip_html | normalize_whitespace | truncate: 200 | escape }}
-<a href="{{ site.url }}{{ post.url remove: ".html" }}"> Czytaj więcej</a>
+<a href="{{ site.url || site.host }}{{ site.baseurl }}{{ post.url remove: ".html" }}"> Czytaj więcej</a>
 </p>
 </div>
 </li>
@@ -45,15 +45,15 @@ layout: "default"
 </ul>
 <div class="pagination">
 {% if paginator.previous_page %}
-<a href="{{ site.url }}/{{ paginator.previous_page_path }}" class="previous">Poprzednia Strona</a>
+<a href="{{ site.url || site.host }}{{ site.baseurl }}/{{ paginator.previous_page_path }}" class="previous">Poprzednia Strona</a>
 {% endif %}
 <span class="page-number">Strona: {{ paginator.page }} / {{ paginator.total_pages }}</span>
 {% if paginator.next_page %}
-<a href="{{ site.url }}/{{ paginator.next_page_path }}" class="next">Następna Strona</a>
+<a href="{{ site.url || site.host }}{{ site.baseurl }}/{{ paginator.next_page_path }}" class="next">Następna Strona</a>
 {% endif %}
 </div>
 {% unless site.feed.enabled == false %}
-<a href="{{ site.url }}/feeds/feed.xml" class="rss-link" target="_blank">
+<a href="{{ site.url || site.host }}{{ site.baseurl }}/feeds/feed.xml" class="rss-link" target="_blank">
 <svg viewBox="0 0 64 64" class="rss-icon" alt="RSS" xmlns="http://www.w3.org/2000/svg"><circle cx="21" cy="43" r="5"/><path d="M35,48.5A2.5,2.5,0,0,1,32.5,46,13.515,13.515,0,0,0,19,32.5a2.5,2.5,0,0,1,0-5A18.521,18.521,0,0,1,37.5,46,2.5,2.5,0,0,1,35,48.5Z"/><path d="M45,48.5A2.5,2.5,0,0,1,42.5,46,23.527,23.527,0,0,0,19,22.5a2.5,2.5,0,0,1,0-5A28.532,28.532,0,0,1,47.5,46,2.5,2.5,0,0,1,45,48.5Z"/></svg>
 Subskrybuj posty
 </a>
