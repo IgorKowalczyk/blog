@@ -75,22 +75,22 @@ transition: 500ms all;
 }
 
 @font-face {
-font-family: 'Montserrat-Light';
+font-family: "Montserrat-Light";
 font-style: normal;
 font-weight: 300;
-src: url('{{ site.url }}/lib/fonts/montserrat-light.ttf');
+src: url("{{ site.url }}/lib/fonts/montserrat-light.ttf");
 }
 
 @font-face {
-font-family: 'Montserrat';
+font-family: "Montserrat";
 font-style: normal;
 font-weight: 500;
-src: url('{{ site.url }}/lib/fonts/montserrat-medium.ttf');
+src: url("{{ site.url }}/lib/fonts/montserrat-medium.ttf");
 }
 
 .no-js {
 background: #f44336;
-font-family: 'Montserrat-Light';
+font-family: "Montserrat-Light";
 color: #fff;
 text-align: center;
 display: -ms-flexbox;
@@ -166,7 +166,7 @@ transform: rotateY(360deg);
 outline: none;
 margin: 0;
 padding: 0;
-font-family: 'Montserrat-Light';
+font-family: "Montserrat-Light";
 color: var(--text);
 box-sizing: border-box;
 text-decoration: none;
@@ -588,7 +588,7 @@ width: 18px;
 
 .nav .menu-icon .navicon:before, .nav .menu-icon .navicon:after {
 background-color: var(--333);
-content: '';
+content: "";
 display: block;
 height: 100%;
 position: absolute;
@@ -838,7 +838,7 @@ color: var(--text);
 transition: 300ms all;
 -moz-user-select: none;
 user-select: none;
-font-family: 'Montserrat-Light';
+font-family: "Montserrat-Light";
 }
 
 :-ms-input-placeholder {
@@ -871,7 +871,7 @@ transition: 300ms all;
 opacity: 0;
 -ms-transition: 300ms all;
 transition: 300ms all;
-font-family: 'Montserrat-Light';
+font-family: "Montserrat-Light";
 }
 
 code {
