@@ -6,17 +6,17 @@ layout: "default"
 {{ content }}
 {% assign posts = site.categories[page.category] %}
 {% unless site.feed.enabled == false %}
-<a href="{{ site.url }}/feeds/{{ page.category }}.xml" class="rss-link target="_blank">
+<a href="{{ site.url || site.host }}/feeds/{{ page.category }}.xml" class="rss-link target="_blank">
 <svg viewBox="0 0 64 64" class="rss-icon" alt="RSS" xmlns="http://www.w3.org/2000/svg"><circle cx="21" cy="43" r="5"/><path d="M35,48.5A2.5,2.5,0,0,1,32.5,46,13.515,13.515,0,0,0,19,32.5a2.5,2.5,0,0,1,0-5A18.521,18.521,0,0,1,37.5,46,2.5,2.5,0,0,1,35,48.5Z"/><path d="M45,48.5A2.5,2.5,0,0,1,42.5,46,23.527,23.527,0,0,0,19,22.5a2.5,2.5,0,0,1,0-5A28.532,28.532,0,0,1,47.5,46,2.5,2.5,0,0,1,45,48.5Z"/></svg>
 Subskrybuj kategorię {{ page.category_name | escape }}
 </a>
 {% endunless %}
 </p>
 {% for post in site.categories[page.category] %}
-<h3><a href = "{{ site.url }}{{ post.url | remove: ".html" }}">{{ post.title }}</a></h3>
+<h3><a href="{{ site.url || site.host }}{{ post.url | remove: ".html" }}">{{ post.title }}</a></h3>
 <div class="post-list-item">
 <p>{{ post.excerpt | default: '' | strip_html | normalize_whitespace | truncate: 200 | escape }}
-<a href="{{ site.url }}{{ post.url | remove: ".html" }}"> Czytaj więcej</a>
+<a href="{{ site.url || site.host }}{{ post.url | remove: ".html" }}"> Czytaj więcej</a>
 </p>
 </div>
 {% endfor %}
