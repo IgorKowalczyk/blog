@@ -6,7 +6,7 @@ description: "Tutaj nic nie ma"
 <div class="message">
 <h1>404</h1>
 <h2>Tutaj nic nie ma!</h2>
-<h3>Ta strona mogła być usunięta albo przeniesiona. <a href="{{ site.url }}/?ref=404">Powróć do strony głównej</a>{% if site.email %} albo <a href="mailto:{{ site.email }}">zgłoś błąd.</a>{% endif %}</h3>
-<p><a class="button" href="{{ site.url }}/?ref=404">Aktualności</a></p>
+<h3>Ta strona mogła być usunięta albo przeniesiona. <a href="{{ site.url || site.host }}{{ site.baseurl }}/?ref=404">Powróć do strony głównej</a>{% if site.email %} albo <a href="mailto:{{ site.email }}">zgłoś błąd.</a>{% endif %}</h3>
+<p><a class="button" href="{{ site.url || site.host }}/?ref=404">Aktualności</a></p>
 {% if site.email %}<p><a class="button" href="mailto:{{ site.email }}">Zgłoś Błąd</a></p>{% endif %}
 </div>
