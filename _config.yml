@@ -14,7 +14,8 @@ description: "Blog na którym pojawiają się wpisy na temat programowania lub i
 portfolio: "/"
 
 # Main url to the site (end without slash) [or dir.]
-url: "https://igorkowalczyk.github.io/blog"
+url: "https://igorkowalczyk.github.io/"
+baseurl: "blog"
 
 # Your github username (no link) - if you don't have - leave blank
 github_username:  "igorkowalczyk"
