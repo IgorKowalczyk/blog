@@ -13,7 +13,7 @@ layout: "default"
 <ul class="cat">Kategorie:&nbsp;
 <span>
 {% for category in page.categories %}
-<a href="{{ site.url }}/categories/{{ category }}">{{ category }}</a>&nbsp;
+<a href="{{ site.url || site.host }}/categories/{{ category }}">{{ category }}</a>&nbsp;
 {% endfor %}
 </span>
 </ul>
@@ -31,7 +31,7 @@ layout: "default"
 <br>
 {% include comments.html %}
 {% unless page.comments == false %}
-<script src="{{ site.url }}/lib/js/form.js"></script>
+<script src="{{ site.url || site.host }}/lib/js/form.js"></script>
 {% endunless %}
 <br>
 <hr>
