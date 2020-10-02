@@ -12,7 +12,7 @@ layout: "null"
 {% endcomment %}
 {% if page.url != "/assets/main.css" %}
 <url>
-<loc>{{ site.url || site.host }}{{ site.baseurl }}{{ page.url }}</loc>
+<loc>{{ site.url || site.host }}{{ site.baseurl }}{{ page.url || remove: ".html" }}</loc>
 <lastmod>{% if page.time %}{{ page.time | date: '%Y-%m-%d' }}{% else %}{{ site.time | date: '%Y-%m-%d' }}{% endif %}</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
@@ -23,7 +23,7 @@ layout: "null"
 {% endfor %}
 {% for post in site.posts %}
 <url>
-<loc>{{ site.url || site.host }}{{ site.baseurl }}{{ post.url }}</loc>
+<loc>{{ site.url || site.host }}{{ site.baseurl }}{{ post.url || remove: ".html" }}</loc>
 <lastmod>{% if page.time %}{{ page.time | date: '%Y-%m-%d' }}{% else %}{{ site.time | date: '%Y-%m-%d' }}{% endif %}</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
