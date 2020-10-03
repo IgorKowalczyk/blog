@@ -31,4 +31,13 @@ layout: "default"
 <br>
 {% include comments.html %}
 {% unless page.comments == false %}
+<script src="{{ site.url || site.host }}{{ site.baseurl }}/lib/js/form.js"></script>
+{% endunless %}
+<br>
+<hr>
+<br>
+
+{% include nav.html %}
+
+{% include recent.html %}
 </article>
