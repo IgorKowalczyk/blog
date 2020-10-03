@@ -30,16 +30,6 @@
 {% unless site.feed.enabled == false %}
 <link href="{{ site.url || site.host }}{{ site.baseurl }}/feeds/feed.xml" type="application/rss+xml" rel="alternate">
 {% endunless %}
-<script src="{{ site.url || site.host }}{{ site.baseurl }}/lib/js/form.js"></script>
-{% endunless %}
-<br>
-<hr>
-<br>
-
-{% include nav.html %}
-
-{% include recent.html %}
-
 <script type="application/ld+json">
 {
 "@context": "http://schema.org",
