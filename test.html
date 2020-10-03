@@ -1,0 +1,6 @@
+{% for post in site.categories[page.category] %}
+<h3><a href="{{ site.url || site.host }}{{ site.baseurl }}{{ post.url | remove: ".html" }}">{{ post.title }}</a></h3>
+<p>{{ post.excerpt | default: '' | strip_html | normalize_whitespace | truncate: 200 | escape }}
+<a href="{{ site.url || site.host }}{{ site.baseurl }}{{ post.url | remove: ".html" }}"> Czytaj więcej</a>
+</p>
+{% endfor %}
