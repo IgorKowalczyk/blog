@@ -37,9 +37,9 @@
 "@type": "Article",
 "timeRequired": "P3M",
 "mainEntityOfPage": "{{ site.url || site.host }}{{ site.baseurl }}",
-"headline": "{{ post.title }}",
-"datePublished": "{{ post.date }}",
-"dateModified": "{{ post.date }}",
+"headline": "{{ page.title }}",
+"datePublished": "{{ page.date }}",
+"dateModified": "{{ page.date }}",
 {% if page.description %}
 "description": "{{ page.description }}",
 {% else %}
@@ -56,7 +56,7 @@
 {% endif %}
 "author": {
 "@type": "Person",
-"name": "{{ post.author }}",
+"name": "{{ page.author }}",
 {% if site.twitter %}
 "sameAs": ["{{ site.url || site.host }}", "{{ site.twitter }}"]
 {% else %}
