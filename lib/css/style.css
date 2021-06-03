@@ -1,7 +1,6 @@
 ---
 layout: "null"
 ---
-/* (c) IGOR KOWALCZYK. All rights reserved. */
 
 :root {
 --white: #fff;
@@ -1032,6 +1031,10 @@ display: block;
 
 .comment .message, .comment .comment-body {
 padding: 5px 10px 10px 10px !important;
+visibility: visible;
+opacity: 1;
+max-width: unset;
+max-height: unset;
 }
 
 .comment {
