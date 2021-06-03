@@ -9,6 +9,7 @@ My personal blog build on Jekyll and CSS
 ### Features
 - 🏷️ Custom categories for posts
 - 📝 Built-in comments [Github PR]
+- 🌃 Light/Dark theme
 - 🌐 Custom pathes for posts
 - ⛔ Capatcha to fight spam-bots
 - 📶 RRS Feed
