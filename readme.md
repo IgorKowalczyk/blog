@@ -18,7 +18,6 @@ My personal blog build on Jekyll and CSS
 1. Fill `_config.yml` with your values
     * For captcha keys go to [Google ReCaptcha](https://developers.google.com/recaptcha) create new site and get your site key and secret key. Then encrypt the values using `https://api-igorkowalczyk.herokuapp.com/v2/encrypt/[YOUR-TEXT-TO-ENCRYPT]` api. 
     * For site verification token go to [Google Search Console](https://search.google.com/search-console) and get your `html tag` key.
-    * 
 2. To set up your environment to develop this page, run `bundle install`.
 3. To test site, run `bundle exec jekyll serve` and open your browser at http://localhost:4000.
 
