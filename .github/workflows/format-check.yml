@@ -1,4 +1,4 @@
-name: Code format check
+name: Prettier
 
 on:
  push:
@@ -8,9 +8,9 @@ on:
 
 jobs:
  format:
+  name: Prettier
   runs-on: ubuntu-latest
   steps:
-   - uses: actions/checkout@v2
-   - name: ✨ Code formatting check
-   run: npm i
-   run: npm run format:check
+   - uses: actions/checkout@v1
+   - run: npm i
+   - run: npm run format:check
