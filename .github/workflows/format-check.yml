@@ -1,4 +1,4 @@
-name: Prettier
+name: Prettier check
 
 on:
  push:
@@ -8,7 +8,7 @@ on:
 
 jobs:
  format:
-  name: Prettier
+  name: ✨ Prettier
   runs-on: ubuntu-latest
   steps:
    - uses: actions/checkout@v1
