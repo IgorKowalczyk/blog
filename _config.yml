@@ -15,7 +15,7 @@ portfolio: "/"
 
 # Main url to the site (end without slash) [or dir.]
 url: "https://igorkowalczyk.github.io/"
-baseurl: "/blog"
+baseurl: "blog"
 
 # Your github username (no link) - if you don't have - leave blank
 github_username: "igorkowalczyk"
