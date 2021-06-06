@@ -1,28 +1,40 @@
 ---
 layout: "default"
 ---
+
 <!DOCTYPE html>
 <html lang="pl">
-{% include head.html %}
-<body ondragstart="return false" ondrag="return false">
-<script type="text/javascript">var preload = document.createElement('div'); preload.className = "preloader"; preload.innerHTML = '</div><div class="spinner"></div>'; document.body.appendChild(preload); window.addEventListener('load', function() { preload.className +=  ' fade'; setTimeout(function(){ preload.style.display = 'none'; },500); })</script>
-<header>
-{% include header.html %}
-<main class="main-content">
-{{ content }}
-</main>
-<ul>
-<li class="center"><div class="theme-switch-container">
-<label class="theme-switch" for="checkbox">
-<input type="checkbox" id="checkbox"/>
-<div class="slider round"></div>
-</label>
-</div><div class="option-description">Jasny/Ciemny Tryb</div></li>
-</ul>
-<footer class="main-footer">
-<div class="footer-col-3">Ta strona korzysta z ciasteczek.</div>
-<div class="footer-col-3">(c) {% if site.first-launch %}<noscript>{{ site.first-launch }}</noscript>{% endif %}<span class="date"></span> {{ site.name | upcase }}. Strona udostępniana pod licencją <a href="{{ site.url || site.host }}{{ site.baseurl }}/license.txt" target="_blank" download>MIT</a></div>
-</footer>
-<script src="{{ site.url || site.host }}{{ site.baseurl }}/lib/js/index.min.js"></script>
-</body>
+ {% include head.html %}
+ <body ondragstart="return false" ondrag="return false">
+  <script type="text/javascript">
+   var preload = document.createElement("div")
+   preload.className = "preloader"
+   preload.innerHTML = '</div><div class="spinner"></div>'
+   document.body.appendChild(preload)
+   window.addEventListener("load", function () {
+    preload.className += " fade"
+    setTimeout(function () {
+     preload.style.display = "none"
+    }, 500)
+   })
+  </script>
+  {% include header.html %}
+  <main class="main-content">{{ content }}</main>
+  <ul>
+   <li class="center">
+    <div class="theme-switch-container">
+     <label class="theme-switch" for="checkbox">
+      <input type="checkbox" id="checkbox" />
+      <div class="slider round"></div>
+     </label>
+    </div>
+    <div class="option-description">Jasny/Ciemny Tryb</div>
+   </li>
+  </ul>
+  <footer class="main-footer">
+   <div class="footer-col-3">Ta strona korzysta z ciasteczek.</div>
+   <div class="footer-col-3">(c) {% if site.first-launch %}<noscript>{{ site.first-launch }}</noscript>{% endif %}<span class="date"></span> {{ site.name | upcase }}. Strona udostępniana pod licencją <a href="{{ site.url || site.host }}{{ site.baseurl }}/license.txt" target="_blank" download>MIT</a></div>
+  </footer>
+  <script src="{{ site.url || site.host }}{{ site.baseurl }}/lib/js/index.min.js"></script>
+ </body>
 </html>

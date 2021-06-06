@@ -6,8 +6,8 @@ layout: "null"
  --white: #fff;
  --text: #212121;
  --border-opacity: 33, 33, 33;
- --00a3a3: #00a3a3;
- --333: #333;
+ --aqua: #00a3a3;
+ --darkgrey: #333;
  --f4f4f4: #f4f4f4;
  --light: #fff;
  --scrollbar-thumb: #888;
@@ -39,8 +39,8 @@ layout: "null"
  --white: #222;
  --text: #fff;
  --border-opacity: 255, 255, 255;
- --00a3a3: #fff;
- --333: #fff;
+ --aqua: #fff;
+ --darkgrey: #fff;
  --f4f4f4: #4a4a4a;
  --link: #fff;
  --scrollbar: #222;
@@ -305,7 +305,7 @@ footer a {
 
 main a,
 footer a {
- color: var(--00a3a3) !important;
+ color: var(--aqua) !important;
  transition: 500ms all;
 }
 
@@ -319,8 +319,7 @@ main {
 }
 
 footer {
- box-shadow: 0 -7px 5px -5px rgba(0, 0, 0, 0.1),
-  0 -7px 5px -5px rgba(0, 0, 0, 0.08);
+ box-shadow: 0 -7px 5px -5px rgba(0, 0, 0, 0.1), 0 -7px 5px -5px rgba(0, 0, 0, 0.08);
  position: absolute;
  right: 0;
  bottom: 0;
@@ -407,7 +406,7 @@ img:not(.rss-icon) {
 a {
  position: relative;
  text-decoration: none;
- background-image: linear-gradient(var(--00a3a3), var(--00a3a3));
+ background-image: linear-gradient(var(--aqua), var(--aqua));
  background-position: 50% 100%;
  background-repeat: no-repeat;
  background-size: 0% 2px;
@@ -429,8 +428,8 @@ a:hover {
 
  main a:hover,
  main a:hover svg {
-  color: var(--00a3a3) !important;
-  fill: var(--00a3a3);
+  color: var(--aqua) !important;
+  fill: var(--aqua);
   transition: 300ms;
  }
 
@@ -584,8 +583,7 @@ a:hover {
 .nav .menu {
  clear: both;
  max-height: 0;
- transition: 500ms background-color, 500ms background, 400ms max-height,
-  1s color;
+ transition: 500ms background-color, 500ms background, 400ms max-height, 1s color;
 }
 
 .nav .menu-icon {
@@ -598,7 +596,7 @@ a:hover {
 }
 
 .nav .menu-icon .navicon {
- background-color: var(--333);
+ background-color: var(--darkgrey);
  display: block;
  height: 2px;
  position: relative;
@@ -608,7 +606,7 @@ a:hover {
 
 .nav .menu-icon .navicon:before,
 .nav .menu-icon .navicon:after {
- background-color: var(--333);
+ background-color: var(--darkgrey);
  content: "";
  display: block;
  height: 100%;
@@ -1168,7 +1166,7 @@ pre.highlight {
 
 .post-recent ul li:hover .post-related-title,
 .post-recent ul li:hover .post-summary {
- color: var(--00a3a3);
+ color: var(--aqua);
 }
 
 .comment p {

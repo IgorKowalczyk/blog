@@ -15,10 +15,10 @@ portfolio: "/"
 
 # Main url to the site (end without slash) [or dir.]
 url: "https://igorkowalczyk.github.io/"
-baseurl: "blog"
+baseurl: "/blog"
 
 # Your github username (no link) - if you don't have - leave blank
-github_username:  "igorkowalczyk"
+github_username: "igorkowalczyk"
 
 # Twitter username (no link) - if you don't have - leave blank
 twitter: "@majonezexe"
@@ -49,7 +49,7 @@ feed:
 # Plugins
 plugins:
  - jekyll-paginate
- 
+
 # Exclude files
 exclude:
  - Gemfile
@@ -58,10 +58,10 @@ exclude:
 
 # Categories
 categories_names:
- 'offtop': "Offtop"
- 'internet': "Internet"
- 'programowanie': "Programowanie"
- 'javascript': "JavaScript"
+ "offtop": "Offtop"
+ "internet": "Internet"
+ "programowanie": "Programowanie"
+ "javascript": "JavaScript"
 
 # To comments (only github. Replace "igorkowalczyk/blog" with your [username/repo]
 comments-post: "https://api-igorkowalczyk.herokuapp.com/v2/entry/igorkowalczyk/blog/master/comments"
@@ -72,9 +72,9 @@ staticman:
 
 # Captcha - to protect comment. Sitekey - normal key. Secret - encrypted. To encrypt go to https://api-igorkowalczyk.herokuapp.com/v2/encrypt/[YOUR-TEXT-TO-ENCRYPT]
 reCaptcha:
-  enabled: true
-  siteKey: "6LepabEZAAAAACc5CaKQ576otDawf5Zp1HXfCKDu"
-  secret: "SBOGLVfiD12mi2BzRmKiNPtbldET2ccrn80DMrIzzxVYdxmM4FfR64w8GjotSPF9Qm71UlyNU3QOojzYdkPq5NF1qSE5e+4wlZ7PLY63nwcQ9jea59RWRIPouBGZRhc5gzbDfQfyQBue32nVFrxXn42Fith81j/1w+aLZjf8AXI="
+ enabled: true
+ siteKey: "6LepabEZAAAAACc5CaKQ576otDawf5Zp1HXfCKDu"
+ secret: "SBOGLVfiD12mi2BzRmKiNPtbldET2ccrn80DMrIzzxVYdxmM4FfR64w8GjotSPF9Qm71UlyNU3QOojzYdkPq5NF1qSE5e+4wlZ7PLY63nwcQ9jea59RWRIPouBGZRhc5gzbDfQfyQBue32nVFrxXn42Fith81j/1w+aLZjf8AXI="
 
 # Tracking ID - if you don't have - leave blank
 tracking_id: "UA-174454816-1"

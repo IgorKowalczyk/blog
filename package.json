@@ -1,0 +1,24 @@
+{
+ "name": "igorkowalczyk-blog",
+ "version": "0.0.2",
+ "description": "My personal blog",
+ "scripts": {
+  "dev": "jekyll serve --livereload",
+  "build": "bundle exec jekyll serve",
+  "format": "prettier --write . --ignore-unknown",
+  "format:check": "prettier --check ."
+ },
+ "repository": {
+  "type": "git",
+  "url": "git+https://github.com/igorkowalczyk/blog.git"
+ },
+ "author": "Igor Kowalczyk",
+ "license": "MIT",
+ "bugs": {
+  "url": "https://github.com/igorkowalczyk/blog/issues"
+ },
+ "homepage": "https://igorkowalczyk.github.io/blog",
+ "devDependencies": {
+  "prettier": "^2.0.5"
+ }
+}

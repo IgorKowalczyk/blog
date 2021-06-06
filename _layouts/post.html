@@ -1,94 +1,89 @@
 ---
 layout: "default"
 ---
+
 {% capture post_slug %}{{ page.title | slugify: "latin" }}{% endcapture %}
 <article class="post">
-<header class="post-header">
-<h2 class="post-title" >{{ page.title | escape }}</h2>
+ <header class="post-header">
+  <h2 class="post-title">{{ page.title | escape }}</h2>
+  <div class="post-meta">
+   {% include time.html %}
+   <span class="bullet" aria-hidden="true">&bull;</span> {{ page.author }} <span class="bullet" aria-hidden="true">&bull;</span>
+   {% include reading-time.html %}
+   <ol>
+    <ul class="cat">
+     Kategorie:&nbsp;
+     <span>
+      {% for category in page.categories %}
+      <a href="{{ site.url || site.host }}{{ site.baseurl }}/categories/{{ category }}">{{ category }}</a>&nbsp; {% endfor %}
+     </span>
+    </ul>
+   </ol>
+  </div>
+ </header>
+ <section class="post-content">{{ content }}</section>
+ <br />
+ {% include share-buttons.html %}
+ <br />
+ <hr />
+ <br />
+ {% include comments.html %} {% unless page.comments == false %}
+ <script src="{{ site.url || site.host }}{{ site.baseurl }}/lib/js/form.js"></script>
+ {% endunless %}
+ <br />
+ <hr />
+ <br />
 
-<p class="post-meta">
-{% include time.html %}
-<span class="bullet" aria-hidden="true">&bull;</span> {{ page.author }} <span class="bullet" aria-hidden="true">&bull;</span> {% include reading-time.html %}
-<ol>
-<ul class="cat">Kategorie:&nbsp;
-<span>
-{% for category in page.categories %}
-<a href="{{ site.url || site.host }}{{ site.baseurl }}/categories/{{ category }}">{{ category }}</a>&nbsp;
-{% endfor %}
-</span>
-</ul>
-</ol>
-</p>
+ {% include nav.html %} {% include recent.html %}
 
-</header>
-<section class="post-content">
-{{ content }}
-</section>
-<br>
-{% include share-buttons.html %}
-<br>
-<hr>
-<br>
-{% include comments.html %}
-{% unless page.comments == false %}
-<script src="{{ site.url || site.host }}{{ site.baseurl }}/lib/js/form.js"></script>
-{% endunless %}
-<br>
-<hr>
-<br>
-
-{% include nav.html %}
-
-{% include recent.html %}
-
-<script type="application/ld+json">
-{
-"@context": "http://schema.org",
-"@type": "Article",
-"timeRequired": "P3M",
-"mainEntityOfPage": "{{ site.url || site.host }}{{ site.baseurl }}",
-"headline": "{{ page.title }}",
-"datePublished": "{{ page.date }}",
-"dateModified": "{{ page.date }}",
-{% if page.description %}
-"description": "{{ page.description }}",
-{% else %}
-"description": "{{ site.description }}",
-{% endif %}
-"wordCount": "666",
-{% if page.image %}
-"image": {
-"@type": "ImageObject",
-"url": "{{ site.url || site.host }}{{ site.baseurl }}/lib/pics/thumbs/{{ page.image }}",
-"height": "225",
-"width": "300"
-},
-{% endif %}
-"author": {
-"@type": "Person",
-"name": "{{ page.author }}",
-{% if site.twitter %}
-"sameAs": ["{{ site.url || site.host }}", "{{ site.twitter }}"]
-{% else %}
-"sameAs": "{{ site.url || site.host }}"
-{% endif %}
-},
-"publisher": {
-"@type": "Organization",
-"name": "{{ site.author }}",
-"url": "{{ site.url || site.host }}",
-{% if site.twitter %}
-"sameAs": ["{{ site.url || site.host }}", "{{ site.twitter }}"],
-{% else %}
-"sameAs": "{{ site.url || site.host }}",
-{% endif %}
-"logo": {
-"@type": "ImageObject",
-"url": "{{ site.url || site.host }}{{ site.baseurl }}/lib/favicon/favicon.jpg",
-"height": "500",
-"width": "355"
-}
-}
-}
-</script>
+ <script type="application/ld+json">
+  {
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "timeRequired": "P3M",
+  "mainEntityOfPage": "{{ site.url || site.host }}{{ site.baseurl }}",
+  "headline": "{{ page.title }}",
+  "datePublished": "{{ page.date }}",
+  "dateModified": "{{ page.date }}",
+  {% if page.description %}
+  "description": "{{ page.description }}",
+  {% else %}
+  "description": "{{ site.description }}",
+  {% endif %}
+  "wordCount": "666",
+  {% if page.image %}
+  "image": {
+  "@type": "ImageObject",
+  "url": "{{ site.url || site.host }}{{ site.baseurl }}/lib/pics/thumbs/{{ page.image }}",
+  "height": "225",
+  "width": "300"
+  },
+  {% endif %}
+  "author": {
+  "@type": "Person",
+  "name": "{{ page.author }}",
+  {% if site.twitter %}
+  "sameAs": ["{{ site.url || site.host }}", "{{ site.twitter }}"]
+  {% else %}
+  "sameAs": "{{ site.url || site.host }}"
+  {% endif %}
+  },
+  "publisher": {
+  "@type": "Organization",
+  "name": "{{ site.author }}",
+  "url": "{{ site.url || site.host }}",
+  {% if site.twitter %}
+  "sameAs": ["{{ site.url || site.host }}", "{{ site.twitter }}"],
+  {% else %}
+  "sameAs": "{{ site.url || site.host }}",
+  {% endif %}
+  "logo": {
+  "@type": "ImageObject",
+  "url": "{{ site.url || site.host }}{{ site.baseurl }}/lib/favicon/favicon.jpg",
+  "height": "500",
+  "width": "355"
+  }
+  }
+  }
+ </script>
 </article>

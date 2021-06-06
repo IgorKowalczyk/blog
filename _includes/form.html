@@ -1,65 +1,68 @@
 {% unless page.comments == false %}
 <form method="post" action="{{ site.comments-post }}" data-action="{{ site.comments-post }}" class="commentform">
-<h3 class="new-comment">Napisz komentarz:</h3>
-<input name="fields[slug]" type="hidden" value="{{ post_slug }}" class="commentform-input commentform-input-slug">
-<input name="options[slug]" type="hidden" value="{{ post_slug }}" class="commentform-input commentform-input-optionsslug">
-<fieldset class="name">
-<label for="name">Imię
-<div class="nameerror error">Proszę wpisać imię!</div>
-<input name="fields[name]" type="text" id="name" placeholder="Jan Kowalski" title="To pole jest wymagane" maxlenght="50" class="commentform-input commentform-input-name">
-</label>
-</fieldset>
-<fieldset class="email">
-<label for="email">E-mail
-<div class="emailerror error">Proszę wpisać poprawny e-mail!</div>
-<input name="fields[email]" id="email" type="email" placeholder="jan@kowalski.com" title="To pole jest wymagane" maxlenght="50" spellcheck="false" class="commentform-input commentform-input-email">
-</label>
-</fieldset>
-<fieldset class="textarea no-margin">
-<label for="message">Wiadomość
-<div class="messageerror error">Proszę wpisać wiadomość!</div>
-<textarea name="fields[message]" type="text" id="message" placeholder="Twoja wiadomość" title="To pole jest wymagane" maxlenght="150" autocomplete="off" spellcheck="true" class="commentform-input commentform-input-message no-margin"></textarea>
-<p class="small-message">Markdown jest obsługiwany</p>
-</label>
-</fieldset>
-<!-- Honeypot -->
-<fieldset class="hp">
-<label for="hp">Zabezpieczenie (Nie wypełniaj!)
-<input name="fields[hp]" type="text" id="hp" placeholder="Nie wypełniaj tego! To jest zabezpieczenie przeciwko botom">
-</label>
-</fieldset>
-{% if site.reCaptcha %}
-<input type="hidden" name="options[reCaptcha][siteKey]" value="{{ site.reCaptcha.siteKey }}">
-<input type="hidden" name="options[reCaptcha][secret]" value="{{ site.reCaptcha.secret }}">
-<fieldset class="security no-margin">
-<div class="captchaerror error">Proszę rozwiązać zadanie zabezpieczające!</div>
-<div id="captcha"></div>
-</fieldset>
-{% endif %}
-<!-- /Honeypot -->
-<div class="messages">
-<p class="small-message">Twój E-Mail nie zostanie opublikowany. Komentarze pojawią się po zaakceptowaniu przez moderatora</p>
-</div>
-<div>
-<button class="submit submit-spinner button">Wyślij komentarz</button>
-</div>
-<div class="commentform-sendfailed message">Wiadomość nie mogła zostać wysłana, proszę spróbować później.</div>
-<div class="commentform-sendsucceeded message">Dziękuje, twój komentarz został poprawnie wysłany!</div>
+ <h3 class="new-comment">Napisz komentarz:</h3>
+ <input name="fields[slug]" type="hidden" value="{{ post_slug }}" class="commentform-input commentform-input-slug" />
+ <input name="options[slug]" type="hidden" value="{{ post_slug }}" class="commentform-input commentform-input-optionsslug" />
+ <fieldset class="name">
+  <label for="name"
+   >Imię
+   <div class="nameerror error">Proszę wpisać imię!</div>
+   <input name="fields[name]" type="text" id="name" placeholder="Jan Kowalski" title="To pole jest wymagane" maxlenght="50" class="commentform-input commentform-input-name" />
+  </label>
+ </fieldset>
+ <fieldset class="email">
+  <label for="email"
+   >E-mail
+   <div class="emailerror error">Proszę wpisać poprawny e-mail!</div>
+   <input name="fields[email]" id="email" type="email" placeholder="jan@kowalski.com" title="To pole jest wymagane" maxlenght="50" spellcheck="false" class="commentform-input commentform-input-email" />
+  </label>
+ </fieldset>
+ <fieldset class="textarea no-margin">
+  <label for="message"
+   >Wiadomość
+   <div class="messageerror error">Proszę wpisać wiadomość!</div>
+   <textarea name="fields[message]" type="text" id="message" placeholder="Twoja wiadomość" title="To pole jest wymagane" maxlenght="150" autocomplete="off" spellcheck="true" class="commentform-input commentform-input-message no-margin"></textarea>
+   <p class="small-message">Markdown jest obsługiwany</p>
+  </label>
+ </fieldset>
+ <!-- Honeypot -->
+ <fieldset class="hp">
+  <label for="hp"
+   >Zabezpieczenie (Nie wypełniaj!)
+   <input name="fields[hp]" type="text" id="hp" placeholder="Nie wypełniaj tego! To jest zabezpieczenie przeciwko botom" />
+  </label>
+ </fieldset>
+ {% if site.reCaptcha %}
+ <input type="hidden" name="options[reCaptcha][siteKey]" value="{{ site.reCaptcha.siteKey }}" />
+ <input type="hidden" name="options[reCaptcha][secret]" value="{{ site.reCaptcha.secret }}" />
+ <fieldset class="security no-margin">
+  <div class="captchaerror error">Proszę rozwiązać zadanie zabezpieczające!</div>
+  <div id="captcha"></div>
+ </fieldset>
+ {% endif %}
+ <!-- /Honeypot -->
+ <div class="messages">
+  <p class="small-message">Twój E-Mail nie zostanie opublikowany. Komentarze pojawią się po zaakceptowaniu przez moderatora</p>
+ </div>
+ <div>
+  <button class="submit submit-spinner button">Wyślij komentarz</button>
+ </div>
+ <div class="commentform-sendfailed message">Wiadomość nie mogła zostać wysłana, proszę spróbować później.</div>
+ <div class="commentform-sendsucceeded message">Dziękuje, twój komentarz został poprawnie wysłany!</div>
 </form>
 {% if site.reCaptcha %}
 <script type="text/javascript">
-var load = function() {
-grecaptcha.render('captcha', {
-'sitekey' : '{{ site.reCaptcha.siteKey }}',
-'theme' : 'dark',
-'hl': 'pl'
-})
-}
+ var load = function () {
+  grecaptcha.render("captcha", {
+   sitekey: "{{ site.reCaptcha.siteKey }}",
+   theme: "dark",
+   hl: "pl",
+  })
+ }
 </script>
 <script src="https://www.google.com/recaptcha/api.js?onload=load&render=explicit" async defer></script>
-{% endif %}
-{% else %}
+{% endif %} {% else %}
 <div class="notice">
-<h4>Dodawanie komentarzy zostało zablokowane.</h4>
+ <h4>Dodawanie komentarzy zostało zablokowane.</h4>
 </div>
 {% endunless %}
