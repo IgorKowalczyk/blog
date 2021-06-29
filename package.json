@@ -19,6 +19,6 @@
  },
  "homepage": "https://igorkowalczyk.github.io/blog",
  "devDependencies": {
-  "prettier": "^2.0.5"
+  "prettier": "^2.3.1"
  }
 }
