@@ -9,7 +9,7 @@ comments: true
 Witajcie, dzisiaj opowiem o jasnej i ciemnej stronie internetu (inaczej trochę o Clearnecie, Deepwebie i Darknecie). Może i dziwny temat, ale bardzo w mojej opinii potrzebny. Możecie ten post uznać za początek mojej opowieści o internecie. Ten wpis jest pierwszym z wielu wpisów, które mają się pojawić na tym blogu w przyszłości ^^.
 
 ![Poziomy internetu](https://upload.wikimedia.org/wikipedia/commons/0/06/Iceberg_of_Webs.svg)
-> Źródło zdjęcia: [Wikipedia](https://en.wikipedia.org/wiki/Clearnet_(networking))
+*Źródło zdjęcia: [Wikipedia](https://en.wikipedia.org/wiki/Clearnet_(networking))*
 
 # Szybki podział
 
@@ -22,7 +22,7 @@ Wszystkie strony dostępne w internecie podzielę dzisiaj na 3 typy:
 Clearnet ogólnie rzecz biorąc jest zwykłym internetem, do stron znajdujących się w clearnecie możemy uzyskać dostęp za pomocą zwykłej przeglądarki internetowej np Firefox. Aby uzyskać dostęp do tej części internetu nie musimy instalować np. [Przeglądarki TOR](https://www.torproject.org/) (Jeśli czytasz ten artykuł to znaczy, że właśnie jesteś w clearnecie). W clearnecie większość ludzi przegląda konwencjonalne strony internetowe typu [Google](https://google.com), [Facebook](https://facebook.com), komunikuje się ze znajomymi, zakłada profile społecznościowe, sprzedaje przedmioty itp. W Clearnecie aktywność jest często monitorowana przez większe organizacje i ich skrypty śledzące (najlepszym przykładem jest [GA](https://analytics.google.com)). Strony clearnetu to w więszkości strony, które zbierają dane użytkowników a potem sprzedają ich dane np do celów reklamowych. Coraz więcej użytkowników clearnetu zaczyna dbać o swoją prywatność dlatego korzystają z VPN (Virtual Private Network) dzięki temu zatrzymują część swoich danych przed korporacjami.
 
 # Deepweb
-Deep web to termin używany do opisania milionów stron, do których nie ma dostępu społeczeństwo i które nie są indeksowane przez wyszukiwarki, takie jak DuckDuckGo czy Google. Ta część Internetu obejmuje korporacyjne strony intranetowe, wiki, strony bankowe, bazy danych, a także prywatne konta w mediach społecznościowych. Deepweb'owi raczej bliżej do clearnet'u niż do darknet'u.
+Deep web to termin używany do opisania milionów stron, do których nie ma dostępu społeczeństwo i które nie są indeksowane przez wyszukiwarki, takie jak DuckDuckGo czy Google. Ta część Internetu obejmuje korporacyjne strony internetowe, wiki, strony bankowe, bazy danych, a także prywatne konta w mediach społecznościowych. Deepweb'owi raczej bliżej do clearnet'u niż do darknet'u.
 
 # Darknet
 Darknet to sieć która korzysta z zaawansowanego szyfrowania aby ukrywac ruch internetowy przez co osoby korzystające z Darknetu mogą czuć się bezpieczniejsze. Witryny znajdujące się w Darknecie wykorzystują domenę najwyższego poziomu czyli '.onion' , często równiez używają adresów URL, które ciężko zapamiętać (losowy ciąg znaków, który nie składa się ze słów które możemy w łatwy sposób rozpoznać). Witryny Darknetu nie są też indeksowane przez zwyczajne wyszukiwarki internetowe.
