@@ -1129,6 +1129,39 @@ pre.highlight {
  transition: 500ms all;
 }
 
+.post-nav {
+ display: grid;
+ grid-template-columns: auto auto;
+ grid-template-rows: auto;
+ gap: 0px 0px;
+ grid-template-areas: "button1 button2";
+}
+
+.prev {
+ grid-area: button1;
+ max-width: 150px;
+ justify-self: start;
+}
+.next {
+ grid-area: button2;
+ max-width: 150px;
+ justify-self: end;
+}
+
+.link-button {
+ border: none;
+ color: var(--button-color) !important;
+ background: var(--button-background);
+ padding: 10px;
+ cursor: pointer;
+ border-radius: 3px;
+ box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.1), 0 1px 3px 0 rgba(0, 0, 0, 0.08);
+ margin: 10px 0px 5px 0px;
+ user-select: none;
+ transition: 500ms all;
+ font-size: 15px;
+}
+
 .post-nav a {
  display: block;
  float: left;
