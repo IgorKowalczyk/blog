@@ -22,6 +22,7 @@ layout: "null"
  --button-background: #00a3a3;
  --button-color: #fff;
  --button-hover: #0fbcbc;
+ --button-hover2: #fff;
  --code: #0000000d;
  --facebook: #3b5998;
  --twitter: #55acee;
@@ -55,6 +56,7 @@ layout: "null"
  --button-background: #fff;
  --button-color: #000;
  --button-hover: #d2d2d2;
+ --button-hover2: #000;
  --code: #1b1b1b;
  --facebook: #7d7d7d;
  --twitter: #7d7d7d;
@@ -1160,6 +1162,11 @@ pre.highlight {
  user-select: none;
  transition: 500ms all;
  font-size: 15px;
+}
+
+.link-button:hover {
+ color: var(--button-hover2);
+ background: var(--button-hover);
 }
 
 .post-nav a {
