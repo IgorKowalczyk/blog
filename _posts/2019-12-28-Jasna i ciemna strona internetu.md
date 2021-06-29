@@ -6,36 +6,35 @@ categories: internet
 comments: true
 ---
 
-Witajcie, dzisiaj opowiem o jasnej i ciemnej stronie internetu. Może i dziwny temat ale bardzo potrzebny. Ten wpis jest pierwszym z wielu wpisów które mają się pojawić na tym blogu - będą dotyczyły bezpieczeństwa w sieci, ponieważ bezpieczeństwo to podstawa.
+Witajcie, dzisiaj opowiem o jasnej i ciemnej stronie internetu (inaczej trochę o Clearnecie, Deepwebie i Darknecie). Może i dziwny temat, ale bardzo w mojej opinii potrzebny. Możecie ten post uznać za początek mojej opowieści o internecie. Ten wpis jest pierwszym z wielu wpisów, które mają się pojawić na tym blogu w przyszłości ^^.
 
-# Typy stron
+![Poziomy internetu](https://upload.wikimedia.org/wikipedia/commons/0/06/Iceberg_of_Webs.svg)
+> Źródło zdjęcia: [Wikipedia](https://en.wikipedia.org/wiki/Clearnet_(networking))
 
-**Dzisiaj w internecie można spotkać wiele stron nie koniecznie tych bezpiecznych.** Ze wszystkich stron internetowych
-wyróżnię dzisiaj 2 typy - jasną stronę i ciemną stronę (jest ich jeszcze bardzo wiele, ale ile to by czasu zajmowało opisywanie wszystkich z nich).
+# Szybki podział
 
-Więc bez zbędnego przedłużania przejdźmy do części właściwej 
+Wszystkie strony dostępne w internecie podzielę dzisiaj na 3 typy:
+* Clearnet
+* Deepweb
+* Darknet
 
-# Jasna Strona
+# Clearnet
+Clearnet ogólnie rzecz biorąc jest zwykłym internetem, do stron znajdujących się w clearnecie możemy uzyskać dostęp za pomocą zwykłej przeglądarki internetowej np Firefox. Aby uzyskać dostęp do tej części internetu nie musimy instalować np. [Przeglądarki TOR](https://www.torproject.org/) (Jeśli czytasz ten artykuł to znaczy, że właśnie jesteś w clearnecie). W clearnecie większość ludzi przegląda konwencjonalne strony internetowe typu [Google](https://google.com), [Facebook](https://facebook.com), komunikuje się ze znajomymi, zakłada profile społecznościowe, sprzedaje przedmioty itp. W Clearnecie aktywność jest często monitorowana przez większe organizacje i ich skrypty śledzące (najlepszym przykładem jest [GA](https://analytics.google.com)). Strony clearnetu to w więszkości strony, które zbierają dane użytkowników a potem sprzedają ich dane np do celów reklamowych. Coraz więcej użytkowników clearnetu zaczyna dbać o swoją prywatność dlatego korzystają z VPN (Virtual Private Network) dzięki temu zatrzymują część swoich danych przed korporacjami.
 
-Do jasnej strony należą takie adresy które nie oszukują nas w żaden sposób, nie naciągają nas na nic, nie wykorzystują informacji
-od nas zebranych np. przez skrypty śledzące (Nie, nie mówię o tych od Google). Tym stroną możemy zaufać ale pamiętajmy **nie możemy im ufać bezgranicznie!**. **Każda dobra strona ma certyfikat SSL** (czyli przesyłane informacje są bezpiecznie kodowane). Przeglądarki informują nas o takim certyfikacie wyświetlając np. w pasku adresu zieloną kłódkę. Dobre strony także korzystają z kodowania `https` (nie mylić z `http`!), kodowanie to zwiększa także bezpieczeństwo wysyłanych i odbieranych danych, dzięki temu nasze hasła, e-maile, itp. są ukrywane.
+# Deepweb
+Deep web to termin używany do opisania milionów stron, do których nie ma dostępu społeczeństwo i które nie są indeksowane przez wyszukiwarki, takie jak DuckDuckGo czy Google. Ta część Internetu obejmuje korporacyjne strony intranetowe, wiki, strony bankowe, bazy danych, a także prywatne konta w mediach społecznościowych. Deepweb'owi raczej bliżej do clearnet'u niż do darknet'u.
 
-# Ciemna Strona
+# Darknet
+Darknet to sieć która korzysta z zaawansowanego szyfrowania aby ukrywac ruch internetowy przez co osoby korzystające z Darknetu mogą czuć się bezpieczniejsze. Witryny znajdujące się w Darknecie wykorzystują domenę najwyższego poziomu czyli '.onion' , często równiez używają adresów URL, które ciężko zapamiętać (losowy ciąg znaków, który nie składa się ze słów które możemy w łatwy sposób rozpoznać). Witryny Darknetu nie są też indeksowane przez zwyczajne wyszukiwarki internetowe.
 
-Do 2 strony internetu (tej złej) należą za to strony totalnie inne od tych wyżej opisanych. Wykorzystują informacje od nas zebrane np. sprawdzania naszej lokalizacji, przekierowują nas na inne adresy internetowe aby jeszcze więcej zebrać informacji, **wykorzystują często skrypty śledzące i formy logowania czy rejestracji do wyciągania haseł, e-maili czy nawet karty kredytowej**. Niektóre z nich oferują także niebezpieczne oprogramowanie komputerowe czy proszą nas o zainstalowanie
-dodatku do przeglądarki. **Od takich stron trzymajmy się wyjątkowo daleko**, nie lekceważmy ich. Choć w przeglądarkach istnieją bazy danych niebezpiecznych stron i przypominają nam o takich stronach, ale w takiej bazie nie ma 100% nie bezpiecznych stron.
+Aby uzyskać dostęp do tej sieci potrzebne nam jest specjalne oprogramowanie o otwartym kodzie źródłowym - np. [Przeglądarka Tor](https://www.torproject.org/) (Oczywiście, istnieją inne narzędzia dzięki którym możemy uzyskać dostęp do darknetu np. I2P). Aby czuć się bezpieczniejszym w darknecie można użyć jeszcze systemu Tails, który jest zbudowany na Linuxie. System Tails jest skoncentrowany na bezpieczństwie - Oznacza to że system możemy zbootować tylko z Pendrive a sam system jest jednorazowy (po wyłączeniu systemu dane na nim zgromadzone zostają bezpowrotnie utracone). Dodaje nam to kolejną warstwę zabezpieczeń podczas korzystania z darknetu.
 
-# Jak się przed niebezpiecznymi stronami chronić?
+Za to, że Darknet jest anonimowy zaczęła się w nim rozwijać w bardzo szybkim tempie działalność przestępcza. Idealnym tego przykładem był targ pod nazwą "Silk Road", ta przypominająca eBay giełda pomogła stworzyć rynek anonimowego handlu przestępczego w systemie peer-to-peer. Serwis Silk Road stał się bardzo rozpoznawalny w 2013, kiedy założyciel tego serwisu został złapany przez FBI. Po tym incydencie podobne strony zaczęły się pojawiać jak grzyby po deszczu. Dziś na podobnych rynkach sprzedaje się tam narkotyki, złośliwe oprogramowanie, dane firm, wycieki z różnych stron czy dziecięcą pornografię. Wbrew pozorom na darknecie nie wynajmiemy płatnych zabójców czy hakerów. Zazwyczaj, jeśli takie oferty się pojawią jest to najzwyklejsze oszustwo które ma nas oskubać z pieniędzy.
 
-**Chronić się przed niebezpiecznymi stronami jest wbrew pozorom bardzo ciężko**. Przeglądarki próbują nas chronić wykorzystując
-różne filtry ale pamiętajmy żaden filtr nie jest w 100% bezpieczny. Chronić się możemy za to my, możemy nie klikać w podejrzane linki,
-nie wchodzić na strony które oferują nam coś co wydaje się fałszywe.
+Dostęp do darknetu nie jest nielegalny, każdy z odrobiną wiedzy może się tam dostać. Darknet wyrobił sobie niezbyt dobrą opinię wśród internautów. Większośc ludzi uważa, że jest on po prostu "zły i niebezpieczny". Wbrew pozorom darknet nie jest wcale aż taki zły jak go malują (Wiadomo - istnieje tam masa niezbezpiecznych rzeczy, na które powinniśmy uważać ale znajdują się tam także dobre rzeczy). W Darknecie mozemy znaleść prywatne fora, poczytać blogi normalnych osób itp. Niektórzy korzystają z darknetu dla bezpieczeństwa. Trochę to jest ironiczne - Czasami ciemna strona internetu potrafi być bezpieczniejsza od tej jasnej strony...
 
-**Aby chronić się lepiej musimy wzmocnić swoją uwagę** - uważać 
-na to co wysyłają nam znajomi czy obcy, mogą to być wirusy lub linki do niebezpiecznych stron internetowych. **Niebezpieczne mogą być także dodatki do przeglądarek! Instalujmy tylko takie które uważamy za bezpieczne.**
-
-**Ja osobiście polecam korzystać z VPN** (Virtual Private Network), zwiększa on szanse że zostaniemy bezpieczni w sieci.
-
-**Z tego wszystkiego wychodzi że zawsze trzeba na siebie uważać w sieci. Nieważne gdzie jesteśmy i tak możemy być odsłonięci na ataki hakerów.** Niedługo pojawi się kontynuacja tego posta.
+# Podsumowanie
+Zarówno Clearnet i Darknet mają swoje dobre i złe cechy. Clearnet ogólnie rzecz biorąc jest jakby zwyczajnym internetem dzie możemy robić normalne rzeczy a Darknet.. Tutaj sytuacja wygląda tochę inaczej - W Darknecie możemy robić zarówno dobre, jak i złe rzeczy (ja zachęcam, aby robić tylko te dobrze rzeczy typu korzystanie z darknetu w normalnych celach). Wszystkie te części internetu mają jednak wspólną część - Darknet, Deepweb i Clearnet są częściami sieci WWW (World Wide Web). Wiele osób nawet nigdy się nie dowie o istnieniu Darknetu mimo tego, że staje się coraz bardziej popularny (choć moim zdaniem powinny się dowiedzieć).
+Mam nadzieję, że wystarczająco przybliżyłem temat podziału internetu. Pamiętaj o czytaniu nastepnych postów któte pojawią się niebawem!
 
 **Koniecznie zobacz > [następną cześć posta](https://igorkowalczyk.github.io/blog/internet/2020/01/22/Bezpieczeństwo-w-sieci-nasze-dane)**
