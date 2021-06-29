@@ -385,10 +385,11 @@ img:not(.rss-icon) {
 }
 
 .post ul li {
- list-style: none;
- padding-bottom: 1em;
+ list-style: disc;
+ padding-bottom: 5px;
  line-height: 1.6em;
  transition: 500ms all;
+ margin-left: 50px;
 }
 
 .post ol li {
@@ -1167,6 +1168,11 @@ pre.highlight {
 .post-recent ul li:hover .post-related-title,
 .post-recent ul li:hover .post-summary {
  color: var(--aqua);
+}
+
+.post-recent ul li {
+ list-style: none;
+ margin-left: auto;
 }
 
 .comment p {

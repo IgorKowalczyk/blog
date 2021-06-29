@@ -1,7 +1,7 @@
 <div class="post-nav">
  {% if page.previous.url %}
- <li><a class="prev" href="{{ site.url || site.host }}{{ site.baseurl }}{{ page.previous.url | remove: '.html' }}">< Poprzedni post</a></li>
+ <button class="prev"><a href="{{ site.url || site.host }}{{ site.baseurl }}{{ page.next.url | remove: '.html' }}" style="color: #000 !important;margin: auto;">< Poprzedni post</a></button>
  {% endif %} {% if page.next.url %}
- <li><a class="next" href="{{ site.url || site.host }}{{ site.baseurl }}{{ page.next.url | remove: '.html' }}">Następny post ></a></li>
+ <button class="next"><a href="{{ site.url || site.host }}{{ site.baseurl }}{{ page.next.url | remove: '.html' }}" style="color: #000 !important;margin: auto;">Następny post &gt;</a></button>
  {% endif %}
 </div>
