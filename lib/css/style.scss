@@ -1165,7 +1165,7 @@ pre.highlight {
 }
 
 .link-button:hover {
- color: var(--button-hover2);
+ color: var(--button-hover2) !important;
  background: var(--button-hover);
 }
 
