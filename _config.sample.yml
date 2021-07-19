@@ -5,29 +5,29 @@ title: "Igor Kowalczyk Blog"
 name: "Igor Kowalczyk"
 
 # E-Mail
-email: "xxmajonezxx@gmail.com"
+email: "example@email.com"
 
 # Description
-description: "Blog na którym pojawiają się wpisy na temat programowania lub innych technologi."
+description: "Example Description"
 
 # Link to portfolio (end with slash)
 portfolio: "/"
 
 # Main url to the site (end without slash) [or dir.]
-url: "https://igorkowalczyk.github.io/"
+url: "https://example.com/"
 baseurl: "blog"
 
 # Your github username
-github_username: "igorkowalczyk"
+github_username: "example"
 
 # Twitter username 
-twitter: "@majonezexe"
+twitter: "@example"
 
 # Time zone
 timezone: "Europe/Warsaw"
 
 # First Launch of the site
-first-launch: "2019"
+first-launch: "2137"
 
 # Support to mobile browsers (It’s unknown what range of browsers support this meta tags) [Better to set the value to "false"!]
 mobile: "false"
@@ -63,8 +63,8 @@ categories_names:
  "programowanie": "Programowanie"
  "javascript": "JavaScript"
 
-# To comments (only github pr. Replace "igorkowalczyk/blog" with your [username/repo]
-comments-post: "https://api-igorkowalczyk.herokuapp.com/v2/entry/igorkowalczyk/blog/master/comments"
+# To comments (Only Github Repos! Syntax: username/repo)
+comments-post: "https://api-igorkowalczyk.herokuapp.com/v2/entry/EXAMPLE/REPO/master/comments"
 
 # Default branch to comments
 staticman:
