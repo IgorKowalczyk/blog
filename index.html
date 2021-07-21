@@ -3,7 +3,8 @@ layout: "default"
 ---
 
 <section class="home">
- <h1 class="section-home-title">Igor Kowalczyk Blog</h1>
+ <h1 class="section-home-title">{{ site.title }}</h1>
+ <p style="text-align: center">{{ site.description }}</p>
  <ul class="post-list">
   {% for post in paginator.posts %}
   <li class="post-list-item">
