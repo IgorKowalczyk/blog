@@ -457,6 +457,19 @@ a:hover {
  }
 }
 
+@media (min-width: 1081px) {
+ .post,
+ .home {
+  padding: 10px 30%;
+ }
+}
+
+@media (max-width: 765px) {
+ .post,
+ .home {
+  padding: 10px 10%;
+ }
+}
 @media (min-width: 765px) {
  h1 {
   font-size: 1.2em;
@@ -487,7 +500,7 @@ a:hover {
 
  .post,
  .home {
-  padding: 3% 15%;
+  padding: 10px 20%;
  }
 }
 
