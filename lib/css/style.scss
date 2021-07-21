@@ -458,15 +458,13 @@ a:hover {
 }
 
 @media (min-width: 1081px) {
- .post,
- .home {
+ .post {
   padding: 10px 30% !important;
  }
 }
 
 @media (max-width: 765px) {
- .post,
- .home {
+ .post {
   padding: 10px 10%;
  }
 }
