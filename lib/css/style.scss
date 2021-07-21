@@ -34,6 +34,7 @@ layout: "null"
  --reddit: #fc451e;
  --share-link: #7d7d7d;
  --error: #c80000;
+ --post-item: #313131;
 }
 
 [data-theme="dark"] {
@@ -68,6 +69,7 @@ layout: "null"
  --reddit: #7d7d7d;
  --share-link: #7d7d7d;
  --error: #c80000;
+ --post-item: #f7f7f7;
 }
 
 svg {
@@ -369,12 +371,17 @@ p * {
 }
 
 .post-list-item {
- padding-bottom: 1em;
- margin-bottom: 1em;
+ background: var(--post-item);
+ border-radius: 15px;
+ box-shadow: 0 16px 60px rgba(0,0,0,0.3);
+ padding: 2rem;
+ margin-top: 50px;
+ margin-bottom: 50px;
 }
 
 .post-list-item-desc {
  padding: 0.5em 0;
+ font-size: 17px;
 }
 
 img:not(.rss-icon) {
@@ -451,11 +458,6 @@ a:hover {
 }
 
 @media (min-width: 765px) {
- main,
- footer {
-  padding: 10px 5%;
- }
-
  h1 {
   font-size: 1.2em;
  }
@@ -479,11 +481,6 @@ a:hover {
 @media (min-width: 1080px) {
  h1 {
   font-size: 2em;
- }
-
- main,
- footer {
-  padding: 10px 20%;
  }
 
  .post,
@@ -775,8 +772,14 @@ input:checked + .slider-switch:before {
  text-align: center;
 }
 
+.cat {
+ text-transform: uppercase;
+ letter-spacing: 0.05em;
+ font-size: 75%;
+}
+
 .cat span a:after {
- content: ",";
+ content: "|";
  transition: 500ms all;
 }
 
