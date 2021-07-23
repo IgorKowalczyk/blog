@@ -825,7 +825,7 @@ textarea {
  resize: vertical !important;
  background: var(--inputtext) !important;
  border: 1px solid RGBA(var(--inputborder));
- border-radius: 3px;
+ border-radius: 5px;
  padding: 10px;
  display: flex;
  margin: 10px 0px 5px 0px;
@@ -854,7 +854,7 @@ fieldset {
 input {
  background: var(--inputtext);
  border:1px solid RGBA(var(--inputborder));
- border-radius: 3px;
+ border-radius: 5px;
  padding: 10px;
  display: flex;
  margin: 10px 0px 5px 0px;
