@@ -853,10 +853,14 @@ input {
 
 button {
  border: none;
- color: var(--button-color);
+ color: #fff;
  display: flex;
- background: var(--button-background);
- padding: 10px;
+ background-image: linear-gradient(to right, #6845aa 50%, #1eae98);
+ background-position: 50% 50%;
+ background-size: 400%;
+ font-size: 15px;
+ padding: 10px 25px;
+ font-family: Poppins;
  cursor: pointer;
  border-radius: 3px;
  box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.1), 0 1px 3px 0 rgba(0, 0, 0, 0.08);
@@ -866,7 +870,9 @@ button {
 }
 
 button:hover {
- background: var(--button-hover);
+ color: #fff !important;
+ background-position: right !important;
+ background-size: 400% !important;
 }
 
 ::-webkit-input-placeholder {
