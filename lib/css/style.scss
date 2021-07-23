@@ -1176,7 +1176,6 @@ pre.highlight {
 
 .prev {
  grid-area: button1;
- max-width: 150px;
  justify-self: start;
 }
 .next {
@@ -1187,7 +1186,7 @@ pre.highlight {
 
 .link-button {
  border: none;
- color: #fff;
+ color: #fff !important;
  cursor: pointer;
  border-radius: 3px;
  background-image: linear-gradient(to right, #6845aa 50%, #1eae98);
@@ -1196,8 +1195,9 @@ pre.highlight {
  box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.1), 0 1px 3px 0 rgba(0, 0, 0, 0.08);
  margin: 10px 0px 5px 0px;
  user-select: none;
- padding: 10px 25px;
+ padding: 10px 15px;
  font-family: "Poppins";
+ font-size: 15px;
  transition: 300ms all;
 }
 
