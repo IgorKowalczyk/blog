@@ -35,6 +35,8 @@ layout: "null"
  --share-link: #7d7d7d;
  --error: #c80000;
  --post-item: #fff;
+ --inputtext: #fff;
+ --inputborder: 33, 33, 33, 0.5;
 }
 
 [data-theme="dark"] {
@@ -70,6 +72,8 @@ layout: "null"
  --share-link: #7d7d7d;
  --error: #c80000;
  --post-item: #313131;
+ --inputtext: #2b2b2b;
+ --inputborder: 255, 255, 255, 0.1;
 }
 
 svg {
@@ -819,8 +823,8 @@ span {
 
 textarea {
  resize: vertical !important;
- background: var(--white) !important;
- border: 1px solid var(--text);
+ background: var(--inputtext) !important;
+ border: 1px solid RGBA(var(--inputborder));
  border-radius: 3px;
  padding: 10px;
  display: flex;
@@ -848,8 +852,8 @@ fieldset {
 }
 
 input {
- background: var(--white);
- border: 1px solid var(--text);
+ background: var(--inputtext);
+ border:1px solid RGBA(var(--inputborder));
  border-radius: 3px;
  padding: 10px;
  display: flex;
