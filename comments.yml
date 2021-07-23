@@ -1,6 +1,11 @@
 comments:
  allowedFields: ["name", "email", "message", "slug"]
  branch: "master"
+ akismet:
+  enabled: true
+  author: "name"
+  authorEmail: "email"
+  content: "message"
  commitMessage: "New comment by {fields.name}"
  filename: "comment-{@timestamp}"
  format: "yaml"
