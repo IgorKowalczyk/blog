@@ -12,8 +12,8 @@ layout: "null"
 body {
  font-size: 1em;
  position: relative;
- -webkit-animation: fade 500ms ease-in;
- animation: fade 500ms ease-in;
+ -webkit-animation: fade 300ms ease-in;
+ animation: fade 300ms ease-in;
  padding: 10px;
 }
 
@@ -47,7 +47,7 @@ main {
  text-decoration: none;
  scrollbar-color: #353535 transparent;
  scrollbar-width: thin;
- transition: 500ms color, 500ms background, 500ms background-color, 500ms opacity, 500ms border, 500ms border-color;
+ transition: 300ms color, 300ms background, 300ms background-color, 300ms opacity, 300ms border, 300ms border-color;
 }
 
 .link {

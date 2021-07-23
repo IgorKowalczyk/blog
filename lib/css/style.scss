@@ -74,7 +74,7 @@ layout: "null"
 
 svg {
  fill: var(--text);
- transition: 500ms all;
+ transition: 300ms all;
 }
 
 @font-face {
@@ -176,7 +176,7 @@ svg {
  padding-left: 0.25rem;
  text-decoration: none;
  opacity: 0;
- transition: opacity 350ms, 500ms color;
+ transition: opacity 350ms, 300ms color;
 }
 
 .anchor-heading .anchor-link:hover {
@@ -237,10 +237,10 @@ body {
  font-size: 1em;
  background-color: var(--white);
  position: relative;
- -webkit-animation: fade 500ms ease-in;
- animation: fade 500ms ease-in;
+ -webkit-animation: fade 300ms ease-in;
+ animation: fade 300ms ease-in;
  padding-bottom: 100px;
- transition: 500ms all;
+ transition: 300ms all;
 }
 
 html {
@@ -263,7 +263,7 @@ code span {
  font-size: 0.9em;
  border-radius: 3px;
  word-break: keep-all;
- transition: 500ms all;
+ transition: 300ms all;
 }
 
 blockquote {
@@ -277,7 +277,7 @@ blockquote {
  align-items: center;
  margin-bottom: 0.8em;
  font-style: italic;
- transition: 500ms all;
+ transition: 300ms all;
 }
 
 blockquote p {
@@ -292,25 +292,25 @@ blockquote p {
  padding: 2px 4px;
  margin: 1em 0;
  color: var(--text);
- transition: 500ms all;
+ transition: 300ms all;
 }
 
 .footer-col-3,
 time,
 .main-footer {
- transition: 500ms all;
+ transition: 300ms all;
 }
 
 main a,
 footer a {
  color: var(--text) !important;
- transition: 500ms all;
+ transition: 300ms all;
 }
 
 main a,
 footer a {
  color: var(--aqua) !important;
- transition: 500ms all;
+ transition: 300ms all;
 }
 
 main {
@@ -329,7 +329,7 @@ footer {
  bottom: 0;
  left: 0;
  padding: 20px !important;
- transition: 500ms all;
+ transition: 300ms all;
 }
 
 p,
@@ -339,21 +339,21 @@ h4,
 h5,
 h6 {
  padding-bottom: 0.8em;
- transition: 500ms all;
+ transition: 300ms all;
 }
 
 .page-title,
 .post-title {
  font-size: 1.5em;
  line-height: 1.3em;
- transition: 500ms all;
+ transition: 300ms all;
 }
 
 .post-meta {
  border-bottom: var(--text) solid 1px;
  margin-bottom: 1em;
  padding-bottom: 9px;
- transition: 500ms all;
+ transition: 300ms all;
 }
 
 .post-list-item h3 a,
@@ -361,13 +361,13 @@ h6 {
  font-size: 1.3em;
  color: var(--text);
  font-weight: 600;
- transition: 500ms all;
+ transition: 300ms all;
 }
 
 .post-content p,
 p * {
  line-height: 1.6em;
- transition: 500ms all;
+ transition: 300ms all;
 }
 
 .post-list-item {
@@ -397,7 +397,7 @@ img:not(.rss-icon) {
  list-style: disc;
  padding-bottom: 5px;
  line-height: 1.6em;
- transition: 500ms all;
+ transition: 300ms all;
  margin-left: 25px;
 }
 
@@ -405,7 +405,7 @@ img:not(.rss-icon) {
  list-style: none;
  padding-bottom: 1em;
  line-height: 1.6em;
- transition: 500ms all;
+ transition: 300ms all;
 }
 
 .home a:hover,
@@ -530,11 +530,11 @@ a:hover {
 .pagination {
  display: flex;
  justify-content: space-between;
- transition: 500ms all;
+ transition: 300ms all;
 }
 
 .page-number {
- transition: 500ms all;
+ transition: 300ms all;
 }
 
 .section-home-title {
@@ -545,7 +545,7 @@ a:hover {
  position: fixed;
  width: 100%;
  top: 0;
- transition: 500ms all !important;
+ transition: 300ms all !important;
  z-index: 9999;
  user-select: none;
  box-shadow: 0 16px 50px rgba(0,0,0,0.1) !important;
@@ -587,7 +587,7 @@ a:hover {
 .nav .logo a {
  display: block;
  float: left;
- transition: 500ms all;
+ transition: 300ms all;
  padding: 20px 20px !important;
  font-size: 20px;
  padding: 10px 20px;
@@ -601,7 +601,7 @@ a:hover {
 .nav .menu {
  clear: both;
  max-height: 0;
- transition: 500ms background-color, 500ms background, 400ms max-height, 1s color;
+ transition: 300ms background-color, 300ms background, 400ms max-height, 1s color;
 }
 
 .nav .menu-icon {
@@ -695,13 +695,13 @@ a:hover {
 }
 
 .logo {
- transition: 500ms all;
+ transition: 300ms all;
 }
 
 ul,
 li {
  list-style: none;
- transition: 500ms all;
+ transition: 300ms all;
 }
 
 .menu-icon svg {
@@ -722,7 +722,7 @@ li {
 }
 
 .option-description {
- transition: 500ms all;
+ transition: 300ms all;
 }
 
 .theme-switch-container,
@@ -798,16 +798,16 @@ input:checked + .slider-switch:before {
 
 .cat span a:after {
  content: "|";
- transition: 500ms all;
+ transition: 300ms all;
 }
 
 .cat span a:last-of-type:after {
  content: "";
- transition: 500ms all;
+ transition: 300ms all;
 }
 
 span {
- transition: 500ms all;
+ transition: 300ms all;
 }
 
 textarea {
@@ -821,7 +821,7 @@ textarea {
  width: 100%;
  min-height: 60px;
  max-height: 300px;
- transition: 500ms all;
+ transition: 300ms all;
 }
 
 .hp {
@@ -848,7 +848,7 @@ input {
  display: flex;
  margin: 10px 0px 5px 0px;
  width: 100%;
- transition: 500ms all;
+ transition: 300ms all;
 }
 
 button {
@@ -862,7 +862,7 @@ button {
  box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.1), 0 1px 3px 0 rgba(0, 0, 0, 0.08);
  margin: 10px 0px 5px 0px;
  user-select: none;
- transition: 500ms all;
+ transition: 300ms all;
 }
 
 button:hover {
@@ -1149,7 +1149,7 @@ pre.highlight {
  width: auto;
  word-break: break-word;
  overflow: hidden;
- transition: 500ms all;
+ transition: 300ms all;
 }
 
 .post-nav {
@@ -1181,7 +1181,7 @@ pre.highlight {
  box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.1), 0 1px 3px 0 rgba(0, 0, 0, 0.08);
  margin: 10px 0px 5px 0px;
  user-select: none;
- transition: 500ms all;
+ transition: 300ms all;
  font-size: 15px;
 }
 
@@ -1207,7 +1207,7 @@ pre.highlight {
 .post-recent h3 {
  padding-bottom: 0.3em;
  text-align: center;
- transition: 500ms all;
+ transition: 300ms all;
 }
 
 .post-recent .post-summary {
@@ -1217,13 +1217,13 @@ pre.highlight {
  -webkit-box-orient: vertical;
  -webkit-line-clamp: 4;
  padding-bottom: 0em !important;
- transition: 500ms all;
+ transition: 300ms all;
 }
 
 .post-recent .post-related-title {
  overflow: hidden;
  text-overflow: ellipsis;
- transition: 500ms all;
+ transition: 300ms all;
 }
 
 .post-recent ul li:hover .post-related-title,
@@ -1238,7 +1238,7 @@ pre.highlight {
 
 .comment p {
  padding-bottom: 0.2em !important;
- transition: 500ms all;
+ transition: 300ms all;
 }
 
 .comment img {
@@ -1273,7 +1273,7 @@ pre.highlight {
  margin-top: 2em;
  border: 2px solid var(--text);
  border-radius: 5px;
- transition: 500ms all;
+ transition: 300ms all;
 }
 
 .bullet {
@@ -1352,7 +1352,7 @@ pre.highlight {
  visibility: hidden;
  opacity: 0;
  pointer-events: none;
- transition: 500ms all;
+ transition: 300ms all;
  font-size: 13px;
 }
 
@@ -1377,7 +1377,7 @@ pre.highlight {
  visibility: visible !important;
  opacity: 1 !important;
  pointer-events: all !important;
- transition: 500ms;
+ transition: 300ms;
  max-height: unset;
 }
 
@@ -1410,7 +1410,7 @@ pre.highlight {
 #share-buttons {
  display: inline-block;
  vertical-align: middle;
- transition: 500ms all;
+ transition: 300ms all;
 }
 
 #share-buttons:after {

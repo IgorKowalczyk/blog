@@ -89,7 +89,7 @@ body {
  flex-direction: column;
  -webkit-animation: fade 0.5s ease-in;
  animation: fade 0.5s ease-in;
- transition: 500ms all;
+ transition: 300ms all;
 }
 
 @keyframes fade {
@@ -104,7 +104,7 @@ body {
 footer {
  text-align: center;
  flex-shrink: 0;
- transition: 500ms all;
+ transition: 300ms all;
 }
 
 .no-js {
@@ -133,7 +133,7 @@ footer {
 a {
  text-decoration: none;
  color: var(--text);
- transition: 500ms all;
+ transition: 300ms all;
 }
 
 .message {
@@ -151,7 +151,7 @@ main {
  font-size: 144px;
  font-weight: 100;
  margin-bottom: 16px;
- transition: 500ms all;
+ transition: 300ms all;
 }
 
 @media (max-width: 300px) {
@@ -163,7 +163,7 @@ main {
 .message h2 {
  margin-bottom: 24px;
  word-break: break-word;
- transition: 500ms all;
+ transition: 300ms all;
 }
 
 .message h3 {
@@ -171,7 +171,7 @@ main {
  font-size: 16px;
  margin-bottom: 32px;
  word-break: break-word;
- transition: 500ms all;
+ transition: 300ms all;
 }
 
 .button {
@@ -188,7 +188,7 @@ main {
  background: var(--button);
  text-decoration: none;
  border-radius: 4px;
- transition: 500ms all;
+ transition: 300ms all;
 }
 
 .button:hover {
@@ -206,7 +206,7 @@ main {
  z-index: 10000;
  perspective: 1600px;
  perspective-origin: 20% 50%;
- transition: 500ms all;
+ transition: 300ms all;
  opacity: 1;
 }
 
