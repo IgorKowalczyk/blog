@@ -323,7 +323,7 @@ main {
 }
 
 footer {
- box-shadow: 0 16px 60px rgba(0,0,0,0.3) !important;
+ box-shadow: 0 16px 60px rgba(0, 0, 0, 0.3) !important;
  position: absolute;
  right: 0;
  bottom: 0;
@@ -373,7 +373,7 @@ p * {
 .post-list-item {
  background: var(--post-item);
  border-radius: 15px;
- box-shadow: 0 16px 50px rgba(0,0,0,0.1);
+ box-shadow: 0 16px 50px rgba(0, 0, 0, 0.1);
  padding: 2rem;
  margin-top: 50px;
  margin-bottom: 50px;
@@ -548,7 +548,7 @@ a:hover {
  transition: 300ms all !important;
  z-index: 9999;
  user-select: none;
- box-shadow: 0 16px 50px rgba(0,0,0,0.1) !important;
+ box-shadow: 0 16px 50px rgba(0, 0, 0, 0.1) !important;
 }
 
 @media screen and (max-width: 705px) {
