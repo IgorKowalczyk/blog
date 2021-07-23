@@ -373,7 +373,7 @@ p * {
 .post-list-item {
  background: var(--post-item);
  border-radius: 15px;
- box-shadow: 0 16px 60px rgba(0, 0, 0, 0.3);
+ box-shadow: 0px 15px 27px -10px rgba(0,0,0,0.05);
  padding: 2rem;
  margin-top: 50px;
  margin-bottom: 50px;
@@ -547,6 +547,7 @@ a:hover {
  transition: 500ms all !important;
  z-index: 9999;
  user-select: none;
+ box-shadow: 0 16px 60px rgba(0,0,0,0.3) !important;
 }
 
 @media screen and (max-width: 705px) {
@@ -574,7 +575,7 @@ a:hover {
  padding: 20px 20px;
  text-decoration: none;
  color: var(--link) !important;
- transition: 500ms all;
+ transition: 350ms all;
 }
 
 .nav li a:hover,
