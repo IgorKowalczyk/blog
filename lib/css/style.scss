@@ -53,7 +53,7 @@ layout: "null"
  --scrollbar-thumb: #2b2b2b;
  --scrollbar-hover: #363636;
  --scrollbar-active: #454545;
- --color-888: #000;
+ --color-888: #888;
  --switch-slider: #fff;
  --preloader: #222;
  --spinner: #888;
@@ -745,7 +745,7 @@ li {
 
 .slider,
 .slider-switch {
- background-color: rgba(31, 31, 31, 0.8);
+ background-color: #353535;
  bottom: 0;
  cursor: pointer;
  left: 0;
