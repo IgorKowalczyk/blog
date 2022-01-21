@@ -4,6 +4,7 @@ layout: "null"
 
 :root {
  --white: #fff;
+ --navbar-rgba: 255, 255, 255, 0.9;
  --text: #212121;
  --border-opacity: 33, 33, 33;
  --aqua: #00a3a3;
@@ -41,6 +42,7 @@ layout: "null"
 
 [data-theme="dark"] {
  --white: #222;
+ --navbar-rgba: 34, 34, 34, 0.9;
  --text: #fff;
  --border-opacity: 255, 255, 255;
  --aqua: #fff;
@@ -376,7 +378,7 @@ p * {
 
 .post-list-item {
  background: var(--post-item);
- border-radius: 15px;
+ border-radius: 5px;
  box-shadow: 0 16px 50px rgba(0, 0, 0, 0.1);
  padding: 2rem;
  margin-top: 50px;
@@ -553,7 +555,7 @@ a:hover {
  text-align: center;
 }
 .nav {
- background-color: var(--white);
+ background-color: rgba(var(--navbar-rgba));
  position: fixed;
  width: 100%;
  top: 0;
@@ -579,7 +581,6 @@ a:hover {
  padding: 0;
  list-style: none;
  overflow: hidden;
- background-color: var(--white);
 }
 
 .nav li a {
@@ -1226,6 +1227,7 @@ pre.highlight {
 
 .post-recent h3 {
  padding-bottom: 0.3em;
+ margin-top: 2em;
  text-align: center;
  transition: 300ms all;
 }
@@ -1301,7 +1303,6 @@ pre.highlight {
 }
 
 .new-comment {
- margin-top: 2em;
  grid-area: title / title;
 }
 
@@ -1316,6 +1317,11 @@ pre.highlight {
   "info info"
   ". button"
   "error error";
+ background: var(--post-item);
+ padding: 2rem;
+ border-radius: 5px;
+ margin-top: 2em;
+ box-shadow: 0 16px 50px rgba(0, 0, 0, 0.1);
 }
 
 .commentform-sendfailed {
