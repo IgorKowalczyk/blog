@@ -253,6 +253,7 @@ body {
 html {
  background-color: var(--white);
  scroll-behavior: smooth;
+ transition: 300ms all;
 }
 
 @keyframes fade {
