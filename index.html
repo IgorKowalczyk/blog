@@ -32,7 +32,7 @@ layout: "default"
  </ul>
  <div class="pagination">
   {% if paginator.previous_page %}
-   <a class="prev link-button" href="{{ site.url || site.host }}{{ site.baseurl }}{{ paginator.previous_page_path }}" style="max-width: unset">&lt; Poprzednia Strona</a>
+  <a class="prev link-button" href="{{ site.url || site.host }}{{ site.baseurl }}{{ paginator.previous_page_path }}" style="max-width: unset">&lt; Poprzednia Strona</a>
   {% else %}
   <a class="prev link-button disabled" style="max-width: unset">&lt; Poprzednia Strona</a>
   {% endif %}
@@ -40,7 +40,7 @@ layout: "default"
   {% if paginator.next_page %}
   <a class="next link-button" href="{{ site.url || site.host }}{{ site.baseurl }}{{ paginator.next_page_path }}" style="max-width: unset">Następna Strona &gt;</a>
   {% else %}
-    <a class="next link-button disabled" style="max-width: unset">Następna Strona &gt;</a>
+  <a class="next link-button disabled" style="max-width: unset">Następna Strona &gt;</a>
   {% endif %}
  </div>
  {% unless site.feed.enabled == false %}
