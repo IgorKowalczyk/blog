@@ -1540,3 +1540,8 @@ pre.highlight {
  width: 1.3em;
  fill: var(--text);
 }
+
+.disabled {
+ opacity: 0.5;
+ cursor: not-allowed;
+}
