@@ -33,7 +33,7 @@ first-launch: "2019"
 mobile: "false"
 
 # Page pagination
-paginate: 8
+paginate: 4
 
 # Markdown and Default theme
 markdown: kramdown
