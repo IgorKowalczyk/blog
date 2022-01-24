@@ -545,10 +545,13 @@ a:hover {
  display: flex;
  justify-content: space-between;
  transition: 300ms all;
+ align-items: center;
 }
 
 .page-number {
  transition: 300ms all;
+ font-size: 17px;
+ margin: 10px 0px 5px 0px;
 }
 
 .section-home-title {
