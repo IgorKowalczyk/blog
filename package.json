@@ -1,6 +1,6 @@
 {
  "name": "igorkowalczyk-blog",
- "version": "0.0.2",
+ "version": "1.0.3",
  "description": "My personal blog",
  "scripts": {
   "dev": "jekyll serve --livereload",
